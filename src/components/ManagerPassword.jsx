@@ -10,6 +10,7 @@ export default function ManagerPassword({ onCreateRoom }) {
   const { socket, emit, on, off } = useSocketContext()
   const [loading, setLoading] = useState(false)
   const [authenticatedTeacher, setAuthenticatedTeacher] = useState(null)
+  const [isCreatingRoom, setIsCreatingRoom] = useState(false)
 
   useEffect(() => {
     // Controlla autenticazione con un piccolo delay per assicurarsi che localStorage sia disponibile
@@ -70,6 +71,13 @@ export default function ManagerPassword({ onCreateRoom }) {
       return
     }
 
+    // Prevenzione loop infinito
+    if (isCreatingRoom || loading) {
+      console.log('🛑 Creazione già in corso, ignoro chiamata duplicata')
+      return
+    }
+
+    setIsCreatingRoom(true)
     setLoading(true)
 
     try {
@@ -100,12 +108,14 @@ export default function ManagerPassword({ onCreateRoom }) {
           console.error('Errore parsing quiz selezionato:', parseError)
           toast.error('Errore nel caricamento del quiz selezionato')
           setLoading(false)
+          setIsCreatingRoom(false)
           return
         }
       } else {
         console.warn('⚠️ Nessun quiz selezionato trovato, uso configurazione default')
         toast.error('Nessun quiz selezionato! Seleziona prima un quiz dal dashboard.')
         setLoading(false)
+        setIsCreatingRoom(false)
         return
       }
 
@@ -135,6 +145,7 @@ export default function ManagerPassword({ onCreateRoom }) {
       toast.error('Errore durante la creazione della room')
     } finally {
       setLoading(false)
+      setIsCreatingRoom(false)
     }
   }
 
@@ -311,11 +322,11 @@ export default function ManagerPassword({ onCreateRoom }) {
 
         <Button
           onClick={() => handleCreate()}
-          disabled={loading}
+          disabled={loading || isCreatingRoom}
           className="relative w-full py-6 text-2xl font-bold bg-gradient-to-r from-green-500 via-green-400 to-cyan-400 hover:from-green-400 hover:via-cyan-400 hover:to-green-500 text-black rounded-xl border-4 border-green-400 shadow-[0_0_40px_rgba(0,255,136,0.8)] hover:shadow-[0_0_60px_rgba(0,255,136,1)] transition-all duration-500 transform hover:scale-105 overflow-hidden"
         >
           <span className="relative z-20">
-            {loading ? '🔄 Creazione in corso...' : '🚀 Crea Room e Genera PIN'}
+            {loading || isCreatingRoom ? '🔄 Creazione in corso...' : '🚀 Crea Room e Genera PIN'}
           </span>
 
           {/* Effetto scintillio animato */}
