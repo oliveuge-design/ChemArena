@@ -11,6 +11,7 @@ import SystemRestart from "@/components/SystemRestart"
 import TeachersList from "@/components/dashboard/TeachersList"
 import ThemeCustomizer from "@/components/dashboard/ThemeCustomizer"
 import AnalyticsDashboard from "@/components/dashboard/AnalyticsDashboard"
+import AIQuizGeneratorStatic from "@/components/dashboard/AIQuizGeneratorStatic"
 
 export default function Dashboard() {
   const router = useRouter()
@@ -51,7 +52,7 @@ export default function Dashboard() {
     // Controlla se c'è un tab specificato nella query string
     const urlParams = new URLSearchParams(window.location.search)
     const tabParam = urlParams.get('tab')
-    if (tabParam && ['archive', 'quizzes', 'create', 'launch', 'analytics', 'statistics', 'teachers', 'server', 'themes'].includes(tabParam)) {
+    if (tabParam && ['archive', 'quizzes', 'create', 'ai-generator', 'launch', 'analytics', 'statistics', 'teachers', 'server', 'themes'].includes(tabParam)) {
       setActiveTab(tabParam)
     }
 
@@ -155,6 +156,7 @@ export default function Dashboard() {
     { id: 'archive', name: 'Archivio Quiz', icon: '📚' },
     { id: 'quizzes', name: 'I Miei Quiz', icon: '📝' },
     { id: 'create', name: 'Crea Quiz', icon: '➕' },
+    { id: 'ai-generator', name: 'AI Quiz Generator', icon: '🤖' },
     { id: 'launch', name: 'Lancia Gioco', icon: '🚀' },
     { id: 'analytics', name: 'Analytics', icon: '🔬' },
     { id: 'themes', name: 'Personalizzazione', icon: '🎨' },
@@ -294,6 +296,7 @@ export default function Dashboard() {
           {activeTab === 'archive' && <QuizArchiveManager />}
           {activeTab === 'quizzes' && <QuizManager onEditQuiz={handleEditQuiz} />}
           {activeTab === 'create' && <QuizCreator editingQuiz={editingQuiz} onClearEdit={handleClearEdit} />}
+          {activeTab === 'ai-generator' && <AIQuizGeneratorStatic />}
           {activeTab === 'launch' && <SmartGameLauncher />}
           {activeTab === 'analytics' && <AnalyticsDashboard />}
           {activeTab === 'themes' && <ThemeCustomizer />}

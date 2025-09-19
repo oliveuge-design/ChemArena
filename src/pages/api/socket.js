@@ -3,33 +3,79 @@ import { GAME_STATE_INIT } from '../../../config.mjs'
 import Manager from '../../../socket/roles/manager.js'
 import Player from '../../../socket/roles/player.js'
 
-// Simplified game state - FIXED: Proper fallback for quiz startup
-let gameState = {
-  started: false,
-  players: [],
-  playersAnswer: [],
-  manager: null,
-  room: null,
-  currentQuestion: 0,
-  roundStartTime: 0,
-  password: global.currentQuizConfig?.password || GAME_STATE_INIT.password,
-  subject: global.currentQuizConfig?.subject || GAME_STATE_INIT.subject,
-  questions: global.currentQuizConfig?.questions || GAME_STATE_INIT.questions
+// FIXED: Prioritize runtime quiz config over file-based fallback
+function initializeGameState() {
+  // Priorità: 1) Global runtime config 2) File config fallback
+  const runtimeConfig = global.currentQuizConfig
+
+  if (runtimeConfig) {
+    console.log('🎯 Using RUNTIME quiz config:', {
+      subject: runtimeConfig.subject,
+      questions: runtimeConfig.questions?.length || 0,
+      password: runtimeConfig.password
+    })
+    return {
+      started: false,
+      players: [],
+      playersAnswer: [],
+      manager: null,
+      room: null,
+      currentQuestion: 0,
+      roundStartTime: 0,
+      password: runtimeConfig.password || 'CHEMARENA',
+      subject: runtimeConfig.subject || 'Quiz',
+      questions: runtimeConfig.questions || []
+    }
+  } else {
+    console.log('⚠️ Using FALLBACK quiz config from file:', {
+      subject: GAME_STATE_INIT.subject,
+      questions: GAME_STATE_INIT.questions?.length || 0,
+      password: GAME_STATE_INIT.password
+    })
+    return {
+      started: false,
+      players: [],
+      playersAnswer: [],
+      manager: null,
+      room: null,
+      currentQuestion: 0,
+      roundStartTime: 0,
+      password: GAME_STATE_INIT.password,
+      subject: GAME_STATE_INIT.subject,
+      questions: GAME_STATE_INIT.questions
+    }
+  }
 }
+
+// Initialize game state with priority to runtime config
+let gameState = initializeGameState()
 
 let io
 
 // FIXED: Function to update gameState from external APIs
 export function updateGameState(newConfig) {
   if (newConfig) {
-    gameState.password = newConfig.password || 'CHEMARENA'
-    gameState.subject = newConfig.subject || 'Quiz'
-    gameState.questions = newConfig.questions || []
+    // Update global config first
+    global.currentQuizConfig = newConfig
 
-    console.log('🔄 GameState updated programmatically:', {
+    // Reset game state to ensure clean sync
+    gameState = {
+      ...gameState,
+      // Preserve connection state but reset quiz data
+      started: false,
+      currentQuestion: 0,
+      roundStartTime: 0,
+      // Update quiz data
+      password: newConfig.password || 'CHEMARENA',
+      subject: newConfig.subject || 'Quiz',
+      questions: newConfig.questions || []
+    }
+
+    console.log('🔄 GameState updated and re-synchronized:', {
       password: gameState.password,
       subject: gameState.subject,
-      questions: gameState.questions?.length || 0
+      questions: gameState.questions?.length || 0,
+      globalConfigUpdated: !!global.currentQuizConfig
     })
 
     // Notify all connected sockets of the update

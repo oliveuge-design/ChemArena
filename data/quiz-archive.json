@@ -1835,13 +1835,824 @@
           "image": ""
         }
       ]
+    },
+    {
+      "id": "quiz_1758292015236",
+      "title": "Quiz di Conduttimetria",
+      "subject": "piolo",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758292015236_0",
+          "question": "Qual è il principale utilizzo della conduttimetria in laboratorio?",
+          "answers": [
+            "Determinazione della temperatura",
+            "Misurazione della conducibilità di soluzioni",
+            "Analisi del pH",
+            "Calcolo della densità"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_1",
+          "question": "Quale dei seguenti fattori influisce sulla conduttività elettrica di una soluzione?",
+          "answers": [
+            "Il colore della soluzione",
+            "La temperatura della soluzione",
+            "Il volume della soluzione",
+            "La pressione atmosferica"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_2",
+          "question": "In quale modo la concentrazione di ioni in soluzione influisce sulla conduttività?",
+          "answers": [
+            "Aumenta la conduttività con la diminuzione della concentrazione",
+            "Non ha alcun effetto sulla conduttività",
+            "Aumenta la conduttività con l'aumento della concentrazione",
+            "Diminuisce la conduttività con l'aumento della temperatura"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_3",
+          "question": "Quale apparecchiatura è comunemente usata per misurare la conduttività di una soluzione?",
+          "answers": [
+            "Spettrofotometro",
+            "Conduttimetro",
+            "Termometro",
+            "Barometro"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_4",
+          "question": "Qual è l'unità di misura della conduttività elettrica?",
+          "answers": [
+            "Ohm",
+            "Siemens",
+            "Volt",
+            "Ampere"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_5",
+          "question": "Cosa indica un valore di conduttività molto elevato in una soluzione?",
+          "answers": [
+            "Presenza di sostanze inerti",
+            "Elevata purezza della soluzione",
+            "Presenza di un'alta concentrazione di ioni",
+            "Bassa temperatura della soluzione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_6",
+          "question": "Quale delle seguenti affermazioni è vera riguardo alla conduttività di soluzioni acide e basiche?",
+          "answers": [
+            "Le soluzioni acide hanno sempre conduttività inferiore rispetto alle basiche",
+            "Le soluzioni basiche sono sempre più conduttive delle soluzioni neutre",
+            "La conduttività dipende dalla concentrazione di ioni presenti",
+            "Le soluzioni neutre hanno la conduttività più alta"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_7",
+          "question": "Come si può migliorare la precisione di una misurazione di conduttività?",
+          "answers": [
+            "Utilizzando un campione più grande",
+            "Controllando la temperatura della soluzione",
+            "Aggiungendo più acqua distillata",
+            "Utilizzando un conduttimetro di dimensioni maggiori"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_8",
+          "question": "Qual è un esempio di applicazione pratica della conduttimetria in campo ambientale?",
+          "answers": [
+            "Misurazione della temperatura dell'aria",
+            "Analisi della qualità dell'acqua",
+            "Determinazione della pressione del suolo",
+            "Misurazione del livello di radiazioni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_9",
+          "question": "In un esperimento, si osserva un aumento della conduttività dopo aver aggiunto un sale a una soluzione. Qual è l'interpretazione corretta di questo fenomeno?",
+          "answers": [
+            "Il sale non influisce sulla conduttività",
+            "Il sale si dissocia in ioni che aumentano la conduttività",
+            "Il sale riduce la temperatura della soluzione",
+            "Il sale aumenta la densità della soluzione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_1758296617098",
+      "title": "Verifica Tecnologie Chimiche",
+      "subject": "aaaa",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758296617098_0",
+          "question": "Quale dei seguenti processi non produce Idrogeno?",
+          "answers": [
+            "Steam Reforming",
+            "Gassificazione del carbone",
+            "Sintesi dell'ammoniaca",
+            "Cracking del petrolio"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_1",
+          "question": "Nello Steam Reforming, quale operazione è condotta per evitare il danneggiamento del catalizzatore?",
+          "answers": [
+            "Aggiunta di acido solforico",
+            "Desolforazione",
+            "Aumento della temperatura",
+            "Riduzione della pressione"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_2",
+          "question": "Qual è la principale reazione durante il reforming primario nello Steam Reforming?",
+          "answers": [
+            "Tra gas naturale e vapore per produrre CO e H2",
+            "Tra CO2 e H2 per produrre metano",
+            "Tra ZnO e H2S per produrre ZnS",
+            "Tra gas naturale e ossigeno"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_3",
+          "question": "Quale dei seguenti fattori influisce sulla conversione della reazione di sintesi dell'ammoniaca?",
+          "answers": [
+            "La temperatura e la pressione",
+            "La concentrazione di ammoniaca",
+            "L'uso di catalizzatori",
+            "La presenza di impurità"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_4",
+          "question": "Qual è la funzione del catalizzatore nella sintesi dell'ammoniaca?",
+          "answers": [
+            "Aumentare l'entalpia della reazione",
+            "Ridurre l'energia di attivazione",
+            "Cambiare la direzione dell'equilibrio",
+            "Incrementare la temperatura di reazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_5",
+          "question": "La legge di Hess è utilizzata per determinare:",
+          "answers": [
+            "La variazione di entalpia di una reazione chimica",
+            "La costante di equilibrio",
+            "La velocità di reazione",
+            "La variazione di disordine"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_6",
+          "question": "Quali sono le condizioni ottimali di temperatura e pressione per il processo di Steam Reforming?",
+          "answers": [
+            "Pressione tra 28 e 40 bar e temperatura tra 700°C e 900°C",
+            "Pressione tra 280 e 400 bar e temperatura tra 150°C e 250°C",
+            "Pressione atmosferica e temperatura ambiente",
+            "Pressione negativa e temperatura alta"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_7",
+          "question": "Nella reazione di sintesi dell'ammoniaca, quale fattore può portare a una conversione parziale?",
+          "answers": [
+            "La bassa energia di attivazione",
+            "La tossicità dell'ammoniaca",
+            "L'elevata energia di attivazione",
+            "L'uso di un catalizzatore"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_8",
+          "question": "Le fasi del ciclo di sintesi dell'ammoniaca seguono un certo ordine. Qual è la sequenza corretta?",
+          "answers": [
+            "Compressione, reazione, separazione, riciclo",
+            "Separazione, reazione, compressione, riciclo",
+            "Riciclo, compressione, reazione, separazione",
+            "Reazione, compressione, separazione, riciclo"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_9",
+          "question": "Quale dei seguenti è un rischio associato alla produzione di ammoniaca?",
+          "answers": [
+            "Tossicità dell'ammoniaca",
+            "Esplosività dell'idrogeno",
+            "Presenza di apparecchiature in pressione",
+            "Tutti i precedenti"
+          ],
+          "solution": 3,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_1758303316332",
+      "title": "Quiz ammoniaca e idrogeno",
+      "subject": "ammoniaca e idrogeno",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758303316332_0",
+          "question": "Qual è la composizione del gas di sintesi?",
+          "answers": [
+            "H2",
+            "CO",
+            "CH4",
+            "H2 + CO"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_1",
+          "question": "Quale processo non produce H2?",
+          "answers": [
+            "Steam Reforming",
+            "Gassificazione del carbone",
+            "Sintesi dell'ammoniaca",
+            "Cracking del petrolio"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_2",
+          "question": "Qual è una frase errata sui rischi dell'idrogeno?",
+          "answers": [
+            "Esplosività con aria",
+            "Emissione di composti solforati",
+            "Tossicità del CO",
+            "Elevate temperature dei processi"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_3",
+          "question": "Qual è la reazione dello steam reforming del gas naturale?",
+          "answers": [
+            "CH4 + H2O -> CO + 3H2",
+            "2CH4 + O2 -> 2CO + 4H2",
+            "FeO + H2O -> Fe3O4 + H2",
+            "C + H2O -> CO + H2"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_4",
+          "question": "In quale produzione si usa H2?",
+          "answers": [
+            "Sintesi H2SO4",
+            "Sintesi NH3",
+            "Sintesi HNO3",
+            "Ossidazione parziale degli idrocarburi"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_5",
+          "question": "La desolforazione nello steam reforming serve a?",
+          "answers": [
+            "Aggiungere composti solforati",
+            "Eliminare composti solforati",
+            "Modificare il pH",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_6",
+          "question": "Durante il reforming primario avviene?",
+          "answers": [
+            "Reazione tra gas naturale e vapore",
+            "Reazione tra ZnO e H2S",
+            "Reazione di ossidazione parziale",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_7",
+          "question": "Qual è la condizione termodinamica dello steam reforming?",
+          "answers": [
+            "28-40 bar e 700-900°C",
+            "280-400 bar e 700-900°C",
+            "28-40 bar e 150-250°C",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_8",
+          "question": "I catalizzatori nello steam reforming sono?",
+          "answers": [
+            "Acidi di Lewis",
+            "Basi di Bronsted",
+            "Metalli di transizione",
+            "Non si usano catalizzatori"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_9",
+          "question": "La legge di Hess definisce?",
+          "answers": [
+            "Variazione di entalpia",
+            "Variazione di entropia",
+            "Variazione di energia libera",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_10",
+          "question": "Il ΔH°rT consente di conoscere?",
+          "answers": [
+            "Se una reazione è esotermica",
+            "Se una reazione è endotermica",
+            "La variazione di disordine",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_11",
+          "question": "Il ΔG°rT se negativo indica?",
+          "answers": [
+            "Reazione spontanea",
+            "Reazione non spontanea",
+            "Nessuna delle risposte",
+            "Misura il lavoro prodotto"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_12",
+          "question": "L’entalpia standard di formazione è definita come?",
+          "answers": [
+            "Reazione di formazione a partire da composti",
+            "Reazione di polimerizzazione",
+            "Reazione a partire dagli elementi",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_13",
+          "question": "Quale settore utilizza l’ammoniaca?",
+          "answers": [
+            "Fertilizzanti",
+            "Esplosivi",
+            "Polimeri sintetici",
+            "Tutti i settori"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_14",
+          "question": "La sintesi dell’ammoniaca è?",
+          "answers": [
+            "Endotermica e bassa pressione",
+            "Endotermica e alta pressione",
+            "Esotermica con conversione completa",
+            "Esotermica e bassa pressione"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_15",
+          "question": "L’ammoniaca a 20°C è?",
+          "answers": [
+            "Sempre gas",
+            "Sempre liquida",
+            "Solida",
+            "Vapore a 1 bar"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_16",
+          "question": "Il ΔG°rT della sintesi dell’ammoniaca è?",
+          "answers": [
+            "Sempre positivo",
+            "Sempre negativo",
+            "Dipende dalla temperatura",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_17",
+          "question": "Per aumentare la conversione della sintesi dell’ammoniaca, la pressione è?",
+          "answers": [
+            "Negativa",
+            "150 atmosfere",
+            "Tra 30 e 40 bar",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_18",
+          "question": "La reazione di sintesi dell’ammoniaca ha un catalizzatore perché?",
+          "answers": [
+            "Abbassa l’entalpia",
+            "Rende la reazione più veloce",
+            "Aumenta la resa",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_19",
+          "question": "Il catalizzatore tradizionale è costituito da?",
+          "answers": [
+            "Metalli nobili",
+            "K2O e Al2O3",
+            "Ferro metallico con K2O",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_20",
+          "question": "Il reattore di sintesi opera a?",
+          "answers": [
+            "Temperature inferiori a 180°C",
+            "Temperature superiori a 1000°C",
+            "Temperature tra 350°C e 500°C",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_21",
+          "question": "L'operazione di quench serve a?",
+          "answers": [
+            "Alzare la temperatura",
+            "Abbassare la temperatura con reagenti freschi",
+            "Abbassare la temperatura con acqua",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_22",
+          "question": "Il controllo della temperatura nei letti catalitici avviene tramite?",
+          "answers": [
+            "Scambio con acqua di raffreddamento",
+            "Scambio tra reagenti e miscela fresca",
+            "Aggiunta di acqua",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_23",
+          "question": "Le fasi del ciclo di sintesi dell’ammoniaca sono?",
+          "answers": [
+            "Separazione, Reazione, Compressione",
+            "Riciclo, Compressione, Reazione",
+            "Reazione, Compressione, Separazione",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_24",
+          "question": "La presenza di inerti nel gas di sintesi?",
+          "answers": [
+            "Diminuisce la resa",
+            "Aumenta la resa",
+            "Non influenza la resa",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_25",
+          "question": "La reazione di sintesi dell’ammoniaca porta a?",
+          "answers": [
+            "Conversione completa",
+            "Conversione parziale",
+            "Nessuna conversione",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_26",
+          "question": "La separazione dell’ammoniaca avviene?",
+          "answers": [
+            "Con refrigerazione e separatori",
+            "Con elio liquido",
+            "Con acqua di raffreddamento",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_27",
+          "question": "I principali rischi della produzione di ammoniaca sono?",
+          "answers": [
+            "Stoccaggio di grandi quantità",
+            "Tossicità",
+            "Infiammabilità",
+            "Tutti i rischi"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_28",
+          "question": "Il catalizzatore della sintesi è definito piroforico perché?",
+          "answers": [
+            "Deve essere incendiato",
+            "Si incendia facilmente",
+            "Incendia il gas di sintesi",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_29",
+          "question": "Il surriscaldamento del catalizzatore comporta?",
+          "answers": [
+            "Maggiore resa",
+            "Reazione più veloce",
+            "Accorcia la vita del catalizzatore",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_30",
+          "question": "Il processo di produzione dell’ammoniaca richiede?",
+          "answers": [
+            "Catalizzatori",
+            "Elevate pressioni",
+            "Temperature controllate",
+            "Tutti i fattori"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_31",
+          "question": "La cinetica della reazione di sintesi è ostacolata da?",
+          "answers": [
+            "Energia di attivazione alta",
+            "Temperatura bassa",
+            "Reazione esotermica",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_32",
+          "question": "La sintesi dell'ammoniaca è influenzata da?",
+          "answers": [
+            "Pressione",
+            "Temperatura",
+            "Concentrazione",
+            "Tutti i fattori"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_33",
+          "question": "Quale gas è un prodotto della reazione di sintesi dell’ammoniaca?",
+          "answers": [
+            "H2",
+            "N2",
+            "O2",
+            "CO2"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_34",
+          "question": "Il raffreddamento del reattore è fondamentale per?",
+          "answers": [
+            "Aumentare la pressione",
+            "Controllare la temperatura",
+            "Mantenere l'equilibrio",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_35",
+          "question": "Quale dei seguenti processi utilizza l’ammoniaca?",
+          "answers": [
+            "Produzione di plastica",
+            "Fertilizzanti",
+            "Combustibili",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
     }
   ],
   "images": [],
   "metadata": {
     "version": "1.0",
-    "lastUpdate": "2025-09-16",
-    "totalQuizzes": 22,
-    "totalQuestions": 116
+    "lastUpdate": "2025-09-19",
+    "totalQuizzes": 25,
+    "totalQuestions": 172
   }
 }

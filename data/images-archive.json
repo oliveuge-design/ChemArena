@@ -45,12 +45,60 @@
         "quiz"
       ],
       "usedInQuestions": []
+    },
+    {
+      "id": "img_1758205739955",
+      "filename": "img_1758205739955_voglio l'immagina da poter animare di un piccolo scenziato simpatico da trasformare in un animazione per pagianweb fanne uno donna.jpg",
+      "originalName": "voglio l'immagina da poter animare di un piccolo scenziato simpatico da trasformare in un animazione per pagianweb fanne uno donna.jpg",
+      "path": "/uploads/images/img_1758205739955_voglio l'immagina da poter animare di un piccolo scenziato simpatico da trasformare in un animazione per pagianweb fanne uno donna.jpg",
+      "url": "/uploads/images/img_1758205739955_voglio l'immagina da poter animare di un piccolo scenziato simpatico da trasformare in un animazione per pagianweb fanne uno donna.jpg",
+      "uploadDate": "2025-09-18",
+      "size": 102833,
+      "mimetype": "image/jpeg",
+      "tags": [],
+      "usedInQuestions": []
+    },
+    {
+      "id": "img_1758205765945",
+      "filename": "img_1758205765945_ChatGPT-Image-11-set-2025_-21_54_38.svg",
+      "originalName": "ChatGPT-Image-11-set-2025_-21_54_38.svg",
+      "path": "/uploads/images/img_1758205765945_ChatGPT-Image-11-set-2025_-21_54_38.svg",
+      "url": "/uploads/images/img_1758205765945_ChatGPT-Image-11-set-2025_-21_54_38.svg",
+      "uploadDate": "2025-09-18",
+      "size": 6539,
+      "mimetype": "image/svg+xml",
+      "tags": [],
+      "usedInQuestions": []
+    },
+    {
+      "id": "img_1758205824613",
+      "filename": "img_1758205824612_Progetto senza titolo (3).svg",
+      "originalName": "Progetto senza titolo (3).svg",
+      "path": "/uploads/images/img_1758205824612_Progetto senza titolo (3).svg",
+      "url": "/uploads/images/img_1758205824612_Progetto senza titolo (3).svg",
+      "uploadDate": "2025-09-18",
+      "size": 143029,
+      "mimetype": "image/svg+xml",
+      "tags": [],
+      "usedInQuestions": []
+    },
+    {
+      "id": "img_1758205860162",
+      "filename": "img_1758205860161_Progetto senza titolo.svg",
+      "originalName": "Progetto senza titolo.svg",
+      "path": "/uploads/images/img_1758205860161_Progetto senza titolo.svg",
+      "url": "/uploads/images/img_1758205860161_Progetto senza titolo.svg",
+      "uploadDate": "2025-09-18",
+      "size": 156237,
+      "mimetype": "image/svg+xml",
+      "tags": [],
+      "usedInQuestions": []
     }
   ],
   "metadata": {
     "version": "1.0",
-    "lastUpdate": "2025-09-15",
-    "totalImages": 3,
+    "lastUpdate": "2025-09-18",
+    "totalImages": 7,
     "uploadPath": "./public/uploads/images/",
     "maxFileSize": 5242880,
     "allowedTypes": [

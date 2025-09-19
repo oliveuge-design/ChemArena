@@ -21,6 +21,15 @@ const Manager = {
       if (!managerSocket) {
         console.log(`🧹 Ghost manager detected (${game.manager} not connected), forcing cleanup...`)
         Object.assign(game, deepClone(GAME_STATE_INIT))
+
+        // Re-apply global config after cleanup if available
+        if (global.currentQuizConfig) {
+          console.log('🔄 Applying global config after ghost cleanup')
+          game.password = global.currentQuizConfig.password || 'CHEMARENA'
+          game.subject = global.currentQuizConfig.subject || 'Quiz'
+          game.questions = global.currentQuizConfig.questions || []
+        }
+
         console.log(`✅ Ghost manager cleaned, proceeding with room creation`)
         // Procedi con la creazione normale
       } else {
@@ -36,6 +45,18 @@ const Manager = {
 
     if (data.teacherId) {
       game.teacherId = data.teacherId
+    }
+
+    // FORCE SYNC: Re-apply global config if available on room creation
+    if (global.currentQuizConfig) {
+      console.log('🔄 Re-syncing gameState with global config on room creation')
+      game.password = global.currentQuizConfig.password || 'CHEMARENA'
+      game.subject = global.currentQuizConfig.subject || 'Quiz'
+      game.questions = global.currentQuizConfig.questions || []
+      console.log('✅ Room quiz synced:', {
+        subject: game.subject,
+        questions: game.questions?.length || 0
+      })
     }
 
     socket.join(roomInvite)
@@ -62,9 +83,21 @@ const Manager = {
       return
     }
 
+    // DEBUG: Log current quiz configuration at game start
+    console.log('🎮 GAME START - Current quiz configuration:', {
+      subject: game.subject,
+      password: game.password,
+      questions: game.questions?.length || 0,
+      firstQuestion: game.questions?.[0]?.question?.substring(0, 50) + '...' || 'No questions',
+      globalConfig: global.currentQuizConfig ? {
+        subject: global.currentQuizConfig.subject,
+        questions: global.currentQuizConfig.questions?.length || 0
+      } : 'Not set'
+    })
+
     game.started = true
     game.gameStartTime = Date.now() // Registra l'inizio del gioco
-    
+
     io.to(game.room).emit("game:status", {
       name: "SHOW_START",
       data: {

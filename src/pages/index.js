@@ -89,36 +89,33 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Atomo Secondario - Carbonio */}
-              <div className="atom atom-carbon">
-                <div className="nucleus nucleus-carbon">C</div>
-                <div className="electron-orbit orbit-inner">
-                  <div className="electron electron-1"></div>
-                  <div className="electron electron-2"></div>
+              {/* Doppia Elica DNA Animata - Sinistra */}
+              <div className="dna-helix dna-left">
+                <div className="dna-strand strand-1">
+                  <div className="base-pair bp-1"><span>A-T</span></div>
+                  <div className="base-pair bp-2"><span>G-C</span></div>
+                  <div className="base-pair bp-3"><span>C-G</span></div>
+                  <div className="base-pair bp-4"><span>T-A</span></div>
                 </div>
-                <div className="electron-orbit orbit-outer">
-                  <div className="electron electron-3"></div>
-                  <div className="electron electron-4"></div>
-                  <div className="electron electron-5"></div>
-                  <div className="electron electron-6"></div>
+                <div className="dna-strand strand-2">
+                  <div className="base-pair bp-5"><span>G-C</span></div>
+                  <div className="base-pair bp-6"><span>A-T</span></div>
+                  <div className="base-pair bp-7"><span>T-A</span></div>
+                  <div className="base-pair bp-8"><span>C-G</span></div>
                 </div>
               </div>
 
-              {/* Atomo Terziario - Ossigeno */}
-              <div className="atom atom-oxygen">
-                <div className="nucleus nucleus-oxygen">O</div>
-                <div className="electron-orbit orbit-inner">
-                  <div className="electron electron-1"></div>
-                  <div className="electron electron-2"></div>
+              {/* Cristallo Quantico Pulsante - Destra */}
+              <div className="quantum-crystal">
+                <div className="crystal-core">
+                  <div className="energy-level level-1"></div>
+                  <div className="energy-level level-2"></div>
+                  <div className="energy-level level-3"></div>
+                  <div className="quantum-particle particle-a"></div>
+                  <div className="quantum-particle particle-b"></div>
+                  <div className="quantum-particle particle-c"></div>
                 </div>
-                <div className="electron-orbit orbit-outer">
-                  <div className="electron electron-3"></div>
-                  <div className="electron electron-4"></div>
-                  <div className="electron electron-5"></div>
-                  <div className="electron electron-6"></div>
-                  <div className="electron electron-7"></div>
-                  <div className="electron electron-8"></div>
-                </div>
+                <div className="crystal-glow"></div>
               </div>
             </div>
 
@@ -243,11 +240,11 @@ export default function Home() {
           left: 0;
           width: 100%;
           height: 100%;
-          background: 
+          background:
             url('/lab-background.jpg') center center/cover no-repeat,
-            linear-gradient(135deg, #001122 0%, #003366 25%, #002244 50%, #001133 75%, #000511 100%),
-            radial-gradient(circle at 30% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 70% 80%, rgba(255, 0, 136, 0.08) 0%, transparent 50%);
+            linear-gradient(135deg, #002244 0%, #004488 25%, #0066BB 50%, #003377 75%, #001144 100%),
+            radial-gradient(circle at 30% 20%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 70% 80%, rgba(255, 0, 136, 0.12) 0%, transparent 50%);
           filter: brightness(0.4) contrast(1.2) saturate(1.5);
           z-index: -3;
         }
@@ -262,7 +259,7 @@ export default function Home() {
             radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.1) 0%, transparent 40%),
             radial-gradient(circle at 80% 70%, rgba(255, 0, 136, 0.08) 0%, transparent 40%),
             radial-gradient(circle at 40% 80%, rgba(0, 255, 136, 0.06) 0%, transparent 30%),
-            linear-gradient(135deg, rgba(0, 20, 40, 0.8) 0%, rgba(0, 40, 80, 0.6) 100%);
+            linear-gradient(135deg, rgba(0, 30, 60, 0.7) 0%, rgba(0, 60, 120, 0.5) 100%);
           z-index: -2;
           animation: overlayPulse 8s ease-in-out infinite;
         }
@@ -556,14 +553,14 @@ export default function Home() {
           animation: atomFloat 8s ease-in-out infinite;
         }
 
-        .atom-carbon {
+        .dna-left {
           transform: scale(1.3);
-          animation: atomFloat 10s ease-in-out infinite 2s;
+          animation: atomFloat 12s ease-in-out infinite 2s;
         }
 
-        .atom-oxygen {
-          transform: scale(1.43);
-          animation: atomFloat 9s ease-in-out infinite 4s;
+        .quantum-crystal {
+          transform: scale(1.2);
+          animation: atomFloat 8s ease-in-out infinite 4s;
         }
 
         @keyframes atomFloat {
@@ -598,22 +595,220 @@ export default function Home() {
           animation: nucleusGlow 3s ease-in-out infinite;
         }
 
-        .nucleus-carbon {
-          background: radial-gradient(circle, #4ecdc4, #00d2d3);
-          color: white;
-          box-shadow:
-            0 0 20px #4ecdc4,
-            inset 0 0 10px rgba(255, 255, 255, 0.3);
-          animation: nucleusGlow 3s ease-in-out infinite 1s;
+        /* === DNA HELIX ANIMATA === */
+        .dna-helix {
+          position: relative;
+          width: 120px;
+          height: 200px;
+          perspective: 1000px;
+          transform-style: preserve-3d;
         }
 
-        .nucleus-oxygen {
-          background: radial-gradient(circle, #45b7d1, #3867d6);
+        .dna-strand {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          animation: dnaRotate 6s linear infinite;
+        }
+
+        .strand-2 {
+          animation-delay: -3s;
+        }
+
+        @keyframes dnaRotate {
+          0% { transform: rotateY(0deg); }
+          100% { transform: rotateY(360deg); }
+        }
+
+        .base-pair {
+          position: absolute;
+          width: 100px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          backdrop-filter: blur(10px);
+          animation: basePairPulse 3s ease-in-out infinite;
+        }
+
+        .base-pair span {
+          font-family: 'Orbitron', monospace;
+          font-size: 10px;
+          font-weight: bold;
           color: white;
+          text-shadow: 0 0 5px currentColor;
+        }
+
+        .bp-1, .bp-5 {
+          top: 10%;
+          background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+          animation-delay: 0s;
+        }
+        .bp-2, .bp-6 {
+          top: 30%;
+          background: linear-gradient(90deg, #4ecdc4, #00d2d3);
+          animation-delay: 0.5s;
+        }
+        .bp-3, .bp-7 {
+          top: 50%;
+          background: linear-gradient(90deg, #45b7d1, #3867d6);
+          animation-delay: 1s;
+        }
+        .bp-4, .bp-8 {
+          top: 70%;
+          background: linear-gradient(90deg, #fd79a8, #e84393);
+          animation-delay: 1.5s;
+        }
+
+        @keyframes basePairPulse {
+          0%, 100% {
+            opacity: 0.8;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+          }
+          50% {
+            opacity: 1;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+          }
+        }
+
+        /* === CRISTALLO QUANTICO === */
+        .quantum-crystal {
+          position: relative;
+          width: 140px;
+          height: 140px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .crystal-core {
+          position: relative;
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+          border-radius: 50%;
+          animation: quantumSpin 4s linear infinite;
           box-shadow:
-            0 0 20px #45b7d1,
-            inset 0 0 10px rgba(255, 255, 255, 0.3);
-          animation: nucleusGlow 3s ease-in-out infinite 2s;
+            0 0 30px rgba(0, 255, 255, 0.5),
+            inset 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes quantumSpin {
+          0% { transform: rotate(0deg) scale(1); }
+          25% { transform: rotate(90deg) scale(1.1); }
+          50% { transform: rotate(180deg) scale(1); }
+          75% { transform: rotate(270deg) scale(1.1); }
+          100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .energy-level {
+          position: absolute;
+          border: 2px solid;
+          border-radius: 50%;
+          animation: energyPulse linear infinite;
+        }
+
+        .level-1 {
+          width: 100px;
+          height: 100px;
+          top: -10px;
+          left: -10px;
+          border-color: #00ffff;
+          animation-duration: 3s;
+        }
+
+        .level-2 {
+          width: 120px;
+          height: 120px;
+          top: -20px;
+          left: -20px;
+          border-color: #ff00ff;
+          animation-duration: 4s;
+          animation-delay: -1s;
+        }
+
+        .level-3 {
+          width: 140px;
+          height: 140px;
+          top: -30px;
+          left: -30px;
+          border-color: #ffff00;
+          animation-duration: 5s;
+          animation-delay: -2s;
+        }
+
+        @keyframes energyPulse {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.05);
+          }
+        }
+
+        .quantum-particle {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          animation: quantumOrbit linear infinite;
+        }
+
+        .particle-a {
+          background: #00ffff;
+          box-shadow: 0 0 10px #00ffff;
+          animation-duration: 2s;
+          animation-timing-function: ease-in-out;
+        }
+
+        .particle-b {
+          background: #ff00ff;
+          box-shadow: 0 0 10px #ff00ff;
+          animation-duration: 3s;
+          animation-delay: -0.7s;
+          animation-timing-function: ease-in-out;
+        }
+
+        .particle-c {
+          background: #ffff00;
+          box-shadow: 0 0 10px #ffff00;
+          animation-duration: 2.5s;
+          animation-delay: -1.2s;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes quantumOrbit {
+          0% {
+            transform: rotate(0deg) translateX(50px) rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg) translateX(50px) rotate(-360deg);
+          }
+        }
+
+        .crystal-glow {
+          position: absolute;
+          width: 160px;
+          height: 160px;
+          top: -10px;
+          left: -10px;
+          background: radial-gradient(circle, transparent 60%, rgba(0, 255, 255, 0.1) 70%, transparent 80%);
+          border-radius: 50%;
+          animation: crystalGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes crystalGlow {
+          0%, 100% {
+            opacity: 0.5;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.1);
+          }
         }
 
         @keyframes nucleusGlow {
@@ -647,47 +842,12 @@ export default function Home() {
           animation-duration: 4s;
         }
 
-        /* Orbite ellittiche per carbonio e ossigeno */
-        .orbit-inner {
-          border-radius: 50% 50% 50% 50% / 35% 35% 65% 65%;
-          width: 117px;
-          height: 78px;
-          animation: orbitRotateInner 3s linear infinite;
-          border-color: rgba(0, 255, 136, 0.6);
-        }
-
-        .orbit-outer {
-          border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
-          width: 182px;
-          height: 130px;
-          animation: orbitRotateOuter 5s linear infinite;
-          border-color: rgba(255, 136, 0, 0.6);
-        }
-
         @keyframes orbitRotate {
           0% {
             transform: translate(-50%, -50%) rotate(0deg);
           }
           100% {
             transform: translate(-50%, -50%) rotate(360deg);
-          }
-        }
-
-        @keyframes orbitRotateInner {
-          0% {
-            transform: translate(-50%, -50%) rotateZ(15deg) rotate(0deg);
-          }
-          100% {
-            transform: translate(-50%, -50%) rotateZ(15deg) rotate(360deg);
-          }
-        }
-
-        @keyframes orbitRotateOuter {
-          0% {
-            transform: translate(-50%, -50%) rotateZ(-20deg) rotate(0deg);
-          }
-          100% {
-            transform: translate(-50%, -50%) rotateZ(-20deg) rotate(360deg);
           }
         }
 
@@ -709,66 +869,6 @@ export default function Home() {
           box-shadow: 0 0 16px #ff6b6b;
         }
 
-        /* Elettroni guscio interno (K) - 2 elettroni distribuiti a 180° */
-        .orbit-inner .electron-1 {
-          top: -3px;
-          left: calc(50% - 3px);
-          background: #00ff88;
-          box-shadow: 0 0 12px #00ff88;
-        }
-
-        .orbit-inner .electron-2 {
-          bottom: -3px;
-          left: calc(50% - 3px);
-          background: #00ff88;
-          box-shadow: 0 0 12px #00ff88;
-        }
-
-        /* Elettroni guscio esterno (L) - distribuiti a coppie a 180° */
-        /* Prima coppia: su-giù */
-        .orbit-outer .electron-3 {
-          top: -3px;
-          left: calc(50% - 3px);
-          background: #ffff00;
-          box-shadow: 0 0 12px #ffff00;
-        }
-
-        .orbit-outer .electron-4 {
-          bottom: -3px;
-          left: calc(50% - 3px);
-          background: #ffff00;
-          box-shadow: 0 0 12px #ffff00;
-        }
-
-        /* Seconda coppia: sinistra-destra */
-        .orbit-outer .electron-5 {
-          top: calc(50% - 3px);
-          left: -3px;
-          background: #ffff00;
-          box-shadow: 0 0 12px #ffff00;
-        }
-
-        .orbit-outer .electron-6 {
-          top: calc(50% - 3px);
-          right: -3px;
-          background: #ffff00;
-          box-shadow: 0 0 12px #ffff00;
-        }
-
-        /* Elettroni extra per ossigeno - terza coppia diagonale a 180° */
-        .orbit-outer .electron-7 {
-          top: calc(25% - 3px);
-          right: calc(15% - 3px);
-          background: #ff8800;
-          box-shadow: 0 0 12px #ff8800;
-        }
-
-        .orbit-outer .electron-8 {
-          bottom: calc(25% - 3px);
-          left: calc(15% - 3px);
-          background: #ff8800;
-          box-shadow: 0 0 12px #ff8800;
-        }
 
         @keyframes electronPulse {
           0%, 100% {
@@ -1104,7 +1204,7 @@ export default function Home() {
             justify-content: space-around;
           }
 
-          .atom-hydrogen, .atom-carbon, .atom-oxygen {
+          .atom-hydrogen, .dna-left, .quantum-crystal {
             transform: scale(1.04);
           }
 
@@ -1115,8 +1215,6 @@ export default function Home() {
           }
 
           .atom-hydrogen .orbit-1 { width: 78px; height: 78px; }
-          .orbit-inner { width: 91px; height: 58px; }
-          .orbit-outer { width: 143px; height: 97px; }
 
           .electron {
             width: 5px;
@@ -1124,14 +1222,6 @@ export default function Home() {
           }
 
           .atom-hydrogen .orbit-1 .electron { right: 39px; }
-          .orbit-inner .electron-1 { left: calc(50% - 2px); top: -2px; }
-          .orbit-inner .electron-2 { left: calc(50% - 2px); bottom: -2px; }
-          .orbit-outer .electron-3 { left: calc(50% - 2px); top: -2px; }
-          .orbit-outer .electron-4 { left: calc(50% - 2px); bottom: -2px; }
-          .orbit-outer .electron-5 { left: -2px; top: calc(50% - 2px); }
-          .orbit-outer .electron-6 { right: -2px; top: calc(50% - 2px); }
-          .orbit-outer .electron-7 { right: calc(15% - 2px); top: calc(25% - 2px); }
-          .orbit-outer .electron-8 { left: calc(15% - 2px); bottom: calc(25% - 2px); }
 
           .circuit-corner { width: 40px; height: 40px; }
 
@@ -1179,15 +1269,15 @@ export default function Home() {
             order: 1;
           }
 
-          .atom-carbon {
-            transform: scale(0.78);
+          .dna-left {
+            transform: scale(0.8);
             order: 2;
           }
 
-          .atom-oxygen {
-            transform: scale(0.91);
+          .quantum-crystal {
+            transform: scale(0.9);
             order: 3;
-            display: none; /* Nascondi il terzo atomo su mobile molto piccolo */
+            display: none; /* Nascondi il cristallo su mobile molto piccolo */
           }
 
           .nucleus {
@@ -1197,8 +1287,6 @@ export default function Home() {
           }
 
           .atom-hydrogen .orbit-1 { width: 65px; height: 65px; }
-          .orbit-inner { width: 78px; height: 45px; }
-          .orbit-outer { width: 117px; height: 78px; }
 
           .electron {
             width: 4px;
@@ -1206,14 +1294,6 @@ export default function Home() {
           }
 
           .atom-hydrogen .orbit-1 .electron { right: 32px; }
-          .orbit-inner .electron-1 { left: calc(50% - 1.5px); top: -1.5px; }
-          .orbit-inner .electron-2 { left: calc(50% - 1.5px); bottom: -1.5px; }
-          .orbit-outer .electron-3 { left: calc(50% - 1.5px); top: -1.5px; }
-          .orbit-outer .electron-4 { left: calc(50% - 1.5px); bottom: -1.5px; }
-          .orbit-outer .electron-5 { left: -1.5px; top: calc(50% - 1.5px); }
-          .orbit-outer .electron-6 { right: -1.5px; top: calc(50% - 1.5px); }
-          .orbit-outer .electron-7 { right: calc(15% - 1.5px); top: calc(25% - 1.5px); }
-          .orbit-outer .electron-8 { left: calc(15% - 1.5px); bottom: calc(25% - 1.5px); }
 
 
           .particle-dust {

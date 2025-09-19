@@ -8,7 +8,7 @@
       "subject": "Amministrazione",
       "role": "admin",
       "active": true,
-      "lastLogin": "2025-09-17T15:49:28.240Z",
+      "lastLogin": "2025-09-19T17:32:56.387Z",
       "createdAt": "2024-01-15",
       "acceptedPrivacy": true,
       "privacyDate": "2025-09-11"
@@ -94,7 +94,7 @@
   ],
   "metadata": {
     "version": "1.0",
-    "lastUpdate": "2025-09-17",
+    "lastUpdate": "2025-09-19",
     "totalTeachers": 7,
     "activeTeachers": 7
   }
