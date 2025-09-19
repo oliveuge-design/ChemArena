@@ -4,9 +4,6 @@ const nextConfig = {
 
   // Performance ottimizzazioni
   swcMinify: true,
-  experimental: {
-    optimizeCss: true,
-  },
 
   // Compress responses per Render
   compress: true,
