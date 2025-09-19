@@ -50,3 +50,31 @@ next-env.d.ts
 
 # Claude
 .claude/
+
+# AI Generator temp files
+/public/uploads/temp/
+test-content*.txt
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Logs
+logs
+*.log
+
+# File uploads (esclude dalle sensitive)
+/public/uploads/temp/
+/temp/
+
+# API Keys e credenziali
+API*.txt
+*keys*.txt
+*secret*.txt

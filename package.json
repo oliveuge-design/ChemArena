@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next out",
+    "type-check": "tsc --noEmit",
+    "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
     "autoprefixer": "^10.0.1",
@@ -34,17 +37,17 @@
     "eslint-config-next": "14.1.0",
     "prettier-plugin-tailwindcss": "^0.5.11"
   },
-  "description": "<p align=\"center\">\r   <h1 align=\"center\">🧪 ChemArena</h1>\r   <p align=\"center\">Piattaforma di quiz interattivi per la chimica</p>\r </p>",
-  "main": "postcss.config.js",
+  "description": "ChemArena AI Generator - Piattaforma avanzata per quiz interattivi di chimica con generazione automatica AI da documenti",
+  "main": "src/pages/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oliveuge-design/chemarena-online.git"
+    "url": "git+https://github.com/oliveuge-design/chemarena-ai-generator.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["chemistry", "quiz", "ai", "education", "generator", "openai", "react", "nextjs"],
+  "author": "Eugenio Oliva",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oliveuge-design/chemarena-online/issues"
+    "url": "https://github.com/oliveuge-design/chemarena-ai-generator/issues"
   },
-  "homepage": "https://github.com/oliveuge-design/chemarena-online#readme"
+  "homepage": "https://chemarena-ai-generator.onrender.com"
 }
