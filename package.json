@@ -1,6 +1,6 @@
 {
-  "name": "chemarena",
-  "version": "1.0.0",
+  "name": "chemarena-ai-generator",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

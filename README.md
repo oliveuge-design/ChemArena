@@ -1,6 +1,6 @@
 <p align="center">
-  <h1 align="center">🧪 ChemArena</h1>
-  <p align="center">Piattaforma di quiz interattivi per la chimica</p>
+  <h1 align="center">🤖 ChemArena AI Generator</h1>
+  <p align="center">Piattaforma di quiz interattivi per la chimica con generazione automatica AI</p>
 </p>
 
 ## 🧩 What is this project?
