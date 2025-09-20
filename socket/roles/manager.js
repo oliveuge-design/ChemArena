@@ -277,13 +277,20 @@ const Manager = {
           const averageScore = totalQuestions > 0 ? Math.round((player.points / (totalQuestions * 1000)) * 100) : 0
 
           const gameData = {
+            gameId: `game_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            teacherId: game.teacherId || null,
+            className: player.className || null,
             date: new Date().toISOString(),
+            gameStartTime: game.gameStartTime ? new Date(game.gameStartTime).toISOString() : new Date().toISOString(),
             quizSubject: game.subject,
+            quizTitle: game.quizTitle || game.subject,
             score: player.points || 0,
             totalQuestions: totalQuestions,
             correctAnswers: correctAnswers,
             averageScore: averageScore,
-            duration: Date.now() - (game.gameStartTime || Date.now())
+            position: null, // Verrà calcolato dopo
+            duration: Date.now() - (game.gameStartTime || Date.now()),
+            responseTime: null // Calcolabile in future versioni
           }
 
           console.log(`📊 Saving stats for student ${player.username} (ID: ${player.studentId}):`, {

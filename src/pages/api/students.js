@@ -3,35 +3,75 @@ import path from 'path';
 import bcrypt from 'bcryptjs';
 
 const STUDENTS_DB_PATH = path.join(process.cwd(), 'data', 'students-db.json');
+const ENHANCED_DB_PATH = path.join(process.cwd(), 'data', 'students-db-enhanced.json');
 
-// Utilità per leggere il database studenti
+// Utilità per leggere il database studenti (priorità a enhanced)
 function readStudentsDB() {
   try {
+    // Prova prima il database enhanced
+    if (fs.existsSync(ENHANCED_DB_PATH)) {
+      const data = fs.readFileSync(ENHANCED_DB_PATH, 'utf8');
+      return JSON.parse(data);
+    }
+
+    // Fallback al database originale
     if (fs.existsSync(STUDENTS_DB_PATH)) {
       const data = fs.readFileSync(STUDENTS_DB_PATH, 'utf8');
       return JSON.parse(data);
     }
-    return { students: [], classes: [], metadata: { version: "1.0", totalStudents: 0, totalClasses: 0 } };
+
+    return {
+      students: [],
+      classes: [],
+      gameResults: [],
+      relationships: { studentTeachers: [], classTeachers: [] },
+      metadata: { version: "2.0", totalStudents: 0, totalClasses: 0 }
+    };
   } catch (error) {
     console.error('❌ Errore lettura database studenti:', error);
-    return { students: [], classes: [], metadata: { version: "1.0", totalStudents: 0, totalClasses: 0 } };
+    return {
+      students: [],
+      classes: [],
+      gameResults: [],
+      relationships: { studentTeachers: [], classTeachers: [] },
+      metadata: { version: "2.0", totalStudents: 0, totalClasses: 0 }
+    };
   }
 }
 
-// Utilità per scrivere il database studenti
+// Utilità per scrivere il database studenti (usa enhanced se disponibile)
 function writeStudentsDB(data) {
   try {
-    const dir = path.dirname(STUDENTS_DB_PATH);
+    const targetPath = fs.existsSync(ENHANCED_DB_PATH) ? ENHANCED_DB_PATH : STUDENTS_DB_PATH;
+    const dir = path.dirname(targetPath);
+
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // Aggiorna metadata
+    // Aggiorna metadata per entrambe le versioni
     data.metadata.lastUpdate = new Date().toISOString().split('T')[0];
     data.metadata.totalStudents = data.students.length;
     data.metadata.totalClasses = data.classes.length;
 
-    fs.writeFileSync(STUDENTS_DB_PATH, JSON.stringify(data, null, 2));
+    // Per versione enhanced, calcola anche altri metadata
+    if (data.gameResults) {
+      data.metadata.totalGameResults = data.gameResults.length;
+    }
+    if (data.relationships) {
+      data.metadata.totalRelationships =
+        (data.relationships.studentTeachers?.length || 0) +
+        (data.relationships.classTeachers?.length || 0);
+    }
+
+    // Crea backup automatico
+    if (fs.existsSync(targetPath)) {
+      const backupPath = path.join(dir, `students-db-backup-${Date.now()}.json`);
+      fs.copyFileSync(targetPath, backupPath);
+    }
+
+    fs.writeFileSync(targetPath, JSON.stringify(data, null, 2));
+    console.log(`✅ Database salvato: ${path.basename(targetPath)}`);
     return true;
   } catch (error) {
     console.error('❌ Errore scrittura database studenti:', error);
@@ -284,63 +324,165 @@ async function handlePost(req, res) {
           return res.status(404).json({ error: 'Studente non trovato' });
         }
 
-        // Aggiorna le statistiche
-        targetStudent.stats.totalGames += 1;
-        targetStudent.stats.totalPoints += gameData.score || 0;
-        targetStudent.stats.correctAnswers = (targetStudent.stats.correctAnswers || 0) + (gameData.correctAnswers || 0);
-        targetStudent.stats.averageScore = Math.round(
-          (targetStudent.stats.totalPoints / targetStudent.stats.totalGames) / 10
+        // Assicurati che statistics abbia la struttura corretta
+        if (!targetStudent.statistics) {
+          targetStudent.statistics = {
+            totalGames: 0,
+            totalPoints: 0,
+            correctAnswers: 0,
+            averageScore: 0,
+            gamesHistory: [],
+            subjectStats: {},
+            teacherStats: {}
+          };
+        }
+
+        // Aggiorna le statistiche generali
+        targetStudent.statistics.totalGames += 1;
+        targetStudent.statistics.totalPoints += gameData.score || 0;
+        targetStudent.statistics.correctAnswers = (targetStudent.statistics.correctAnswers || 0) + (gameData.correctAnswers || 0);
+        targetStudent.statistics.averageScore = Math.round(
+          (targetStudent.statistics.totalPoints / targetStudent.statistics.totalGames) / 10
         );
 
         // Aggiorna statistiche per materia
         if (gameData.quizSubject) {
-          if (!targetStudent.stats.subjectStats) {
-            targetStudent.stats.subjectStats = {};
-          }
-
-          if (!targetStudent.stats.subjectStats[gameData.quizSubject]) {
-            targetStudent.stats.subjectStats[gameData.quizSubject] = {
+          if (!targetStudent.statistics.subjectStats[gameData.quizSubject]) {
+            targetStudent.statistics.subjectStats[gameData.quizSubject] = {
               gamesPlayed: 0,
               totalPoints: 0,
-              averageScore: 0
+              averageScore: 0,
+              bestScore: 0,
+              teachers: []
             };
           }
 
-          const subjectStats = targetStudent.stats.subjectStats[gameData.quizSubject];
+          const subjectStats = targetStudent.statistics.subjectStats[gameData.quizSubject];
           subjectStats.gamesPlayed += 1;
           subjectStats.totalPoints += gameData.score || 0;
           subjectStats.averageScore = Math.round(subjectStats.totalPoints / subjectStats.gamesPlayed);
+
+          if ((gameData.score || 0) > subjectStats.bestScore) {
+            subjectStats.bestScore = gameData.score || 0;
+          }
+
+          // Aggiungi teacher se non presente
+          if (gameData.teacherId && !subjectStats.teachers.includes(gameData.teacherId)) {
+            subjectStats.teachers.push(gameData.teacherId);
+          }
         }
 
-        // Aggiungi al history
-        if (!targetStudent.stats.gamesHistory) {
-          targetStudent.stats.gamesHistory = [];
+        // Aggiorna statistiche per teacher (NUOVO)
+        if (gameData.teacherId) {
+          if (!targetStudent.statistics.teacherStats[gameData.teacherId]) {
+            targetStudent.statistics.teacherStats[gameData.teacherId] = {
+              gamesPlayed: 0,
+              totalPoints: 0,
+              averageScore: 0,
+              subjects: [],
+              lastGameDate: null,
+              bestScore: 0,
+              improvementRate: 0
+            };
+          }
+
+          const teacherStats = targetStudent.statistics.teacherStats[gameData.teacherId];
+          teacherStats.gamesPlayed += 1;
+          teacherStats.totalPoints += gameData.score || 0;
+          teacherStats.averageScore = Math.round(teacherStats.totalPoints / teacherStats.gamesPlayed);
+          teacherStats.lastGameDate = gameData.date;
+
+          if ((gameData.score || 0) > teacherStats.bestScore) {
+            teacherStats.bestScore = gameData.score || 0;
+          }
+
+          // Aggiungi subject se non presente
+          if (gameData.quizSubject && !teacherStats.subjects.includes(gameData.quizSubject)) {
+            teacherStats.subjects.push(gameData.quizSubject);
+          }
         }
 
-        targetStudent.stats.gamesHistory.push({
+        // Aggiungi al history con informazioni complete
+        const gameEntry = {
+          gameId: gameData.gameId || `game_${Date.now()}`,
+          teacherId: gameData.teacherId || null,
+          className: gameData.className || null,
           date: gameData.date,
           subject: gameData.quizSubject,
+          quizTitle: gameData.quizTitle || gameData.quizSubject,
           score: gameData.score,
           correctAnswers: gameData.correctAnswers,
           totalQuestions: gameData.totalQuestions,
           averageScore: gameData.averageScore,
-          duration: gameData.duration
-        });
+          position: gameData.position || null,
+          duration: gameData.duration,
+          responseTime: gameData.responseTime || null
+        };
 
-        // Mantieni solo gli ultimi 50 giochi nel history
-        if (targetStudent.stats.gamesHistory.length > 50) {
-          targetStudent.stats.gamesHistory = targetStudent.stats.gamesHistory.slice(-50);
+        targetStudent.statistics.gamesHistory.push(gameEntry);
+
+        // Mantieni solo gli ultimi 100 giochi nel history (aumentato per statistiche complete)
+        if (targetStudent.statistics.gamesHistory.length > 100) {
+          targetStudent.statistics.gamesHistory = targetStudent.statistics.gamesHistory.slice(-100);
+        }
+
+        // Aggiungi gameResult al database enhanced se disponibile
+        if (db.gameResults && gameData.gameId) {
+          const existingGameResult = db.gameResults.find(gr => gr.gameId === gameData.gameId);
+          if (existingGameResult) {
+            // Aggiorna risultato esistente
+            const studentResult = existingGameResult.students.find(s => s.studentId === studentId);
+            if (!studentResult) {
+              existingGameResult.students.push({
+                studentId: studentId,
+                nickname: targetStudent.nickname,
+                fullName: targetStudent.fullName,
+                score: gameData.score,
+                correctAnswers: gameData.correctAnswers,
+                averageScore: gameData.averageScore,
+                position: gameData.position,
+                responseTime: gameData.responseTime
+              });
+            }
+          } else {
+            // Crea nuovo game result
+            const newGameResult = {
+              id: `game_result_${Date.now()}`,
+              gameId: gameData.gameId,
+              teacherId: gameData.teacherId,
+              className: gameData.className,
+              quizSubject: gameData.quizSubject,
+              quizTitle: gameData.quizTitle,
+              gameStartTime: gameData.gameStartTime,
+              gameEndTime: gameData.date,
+              duration: gameData.duration,
+              totalQuestions: gameData.totalQuestions,
+              maxScore: gameData.totalQuestions * 1000,
+              students: [{
+                studentId: studentId,
+                nickname: targetStudent.nickname,
+                fullName: targetStudent.fullName,
+                score: gameData.score,
+                correctAnswers: gameData.correctAnswers,
+                averageScore: gameData.averageScore,
+                position: gameData.position,
+                responseTime: gameData.responseTime
+              }]
+            };
+            db.gameResults.push(newGameResult);
+          }
         }
 
         // Salva nel database
         if (writeStudentsDB(db)) {
           return res.status(200).json({
             success: true,
-            message: 'Statistiche aggiornate con successo',
+            message: 'Statistiche aggiornate con successo (enhanced)',
             newStats: {
-              totalGames: targetStudent.stats.totalGames,
-              totalPoints: targetStudent.stats.totalPoints,
-              averageScore: targetStudent.stats.averageScore
+              totalGames: targetStudent.statistics.totalGames,
+              totalPoints: targetStudent.statistics.totalPoints,
+              averageScore: targetStudent.statistics.averageScore,
+              teacherStats: gameData.teacherId ? targetStudent.statistics.teacherStats[gameData.teacherId] : null
             }
           });
         } else {

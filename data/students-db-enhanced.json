@@ -1,0 +1,152 @@
+{
+  "students": [
+    {
+      "id": "student_demo_001",
+      "nickname": "mario_rossi",
+      "fullName": "Mario Rossi",
+      "email": "mario.rossi@scuola.it",
+      "classes": [
+        "5A_CHI"
+      ],
+      "teachers": [],
+      "createdAt": "2025-01-15",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 12,
+        "totalPoints": 890,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {
+          "Chimica": {
+            "gamesPlayed": 8,
+            "totalPoints": 650,
+            "averageScore": 81,
+            "bestScore": 0,
+            "teachers": []
+          },
+          "Medicina": {
+            "gamesPlayed": 3,
+            "totalPoints": 180,
+            "averageScore": 60,
+            "bestScore": 0,
+            "teachers": []
+          },
+          "Geografia": {
+            "gamesPlayed": 1,
+            "totalPoints": 60,
+            "averageScore": 60,
+            "bestScore": 0,
+            "teachers": []
+          }
+        },
+        "teacherStats": {}
+      }
+    },
+    {
+      "id": "student_demo_002",
+      "nickname": "giulia_verdi",
+      "fullName": "Giulia Verdi",
+      "email": "giulia.verdi@scuola.it",
+      "classes": [
+        "5A_CHI"
+      ],
+      "teachers": [],
+      "createdAt": "2025-01-15",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 10,
+        "totalPoints": 1150,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {
+          "Medicina": {
+            "gamesPlayed": 6,
+            "totalPoints": 780,
+            "averageScore": 130,
+            "bestScore": 0,
+            "teachers": []
+          },
+          "Chimica": {
+            "gamesPlayed": 4,
+            "totalPoints": 370,
+            "averageScore": 93,
+            "bestScore": 0,
+            "teachers": []
+          }
+        },
+        "teacherStats": {}
+      }
+    }
+  ],
+  "classes": [
+    {
+      "id": "5A_CHI",
+      "name": "5A Chimica",
+      "description": "Classe migrata automaticamente - 5A Chimica",
+      "school": "ITIS Galileo Galilei",
+      "academicYear": "2025/2026",
+      "teachers": [],
+      "students": [
+        "student_demo_001",
+        "student_demo_002"
+      ],
+      "createdAt": "2025-01-10",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": false,
+        "allowAnonymous": true,
+        "trackStats": true
+      },
+      "statistics": {
+        "totalStudents": 24,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null
+      }
+    },
+    {
+      "id": "4B_BIO",
+      "name": "4B Biotecnologie",
+      "description": "Classe migrata automaticamente - 4B Biotecnologie",
+      "school": "ITIS Galileo Galilei",
+      "academicYear": "2025/2026",
+      "teachers": [],
+      "students": [],
+      "createdAt": "2025-01-12",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": true,
+        "allowAnonymous": false,
+        "trackStats": true
+      },
+      "statistics": {
+        "totalStudents": 22,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null
+      }
+    }
+  ],
+  "gameResults": [],
+  "relationships": {
+    "studentTeachers": [],
+    "classTeachers": []
+  },
+  "metadata": {
+    "version": "2.0",
+    "lastUpdate": "2025-09-20",
+    "totalStudents": 2,
+    "totalClasses": 2,
+    "totalTeachers": 0,
+    "totalGameResults": 0,
+    "totalRelationships": 0,
+    "migrationDate": "2025-09-20T19:29:03.845Z",
+    "structure": "enhanced_many_to_many"
+  }
+}
