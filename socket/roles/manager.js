@@ -164,7 +164,7 @@ const Manager = {
     console.log(`✅ Force reset completed - New state: manager=${game.manager}, room=${game.room}`)
   },
 
-  showLeaderboard: (game, io, socket) => {
+  showLeaderboard: async (game, io, socket) => {
     if (!game.questions[game.currentQuestion + 1]) {
       // Salva statistiche prima di finire il gioco
       const gameEndTime = Date.now()
@@ -183,10 +183,10 @@ const Manager = {
         maxScore: game.questions.length * 1000,
         questionStats: game.questions.map((question, index) => {
           const totalAnswers = game.playersAnswer.filter(a => a.questionIndex === index).length
-          const correctAnswers = game.playersAnswer.filter(a => 
+          const correctAnswers = game.playersAnswer.filter(a =>
             a.questionIndex === index && a.answerKey === question.solution
           ).length
-          
+
           return {
             questionIndex: index,
             question: question.question,
@@ -196,6 +196,9 @@ const Manager = {
           }
         })
       }
+
+      // Salva statistiche per studenti registrati
+      await Manager.saveStudentStatistics(game)
 
       // Invia evento speciale per salvare le statistiche lato client
       socket.emit("game:saveStats", gameStats)
@@ -246,6 +249,84 @@ const Manager = {
           .slice(0, 5),
       },
     })
+  },
+
+  saveStudentStatistics: async (game) => {
+    try {
+      console.log('📊 Saving statistics for registered students...')
+
+      const registeredPlayers = game.players.filter(player => player.isRegistered && player.studentId)
+
+      if (registeredPlayers.length === 0) {
+        console.log('📊 No registered students found in this game')
+        return
+      }
+
+      console.log(`📊 Found ${registeredPlayers.length} registered students to save statistics for`)
+
+      for (const player of registeredPlayers) {
+        try {
+          // Calcola statistiche del player
+          const playerAnswers = game.playersAnswer.filter(answer => answer.id === player.id)
+          const correctAnswers = playerAnswers.filter(answer => {
+            const question = game.questions[answer.questionIndex || game.currentQuestion]
+            return question && answer.answerKey === question.solution
+          }).length
+
+          const totalQuestions = game.questions.length
+          const averageScore = totalQuestions > 0 ? Math.round((player.points / (totalQuestions * 1000)) * 100) : 0
+
+          const gameData = {
+            date: new Date().toISOString(),
+            quizSubject: game.subject,
+            score: player.points || 0,
+            totalQuestions: totalQuestions,
+            correctAnswers: correctAnswers,
+            averageScore: averageScore,
+            duration: Date.now() - (game.gameStartTime || Date.now())
+          }
+
+          console.log(`📊 Saving stats for student ${player.username} (ID: ${player.studentId}):`, {
+            score: gameData.score,
+            correctAnswers: gameData.correctAnswers,
+            totalQuestions: gameData.totalQuestions,
+            averageScore: gameData.averageScore
+          })
+
+          // Chiama API per salvare le statistiche
+          const response = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3002'}/api/students`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              action: 'update-statistics',
+              studentId: player.studentId,
+              gameData: gameData
+            })
+          })
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+          }
+
+          const result = await response.json()
+          if (result.success) {
+            console.log(`✅ Statistics saved for student ${player.username}`)
+          } else {
+            console.error(`❌ Failed to save statistics for student ${player.username}:`, result.error)
+          }
+
+        } catch (error) {
+          console.error(`❌ Error saving statistics for student ${player.username}:`, error)
+        }
+      }
+
+      console.log('📊 Student statistics saving completed')
+
+    } catch (error) {
+      console.error('❌ Error in saveStudentStatistics:', error)
+    }
   },
 }
 

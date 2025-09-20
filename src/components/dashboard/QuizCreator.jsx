@@ -1,23 +1,28 @@
 import { useState, useEffect } from "react"
 import Button from "@/components/Button"
 import QuizTemplateManager from "./QuizTemplateManager"
+import { QUIZ_CATEGORIES, autoCategorizateQuiz } from "@/constants/categories"
 
 export default function QuizCreator({ editingQuiz, onClearEdit }) {
   const [quiz, setQuiz] = useState({
     id: '',
     subject: '',
     password: 'QUIZ123',
+    category: '',
+    subcategory: '',
     questions: []
   })
   
   const [currentQuestion, setCurrentQuestion] = useState({
     question: '',
-    answers: ['', '', '', ''],
+    answers: ['', '', '', '', '', '', '', ''],
     solution: 0,
     time: 15,
     cooldown: 5,
     image: ''
   })
+
+  const [numAnswers, setNumAnswers] = useState(4)
 
   const [editingIndex, setEditingIndex] = useState(-1)
   const [showPreview, setShowPreview] = useState(false)
@@ -46,15 +51,19 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
     }
   }, [editingQuiz, isEditMode])
 
-  const resetQuestion = () => {
+
+  const resetQuestion = (keepNumAnswers = false) => {
     setCurrentQuestion({
       question: '',
-      answers: ['', '', '', ''],
+      answers: ['', '', '', '', '', '', '', ''],
       solution: 0,
       time: 15,
       cooldown: 5,
       image: ''
     })
+    if (!keepNumAnswers) {
+      setNumAnswers(4)
+    }
   }
 
   const resetForm = () => {
@@ -62,6 +71,8 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
       id: '',
       subject: '',
       password: 'QUIZ123',
+      category: '',
+      subcategory: '',
       questions: []
     })
     resetQuestion()
@@ -70,7 +81,20 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
   }
 
   const handleQuizChange = (field, value) => {
-    setQuiz(prev => ({ ...prev, [field]: value }))
+    setQuiz(prev => {
+      const updated = { ...prev, [field]: value }
+
+      // Auto-categorizza quando cambia il subject
+      if (field === 'subject' && value) {
+        const suggestion = autoCategorizateQuiz({ subject: value, title: prev.title || '' })
+        if (suggestion.confidence === 'auto') {
+          updated.category = suggestion.category
+          updated.subcategory = suggestion.subcategory
+        }
+      }
+
+      return updated
+    })
   }
 
   const handleQuestionChange = (field, value) => {
@@ -81,6 +105,14 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
     const newAnswers = [...currentQuestion.answers]
     newAnswers[index] = value
     setCurrentQuestion(prev => ({ ...prev, answers: newAnswers }))
+  }
+
+  const handleNumAnswersChange = (newNum) => {
+    setNumAnswers(newNum)
+    // Assicurati che la soluzione non sia fuori range
+    if (currentQuestion.solution >= newNum) {
+      setCurrentQuestion(prev => ({ ...prev, solution: 0 }))
+    }
   }
 
   const handleSelectTemplate = (template) => {
@@ -100,25 +132,58 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
   }
 
   const addQuestion = () => {
-    if (!currentQuestion.question.trim() || !currentQuestion.answers.some(a => a.trim())) {
+    if (!currentQuestion.question.trim() || !currentQuestion.answers.slice(0, numAnswers).some(a => a.trim())) {
       alert('Compila almeno la domanda e una risposta!')
       return
     }
 
+    // Valida che ci siano almeno 2 risposte compilate
+    const filledAnswers = currentQuestion.answers.slice(0, numAnswers).filter(a => a.trim())
+    if (filledAnswers.length < 2) {
+      alert('Compila almeno 2 risposte!')
+      return
+    }
+
+    // Crea la domanda con solo le risposte necessarie
+    const questionToAdd = {
+      ...currentQuestion,
+      answers: currentQuestion.answers.slice(0, numAnswers),
+      numAnswers: numAnswers
+    }
+
+    console.log('🔧 DEBUG - Aggiungendo domanda:', questionToAdd)
+    console.log('🔧 DEBUG - Quiz corrente:', quiz.questions.length, 'domande')
+
     const newQuestions = [...quiz.questions]
     if (editingIndex >= 0) {
-      newQuestions[editingIndex] = { ...currentQuestion }
+      newQuestions[editingIndex] = questionToAdd
       setEditingIndex(-1)
     } else {
-      newQuestions.push({ ...currentQuestion })
+      newQuestions.push(questionToAdd)
     }
-    
-    setQuiz(prev => ({ ...prev, questions: newQuestions }))
-    resetQuestion()
+
+    console.log('🔧 DEBUG - Nuove domande:', newQuestions.length, 'domande')
+
+    setQuiz(prev => {
+      const updated = { ...prev, questions: newQuestions }
+      console.log('🔧 DEBUG - Quiz aggiornato:', updated.questions.length, 'domande')
+      return updated
+    })
+    resetQuestion(true) // Mantieni il numAnswers corrente
   }
 
   const editQuestion = (index) => {
-    setCurrentQuestion(quiz.questions[index])
+    const question = quiz.questions[index]
+    const questionNumAnswers = question.numAnswers || question.answers.length
+
+    // Estendi a 8 se necessario per l'editing
+    const extendedAnswers = [...question.answers]
+    while (extendedAnswers.length < 8) {
+      extendedAnswers.push('')
+    }
+
+    setCurrentQuestion({ ...question, answers: extendedAnswers })
+    setNumAnswers(questionNumAnswers)
     setEditingIndex(index)
   }
 
@@ -129,38 +194,63 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
     }
   }
 
-  const saveQuiz = () => {
+  const saveQuiz = async () => {
     if (!quiz.subject.trim() || quiz.questions.length === 0) {
       alert('Inserisci un titolo e almeno una domanda!')
       return
     }
 
+    // Converte il formato interno nel formato archivio
     const quizToSave = {
-      ...quiz,
-      id: quiz.id || Date.now().toString(),
-      createdAt: quiz.createdAt || new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      id: quiz.id || `manual_${Date.now()}`,
+      title: quiz.subject,
+      subject: quiz.subject,
+      created: quiz.createdAt ? quiz.createdAt.split('T')[0] : new Date().toISOString().split('T')[0],
+      author: "Manager",
+      password: quiz.password || 'QUIZ123',
+      category: quiz.category || '',
+      subcategory: quiz.subcategory || '',
+      questions: quiz.questions.map((q, index) => ({
+        id: q.id || `q${index + 1}`,
+        question: q.question,
+        answers: q.answers,
+        solution: q.solution,
+        time: q.time || 15,
+        cooldown: q.cooldown || 5,
+        image: q.image || ""
+      }))
     }
 
-    const savedQuizzes = JSON.parse(localStorage.getItem('chemarena-quizzes') || '[]')
-    const existingIndex = savedQuizzes.findIndex(q => q.id === quizToSave.id)
-    
-    if (existingIndex >= 0) {
-      savedQuizzes[existingIndex] = quizToSave
-      alert('✅ Quiz aggiornato con successo!')
-    } else {
-      savedQuizzes.push(quizToSave)
-      alert('✅ Quiz creato con successo!')
+    console.log('🔧 DEBUG - Salvando quiz nell\'archivio:', quizToSave)
+
+    try {
+      const response = await fetch('/api/quiz-archive', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(quizToSave)
+      })
+
+      if (response.ok) {
+        const result = await response.json()
+        alert(`✅ Quiz ${isEditMode ? 'aggiornato' : 'creato'} con successo nell'archivio!\n🎯 ${quizToSave.questions.length} domande salvate`)
+
+        // Reset del form e uscita dalla modalità modifica
+        if (onClearEdit) {
+          onClearEdit()
+        }
+        resetForm()
+        setIsEditMode(false)
+      } else {
+        const error = await response.json()
+        console.error('❌ Errore salvataggio:', error)
+        alert(`❌ Errore salvataggio quiz: ${error.error || 'Errore sconosciuto'}\n\nDettagli: ${error.details || 'Nessun dettaglio disponibile'}`)
+      }
+    } catch (error) {
+      console.error('❌ Errore di rete:', error)
+      alert(`❌ Errore di connessione al server.\n\nVerifica che il server sia attivo e riprova.`)
     }
-    
-    localStorage.setItem('chemarena-quizzes', JSON.stringify(savedQuizzes))
-    
-    // Reset del form e uscita dalla modalità modifica
-    if (onClearEdit) {
-      onClearEdit()
-    }
-    resetForm()
-    setIsEditMode(false)
   }
 
   return (
@@ -217,7 +307,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
       {/* Informazioni Quiz */}
       <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Informazioni Generali</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Titolo Quiz *
@@ -226,7 +316,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
               type="text"
               value={quiz.subject}
               onChange={(e) => handleQuizChange('subject', e.target.value)}
-              placeholder="es. Matematica - Equazioni"
+              placeholder="es. Chimica - Titolazioni"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -243,6 +333,61 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
             />
           </div>
         </div>
+
+        {/* Categoria e Sottocategoria */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Categoria
+            </label>
+            <select
+              value={quiz.category}
+              onChange={(e) => handleQuizChange('category', e.target.value)}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="">🎯 Seleziona categoria...</option>
+              {Object.entries(QUIZ_CATEGORIES).map(([key, category]) => (
+                <option key={key} value={key}>
+                  {category.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Sottocategoria
+            </label>
+            <select
+              value={quiz.subcategory}
+              onChange={(e) => handleQuizChange('subcategory', e.target.value)}
+              disabled={!quiz.category}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100"
+            >
+              <option value="">🏷️ Seleziona sottocategoria...</option>
+              {quiz.category && Object.entries(QUIZ_CATEGORIES[quiz.category]?.subcategories || {}).map(([key, subcategory]) => (
+                <option key={key} value={key}>
+                  {subcategory.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Preview categoria selezionata */}
+        {quiz.category && quiz.subcategory && (
+          <div className="mt-4 p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border">
+            <div className="flex items-center space-x-2">
+              <span className="text-sm font-medium text-gray-700">Categoria selezionata:</span>
+              <span className={`px-2 py-1 rounded-full text-xs font-medium ${QUIZ_CATEGORIES[quiz.category]?.color || 'bg-gray-100 text-gray-800'}`}>
+                {QUIZ_CATEGORIES[quiz.category]?.label}
+              </span>
+              <span className="text-gray-400">→</span>
+              <span className={`px-2 py-1 rounded-full text-xs font-medium ${QUIZ_CATEGORIES[quiz.category]?.subcategories[quiz.subcategory]?.color || 'bg-gray-100 text-gray-800'}`}>
+                {QUIZ_CATEGORIES[quiz.category]?.subcategories[quiz.subcategory]?.label}
+              </span>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Editor Domande */}
@@ -266,11 +411,29 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Risposte
-            </label>
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-sm font-medium text-gray-700">
+                Risposte
+              </label>
+              <div className="flex items-center space-x-2">
+                <label className="text-sm text-gray-600">Numero opzioni:</label>
+                <select
+                  value={numAnswers}
+                  onChange={(e) => handleNumAnswersChange(parseInt(e.target.value))}
+                  className="px-2 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
+                  <option value={6}>6</option>
+                  <option value={7}>7</option>
+                  <option value={8}>8</option>
+                </select>
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {currentQuestion.answers.map((answer, index) => (
+              {currentQuestion.answers.slice(0, numAnswers).map((answer, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <input
                     type="radio"
@@ -283,7 +446,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
                     type="text"
                     value={answer}
                     onChange={(e) => handleAnswerChange(index, e.target.value)}
-                    placeholder={`Risposta ${index + 1}`}
+                    placeholder={`Risposta ${String.fromCharCode(65 + index)}`}
                     className={`flex-1 p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
                       currentQuestion.solution === index ? 'border-green-500 bg-green-50' : 'border-gray-300'
                     }`}
@@ -292,7 +455,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
               ))}
             </div>
             <p className="text-xs text-gray-500 mt-1">
-              Seleziona il radio button per indicare la risposta corretta
+              Seleziona il radio button per indicare la risposta corretta • Fino a 8 opzioni supportate
             </p>
           </div>
 
@@ -379,11 +542,11 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
                     {showPreview && (
                       <div className="mt-2 space-y-1">
                         {q.answers.map((answer, ansIndex) => (
-                          <div 
-                            key={ansIndex} 
+                          <div
+                            key={ansIndex}
                             className={`text-sm px-2 py-1 rounded ${
-                              q.solution === ansIndex 
-                                ? 'bg-green-100 text-green-800 font-medium' 
+                              q.solution === ansIndex
+                                ? 'bg-green-100 text-green-800 font-medium'
                                 : 'bg-gray-100 text-gray-800'
                             }`}
                           >
@@ -392,7 +555,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
                           </div>
                         ))}
                         <div className="text-xs text-gray-500 mt-1">
-                          Tempo: {q.time}s | Pausa: {q.cooldown}s
+                          {q.answers.length} opzioni | Tempo: {q.time}s | Pausa: {q.cooldown}s
                         </div>
                       </div>
                     )}
@@ -417,6 +580,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
           </div>
         </div>
       )}
+
 
       {/* Salva Quiz */}
       <div className="bg-white rounded-lg shadow-md p-6">

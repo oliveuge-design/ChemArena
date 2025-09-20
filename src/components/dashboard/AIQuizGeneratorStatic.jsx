@@ -9,7 +9,8 @@ export default function AIQuizGeneratorStatic() {
   const [config, setConfig] = useState({
     subject: '',
     numQuestions: 10,
-    difficulty: 'medium'
+    difficulty: 'medium',
+    numAnswers: 4
   })
   const [apiKey, setApiKey] = useState('')
   const [showApiKeyInput, setShowApiKeyInput] = useState(false)
@@ -122,7 +123,7 @@ export default function AIQuizGeneratorStatic() {
           // Reset form
           setFiles([])
           setApiKey('')
-          setConfig({ subject: '', numQuestions: 10, difficulty: 'medium' })
+          setConfig({ subject: '', numQuestions: 10, difficulty: 'medium', numAnswers: 4 })
 
           setTimeout(() => {
             setStatusMessage('')
@@ -148,7 +149,7 @@ export default function AIQuizGeneratorStatic() {
     setStatusMessage('')
     setFiles([])
     setApiKey('')
-    setConfig({ subject: '', numQuestions: 10, difficulty: 'medium' })
+    setConfig({ subject: '', numQuestions: 10, difficulty: 'medium', numAnswers: 4 })
   }
 
   return (
@@ -277,7 +278,7 @@ export default function AIQuizGeneratorStatic() {
         <div className="bg-white rounded-lg shadow p-6">
           <h3 className="text-lg font-semibold mb-4">⚙️ Configurazione Quiz</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Materia
@@ -307,6 +308,28 @@ export default function AIQuizGeneratorStatic() {
                 {config.numQuestions <= 15 ? '⚡ Veloce (1-15 domande)' :
                  config.numQuestions <= 30 ? '⏱️ Medio (16-30 domande)' :
                  '🚀 Avanzato (31-50 domande)'}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Opzioni per Domanda
+              </label>
+              <select
+                value={config.numAnswers}
+                onChange={(e) => setConfig({...config, numAnswers: parseInt(e.target.value)})}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value={2}>2 opzioni</option>
+                <option value={3}>3 opzioni</option>
+                <option value={4}>4 opzioni</option>
+                <option value={5}>5 opzioni</option>
+                <option value={6}>6 opzioni</option>
+                <option value={7}>7 opzioni</option>
+                <option value={8}>8 opzioni</option>
+              </select>
+              <div className="text-xs text-gray-500 mt-1">
+                🎯 Da 2 a 8 opzioni di risposta
               </div>
             </div>
           </div>

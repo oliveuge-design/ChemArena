@@ -257,6 +257,154 @@ export default function Answers({
             0 0 80px rgba(34, 197, 94, 0.5);
           border-color: #22c55e;
         }
+
+        .answer-purple {
+          background: linear-gradient(135deg, #581c87 0%, #a855f7 25%, #c084fc 75%, #581c87 100%);
+          border: 3px solid #a855f7;
+          box-shadow:
+            0 0 25px rgba(168, 85, 247, 0.6),
+            inset 0 0 25px rgba(192, 132, 252, 0.2),
+            0 0 50px rgba(168, 85, 247, 0.3);
+          transition: all 0.3s ease;
+          backdrop-filter: blur(8px);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .answer-purple::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.4), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .answer-purple:hover::before {
+          left: 100%;
+        }
+
+        .answer-purple:hover {
+          transform: scale(1.02);
+          box-shadow:
+            0 0 40px rgba(168, 85, 247, 0.8),
+            inset 0 0 40px rgba(192, 132, 252, 0.3),
+            0 0 80px rgba(168, 85, 247, 0.5);
+          border-color: #a855f7;
+        }
+
+        .answer-pink {
+          background: linear-gradient(135deg, #831843 0%, #ec4899 25%, #f472b6 75%, #831843 100%);
+          border: 3px solid #ec4899;
+          box-shadow:
+            0 0 25px rgba(236, 72, 153, 0.6),
+            inset 0 0 25px rgba(244, 114, 182, 0.2),
+            0 0 50px rgba(236, 72, 153, 0.3);
+          transition: all 0.3s ease;
+          backdrop-filter: blur(8px);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .answer-pink::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.4), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .answer-pink:hover::before {
+          left: 100%;
+        }
+
+        .answer-pink:hover {
+          transform: scale(1.02);
+          box-shadow:
+            0 0 40px rgba(236, 72, 153, 0.8),
+            inset 0 0 40px rgba(244, 114, 182, 0.3),
+            0 0 80px rgba(236, 72, 153, 0.5);
+          border-color: #ec4899;
+        }
+
+        .answer-cyan {
+          background: linear-gradient(135deg, #164e63 0%, #06b6d4 25%, #67e8f9 75%, #164e63 100%);
+          border: 3px solid #06b6d4;
+          box-shadow:
+            0 0 25px rgba(6, 182, 212, 0.6),
+            inset 0 0 25px rgba(103, 232, 249, 0.2),
+            0 0 50px rgba(6, 182, 212, 0.3);
+          transition: all 0.3s ease;
+          backdrop-filter: blur(8px);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .answer-cyan::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.4), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .answer-cyan:hover::before {
+          left: 100%;
+        }
+
+        .answer-cyan:hover {
+          transform: scale(1.02);
+          box-shadow:
+            0 0 40px rgba(6, 182, 212, 0.8),
+            inset 0 0 40px rgba(103, 232, 249, 0.3),
+            0 0 80px rgba(6, 182, 212, 0.5);
+          border-color: #06b6d4;
+        }
+
+        .answer-lime {
+          background: linear-gradient(135deg, #365314 0%, #65a30d 25%, #a3e635 75%, #365314 100%);
+          border: 3px solid #65a30d;
+          box-shadow:
+            0 0 25px rgba(101, 163, 13, 0.6),
+            inset 0 0 25px rgba(163, 230, 53, 0.2),
+            0 0 50px rgba(101, 163, 13, 0.3);
+          transition: all 0.3s ease;
+          backdrop-filter: blur(8px);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .answer-lime::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(101, 163, 13, 0.4), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .answer-lime:hover::before {
+          left: 100%;
+        }
+
+        .answer-lime:hover {
+          transform: scale(1.02);
+          box-shadow:
+            0 0 40px rgba(101, 163, 13, 0.8),
+            inset 0 0 40px rgba(163, 230, 53, 0.3),
+            0 0 80px rgba(101, 163, 13, 0.5);
+          border-color: #65a30d;
+        }
       `}</style>
 
       <div className="flex h-full flex-1 flex-col justify-between">
@@ -360,7 +508,12 @@ export default function Answers({
           </div>
         )}
 
-        <div className="mx-auto mb-4 grid w-full max-w-7xl grid-cols-2 gap-4 px-4 text-lg font-bold text-white md:text-xl">
+        <div className={`mx-auto mb-4 grid w-full max-w-7xl gap-4 px-4 text-lg font-bold text-white md:text-xl ${
+          answers.length <= 2 ? 'grid-cols-2' :
+          answers.length <= 4 ? 'grid-cols-2' :
+          answers.length <= 6 ? 'grid-cols-3' :
+          'grid-cols-4'
+        }`}>
           {answers.map((answer, key) => {
             // Supporta sia il formato stringa che oggetto
             const answerText = typeof answer === 'string' ? answer : (answer.text || '');

@@ -61,6 +61,10 @@ const Player = {
       points: 0,
       isEducational: player.isEducational || false,
       joinedAt: new Date().toISOString(),
+      // Student profile data
+      studentId: player.studentId || null,
+      isRegistered: player.isRegistered || false,
+      className: player.className || null,
     }
     socket.to(player.room).emit("manager:newPlayer", { ...playerData })
 

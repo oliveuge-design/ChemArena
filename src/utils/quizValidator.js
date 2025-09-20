@@ -8,13 +8,19 @@ const MAX_BACKUPS = 10;
 // Schema validation per quiz
 const QUIZ_SCHEMA = {
   required: ['id', 'title', 'subject', 'created', 'author', 'questions'],
+  optional: ['category', 'subcategory', 'tags', 'difficulty', 'password'],
   types: {
     id: 'string',
     title: 'string',
     subject: 'string',
     created: 'string',
     author: 'string',
-    questions: 'array'
+    questions: 'array',
+    category: 'string',
+    subcategory: 'string',
+    tags: 'array',
+    difficulty: 'string',
+    password: 'string'
   }
 };
 
@@ -92,8 +98,8 @@ function validateQuestion(question, index) {
 
   // Validazioni specifiche per domande
   if ('answers' in question) {
-    if (!Array.isArray(question.answers) || question.answers.length !== 4) {
-      errors.push(`Domanda ${index + 1}: 'answers' deve essere un array di esattamente 4 elementi`);
+    if (!Array.isArray(question.answers) || question.answers.length < 2 || question.answers.length > 8) {
+      errors.push(`Domanda ${index + 1}: 'answers' deve essere un array di 2-8 elementi, ricevuto ${question.answers?.length}`);
     } else {
       question.answers.forEach((answer, i) => {
         if (typeof answer !== 'string') {
@@ -104,8 +110,9 @@ function validateQuestion(question, index) {
   }
 
   if ('solution' in question) {
-    if (question.solution < 0 || question.solution > 3) {
-      errors.push(`Domanda ${index + 1}: 'solution' deve essere tra 0 e 3`);
+    const maxSolutionIndex = (question.answers?.length || 4) - 1;
+    if (question.solution < 0 || question.solution > maxSolutionIndex) {
+      errors.push(`Domanda ${index + 1}: 'solution' deve essere tra 0 e ${maxSolutionIndex} (${question.answers?.length || 4} opzioni), ricevuto ${question.solution}`);
     }
   }
 

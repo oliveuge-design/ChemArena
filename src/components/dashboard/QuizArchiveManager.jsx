@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { QuizArchive } from '../../utils/quizArchive';
+import { QUIZ_CATEGORIES, filterQuizzesByCategory, getCategoryStats } from '../../constants/categories';
 import toast from 'react-hot-toast';
 
 export default function QuizArchiveManager({ readOnly = false }) {
@@ -7,6 +8,12 @@ export default function QuizArchiveManager({ readOnly = false }) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedTab, setSelectedTab] = useState('browse');
+
+  // Filtri per categoria
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+
   const [newQuiz, setNewQuiz] = useState({
     title: '',
     subject: '',
@@ -92,6 +99,27 @@ export default function QuizArchiveManager({ readOnly = false }) {
       toast.error('Errore nel salvare il quiz');
     }
   };
+
+  // Logica di filtraggio
+  const filteredQuizzes = quizzes.filter(quiz => {
+    // Filtro per ricerca testuale
+    if (searchTerm) {
+      const searchLower = searchTerm.toLowerCase()
+      if (!quiz.title.toLowerCase().includes(searchLower) &&
+          !quiz.subject.toLowerCase().includes(searchLower) &&
+          !(quiz.author || '').toLowerCase().includes(searchLower)) {
+        return false
+      }
+    }
+
+    // Filtro per categoria
+    if (selectedCategory && quiz.category !== selectedCategory) return false
+    if (selectedSubcategory && quiz.subcategory !== selectedSubcategory) return false
+
+    return true
+  })
+
+  const categoryStats = getCategoryStats(quizzes)
 
   const editQuiz = (quiz) => {
     setEditingQuiz(quiz);
@@ -240,7 +268,106 @@ export default function QuizArchiveManager({ readOnly = false }) {
 
       {selectedTab === 'browse' && (
         <div>
-          <h3 className="text-xl font-bold mb-4">Quiz Salvati</h3>
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-xl font-bold">🗂️ Quiz Salvati ({quizzes.length})</h3>
+            <div className="text-sm text-gray-500">
+              {filteredQuizzes.length !== quizzes.length && `Filtrati: ${filteredQuizzes.length}`}
+            </div>
+          </div>
+
+          {/* Filtri e Ricerca */}
+          <div className="bg-gray-50 rounded-lg p-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+              {/* Ricerca */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">🔍 Cerca</label>
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Titolo, materia, autore..."
+                  className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              {/* Categoria */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">🎯 Categoria</label>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => {
+                    setSelectedCategory(e.target.value)
+                    setSelectedSubcategory('') // Reset sottocategoria
+                  }}
+                  className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="">Tutte le categorie</option>
+                  {Object.entries(QUIZ_CATEGORIES).map(([key, category]) => (
+                    <option key={key} value={key}>
+                      {category.label} ({categoryStats[key]?.total || 0})
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Sottocategoria */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">🏷️ Sottocategoria</label>
+                <select
+                  value={selectedSubcategory}
+                  onChange={(e) => setSelectedSubcategory(e.target.value)}
+                  disabled={!selectedCategory}
+                  className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+                >
+                  <option value="">Tutte le sottocategorie</option>
+                  {selectedCategory && Object.entries(QUIZ_CATEGORIES[selectedCategory]?.subcategories || {}).map(([key, subcategory]) => (
+                    <option key={key} value={key}>
+                      {subcategory.label} ({categoryStats[selectedCategory]?.subcategories[key] || 0})
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Reset Filtri */}
+              <div className="flex items-end">
+                <button
+                  onClick={() => {
+                    setSearchTerm('')
+                    setSelectedCategory('')
+                    setSelectedSubcategory('')
+                  }}
+                  className="w-full p-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 text-sm font-medium"
+                >
+                  🗑️ Reset Filtri
+                </button>
+              </div>
+            </div>
+
+            {/* Statistiche categorie */}
+            <div className="flex flex-wrap gap-2">
+              {Object.entries(categoryStats).map(([categoryKey, stats]) => {
+                const category = QUIZ_CATEGORIES[categoryKey]
+                if (!category) return null
+                return (
+                  <button
+                    key={categoryKey}
+                    onClick={() => {
+                      setSelectedCategory(categoryKey)
+                      setSelectedSubcategory('')
+                    }}
+                    className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                      selectedCategory === categoryKey
+                        ? category.color
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                  >
+                    {category.label} ({stats.total})
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
           {loading ? (
             <p>Caricamento...</p>
           ) : quizzes.length === 0 ? (
@@ -253,14 +380,48 @@ export default function QuizArchiveManager({ readOnly = false }) {
                 Crea il tuo primo quiz
               </button>
             </div>
+          ) : filteredQuizzes.length === 0 ? (
+            <div className="text-center py-8">
+              <p className="text-gray-500 mb-4">Nessun quiz corrisponde ai filtri selezionati</p>
+              <button
+                onClick={() => {
+                  setSearchTerm('')
+                  setSelectedCategory('')
+                  setSelectedSubcategory('')
+                }}
+                className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
+              >
+                Reset Filtri
+              </button>
+            </div>
           ) : (
             <div className="grid gap-4">
-              {quizzes.map(quiz => (
+              {filteredQuizzes.map(quiz => (
                 <div key={quiz.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
                       <h4 className="font-semibold text-lg">{quiz.title}</h4>
                       <p className="text-gray-600">Materia: {quiz.subject}</p>
+
+                      {/* Categorie */}
+                      {(quiz.category || quiz.subcategory) && (
+                        <div className="flex items-center space-x-2 mt-1 mb-2">
+                          {quiz.category && QUIZ_CATEGORIES[quiz.category] && (
+                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${QUIZ_CATEGORIES[quiz.category].color}`}>
+                              {QUIZ_CATEGORIES[quiz.category].label}
+                            </span>
+                          )}
+                          {quiz.subcategory && quiz.category && QUIZ_CATEGORIES[quiz.category]?.subcategories[quiz.subcategory] && (
+                            <>
+                              <span className="text-gray-400">→</span>
+                              <span className={`px-2 py-1 rounded-full text-xs font-medium ${QUIZ_CATEGORIES[quiz.category].subcategories[quiz.subcategory].color}`}>
+                                {QUIZ_CATEGORIES[quiz.category].subcategories[quiz.subcategory].label}
+                              </span>
+                            </>
+                          )}
+                        </div>
+                      )}
+
                       <p className="text-sm text-gray-500">
                         {quiz.questions.length} domande • Creato il {quiz.created}
                         {quiz.author && ` • da ${quiz.author}`}

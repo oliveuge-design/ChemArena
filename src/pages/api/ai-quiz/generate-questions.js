@@ -147,7 +147,7 @@ ISTRUZIONI:
 2. Crea esattamente ${config.numQuestions} domande a scelta multipla in italiano
 3. Materia: ${config.subject}
 4. ${difficultyInstructions[config.difficulty]}
-5. Ogni domanda deve avere esattamente 4 opzioni di risposta
+5. Ogni domanda deve avere esattamente ${config.numAnswers || 4} opzioni di risposta
 6. Una sola risposta corretta per domanda
 7. Le domande devono essere varie e coprire diversi aspetti del contenuto
 8. Evita domande troppo ovvie o troppo oscure
@@ -162,7 +162,7 @@ FORMATO RICHIESTO (rispondi SOLO con questo JSON valido, niente altro):
     {
       "id": "q1",
       "question": "Testo della domanda?",
-      "answers": ["Opzione A", "Opzione B", "Opzione C", "Opzione D"],
+      "answers": [${Array.from({length: config.numAnswers || 4}, (_, i) => `"Opzione ${String.fromCharCode(65 + i)}"`).join(', ')}],
       "solution": 0,
       "time": ${config.difficulty === 'hard' ? 30 : config.difficulty === 'medium' ? 20 : 15},
       "cooldown": 5,
@@ -173,7 +173,7 @@ FORMATO RICHIESTO (rispondi SOLO con questo JSON valido, niente altro):
 
 REGOLE CRITICHE:
 - Genera ESATTAMENTE ${config.numQuestions} domande complete
-- solution è l'indice (0-3) della risposta corretta
+- solution è l'indice (0-${(config.numAnswers || 4) - 1}) della risposta corretta
 - JSON deve essere valido e parsabile
 - NON aggiungere testo prima o dopo il JSON
 - Se il contenuto è lungo, distribuisci le domande su tutti gli argomenti trattati
@@ -270,12 +270,14 @@ function parseAIResponse(response, config) {
       .map((q, index) => ({
         id: q.id || `q${index + 1}`,
         question: q.question || 'Domanda non valida',
-        answers: Array.isArray(q.answers) && q.answers.length >= 3
-          ? (q.answers.length === 4
+        answers: Array.isArray(q.answers) && q.answers.length >= 2
+          ? (q.answers.length === (config.numAnswers || 4)
               ? q.answers
-              : [...q.answers, ...Array(4 - q.answers.length).fill('Opzione aggiuntiva')])
-          : ['Opzione A', 'Opzione B', 'Opzione C', 'Opzione D'],
-        solution: typeof q.solution === 'number' && q.solution >= 0 && q.solution <= 3
+              : q.answers.length > (config.numAnswers || 4)
+                ? q.answers.slice(0, config.numAnswers || 4)
+                : [...q.answers, ...Array((config.numAnswers || 4) - q.answers.length).fill('Opzione aggiuntiva')])
+          : Array.from({length: config.numAnswers || 4}, (_, i) => `Opzione ${String.fromCharCode(65 + i)}`),
+        solution: typeof q.solution === 'number' && q.solution >= 0 && q.solution < (config.numAnswers || 4)
           ? q.solution
           : 0,
         time: q.time || (config.difficulty === 'hard' ? 30 : config.difficulty === 'medium' ? 20 : 15),
@@ -328,12 +330,7 @@ function generateFallbackQuiz(config) {
       {
         id: 'q1',
         question: `Quale dei seguenti concetti è fondamentale in ${config.subject}?`,
-        answers: [
-          'Concetto A',
-          'Concetto B',
-          'Concetto C',
-          'Concetto D'
-        ],
+        answers: Array.from({length: config.numAnswers || 4}, (_, i) => `Concetto ${String.fromCharCode(65 + i)}`),
         solution: 0,
         time: 20,
         cooldown: 5,

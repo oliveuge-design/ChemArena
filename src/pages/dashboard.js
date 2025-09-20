@@ -12,6 +12,7 @@ import TeachersList from "@/components/dashboard/TeachersList"
 import ThemeCustomizer from "@/components/dashboard/ThemeCustomizer"
 import AnalyticsDashboard from "@/components/dashboard/AnalyticsDashboard"
 import AIQuizGeneratorStatic from "@/components/dashboard/AIQuizGeneratorStatic"
+import ClassManager from "@/components/dashboard/ClassManager"
 
 export default function Dashboard() {
   const router = useRouter()
@@ -52,7 +53,7 @@ export default function Dashboard() {
     // Controlla se c'è un tab specificato nella query string
     const urlParams = new URLSearchParams(window.location.search)
     const tabParam = urlParams.get('tab')
-    if (tabParam && ['archive', 'quizzes', 'create', 'ai-generator', 'launch', 'analytics', 'statistics', 'teachers', 'server', 'themes'].includes(tabParam)) {
+    if (tabParam && ['archive', 'quizzes', 'create', 'ai-generator', 'launch', 'analytics', 'statistics', 'teachers', 'classes', 'server', 'themes'].includes(tabParam)) {
       setActiveTab(tabParam)
     }
 
@@ -162,6 +163,7 @@ export default function Dashboard() {
     { id: 'themes', name: 'Personalizzazione', icon: '🎨' },
     { id: 'statistics', name: 'Statistiche', icon: '📊' },
     { id: 'teachers', name: 'Insegnanti', icon: '👥' },
+    { id: 'classes', name: 'Gestione Classi', icon: '🏫' },
     { id: 'server', name: 'Server', icon: '⚙️' }
   ]
 
@@ -302,6 +304,7 @@ export default function Dashboard() {
           {activeTab === 'themes' && <ThemeCustomizer />}
           {activeTab === 'statistics' && <Statistics />}
           {activeTab === 'teachers' && <TeachersList />}
+          {activeTab === 'classes' && <ClassManager />}
           {activeTab === 'server' && (
             <div className="space-y-6">
               <ServerControls />

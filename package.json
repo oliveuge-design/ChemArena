@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.0.1",
+    "bcryptjs": "^3.0.2",
     "clsx": "^2.1.0",
     "concurrently": "^8.2.2",
     "formidable": "^3.5.1",
@@ -43,7 +44,16 @@
     "type": "git",
     "url": "git+https://github.com/oliveuge-design/chemarena-ai-generator.git"
   },
-  "keywords": ["chemistry", "quiz", "ai", "education", "generator", "openai", "react", "nextjs"],
+  "keywords": [
+    "chemistry",
+    "quiz",
+    "ai",
+    "education",
+    "generator",
+    "openai",
+    "react",
+    "nextjs"
+  ],
   "author": "Eugenio Oliva",
   "license": "MIT",
   "bugs": {
