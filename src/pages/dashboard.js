@@ -10,7 +10,7 @@ import { DashboardErrorBoundary } from "@/components/ErrorBoundary"
 const ClassManager = dynamic(() => import("@/components/dashboard/ClassManager"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
 })
-const SmartGameLauncherLazy = dynamic(() => import("@/components/dashboard/SmartGameLauncher"), {
+const GameLauncherLazy = dynamic(() => import("@/components/dashboard/GameLauncher"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-80 rounded-lg"></div>
 })
 const QuizArchiveManager = dynamic(() => import("@/components/dashboard/QuizArchiveManager"), {
@@ -35,7 +35,7 @@ const AnalyticsDashboard = dynamic(() => import("@/components/dashboard/Analytic
 // Import sincroni per componenti leggeri (<300 righe)
 import QuizManager from "@/components/dashboard/QuizManager"
 import Statistics from "@/components/dashboard/Statistics"
-// SmartGameLauncher ora lazy-loaded come SmartGameLauncherLazy
+// GameLauncher ora lazy-loaded come GameLauncherLazy (con 6 modalità quiz)
 import ServerControls from "@/components/dashboard/ServerControls"
 import SystemRestart from "@/components/SystemRestart"
 import TeachersList from "@/components/dashboard/TeachersList"
@@ -353,7 +353,7 @@ function DashboardContent() {
           )}
           {activeTab === 'launch' && (
             <DashboardErrorBoundary>
-              <SmartGameLauncherLazy />
+              <GameLauncherLazy />
             </DashboardErrorBoundary>
           )}
           {activeTab === 'analytics' && (
