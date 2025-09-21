@@ -1,9 +1,12 @@
 import { cooldown, sleep } from "./cooldown.js"
+import QuizModeEngine from "./QuizModeEngine.js"
 
 export const startRound = async (game, io, socket, multiRoomManager = null) => {
   const question = game.questions[game.currentQuestion]
+  const gameMode = game.gameMode || 'standard'
+  const modeConfig = QuizModeEngine.getModeConfig(gameMode, question, game.gameSettings)
 
-  console.log(`🔍 StartRound: questionIndex=${game.currentQuestion}, started=${game.started}, room=${game.room}`)
+  console.log(`🔍 StartRound: questionIndex=${game.currentQuestion}, started=${game.started}, room=${game.room}, mode=${gameMode}`)
 
   // Funzione helper per verificare se la room esiste ancora
   const isRoomValid = () => {
@@ -33,6 +36,8 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
     data: {
       totalAnswers: game.questions[game.currentQuestion].answers.length,
       questionNumber: game.currentQuestion + 1,
+      gameMode: gameMode,
+      modeMessage: QuizModeEngine.getModeStatusMessage(gameMode, game)
     },
   })
 
@@ -50,6 +55,7 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       question: question.question,
       image: question.image,
       cooldown: question.cooldown,
+      gameMode: gameMode,
     },
   })
 
@@ -63,19 +69,28 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
 
   game.roundStartTime = Date.now()
 
-  io.to(game.room).emit("game:status", {
-    name: "SELECT_ANSWER",
-    data: {
-      question: question.question,
-      answers: question.answers,
-      image: question.image,
-      time: question.time,
-      totalPlayer: game.players.length,
-    },
-  })
+  // Gestione speciale per modalità "Risposte a Comparsa"
+  if (gameMode === 'appearing') {
+    console.log(`✨ Starting appearing answers mode for question ${game.currentQuestion + 1}`)
+    await QuizModeEngine.handleAppearingAnswers(game, io, question)
+  } else {
+    // Modalità standard o altre
+    io.to(game.room).emit("game:status", {
+      name: "SELECT_ANSWER",
+      data: {
+        question: question.question,
+        answers: question.answers,
+        image: question.image,
+        time: modeConfig.questionTime, // Usa il tempo della modalità
+        totalPlayer: game.players.length,
+        gameMode: gameMode,
+        modeConfig: modeConfig
+      },
+    })
+  }
 
-  console.log(`🔍 Starting question cooldown for ${question.time} seconds...`)
-  await cooldown(question.time, io, game.room)
+  console.log(`🔍 Starting question cooldown for ${modeConfig.questionTime} seconds (mode: ${gameMode})...`)
+  await cooldown(modeConfig.questionTime, io, game.room)
   console.log(`🔍 After question cooldown, game.started=${game.started}, room=${game.room}`)
 
   if (!isRoomValid()) {
@@ -84,31 +99,68 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
   }
 
   game.players.map(async (player) => {
+    // Verifica se il giocatore può ancora partecipare (modalità sopravvivenza)
+    if (!QuizModeEngine.canPlayerAnswer(game, player.id)) {
+      return // Salta giocatori eliminati
+    }
+
     let playerAnswer = await game.playersAnswer.find((p) => p.id === player.id)
 
     let isCorrect = playerAnswer
       ? playerAnswer.answer === question.solution
       : false
 
-    let points =
-      (isCorrect && Math.round(playerAnswer && playerAnswer.points)) || 0
+    // Calcola punteggio con il sistema delle modalità
+    let basePoints = (isCorrect && Math.round(playerAnswer && playerAnswer.points)) || 0
+    let answerTime = playerAnswer ? (playerAnswer.timestamp - game.roundStartTime) / 1000 : modeConfig.questionTime
+    let playerLives = game.playerLives ? game.playerLives[player.id] : null
 
-    player.points += points
+    let points = QuizModeEngine.calculateScore(
+      gameMode,
+      basePoints,
+      answerTime,
+      modeConfig.questionTime,
+      isCorrect,
+      playerLives
+    )
 
-    let sortPlayers = game.players.sort((a, b) => b.points - a.points)
+    // Gestisci eliminazione in modalità sopravvivenza
+    let survivalResult = { eliminated: false, livesRemaining: null }
+    if (gameMode === 'survival') {
+      survivalResult = QuizModeEngine.handleSurvivalElimination(game, player.id, isCorrect)
+    }
+
+    if (!survivalResult.eliminated) {
+      player.points += points
+    }
+
+    let sortPlayers = game.players
+      .filter(p => !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id))
+      .sort((a, b) => b.points - a.points)
 
     let rank = sortPlayers.findIndex((p) => p.id === player.id) + 1
     let aheadPlayer = sortPlayers[rank - 2]
+
+    let resultMessage = isCorrect ? "Nice !" : "Too bad"
+    if (survivalResult.eliminated) {
+      resultMessage = "💀 Eliminato!"
+    } else if (gameMode === 'survival' && survivalResult.livesRemaining !== null) {
+      resultMessage += ` (Vite: ${survivalResult.livesRemaining})`
+    }
 
     io.to(player.id).emit("game:status", {
       name: "SHOW_RESULT",
       data: {
         correct: isCorrect,
-        message: isCorrect ? "Nice !" : "Too bad",
+        message: resultMessage,
         points: points,
         myPoints: player.points,
-        rank,
+        rank: survivalResult.eliminated ? 'ELIMINATO' : rank,
         aheadOfMe: aheadPlayer ? aheadPlayer.username : null,
+        gameMode: gameMode,
+        eliminated: survivalResult.eliminated,
+        livesRemaining: survivalResult.livesRemaining,
+        speedBonus: points > basePoints ? points - basePoints : 0
       },
     })
   })
@@ -119,7 +171,11 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
     totalType[answer] = (totalType[answer] || 0) + 1
   })
 
-  // Manager
+  // Manager - Invia statistiche aggiornate con informazioni modalità
+  const activePlayers = game.players.filter(p =>
+    !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id)
+  )
+
   io.to(game.manager).emit("game:status", {
     name: "SHOW_RESPONSES",
     data: {
@@ -128,6 +184,12 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       correct: game.questions[game.currentQuestion].solution,
       answers: game.questions[game.currentQuestion].answers,
       image: game.questions[game.currentQuestion].image,
+      gameMode: gameMode,
+      modeConfig: modeConfig,
+      activePlayers: activePlayers.length,
+      totalPlayers: game.players.length,
+      eliminatedPlayers: game.eliminatedPlayers ? game.eliminatedPlayers.length : 0,
+      canGameContinue: QuizModeEngine.canGameContinue(game)
     },
   })
 

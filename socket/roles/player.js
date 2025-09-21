@@ -1,6 +1,7 @@
 import convertTimeToPoint from "../utils/convertTimeToPoint.js"
 import { abortCooldown } from "../utils/cooldown.js"
 import { inviteCodeValidator, usernameValidator } from "../validator.js"
+import QuizModeEngine from "../utils/QuizModeEngine.js"
 
 const Player = {
   checkRoom: async (game, io, socket, roomId) => {
@@ -83,28 +84,58 @@ const Player = {
   selectedAnswer: (game, io, socket, answerKey) => {
     const player = game.players.find((player) => player.id === socket.id)
     const question = game.questions[game.currentQuestion]
+    const gameMode = game.gameMode || 'standard'
 
     if (!player) {
       return
     }
 
+    // Verifica se il giocatore può ancora rispondere (modalità sopravvivenza)
+    if (!QuizModeEngine.canPlayerAnswer(game, socket.id)) {
+      socket.emit("game:status", {
+        name: "ELIMINATED",
+        data: { text: "💀 Sei stato eliminato!" },
+      })
+      return
+    }
+
+    // Verifica se ha già risposto
     if (game.playersAnswer.find((p) => p.id === socket.id)) {
       return
     }
 
+    // Ottieni configurazione modalità per tempi appropriati
+    const modeConfig = QuizModeEngine.getModeConfig(gameMode, question, game.gameSettings)
+
+    // Aggiungi risposta con timestamp per calcolo bonus velocità
     game.playersAnswer.push({
       id: socket.id,
       answer: answerKey,
-      points: convertTimeToPoint(game.roundStartTime, question.time),
+      points: convertTimeToPoint(game.roundStartTime, modeConfig.questionTime),
+      timestamp: Date.now(), // Per calcolo bonus velocità preciso
+      gameMode: gameMode
     })
+
+    console.log(`🎯 Player ${player.username} answered ${answerKey} in mode ${gameMode}`)
 
     socket.emit("game:status", {
       name: "WAIT",
-      data: { text: "Waiting for the players to answer" },
+      data: {
+        text: "Waiting for the players to answer",
+        gameMode: gameMode,
+        answeredAt: Date.now()
+      },
     })
+
     socket.to(game.room).emit("game:playerAnswer", game.playersAnswer.length)
 
-    if (game.playersAnswer.length === game.players.length) {
+    // Verifica se tutti i giocatori attivi hanno risposto
+    const activePlayers = game.players.filter(p =>
+      !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id)
+    )
+
+    if (game.playersAnswer.length === activePlayers.length) {
+      console.log(`✅ All active players answered (${game.playersAnswer.length}/${activePlayers.length}), aborting cooldown`)
       abortCooldown(game, io, game.room)
     }
   },

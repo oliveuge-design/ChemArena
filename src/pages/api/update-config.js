@@ -45,6 +45,8 @@ const QUIZZ_CONFIG = {
   password: "${settings.password || quiz.password}",
   subject: "${processedQuiz.subject}",
   questions: ${JSON.stringify(processedQuiz.questions, null, 4)},
+  gameMode: "${settings.gameMode || 'standard'}",
+  gameSettings: ${JSON.stringify(settings, null, 4)},
 }
 
 // DONT CHANGE
@@ -56,6 +58,9 @@ export const GAME_STATE_INIT = {
   room: null,
   currentQuestion: 0,
   roundStartTime: 0,
+  eliminatedPlayers: [],
+  bonusMultiplier: 1,
+  currentAnswers: {},
   ...QUIZZ_CONFIG,
 }
 `
@@ -75,6 +80,7 @@ export const GAME_STATE_INIT = {
     console.log('✅ File config.mjs aggiornato con successo')
     console.log(`📝 Quiz: ${processedQuiz.subject}`)
     console.log(`🔑 Quiz configuration updated with new password`)
+    console.log(`🎮 Game Mode: ${settings.gameMode || 'standard'}`)
     console.log(`📊 Domande: ${processedQuiz.questions.length}`)
 
     res.status(200).json({ 
