@@ -1,0 +1,164 @@
+{
+  "name": "ChemArena - Quiz di Chimica Interattivo",
+  "short_name": "ChemArena",
+  "description": "Piattaforma di quiz interattivi per l'apprendimento della chimica con modalità multiplayer real-time",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#667eea",
+  "background_color": "#1f2937",
+  "lang": "it",
+  "dir": "ltr",
+
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Gioca Subito",
+      "short_name": "Gioca",
+      "description": "Accedi direttamente al gioco come studente",
+      "url": "/game",
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "any"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Admin",
+      "short_name": "Admin",
+      "description": "Accesso amministratore per gestire quiz",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "any"
+        }
+      ]
+    },
+    {
+      "name": "Crea Quiz",
+      "short_name": "Manager",
+      "description": "Crea e gestisci una nuova sessione di gioco",
+      "url": "/manager",
+      "icons": [
+        {
+          "src": "/icon.svg",
+          "sizes": "any"
+        }
+      ]
+    }
+  ],
+
+  "categories": [
+    "education",
+    "games",
+    "productivity"
+  ],
+
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dashboard principale ChemArena"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Gioco interattivo mobile"
+    }
+  ],
+
+  "prefer_related_applications": false,
+
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+
+  "file_handlers": [
+    {
+      "action": "/dashboard?tab=create",
+      "accept": {
+        "application/json": [".json"],
+        "text/plain": [".txt"]
+      }
+    }
+  ],
+
+  "protocol_handlers": [
+    {
+      "protocol": "web+chemarena",
+      "url": "/game?pin=%s"
+    }
+  ],
+
+  "share_target": {
+    "action": "/dashboard?tab=import",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "quiz_file",
+          "accept": ["application/json", ".json"]
+        }
+      ]
+    }
+  },
+
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+
+  "id": "chemarena-app",
+  "related_applications": [],
+
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ]
+}

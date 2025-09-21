@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import TronButton from '@/components/TronButton'
+import PWAInstallButton from '@/components/PWAInstallButton'
 
 export default function Home() {
   const router = useRouter()
@@ -139,13 +140,18 @@ export default function Home() {
           </div>
           
           {/* Pulsante Admin in basso a sinistra */}
-          <button 
-            onClick={() => router.push('/login')} 
+          <button
+            onClick={() => router.push('/login')}
             className="admin-button"
           >
             <span className="admin-icon">⚙️</span>
             <span className="admin-text">ADMIN</span>
           </button>
+
+          {/* PWA Install Button in alto a destra */}
+          <div className="absolute top-4 right-4 z-30">
+            <PWAInstallButton />
+          </div>
         </header>
 
         {/* Contenuto principale */}
