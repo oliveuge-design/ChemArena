@@ -559,7 +559,57 @@ async function handlePut(req, res) {
     const { action, studentId, gameData, stats } = req.body;
     const db = readStudentsDB();
 
-    if (action === 'update-stats' && studentId && gameData) {
+    if (action === 'update' && studentId) {
+      // Update generale studente (nickname, fullName, email, etc.)
+      const { updateData } = req.body;
+      const studentIndex = db.students.findIndex(s => s.id === studentId && s.isActive);
+
+      if (studentIndex === -1) {
+        return res.status(404).json({ error: 'Studente non trovato' });
+      }
+
+      const student = db.students[studentIndex];
+
+      // Campi modificabili
+      const allowedFields = ['nickname', 'fullName', 'email', 'classes', 'teachers'];
+
+      for (const field of allowedFields) {
+        if (updateData[field] !== undefined) {
+          // Validazione nickname univoco se cambiato
+          if (field === 'nickname' && updateData.nickname !== student.nickname) {
+            const existingStudent = db.students.find(s =>
+              s.nickname.toLowerCase() === updateData.nickname.toLowerCase() &&
+              s.id !== studentId &&
+              s.isActive
+            );
+            if (existingStudent) {
+              return res.status(400).json({ error: 'Nickname già in uso da un altro studente' });
+            }
+          }
+
+          student[field] = updateData[field];
+        }
+      }
+
+      if (writeStudentsDB(db)) {
+        console.log(`✅ Studente aggiornato: ${student.nickname} (${student.fullName})`);
+        return res.status(200).json({
+          success: true,
+          student: {
+            id: student.id,
+            nickname: student.nickname,
+            fullName: student.fullName,
+            email: student.email,
+            classes: student.classes || [student.className], // Compatibility
+            statistics: student.statistics
+          },
+          message: 'Studente aggiornato con successo'
+        });
+      } else {
+        return res.status(500).json({ error: 'Errore nel salvataggio' });
+      }
+
+    } else if (action === 'update-stats' && studentId && gameData) {
       const studentIndex = db.students.findIndex(s => s.id === studentId && s.isActive);
       if (studentIndex === -1) {
         return res.status(404).json({ error: 'Studente non trovato' });

@@ -82,6 +82,299 @@
         },
         "teacherStats": {}
       }
+    },
+    {
+      "id": "student_1758398590224_bz26p9d7f",
+      "nickname": "marco_bianchi_new",
+      "fullName": "Marco Bianchi (Aggiornato)",
+      "email": "marco.bianchi@scuola.it",
+      "classes": [
+        "3A_CHIMICA"
+      ],
+      "teachers": [
+        "teacher_test"
+      ],
+      "createdAt": "2025-09-20T20:03:10.224Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {},
+        "teacherStats": {
+          "teacher_test": {
+            "gamesPlayed": 0,
+            "totalPoints": 0,
+            "averageScore": 0,
+            "subjects": [],
+            "lastGameDate": null,
+            "bestScore": 0,
+            "improvementRate": 0
+          }
+        },
+        "progressTracking": {
+          "weeklyProgress": [],
+          "monthlyProgress": [],
+          "subjectProgress": {},
+          "difficultyProgress": {},
+          "streaks": {
+            "current": 0,
+            "longest": 0,
+            "lastGameDate": null
+          }
+        }
+      }
+    },
+    {
+      "id": "student_1758398590224_q8dyvjmsx",
+      "nickname": "sara_n",
+      "fullName": "Sara Neri",
+      "email": "sara.neri@scuola.it",
+      "classes": [
+        "3A_CHIMICA"
+      ],
+      "teachers": [
+        "teacher_test"
+      ],
+      "createdAt": "2025-09-20T20:03:10.224Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {},
+        "teacherStats": {
+          "teacher_test": {
+            "gamesPlayed": 0,
+            "totalPoints": 0,
+            "averageScore": 0,
+            "subjects": [],
+            "lastGameDate": null,
+            "bestScore": 0,
+            "improvementRate": 0
+          }
+        },
+        "progressTracking": {
+          "weeklyProgress": [],
+          "monthlyProgress": [],
+          "subjectProgress": {},
+          "difficultyProgress": {},
+          "streaks": {
+            "current": 0,
+            "longest": 0,
+            "lastGameDate": null
+          }
+        }
+      }
+    },
+    {
+      "id": "student_1758399467521_ros8rw9bp",
+      "nickname": "Bullo",
+      "className": "3ACH",
+      "fullName": "Andrea Pizzardo",
+      "email": "",
+      "createdAt": "2025-09-20T20:17:47.521Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {}
+      }
+    },
+    {
+      "id": "student_1758399842934_euzsilzxp",
+      "nickname": "alice_test",
+      "fullName": "Alice Test",
+      "email": "alice.test@studente.it",
+      "classes": [
+        "3A_CHIMICA"
+      ],
+      "teachers": [],
+      "createdAt": "2025-09-20T20:24:02.934Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {},
+        "teacherStats": {},
+        "progressTracking": {
+          "weeklyProgress": [],
+          "monthlyProgress": [],
+          "subjectProgress": {},
+          "difficultyProgress": {},
+          "streaks": {
+            "current": 0,
+            "longest": 0,
+            "lastGameDate": null
+          }
+        }
+      }
+    },
+    {
+      "id": "student_1758400281728_zhx7dsgsb",
+      "nickname": "test_final",
+      "fullName": "Test Student Final",
+      "email": "",
+      "classes": [
+        "3A_CHIMICA"
+      ],
+      "teachers": [
+        "teacher_test"
+      ],
+      "createdAt": "2025-09-20T20:31:21.728Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {},
+        "teacherStats": {
+          "teacher_test": {
+            "gamesPlayed": 0,
+            "totalPoints": 0,
+            "averageScore": 0,
+            "subjects": [],
+            "lastGameDate": null,
+            "bestScore": 0,
+            "improvementRate": 0
+          }
+        },
+        "progressTracking": {
+          "weeklyProgress": [],
+          "monthlyProgress": [],
+          "subjectProgress": {},
+          "difficultyProgress": {},
+          "streaks": {
+            "current": 0,
+            "longest": 0,
+            "lastGameDate": null
+          }
+        }
+      }
+    },
+    {
+      "id": "student_1758400336499_buasa1y01",
+      "nickname": "pippo",
+      "fullName": "marco carta",
+      "email": "",
+      "classes": [
+        "3ACH"
+      ],
+      "teachers": [],
+      "createdAt": "2025-09-20T20:32:16.499Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {},
+        "teacherStats": {},
+        "progressTracking": {
+          "weeklyProgress": [],
+          "monthlyProgress": [],
+          "subjectProgress": {},
+          "difficultyProgress": {},
+          "streaks": {
+            "current": 0,
+            "longest": 0,
+            "lastGameDate": null
+          }
+        }
+      }
+    },
+    {
+      "id": "student_1758400562209_fsw4jctn9",
+      "nickname": "ggg",
+      "fullName": "gggg",
+      "email": "",
+      "classes": [
+        "3ACH"
+      ],
+      "teachers": [],
+      "createdAt": "2025-09-20T20:36:02.209Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {},
+        "teacherStats": {},
+        "progressTracking": {
+          "weeklyProgress": [],
+          "monthlyProgress": [],
+          "subjectProgress": {},
+          "difficultyProgress": {},
+          "streaks": {
+            "current": 0,
+            "longest": 0,
+            "lastGameDate": null
+          }
+        }
+      }
+    },
+    {
+      "id": "student_1758400596167_a945h862o",
+      "nickname": "ddd",
+      "fullName": "ddd",
+      "email": "",
+      "classes": [
+        "3ACH"
+      ],
+      "teachers": [],
+      "createdAt": "2025-09-20T20:36:36.167Z",
+      "isActive": true,
+      "passwordHash": null,
+      "requiresPassword": false,
+      "statistics": {
+        "totalGames": 0,
+        "totalPoints": 0,
+        "correctAnswers": 0,
+        "averageScore": 0,
+        "gamesHistory": [],
+        "subjectStats": {},
+        "teacherStats": {},
+        "progressTracking": {
+          "weeklyProgress": [],
+          "monthlyProgress": [],
+          "subjectProgress": {},
+          "difficultyProgress": {},
+          "streaks": {
+            "current": 0,
+            "longest": 0,
+            "lastGameDate": null
+          }
+        }
+      }
     }
   ],
   "classes": [
@@ -131,21 +424,272 @@
         "averageScore": 0,
         "lastGameDate": null
       }
+    },
+    {
+      "id": "3A_CHIMICA",
+      "name": "3A_CHIMICA",
+      "description": "Classe importata automaticamente da CSV - 3A_CHIMICA",
+      "school": "Importata da Google Sheets",
+      "academicYear": "2025/2026",
+      "teachers": [
+        "teacher_test"
+      ],
+      "students": [
+        "student_1758398590224_bz26p9d7f",
+        "student_1758398590224_q8dyvjmsx",
+        "student_1758399842934_euzsilzxp",
+        "student_1758400281728_zhx7dsgsb"
+      ],
+      "createdAt": "2025-09-20T20:03:10.224Z",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": false,
+        "allowAnonymous": true,
+        "trackStats": true,
+        "autoEnrollment": true
+      },
+      "statistics": {
+        "totalStudents": 4,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null,
+        "progressTracking": {
+          "weeklyAverage": 0,
+          "monthlyAverage": 0,
+          "improvementRate": 0
+        }
+      }
+    },
+    {
+      "id": "CLASSE_TEST",
+      "name": "Classe Test",
+      "description": "Test classe enhanced",
+      "school": "Test School",
+      "academicYear": "2025/2026",
+      "teachers": [
+        "teacher_test"
+      ],
+      "students": [],
+      "createdAt": "2025-09-20T20:12:48.001Z",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": false,
+        "allowAnonymous": true,
+        "trackStats": true,
+        "autoEnrollment": true
+      },
+      "statistics": {
+        "totalStudents": 0,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null,
+        "progressTracking": {
+          "weeklyAverage": 0,
+          "monthlyAverage": 0,
+          "improvementRate": 0
+        }
+      }
+    },
+    {
+      "id": "3ACH",
+      "name": "3ACH",
+      "description": "Classe 3ACH",
+      "school": "Scuola non specificata",
+      "academicYear": "2025/2026",
+      "teachers": [],
+      "students": [
+        "student_1758400336499_buasa1y01",
+        "student_1758400562209_fsw4jctn9",
+        "student_1758400596167_a945h862o"
+      ],
+      "createdAt": "2025-09-20T20:17:16.154Z",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": false,
+        "allowAnonymous": true,
+        "trackStats": true,
+        "autoEnrollment": true
+      },
+      "statistics": {
+        "totalStudents": 3,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null,
+        "progressTracking": {
+          "weeklyAverage": 0,
+          "monthlyAverage": 0,
+          "improvementRate": 0
+        }
+      }
+    },
+    {
+      "id": "3ACH_1",
+      "name": "3ACH",
+      "description": "Classe 3ACH",
+      "school": "Scuola non specificata",
+      "academicYear": "2025/2026",
+      "teachers": [],
+      "students": [],
+      "createdAt": "2025-09-20T20:25:46.030Z",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": false,
+        "allowAnonymous": true,
+        "trackStats": true,
+        "autoEnrollment": true
+      },
+      "statistics": {
+        "totalStudents": 0,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null,
+        "progressTracking": {
+          "weeklyAverage": 0,
+          "monthlyAverage": 0,
+          "improvementRate": 0
+        }
+      }
+    },
+    {
+      "id": "3BCH",
+      "name": "3BCH",
+      "description": "Classe 3BCH",
+      "school": "Scuola non specificata",
+      "academicYear": "2025/2026",
+      "teachers": [],
+      "students": [],
+      "createdAt": "2025-09-20T20:26:43.906Z",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": false,
+        "allowAnonymous": true,
+        "trackStats": true,
+        "autoEnrollment": true
+      },
+      "statistics": {
+        "totalStudents": 0,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null,
+        "progressTracking": {
+          "weeklyAverage": 0,
+          "monthlyAverage": 0,
+          "improvementRate": 0
+        }
+      }
+    },
+    {
+      "id": "3ACH_2",
+      "name": "3ACH",
+      "description": "Classe 3ACH",
+      "school": "Scuola non specificata",
+      "academicYear": "2025/2026",
+      "teachers": [],
+      "students": [],
+      "createdAt": "2025-09-20T20:27:38.766Z",
+      "isActive": true,
+      "settings": {
+        "requiresPassword": false,
+        "allowAnonymous": true,
+        "trackStats": true,
+        "autoEnrollment": true
+      },
+      "statistics": {
+        "totalStudents": 0,
+        "totalGames": 0,
+        "averageScore": 0,
+        "lastGameDate": null,
+        "progressTracking": {
+          "weeklyAverage": 0,
+          "monthlyAverage": 0,
+          "improvementRate": 0
+        }
+      }
     }
   ],
   "gameResults": [],
   "relationships": {
-    "studentTeachers": [],
-    "classTeachers": []
+    "studentTeachers": [
+      {
+        "studentId": "student_1758398590224_bz26p9d7f",
+        "teacherId": "teacher_test",
+        "subjects": [],
+        "classrooms": [
+          "3A_CHIMICA"
+        ],
+        "startDate": "2025-09-20",
+        "isActive": true,
+        "statistics": {
+          "gamesPlayed": 0,
+          "averageScore": 0,
+          "lastInteraction": null,
+          "progressNotes": []
+        }
+      },
+      {
+        "studentId": "student_1758398590224_q8dyvjmsx",
+        "teacherId": "teacher_test",
+        "subjects": [],
+        "classrooms": [
+          "3A_CHIMICA"
+        ],
+        "startDate": "2025-09-20",
+        "isActive": true,
+        "statistics": {
+          "gamesPlayed": 0,
+          "averageScore": 0,
+          "lastInteraction": null,
+          "progressNotes": []
+        }
+      },
+      {
+        "studentId": "student_1758400281728_zhx7dsgsb",
+        "teacherId": "teacher_test",
+        "subjects": [],
+        "classrooms": [
+          "3A_CHIMICA"
+        ],
+        "startDate": "2025-09-20",
+        "isActive": true,
+        "statistics": {
+          "gamesPlayed": 0,
+          "averageScore": 0,
+          "lastInteraction": null,
+          "progressNotes": []
+        }
+      }
+    ],
+    "classTeachers": [
+      {
+        "classId": "3A_CHIMICA",
+        "teacherId": "teacher_test",
+        "subjects": [
+          "Chimica"
+        ],
+        "role": "imported",
+        "startDate": "2025-09-20",
+        "isActive": true
+      },
+      {
+        "classId": "CLASSE_TEST",
+        "teacherId": "teacher_test",
+        "subjects": [
+          "Chimica"
+        ],
+        "role": "teacher",
+        "startDate": "2025-09-20",
+        "isActive": true
+      }
+    ]
   },
   "metadata": {
     "version": "2.0",
     "lastUpdate": "2025-09-20",
-    "totalStudents": 2,
-    "totalClasses": 2,
-    "totalTeachers": 0,
+    "totalStudents": 10,
+    "totalClasses": 8,
+    "totalTeachers": 1,
     "totalGameResults": 0,
-    "totalRelationships": 0,
+    "totalRelationships": 5,
     "migrationDate": "2025-09-20T19:29:03.845Z",
     "structure": "enhanced_many_to_many"
   }

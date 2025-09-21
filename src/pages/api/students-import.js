@@ -238,7 +238,7 @@ async function executeImport(studentsData, validation) {
 
   try {
     // 1. Crea classi mancanti
-    for (const className of validation.classesToCreate) {
+    for (const className of validation.classesToCreate || []) {
       const classId = className.replace(/\s+/g, '_').toUpperCase();
       const newClass = {
         id: classId,
@@ -275,7 +275,7 @@ async function executeImport(studentsData, validation) {
     }
 
     // 2. Processa ogni studente
-    for (const studentData of validation.valid) {
+    for (const studentData of validation.valid || []) {
       try {
         const className = studentData.className;
         const classId = className.replace(/\s+/g, '_').toUpperCase();
@@ -418,22 +418,28 @@ export default async function handler(req, res) {
           return res.status(400).json({ error: 'Array studenti richiesto per validazione' });
         }
 
-        const validationResult = await validateImportData(students);
-        return res.status(200).json(validationResult);
+        const validateResult = await validateImportData(students);
+        return res.status(200).json(validateResult);
 
       case 'import':
-        if (!students || !validation) {
-          return res.status(400).json({ error: 'Dati studenti e validazione richiesti per import' });
+        if (!students) {
+          return res.status(400).json({ error: 'Array studenti richiesto per import' });
         }
 
-        if (validation.errors && validation.errors.length > 0) {
+        // Genera sempre una validazione completa
+        console.log('🔍 Generating validation for students:', students.length);
+        const importValidation = await validateImportData(students);
+        console.log('🔍 Validation result:', JSON.stringify(importValidation, null, 2));
+
+        if (importValidation.errors && importValidation.errors.length > 0) {
           return res.status(400).json({
             error: 'Errori di validazione devono essere risolti prima dell\'import',
-            validationErrors: validation.errors
+            validationErrors: importValidation.errors
           });
         }
 
-        const importResult = await executeImport(students, validation);
+        console.log('🔍 Proceeding with import using validation:', Object.keys(importValidation));
+        const importResult = await executeImport(students, importValidation);
 
         if (importResult.errors && importResult.errors.length > 0 && importResult.success.students === 0) {
           return res.status(400).json(importResult);

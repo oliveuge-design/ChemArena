@@ -9,7 +9,10 @@
     "lint": "next lint",
     "clean": "rm -rf .next out",
     "type-check": "tsc --noEmit",
-    "analyze": "ANALYZE=true npm run build"
+    "analyze": "ANALYZE=true npm run build",
+    "security:validate": "node scripts/validate-env.js",
+    "security:scan": "npm run security:validate && git diff --cached --name-only | xargs -I {} grep -l \"sk-\" {} || true",
+    "security:setup": "node scripts/setup-security.js"
   },
   "dependencies": {
     "autoprefixer": "^10.0.1",

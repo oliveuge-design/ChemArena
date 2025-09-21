@@ -14,6 +14,18 @@
       "privacyDate": "2025-09-11"
     },
     {
+      "id": "teacher_test",
+      "name": "Prof. Test Teacher",
+      "email": "teacher@scuola.it",
+      "password": "Test123!",
+      "subject": "Chimica",
+      "role": "teacher",
+      "active": true,
+      "createdAt": "2025-09-20",
+      "acceptedPrivacy": true,
+      "privacyDate": "2025-09-20"
+    },
+    {
       "id": "teacher_001",
       "name": "Prof. Mario Rossi",
       "email": "mario.rossi@chemarena.edu",

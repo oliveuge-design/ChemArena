@@ -5,9 +5,21 @@ import TronButton from '@/components/TronButton'
 export default function Home() {
   const router = useRouter()
   const [showQuickJoin, setShowQuickJoin] = useState(false)
+  const [showStudentOptions, setShowStudentOptions] = useState(false)
+  const [showStudentRegistration, setShowStudentRegistration] = useState(false)
   const [gamePin, setGamePin] = useState('')
   const [playerName, setPlayerName] = useState('')
   const [isQRAccess, setIsQRAccess] = useState(false)
+
+  // Stati per registrazione studente
+  const [studentForm, setStudentForm] = useState({
+    nickname: '',
+    fullName: '',
+    email: '',
+    selectedClass: ''
+  })
+  const [availableClasses, setAvailableClasses] = useState([])
+  const [registrationStatus, setRegistrationStatus] = useState('')
   
   // QR access detection - mantenuto semplice
   useEffect(() => {
@@ -21,6 +33,67 @@ export default function Home() {
     if (gamePin.trim() && playerName.trim()) {
       router.push(`/game?pin=${gamePin.trim()}&name=${encodeURIComponent(playerName.trim())}`)
     }
+  }
+
+  const loadAvailableClasses = async () => {
+    try {
+      const response = await fetch('/api/classes?action=list')
+      const data = await response.json()
+      setAvailableClasses(data.classes || [])
+    } catch (error) {
+      console.error('Errore caricamento classi:', error)
+      setAvailableClasses([])
+    }
+  }
+
+  const handleStudentRegistration = async (e) => {
+    e.preventDefault()
+    setRegistrationStatus('loading')
+
+    try {
+      // Registra lo studente tramite il sistema import
+      const response = await fetch('/api/students-import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'import',
+          students: [{
+            fullName: studentForm.fullName,
+            nickname: studentForm.nickname,
+            email: studentForm.email,
+            className: studentForm.selectedClass,
+            teacherEmailsList: [] // Verrà gestito automaticamente dal sistema
+          }]
+        })
+      })
+
+      const data = await response.json()
+
+      if (data.success && data.success.students > 0) {
+        setRegistrationStatus('success')
+        setStudentForm({ nickname: '', fullName: '', email: '', selectedClass: '' })
+
+        // Reindirizza automaticamente al login dopo 2 secondi
+        setTimeout(() => {
+          setShowStudentRegistration(false)
+          setShowStudentOptions(false)
+          setShowQuickJoin(true)
+          setPlayerName(studentForm.nickname)
+        }, 2000)
+      } else {
+        setRegistrationStatus('error')
+        console.error('Errore registrazione:', data.errors)
+      }
+    } catch (error) {
+      console.error('Errore registrazione studente:', error)
+      setRegistrationStatus('error')
+    }
+  }
+
+  const openStudentRegistration = () => {
+    setShowStudentRegistration(true)
+    setShowStudentOptions(false)
+    loadAvailableClasses()
   }
 
   return (
@@ -150,9 +223,9 @@ export default function Home() {
                 
                 <TronButton
                   title="STUDENTE"
-                  subtitle="Partecipa ai quiz"
+                  subtitle="Partecipa o registrati"
                   icon="🎓"
-                  onClick={() => setShowQuickJoin(!showQuickJoin)}
+                  onClick={() => setShowStudentOptions(!showStudentOptions)}
                   variant="secondary"
                 />
                 
@@ -212,6 +285,133 @@ export default function Home() {
                         {isQRAccess ? '🚀 ENTRA VELOCEMENTE' : 'ENTRA'}
                       </button>
                     </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Opzioni Studente */}
+              {showStudentOptions && (
+                <div className="mt-8 max-w-md mx-auto quick-join-panel">
+                  <div className="tron-panel p-6">
+                    <h3 className="text-cyan-400 text-xl font-bold mb-6 text-center">
+                      🎓 AREA STUDENTE
+                    </h3>
+                    <div className="space-y-4">
+                      <button
+                        onClick={() => {
+                          setShowStudentOptions(false)
+                          setShowQuickJoin(true)
+                        }}
+                        className="tron-join-btn w-full"
+                      >
+                        🚀 ENTRA IN UN QUIZ
+                      </button>
+                      <button
+                        onClick={openStudentRegistration}
+                        className="tron-register-btn w-full"
+                      >
+                        📝 REGISTRATI NELLA CLASSE
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Registrazione Studente */}
+              {showStudentRegistration && (
+                <div className="mt-8 max-w-lg mx-auto quick-join-panel">
+                  <div className="tron-panel p-6">
+                    <h3 className="text-cyan-400 text-xl font-bold mb-6 text-center">
+                      📝 REGISTRAZIONE STUDENTE
+                    </h3>
+
+                    {registrationStatus === 'success' && (
+                      <div className="bg-green-900/20 border border-green-400/30 rounded-lg p-4 mb-6">
+                        <p className="text-green-300 text-center">
+                          ✅ Registrazione completata! Ti stiamo reindirizzando...
+                        </p>
+                      </div>
+                    )}
+
+                    {registrationStatus === 'error' && (
+                      <div className="bg-red-900/20 border border-red-400/30 rounded-lg p-4 mb-6">
+                        <p className="text-red-300 text-center">
+                          ❌ Errore nella registrazione. Riprova o contatta il tuo insegnante.
+                        </p>
+                      </div>
+                    )}
+
+                    <form onSubmit={handleStudentRegistration} className="space-y-4">
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="Nickname (per giocare)..."
+                          value={studentForm.nickname}
+                          onChange={(e) => setStudentForm({...studentForm, nickname: e.target.value})}
+                          className="tron-input w-full"
+                          required
+                          disabled={registrationStatus === 'loading'}
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          placeholder="Nome e Cognome..."
+                          value={studentForm.fullName}
+                          onChange={(e) => setStudentForm({...studentForm, fullName: e.target.value})}
+                          className="tron-input w-full"
+                          required
+                          disabled={registrationStatus === 'loading'}
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="email"
+                          placeholder="Email (opzionale)..."
+                          value={studentForm.email}
+                          onChange={(e) => setStudentForm({...studentForm, email: e.target.value})}
+                          className="tron-input w-full"
+                          disabled={registrationStatus === 'loading'}
+                        />
+                      </div>
+                      <div>
+                        <select
+                          value={studentForm.selectedClass}
+                          onChange={(e) => setStudentForm({...studentForm, selectedClass: e.target.value})}
+                          className="tron-input w-full"
+                          required
+                          disabled={registrationStatus === 'loading'}
+                        >
+                          <option value="">Seleziona la tua classe...</option>
+                          {availableClasses.map((cls) => (
+                            <option key={cls.id} value={cls.name}>
+                              {cls.name} - {cls.school}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="flex space-x-3 pt-4">
+                        <button
+                          type="submit"
+                          disabled={registrationStatus === 'loading' || !studentForm.nickname || !studentForm.fullName || !studentForm.selectedClass}
+                          className="tron-register-btn flex-1"
+                        >
+                          {registrationStatus === 'loading' ? '⏳ REGISTRANDO...' : '📝 REGISTRATI'}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setShowStudentRegistration(false)
+                            setShowStudentOptions(true)
+                            setRegistrationStatus('')
+                          }}
+                          className="tron-back-btn flex-1"
+                          disabled={registrationStatus === 'loading'}
+                        >
+                          ← INDIETRO
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               )}
@@ -1160,6 +1360,48 @@ export default function Home() {
         }
 
         .tron-join-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .tron-register-btn {
+          background: linear-gradient(135deg, #10b981, #059669);
+          border: 2px solid #10b981;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .tron-register-btn:hover:not(:disabled) {
+          background: linear-gradient(135deg, #059669, #047857);
+          box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+          transform: translateY(-2px);
+        }
+
+        .tron-register-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .tron-back-btn {
+          background: linear-gradient(135deg, #6b7280, #4b5563);
+          border: 2px solid #6b7280;
+          color: white;
+          padding: 12px 24px;
+          border-radius: 8px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          box-shadow: 0 0 20px rgba(107, 114, 128, 0.3);
+        }
+
+        .tron-back-btn:hover:not(:disabled) {
+          background: linear-gradient(135deg, #4b5563, #374151);
+          box-shadow: 0 0 30px rgba(107, 114, 128, 0.6);
+          transform: translateY(-2px);
+        }
+
+        .tron-back-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
         .quick-join-panel {
           animation: slideDown 0.3s ease-out;

@@ -1,0 +1,85 @@
+name: 🔐 Security Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  secret-scan:
+    name: Secret Detection
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run Environment Validation
+      run: |
+        echo "OPENAI_API_KEY=sk-test-dummy-key-for-validation-12345678901234567890" >> .env.local
+        echo "NEXT_PUBLIC_SOCKET_URL=http://localhost:3001" >> .env.local
+        node scripts/validate-env.js
+
+    - name: Scan for secrets with TruffleHog
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: main
+        head: HEAD
+        extra_args: --debug --only-verified
+
+    - name: Run custom secret patterns
+      run: |
+        echo "🔍 Scanning for API keys and secrets..."
+
+        # Check for OpenAI keys
+        if grep -r "sk-[a-zA-Z0-9]\{48\}" . --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next; then
+          echo "❌ OpenAI API key found in code!"
+          exit 1
+        fi
+
+        # Check for project keys
+        if grep -r "sk-proj-[a-zA-Z0-9_-]\{100,\}" . --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next; then
+          echo "❌ OpenAI Project API key found in code!"
+          exit 1
+        fi
+
+        # Check for hardcoded passwords
+        if grep -ri "password.*=.*['\"][^'\"]\{8,\}" . --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next; then
+          echo "❌ Hardcoded password found in code!"
+          exit 1
+        fi
+
+        echo "✅ No secrets detected in codebase"
+
+  dependency-scan:
+    name: Dependency Vulnerabilities
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Run npm audit
+      run: |
+        npm audit --audit-level high
+
+    - name: Check for known vulnerabilities
+      run: |
+        npx audit-ci --moderate

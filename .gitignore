@@ -74,7 +74,29 @@ logs
 /public/uploads/temp/
 /temp/
 
-# API Keys e credenziali
+# API Keys e credenziali - SECURITY CRITICAL
 API*.txt
 *keys*.txt
 *secret*.txt
+*password*.txt
+*credential*.txt
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Environment files con secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Cloud provider configs
+.aws/
+.azure/
+.gcp/
+
+# Database dumps
+*.sql
+*.dump
+*.db

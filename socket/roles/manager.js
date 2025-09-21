@@ -253,7 +253,139 @@ const Manager = {
 
   saveStudentStatistics: async (game) => {
     try {
-      console.log('📊 Saving statistics for registered students...')
+      console.log('📊 Saving statistics with enhanced tracking system...')
+
+      // Calcola posizioni finali per tutti i player
+      const sortedPlayers = [...game.players].sort((a, b) => (b.points || 0) - (a.points || 0))
+      const playerPositions = new Map()
+      sortedPlayers.forEach((player, index) => {
+        playerPositions.set(player.id || player.username, index + 1)
+      })
+
+      // Prepara dati completi del gioco per l'API statistiche enhanced
+      const enhancedGameResult = {
+        quizId: game.quizId || null,
+        quizTitle: game.quizTitle || game.subject,
+        subject: game.subject,
+        difficulty: game.difficulty || "media",
+        totalQuestions: game.questions.length,
+        gameMode: game.gameMode || "standard",
+        timeLimit: game.timeLimit || null,
+
+        // Informazioni sessione
+        teacherId: game.teacherId || null,
+        classId: game.classId || null,
+        sessionDuration: Date.now() - (game.gameStartTime || Date.now()),
+        totalPlayers: game.players.length,
+        completedPlayers: game.players.filter(p => p.finished || p.completed).length,
+
+        // Player results con statistiche dettagliate
+        players: game.players.map(player => {
+          const playerAnswers = game.playersAnswer.filter(answer => answer.id === player.id)
+          const correctAnswers = playerAnswers.filter(answer => {
+            const question = game.questions[answer.questionIndex || game.currentQuestion]
+            return question && answer.answerKey === question.solution
+          }).length
+
+          return {
+            studentId: player.studentId || null,
+            nickname: player.username || player.name || 'Anonimo',
+            fullName: player.fullName || player.username || 'Anonimo',
+            score: player.points || 0,
+            correctAnswers: correctAnswers,
+            totalAnswers: playerAnswers.length,
+            accuracy: playerAnswers.length > 0 ? (correctAnswers / playerAnswers.length) * 100 : 0,
+            position: playerPositions.get(player.id || player.username) || null,
+            timeSpent: Date.now() - (player.joinTime || game.gameStartTime || Date.now()),
+            isRegistered: player.isRegistered || false,
+            className: player.className || null,
+            answers: playerAnswers.map(answer => ({
+              questionIndex: answer.questionIndex || game.currentQuestion,
+              answerKey: answer.answerKey,
+              isCorrect: (() => {
+                const question = game.questions[answer.questionIndex || game.currentQuestion]
+                return question && answer.answerKey === question.solution
+              })(),
+              timeToAnswer: answer.timeToAnswer || null
+            }))
+          }
+        }),
+
+        // Statistiche per domanda
+        questionsStats: game.questions.map((question, index) => {
+          const totalAnswers = game.playersAnswer.filter(a => a.questionIndex === index).length
+          const correctAnswers = game.playersAnswer.filter(a =>
+            a.questionIndex === index && a.answerKey === question.solution
+          ).length
+
+          return {
+            questionIndex: index,
+            question: question.question,
+            correctAnswer: question.solution,
+            totalAnswers: totalAnswers,
+            correctAnswers: correctAnswers,
+            accuracy: totalAnswers > 0 ? (correctAnswers / totalAnswers) * 100 : 0,
+            difficulty: question.difficulty || "media",
+            timeSpent: null // Calcolabile in future versioni
+          }
+        })
+      }
+
+      console.log(`📊 Enhanced game result prepared:`, {
+        quizTitle: enhancedGameResult.quizTitle,
+        totalPlayers: enhancedGameResult.totalPlayers,
+        registeredPlayers: enhancedGameResult.players.filter(p => p.isRegistered).length,
+        averageScore: enhancedGameResult.players.reduce((sum, p) => sum + p.score, 0) / enhancedGameResult.players.length
+      })
+
+      // Chiama la nuova API per salvare i risultati completi
+      const response = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/quiz-statistics`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          action: 'saveGameResult',
+          gameResult: enhancedGameResult
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+      }
+
+      const result = await response.json()
+      if (result.success) {
+        console.log(`✅ Enhanced game statistics saved successfully. Game ID: ${result.gameId}`)
+
+        // Log registrazione studenti
+        const registeredCount = enhancedGameResult.players.filter(p => p.isRegistered).length
+        if (registeredCount > 0) {
+          console.log(`📊 Statistics updated for ${registeredCount} registered students`)
+        }
+      } else {
+        console.error(`❌ Failed to save enhanced game statistics:`, result.error)
+      }
+
+      console.log('📊 Enhanced statistics saving completed')
+
+    } catch (error) {
+      console.error('❌ Error in enhanced saveStudentStatistics:', error)
+
+      // Fallback al sistema precedente in caso di errore
+      console.log('🔄 Attempting fallback to legacy statistics system...')
+      try {
+        await Manager.legacySaveStudentStatistics(game)
+      } catch (fallbackError) {
+        console.error('❌ Fallback also failed:', fallbackError)
+      }
+    }
+  },
+
+  // Mantieni il sistema legacy come fallback
+  legacySaveStudentStatistics: async (game) => {
+    try {
+      console.log('📊 Using legacy statistics system...')
 
       const registeredPlayers = game.players.filter(player => player.isRegistered && player.studentId)
 
@@ -262,7 +394,7 @@ const Manager = {
         return
       }
 
-      console.log(`📊 Found ${registeredPlayers.length} registered students to save statistics for`)
+      console.log(`📊 Found ${registeredPlayers.length} registered students to save legacy statistics for`)
 
       for (const player of registeredPlayers) {
         try {
@@ -277,7 +409,7 @@ const Manager = {
           const averageScore = totalQuestions > 0 ? Math.round((player.points / (totalQuestions * 1000)) * 100) : 0
 
           const gameData = {
-            gameId: `game_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            gameId: `legacy_game_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
             teacherId: game.teacherId || null,
             className: player.className || null,
             date: new Date().toISOString(),
@@ -288,20 +420,13 @@ const Manager = {
             totalQuestions: totalQuestions,
             correctAnswers: correctAnswers,
             averageScore: averageScore,
-            position: null, // Verrà calcolato dopo
+            position: null,
             duration: Date.now() - (game.gameStartTime || Date.now()),
-            responseTime: null // Calcolabile in future versioni
+            responseTime: null
           }
 
-          console.log(`📊 Saving stats for student ${player.username} (ID: ${player.studentId}):`, {
-            score: gameData.score,
-            correctAnswers: gameData.correctAnswers,
-            totalQuestions: gameData.totalQuestions,
-            averageScore: gameData.averageScore
-          })
-
-          // Chiama API per salvare le statistiche
-          const response = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3002'}/api/students`, {
+          // Chiama API legacy per salvare le statistiche
+          const response = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/students`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -313,26 +438,20 @@ const Manager = {
             })
           })
 
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`)
-          }
-
-          const result = await response.json()
-          if (result.success) {
-            console.log(`✅ Statistics saved for student ${player.username}`)
-          } else {
-            console.error(`❌ Failed to save statistics for student ${player.username}:`, result.error)
+          if (response.ok) {
+            const result = await response.json()
+            if (result.success) {
+              console.log(`✅ Legacy statistics saved for student ${player.username}`)
+            }
           }
 
         } catch (error) {
-          console.error(`❌ Error saving statistics for student ${player.username}:`, error)
+          console.error(`❌ Error saving legacy statistics for student ${player.username}:`, error)
         }
       }
 
-      console.log('📊 Student statistics saving completed')
-
     } catch (error) {
-      console.error('❌ Error in saveStudentStatistics:', error)
+      console.error('❌ Error in legacySaveStudentStatistics:', error)
     }
   },
 }

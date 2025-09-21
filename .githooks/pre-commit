@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# ChemArena - Git Pre-commit Hook per Secret Scanning
+# Previene commit di API keys, passwords e secrets
+
+echo "🔍 Scanning for secrets before commit..."
+
+# Pattern pericolosi da cercare
+SECRET_PATTERNS=(
+    "sk-[a-zA-Z0-9]{48}"              # OpenAI API keys
+    "pk-[a-zA-Z0-9]{48}"              # OpenAI Public keys
+    "sk-proj-[a-zA-Z0-9_-]{100,}"     # OpenAI Project keys
+    "['\"]?OPENAI_API_KEY['\"]?\s*[:=]\s*['\"]?sk-" # OPENAI_API_KEY assignment
+    "password\s*[:=]\s*['\"][^'\"]{8,}" # Password assignments
+    "secret\s*[:=]\s*['\"][^'\"]{8,}"   # Secret assignments
+    "token\s*[:=]\s*['\"][^'\"]{8,}"    # Token assignments
+    "key\s*[:=]\s*['\"][^'\"]{20,}"     # Generic key assignments
+)
+
+# File da escludere dalla scansione
+EXCLUDE_PATTERNS="node_modules|\.git|\.next|package-lock\.json|\.min\."
+
+# Funzione per controllare un singolo file
+check_file() {
+    local file="$1"
+    local found_secrets=false
+
+    for pattern in "${SECRET_PATTERNS[@]}"; do
+        if grep -qiE "$pattern" "$file" 2>/dev/null; then
+            echo "🚨 SECURITY ALERT: Possible secret found in $file"
+            echo "   Pattern: $pattern"
+            grep -niE "$pattern" "$file" | head -3
+            echo ""
+            found_secrets=true
+        fi
+    done
+
+    echo "$found_secrets"
+}
+
+# Controlla file staged per commit
+staged_files=$(git diff --cached --name-only)
+secrets_found=false
+
+for file in $staged_files; do
+    # Skip file binari e esclusi
+    if [[ -f "$file" ]] && ! echo "$file" | grep -qE "$EXCLUDE_PATTERNS"; then
+        if file_has_secrets=$(check_file "$file"); then
+            if [[ "$file_has_secrets" == "true" ]]; then
+                secrets_found=true
+            fi
+        fi
+    fi
+done
+
+if [[ "$secrets_found" == "true" ]]; then
+    echo ""
+    echo "❌ COMMIT BLOCKED: Secrets detected!"
+    echo ""
+    echo "🛠️  How to fix:"
+    echo "   1. Remove secrets from staged files"
+    echo "   2. Use environment variables (.env.local)"
+    echo "   3. Add sensitive files to .gitignore"
+    echo "   4. Use git-secret or similar tools for encrypted secrets"
+    echo ""
+    echo "To bypass this check (NOT RECOMMENDED):"
+    echo "   git commit --no-verify"
+    echo ""
+    exit 1
+fi
+
+echo "✅ No secrets detected. Commit proceeding..."
+exit 0

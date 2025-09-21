@@ -1,19 +1,41 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
+import dynamic from "next/dynamic"
 import Button from "@/components/Button"
+
+// Lazy loading per componenti pesanti (>500 righe)
+const ClassManager = dynamic(() => import("@/components/dashboard/ClassManager"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
+})
+const SmartGameLauncherLazy = dynamic(() => import("@/components/dashboard/SmartGameLauncher"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-80 rounded-lg"></div>
+})
+const QuizArchiveManager = dynamic(() => import("@/components/dashboard/QuizArchiveManager"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
+})
+const QuizCreator = dynamic(() => import("@/components/dashboard/QuizCreator"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
+})
+const ThemeCustomizer = dynamic(() => import("@/components/dashboard/ThemeCustomizer"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-64 rounded-lg"></div>
+})
+const AIQuizGeneratorStatic = dynamic(() => import("@/components/dashboard/AIQuizGeneratorStatic"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
+})
+const GoogleSheetsImport = dynamic(() => import("@/components/dashboard/GoogleSheetsImport"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-64 rounded-lg"></div>
+})
+const AnalyticsDashboard = dynamic(() => import("@/components/dashboard/AnalyticsDashboard"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
+})
+
+// Import sincroni per componenti leggeri (<300 righe)
 import QuizManager from "@/components/dashboard/QuizManager"
-import QuizCreator from "@/components/dashboard/QuizCreator"
-import QuizArchiveManager from "@/components/dashboard/QuizArchiveManager"
 import Statistics from "@/components/dashboard/Statistics"
-import SmartGameLauncher from "@/components/dashboard/SmartGameLauncher"
+// SmartGameLauncher ora lazy-loaded come SmartGameLauncherLazy
 import ServerControls from "@/components/dashboard/ServerControls"
 import SystemRestart from "@/components/SystemRestart"
 import TeachersList from "@/components/dashboard/TeachersList"
-import ThemeCustomizer from "@/components/dashboard/ThemeCustomizer"
-import AnalyticsDashboard from "@/components/dashboard/AnalyticsDashboard"
-import AIQuizGeneratorStatic from "@/components/dashboard/AIQuizGeneratorStatic"
-import ClassManager from "@/components/dashboard/ClassManager"
-import GoogleSheetsImport from "@/components/dashboard/GoogleSheetsImport"
 
 export default function Dashboard() {
   const router = useRouter()
@@ -301,7 +323,7 @@ export default function Dashboard() {
           {activeTab === 'quizzes' && <QuizManager onEditQuiz={handleEditQuiz} />}
           {activeTab === 'create' && <QuizCreator editingQuiz={editingQuiz} onClearEdit={handleClearEdit} />}
           {activeTab === 'ai-generator' && <AIQuizGeneratorStatic />}
-          {activeTab === 'launch' && <SmartGameLauncher />}
+          {activeTab === 'launch' && <SmartGameLauncherLazy />}
           {activeTab === 'analytics' && <AnalyticsDashboard />}
           {activeTab === 'themes' && <ThemeCustomizer />}
           {activeTab === 'statistics' && <Statistics />}
