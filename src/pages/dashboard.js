@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo, useCallback } from "react"
 import { useRouter } from "next/router"
 import dynamic from "next/dynamic"
 import Button from "@/components/Button"
@@ -89,15 +89,14 @@ export default function Dashboard() {
     return () => window.removeEventListener('setDashboardTab', handleTabChange)
   }, [])
 
-  const handleAuth = async (e) => {
+  const handleAuth = useCallback(async (e) => {
     if (e) e.preventDefault()
     setIsLoading(true)
-    
+
     // Simula un piccolo delay per mostrare il loading
     await new Promise(resolve => setTimeout(resolve, 500))
-    
+
     // Admin authentication attempt
-    
     // Controlla prima se esiste un admin con questa password
     try {
       const response = await fetch('/api/teacher-auth', {
@@ -110,9 +109,9 @@ export default function Dashboard() {
           password: password.trim()
         })
       })
-      
+
       const data = await response.json()
-      
+
       if (data.success && data.teacher.role === 'admin' && data.teacher.name === 'Eugenio Oliva') {
         setIsAuthenticated(true)
         localStorage.setItem('teacher-auth', JSON.stringify(data.teacher))
@@ -140,22 +139,23 @@ export default function Dashboard() {
         alert("Password non corretta.")
       }
     }
-    
-    setIsLoading(false)
-  }
 
-  const handleGoHome = () => {
+    setIsLoading(false)
+  }, [password]) // Dipende da password - si aggiorna solo quando cambia
+
+  // Memoizza funzioni per evitare re-creazione ad ogni render
+  const handleGoHome = useCallback(() => {
     console.log("Reindirizzamento alla home") // Debug
     router.push('/')
-  }
+  }, [router])
 
-  const quickRestartServer = async () => {
+  const quickRestartServer = useCallback(async () => {
     if (!confirm('Vuoi riavviare il server socket?\n\nQuesto applicherà tutte le modifiche ai quiz.')) return
-    
+
     try {
       const response = await fetch('/api/restart-server', { method: 'POST' })
       const data = await response.json()
-      
+
       if (data.success) {
         alert('✅ Server riavviato con successo!')
       } else {
@@ -164,19 +164,20 @@ export default function Dashboard() {
     } catch (error) {
       alert('❌ Errore di connessione durante il riavvio.')
     }
-  }
+  }, []) // Nessuna dipendenza - funzione stabile
 
-  const handleEditQuiz = (quiz) => {
+  const handleEditQuiz = useCallback((quiz) => {
     console.log("Modifica quiz:", quiz) // Debug
     setEditingQuiz(quiz)
     setActiveTab('create') // Passa al tab di creazione
-  }
+  }, []) // Stabile - usa setter che sono sempre gli stessi
 
-  const handleClearEdit = () => {
+  const handleClearEdit = useCallback(() => {
     setEditingQuiz(null)
-  }
+  }, [])
 
-  const tabs = [
+  // Memoizza tabs (non cambiano mai durante il ciclo di vita)
+  const tabs = useMemo(() => [
     { id: 'archive', name: 'Archivio Quiz', icon: '📚' },
     { id: 'quizzes', name: 'I Miei Quiz', icon: '📝' },
     { id: 'create', name: 'Crea Quiz', icon: '➕' },
@@ -189,7 +190,7 @@ export default function Dashboard() {
     { id: 'classes', name: 'Gestione Classi', icon: '🏫' },
     { id: 'import', name: 'Import Google Sheets', icon: '📊' },
     { id: 'server', name: 'Server', icon: '⚙️' }
-  ]
+  ], []) // Empty dependency array - mai cambia
 
   if (!isAuthenticated) {
     return (
