@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react"
 import Button from "@/components/Button"
+import { useDashboard } from "@/context/DashboardContext"
 
-export default function QuizManager({ onEditQuiz }) {
+export default function QuizManager() {
+  const { setEditingQuiz } = useDashboard()
   const [quizzes, setQuizzes] = useState([])
   const [selectedQuiz, setSelectedQuiz] = useState(null)
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(null)
@@ -14,11 +16,7 @@ export default function QuizManager({ onEditQuiz }) {
 
   const handleEdit = (quiz) => {
     console.log("QuizManager - Avvio modifica quiz:", quiz) // Debug
-    if (onEditQuiz) {
-      onEditQuiz(quiz)
-    } else {
-      alert("⚠️ Funzione di modifica non disponibile. Contatta il supporto tecnico.")
-    }
+    setEditingQuiz(quiz) // Context gestisce automaticamente tab switch
   }
 
   const handleDelete = (quizId) => {

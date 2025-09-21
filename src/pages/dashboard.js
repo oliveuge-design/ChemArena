@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useCallback } from "react"
 import { useRouter } from "next/router"
 import dynamic from "next/dynamic"
 import Button from "@/components/Button"
+import { DashboardProvider, useDashboard } from "@/context/DashboardContext"
 
 // Lazy loading per componenti pesanti (>500 righe)
 const ClassManager = dynamic(() => import("@/components/dashboard/ClassManager"), {
@@ -37,13 +38,22 @@ import ServerControls from "@/components/dashboard/ServerControls"
 import SystemRestart from "@/components/SystemRestart"
 import TeachersList from "@/components/dashboard/TeachersList"
 
-export default function Dashboard() {
+// Component interno che usa il context
+function DashboardContent() {
   const router = useRouter()
-  const [activeTab, setActiveTab] = useState('archive')
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const {
+    activeTab,
+    setActiveTab,
+    isAuthenticated,
+    setAuthentication,
+    isLoading,
+    setLoading,
+    editingQuiz,
+    setEditingQuiz,
+    clearEditingQuiz
+  } = useDashboard()
+
   const [password, setPassword] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const [editingQuiz, setEditingQuiz] = useState(null)
 
   // Controlla se l'utente era già autenticato (per mantenere la sessione)
   useEffect(() => {
@@ -55,7 +65,7 @@ export default function Dashboard() {
         
         // Solo Admin (Eugenio Oliva) può accedere alla dashboard completa
         if (teacherData.role === 'admin' && teacherData.name === 'Eugenio Oliva') {
-          setIsAuthenticated(true)
+          setAuthentication(true, teacherData)
           return
         } else {
           // Insegnanti normali vengono reindirizzati alla loro dashboard
@@ -70,7 +80,7 @@ export default function Dashboard() {
     // Fallback al vecchio sistema di autenticazione (per compatibilità)
     const savedAuth = localStorage.getItem('dashboard-auth')
     if (savedAuth === 'true') {
-      setIsAuthenticated(true)
+      setAuthentication(true)
     }
 
     // Controlla se c'è un tab specificato nella query string
@@ -91,7 +101,7 @@ export default function Dashboard() {
 
   const handleAuth = useCallback(async (e) => {
     if (e) e.preventDefault()
-    setIsLoading(true)
+    setLoading(true)
 
     // Simula un piccolo delay per mostrare il loading
     await new Promise(resolve => setTimeout(resolve, 500))
@@ -113,14 +123,14 @@ export default function Dashboard() {
       const data = await response.json()
 
       if (data.success && data.teacher.role === 'admin' && data.teacher.name === 'Eugenio Oliva') {
-        setIsAuthenticated(true)
+        setAuthentication(true, data.teacher)
         localStorage.setItem('teacher-auth', JSON.stringify(data.teacher))
         localStorage.setItem('dashboard-auth', 'true') // Mantieni compatibilità
         console.log("Accesso Admin autorizzato per Eugenio Oliva")
       } else {
         // Fallback al vecchio sistema per compatibilità
         if (password.trim() === "admin123") {
-          setIsAuthenticated(true)
+          setAuthentication(true)
           localStorage.setItem('dashboard-auth', 'true')
           console.log("Accesso autorizzato (fallback)")
         } else {
@@ -132,7 +142,7 @@ export default function Dashboard() {
       console.error('Errore autenticazione:', error)
       // Fallback al vecchio sistema
       if (password.trim() === "admin123") {
-        setIsAuthenticated(true)
+        setAuthentication(true)
         localStorage.setItem('dashboard-auth', 'true')
         console.log("Accesso autorizzato (fallback)")
       } else {
@@ -140,7 +150,7 @@ export default function Dashboard() {
       }
     }
 
-    setIsLoading(false)
+    setLoading(false)
   }, [password]) // Dipende da password - si aggiorna solo quando cambia
 
   // Memoizza funzioni per evitare re-creazione ad ogni render
@@ -168,13 +178,12 @@ export default function Dashboard() {
 
   const handleEditQuiz = useCallback((quiz) => {
     console.log("Modifica quiz:", quiz) // Debug
-    setEditingQuiz(quiz)
-    setActiveTab('create') // Passa al tab di creazione
-  }, []) // Stabile - usa setter che sono sempre gli stessi
+    setEditingQuiz(quiz) // Context gestisce automaticamente il cambio tab
+  }, [setEditingQuiz])
 
   const handleClearEdit = useCallback(() => {
-    setEditingQuiz(null)
-  }, [])
+    clearEditingQuiz()
+  }, [clearEditingQuiz])
 
   // Memoizza tabs (non cambiano mai durante il ciclo di vita)
   const tabs = useMemo(() => [
@@ -321,8 +330,8 @@ export default function Dashboard() {
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
           {activeTab === 'archive' && <QuizArchiveManager />}
-          {activeTab === 'quizzes' && <QuizManager onEditQuiz={handleEditQuiz} />}
-          {activeTab === 'create' && <QuizCreator editingQuiz={editingQuiz} onClearEdit={handleClearEdit} />}
+          {activeTab === 'quizzes' && <QuizManager />}
+          {activeTab === 'create' && <QuizCreator />}
           {activeTab === 'ai-generator' && <AIQuizGeneratorStatic />}
           {activeTab === 'launch' && <SmartGameLauncherLazy />}
           {activeTab === 'analytics' && <AnalyticsDashboard />}
@@ -340,5 +349,14 @@ export default function Dashboard() {
         </div>
       </main>
     </div>
+  )
+}
+
+// Export principale con Provider wrapper
+export default function Dashboard() {
+  return (
+    <DashboardProvider>
+      <DashboardContent />
+    </DashboardProvider>
   )
 }

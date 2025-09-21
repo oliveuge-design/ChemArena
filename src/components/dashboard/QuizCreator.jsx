@@ -2,8 +2,10 @@ import { useState, useEffect } from "react"
 import Button from "@/components/Button"
 import QuizTemplateManager from "./QuizTemplateManager"
 import { QUIZ_CATEGORIES, autoCategorizateQuiz } from "@/constants/categories"
+import { useDashboard } from "@/context/DashboardContext"
 
-export default function QuizCreator({ editingQuiz, onClearEdit }) {
+export default function QuizCreator() {
+  const { editingQuiz, clearEditingQuiz } = useDashboard()
   const [quiz, setQuiz] = useState({
     id: '',
     subject: '',
@@ -237,9 +239,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
         alert(`✅ Quiz ${isEditMode ? 'aggiornato' : 'creato'} con successo nell'archivio!\n🎯 ${quizToSave.questions.length} domande salvate`)
 
         // Reset del form e uscita dalla modalità modifica
-        if (onClearEdit) {
-          onClearEdit()
-        }
+        clearEditingQuiz()
         resetForm()
         setIsEditMode(false)
       } else {
@@ -269,7 +269,7 @@ export default function QuizCreator({ editingQuiz, onClearEdit }) {
             <div className="flex space-x-3">
               <Button 
                 onClick={() => {
-                  if (onClearEdit) onClearEdit()
+                  clearEditingQuiz()
                   resetForm()
                   setIsEditMode(false)
                 }}
