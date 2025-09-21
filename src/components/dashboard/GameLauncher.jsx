@@ -50,22 +50,27 @@ export default function GameLauncher() {
   }
 
   const checkConfigStatus = () => {
-    const lastUpdate = localStorage.getItem('last-config-update')
-    const lastGameSettings = localStorage.getItem('game-settings')
-    const currentGameQuizStored = localStorage.getItem('current-game-quiz')
-    
-    if (!lastUpdate || !currentGameQuizStored) {
+    try {
+      const lastUpdate = localStorage.getItem('last-config-update')
+      const lastGameSettings = localStorage.getItem('game-settings')
+      const currentGameQuizStored = localStorage.getItem('current-game-quiz')
+
+      if (!lastUpdate || !currentGameQuizStored) {
+        setConfigStatus('unknown')
+        return
+      }
+
+      if (selectedQuiz && gameSettings) {
+        const needsUpdate = (
+          JSON.stringify(selectedQuiz) !== currentGameQuizStored ||
+          JSON.stringify(gameSettings) !== lastGameSettings
+        )
+
+        setConfigStatus(needsUpdate ? 'needs-update' : 'updated')
+      }
+    } catch (error) {
+      console.warn('Error in checkConfigStatus:', error)
       setConfigStatus('unknown')
-      return
-    }
-    
-    if (selectedQuiz && gameSettings) {
-      const needsUpdate = (
-        JSON.stringify(selectedQuiz) !== currentGameQuizStored ||
-        JSON.stringify(gameSettings) !== lastGameSettings
-      )
-      
-      setConfigStatus(needsUpdate ? 'needs-update' : 'updated')
     }
   }
 
@@ -703,12 +708,13 @@ export default function GameLauncher() {
                 <div className="flex justify-between">
                   <span>Modalità:</span>
                   <span className="font-medium capitalize">
-                    {gameSettings.gameMode === 'standard' && '📝 Standard'}
-                    {gameSettings.gameMode === 'chase' && '🏃 Inseguimento'}
-                    {gameSettings.gameMode === 'appearing' && '✨ Risposte a Comparsa'}
-                    {gameSettings.gameMode === 'timed' && '⏱️ Quiz a Tempo'}
-                    {gameSettings.gameMode === 'untimed' && '🎯 Senza Tempo'}
-                    {gameSettings.gameMode === 'survival' && '💀 Sopravvivenza'}
+                    {gameSettings.gameMode === 'standard' ? '📝 Standard' :
+                     gameSettings.gameMode === 'chase' ? '🏃 Inseguimento' :
+                     gameSettings.gameMode === 'appearing' ? '✨ Risposte a Comparsa' :
+                     gameSettings.gameMode === 'timed' ? '⏱️ Quiz a Tempo' :
+                     gameSettings.gameMode === 'untimed' ? '🎯 Senza Tempo' :
+                     gameSettings.gameMode === 'survival' ? '💀 Sopravvivenza' :
+                     '📝 Standard'}
                   </span>
                 </div>
                 <div className="flex justify-between">
@@ -722,11 +728,12 @@ export default function GameLauncher() {
                 <div className="flex justify-between">
                   <span>Tema sfondo:</span>
                   <span className="font-medium">
-                    {gameSettings.backgroundTheme === 'laboratory' && '🧪 Laboratorio'}
-                    {gameSettings.backgroundTheme === 'gaming1' && '🎮 Gaming Tech 1'}
-                    {gameSettings.backgroundTheme === 'gaming2' && '🎮 Gaming Tech 2'}
-                    {gameSettings.backgroundTheme === 'gaming3' && '🎮 Gaming Tech 3'}
-                    {gameSettings.backgroundTheme === 'original' && '⭐ Completo'}
+                    {gameSettings.backgroundTheme === 'laboratory' ? '🧪 Laboratorio' :
+                     gameSettings.backgroundTheme === 'gaming1' ? '🎮 Gaming Tech 1' :
+                     gameSettings.backgroundTheme === 'gaming2' ? '🎮 Gaming Tech 2' :
+                     gameSettings.backgroundTheme === 'gaming3' ? '🎮 Gaming Tech 3' :
+                     gameSettings.backgroundTheme === 'original' ? '⭐ Completo' :
+                     '🧪 Laboratorio'}
                   </span>
                 </div>
               </div>
