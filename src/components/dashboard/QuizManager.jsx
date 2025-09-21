@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Button from "@/components/Button"
 import { useDashboard } from "@/context/DashboardContext"
+import { quizLogger } from "@/utils/logger"
 
 export default function QuizManager() {
   const { setEditingQuiz } = useDashboard()
@@ -15,7 +16,7 @@ export default function QuizManager() {
   }, [])
 
   const handleEdit = (quiz) => {
-    console.log("QuizManager - Avvio modifica quiz:", quiz) // Debug
+    quizLogger.user("Starting quiz edit", { quizId: quiz?.id, quizName: quiz?.subject })
     setEditingQuiz(quiz) // Context gestisce automaticamente tab switch
   }
 

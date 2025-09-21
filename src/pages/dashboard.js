@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import dynamic from "next/dynamic"
 import Button from "@/components/Button"
 import { DashboardProvider, useDashboard } from "@/context/DashboardContext"
+import { dashboardLogger } from "@/utils/logger"
 
 // Lazy loading per componenti pesanti (>500 righe)
 const ClassManager = dynamic(() => import("@/components/dashboard/ClassManager"), {
@@ -126,25 +127,25 @@ function DashboardContent() {
         setAuthentication(true, data.teacher)
         localStorage.setItem('teacher-auth', JSON.stringify(data.teacher))
         localStorage.setItem('dashboard-auth', 'true') // Mantieni compatibilità
-        console.log("Accesso Admin autorizzato per Eugenio Oliva")
+        dashboardLogger.info("Admin access granted", { user: data.teacher.name })
       } else {
         // Fallback al vecchio sistema per compatibilità
         if (password.trim() === "admin123") {
           setAuthentication(true)
           localStorage.setItem('dashboard-auth', 'true')
-          console.log("Accesso autorizzato (fallback)")
+          dashboardLogger.info("Admin access granted (fallback)", { method: "legacy" })
         } else {
           alert("Password Admin non corretta.")
-          console.log("Accesso negato")
+          dashboardLogger.warn("Admin access denied", { reason: "invalid_password" })
         }
       }
     } catch (error) {
-      console.error('Errore autenticazione:', error)
+      dashboardLogger.error('Authentication error', error)
       // Fallback al vecchio sistema
       if (password.trim() === "admin123") {
         setAuthentication(true)
         localStorage.setItem('dashboard-auth', 'true')
-        console.log("Accesso autorizzato (fallback)")
+        dashboardLogger.info("Admin access granted (fallback error recovery)", { method: "legacy_recovery" })
       } else {
         alert("Password non corretta.")
       }
@@ -155,7 +156,7 @@ function DashboardContent() {
 
   // Memoizza funzioni per evitare re-creazione ad ogni render
   const handleGoHome = useCallback(() => {
-    console.log("Reindirizzamento alla home") // Debug
+    dashboardLogger.user("Navigating to home")
     router.push('/')
   }, [router])
 
@@ -177,7 +178,7 @@ function DashboardContent() {
   }, []) // Nessuna dipendenza - funzione stabile
 
   const handleEditQuiz = useCallback((quiz) => {
-    console.log("Modifica quiz:", quiz) // Debug
+    dashboardLogger.user("Editing quiz", { quizId: quiz?.id, quizName: quiz?.subject })
     setEditingQuiz(quiz) // Context gestisce automaticamente il cambio tab
   }, [setEditingQuiz])
 
