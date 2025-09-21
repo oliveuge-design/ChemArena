@@ -4,8 +4,9 @@ import dynamic from "next/dynamic"
 import Button from "@/components/Button"
 import { DashboardProvider, useDashboard } from "@/context/DashboardContext"
 import { dashboardLogger } from "@/utils/logger"
+import { DashboardErrorBoundary } from "@/components/ErrorBoundary"
 
-// Lazy loading per componenti pesanti (>500 righe)
+// Lazy loading per componenti pesanti (>500 righe) con Error Boundaries
 const ClassManager = dynamic(() => import("@/components/dashboard/ClassManager"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
 })
@@ -330,22 +331,68 @@ function DashboardContent() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
-          {activeTab === 'archive' && <QuizArchiveManager />}
-          {activeTab === 'quizzes' && <QuizManager />}
-          {activeTab === 'create' && <QuizCreator />}
-          {activeTab === 'ai-generator' && <AIQuizGeneratorStatic />}
-          {activeTab === 'launch' && <SmartGameLauncherLazy />}
-          {activeTab === 'analytics' && <AnalyticsDashboard />}
-          {activeTab === 'themes' && <ThemeCustomizer />}
-          {activeTab === 'statistics' && <Statistics />}
-          {activeTab === 'teachers' && <TeachersList />}
-          {activeTab === 'classes' && <ClassManager />}
-          {activeTab === 'import' && <GoogleSheetsImport />}
+          {activeTab === 'archive' && (
+            <DashboardErrorBoundary>
+              <QuizArchiveManager />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'quizzes' && (
+            <DashboardErrorBoundary>
+              <QuizManager />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'create' && (
+            <DashboardErrorBoundary>
+              <QuizCreator />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'ai-generator' && (
+            <DashboardErrorBoundary>
+              <AIQuizGeneratorStatic />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'launch' && (
+            <DashboardErrorBoundary>
+              <SmartGameLauncherLazy />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'analytics' && (
+            <DashboardErrorBoundary>
+              <AnalyticsDashboard />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'themes' && (
+            <DashboardErrorBoundary>
+              <ThemeCustomizer />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'statistics' && (
+            <DashboardErrorBoundary>
+              <Statistics />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'teachers' && (
+            <DashboardErrorBoundary>
+              <TeachersList />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'classes' && (
+            <DashboardErrorBoundary>
+              <ClassManager />
+            </DashboardErrorBoundary>
+          )}
+          {activeTab === 'import' && (
+            <DashboardErrorBoundary>
+              <GoogleSheetsImport />
+            </DashboardErrorBoundary>
+          )}
           {activeTab === 'server' && (
-            <div className="space-y-6">
-              <ServerControls />
-              <SystemRestart />
-            </div>
+            <DashboardErrorBoundary>
+              <div className="space-y-6">
+                <ServerControls />
+                <SystemRestart />
+              </div>
+            </DashboardErrorBoundary>
           )}
         </div>
       </main>
@@ -353,11 +400,13 @@ function DashboardContent() {
   )
 }
 
-// Export principale con Provider wrapper
+// Export principale con Provider wrapper e Error Boundary
 export default function Dashboard() {
   return (
-    <DashboardProvider>
-      <DashboardContent />
-    </DashboardProvider>
+    <DashboardErrorBoundary>
+      <DashboardProvider>
+        <DashboardContent />
+      </DashboardProvider>
+    </DashboardErrorBoundary>
   )
 }
