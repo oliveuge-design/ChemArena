@@ -239,7 +239,7 @@ export default function GameLauncher() {
       <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">
           1. Seleziona Quiz
-          {currentGameQuiz && (
+          {currentGameQuiz?.subject && (
             <span className="ml-2 text-sm font-normal text-green-600">
               (Attivo: {currentGameQuiz.subject})
             </span>
