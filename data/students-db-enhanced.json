@@ -607,7 +607,446 @@
       }
     }
   ],
-  "gameResults": [],
+  "gameResults": [
+    {
+      "id": "game_1758538932411_2l8a9fj5a",
+      "timestamp": "2025-09-22T11:02:12.411Z",
+      "gameDate": "2025-09-22",
+      "quizInfo": {
+        "quizId": null,
+        "quizTitle": "Chimica Analitica",
+        "subject": "Chimica Analitica",
+        "difficulty": "media",
+        "totalQuestions": 6,
+        "gameMode": "standard",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": null,
+        "classId": null,
+        "sessionDuration": 118147,
+        "totalPlayers": 1,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "giallo",
+          "fullName": "giallo",
+          "score": 3685,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 118147,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 3685,
+        "medianScore": 3685,
+        "minScore": 3685,
+        "maxScore": 3685,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Prima di iniziare una titolazione, cosa si deve fare con la buretta?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Perché si deve eliminare la bolla d'aria dal beccuccio della buretta?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 2,
+            "question": "Durante la titolazione, come si deve aggiungere il titolante vicino al punto finale?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 3,
+            "question": "Come si legge correttamente il volume in una buretta?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 4,
+            "question": "Perché si deve agitare la soluzione durante la titolazione?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 5,
+            "question": "Cosa si deve fare se si supera il punto finale durante una titolazione?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1758539595950_q5rwmecog",
+      "timestamp": "2025-09-22T11:13:15.950Z",
+      "gameDate": "2025-09-22",
+      "quizInfo": {
+        "quizId": null,
+        "quizTitle": "piolo",
+        "subject": "piolo",
+        "difficulty": "media",
+        "totalQuestions": 10,
+        "gameMode": "standard",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": null,
+        "classId": null,
+        "sessionDuration": 434568,
+        "totalPlayers": 3,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "123",
+          "fullName": "123",
+          "score": 4408,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 434568,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "456",
+          "fullName": "456",
+          "score": 2304,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 3,
+          "timeSpent": 434568,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "pollo",
+          "fullName": "pollo",
+          "score": 3238,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 2,
+          "timeSpent": 434568,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 3316.6666666666665,
+        "medianScore": 3238,
+        "minScore": 2304,
+        "maxScore": 4408,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Qual è il principale utilizzo della conduttimetria in laboratorio?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale dei seguenti fattori influisce sulla conduttività elettrica di una soluzione?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 2,
+            "question": "In quale modo la concentrazione di ioni in soluzione influisce sulla conduttività?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 3,
+            "question": "Quale apparecchiatura è comunemente usata per misurare la conduttività di una soluzione?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 4,
+            "question": "Qual è l'unità di misura della conduttività elettrica?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 5,
+            "question": "Cosa indica un valore di conduttività molto elevato in una soluzione?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 6,
+            "question": "Quale delle seguenti affermazioni è vera riguardo alla conduttività di soluzioni acide e basiche?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 7,
+            "question": "Come si può migliorare la precisione di una misurazione di conduttività?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 8,
+            "question": "Qual è un esempio di applicazione pratica della conduttimetria in campo ambientale?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 9,
+            "question": "In un esperimento, si osserva un aumento della conduttività dopo aver aggiunto un sale a una soluzione. Qual è l'interpretazione corretta di questo fenomeno?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1758628387884_68c7p6u3k",
+      "timestamp": "2025-09-23T11:53:07.884Z",
+      "gameDate": "2025-09-23",
+      "quizInfo": {
+        "quizId": null,
+        "quizTitle": "Chimica Analitica",
+        "subject": "Chimica Analitica",
+        "difficulty": "media",
+        "totalQuestions": 6,
+        "gameMode": "standard",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": null,
+        "classId": null,
+        "sessionDuration": 206540,
+        "totalPlayers": 3,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "pello",
+          "fullName": "pello",
+          "score": 1281,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 3,
+          "timeSpent": 206541,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "pallo",
+          "fullName": "pallo",
+          "score": 2599,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 206541,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "pillo",
+          "fullName": "pillo",
+          "score": 1684,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 2,
+          "timeSpent": 206541,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 1854.6666666666667,
+        "medianScore": 1684,
+        "minScore": 1281,
+        "maxScore": 2599,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Qual è il requisito principale per una reazione di titolazione?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "In che unità si esprime tipicamente la concentrazione di una soluzione titolante?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 2,
+            "question": "Cosa rappresenta la curva di titolazione?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 3,
+            "question": "In una titolazione acido-base, cosa determina la scelta dell'indicatore?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 4,
+            "question": "Qual è la differenza tra punto di equivalenza e punto finale?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 5,
+            "question": "Cosa indica il punto di equivalenza in una titolazione?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    }
+  ],
   "relationships": {
     "studentTeachers": [
       {
@@ -684,11 +1123,11 @@
   },
   "metadata": {
     "version": "2.0",
-    "lastUpdate": "2025-09-20",
+    "lastUpdate": "2025-09-23",
     "totalStudents": 10,
     "totalClasses": 8,
     "totalTeachers": 1,
-    "totalGameResults": 0,
+    "totalGameResults": 3,
     "totalRelationships": 5,
     "migrationDate": "2025-09-20T19:29:03.845Z",
     "structure": "enhanced_many_to_many"

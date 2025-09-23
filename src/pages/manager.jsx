@@ -103,14 +103,21 @@ export default function Manager() {
         console.log('🔢 Domande:', quiz.questions?.length || 0)
         console.log('🔑 Password:', quiz.password || 'CHEMARENA')
 
+        // Carica anche le impostazioni di gioco
+        const gameSettings = JSON.parse(localStorage.getItem('game-settings') || '{}')
+
         quizData = {
           teacherId: authenticatedTeacher.id || `teacher_${socket.id}`,
-          password: quiz.password || 'CHEMARENA',
           subject: quiz.subject || 'Quiz',
           questions: quiz.questions || [],
           quizTitle: quiz.title,
-          quizId: quiz.id
+          quizId: quiz.id,
+          gameMode: gameSettings.gameMode || quiz.gameMode || 'standard',
+          gameSettings: gameSettings
         }
+
+        console.log('🎮 Game Mode caricato:', quizData.gameMode)
+        console.log('⚙️ Game Settings:', gameSettings)
       } else {
         console.warn('⚠️ Nessun quiz selezionato, uso configurazione default')
         quizData = {

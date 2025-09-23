@@ -10,7 +10,7 @@ import { DashboardErrorBoundary } from "@/components/ErrorBoundary"
 const ClassManager = dynamic(() => import("@/components/dashboard/ClassManager"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
 })
-const GameLauncherLazy = dynamic(() => import("@/components/dashboard/GameLauncher"), {
+const GameLauncherLazy = dynamic(() => import("@/components/dashboard/GameLauncherSliderFixed"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-80 rounded-lg"></div>
 })
 const QuizArchiveManager = dynamic(() => import("@/components/dashboard/QuizArchiveManager"), {
@@ -352,9 +352,11 @@ function DashboardContent() {
             </DashboardErrorBoundary>
           )}
           {activeTab === 'launch' && (
-            <DashboardErrorBoundary>
-              <GameLauncherLazy />
-            </DashboardErrorBoundary>
+            <div className="fixed inset-0 z-40 bg-white">
+              <DashboardErrorBoundary>
+                <GameLauncherLazy />
+              </DashboardErrorBoundary>
+            </div>
           )}
           {activeTab === 'analytics' && (
             <DashboardErrorBoundary>

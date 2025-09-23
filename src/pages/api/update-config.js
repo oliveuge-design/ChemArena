@@ -42,7 +42,7 @@ export default function handler(req, res) {
 export const WEBSOCKET_SERVER_PORT = 5505
 
 const QUIZZ_CONFIG = {
-  password: "${settings.password || quiz.password}",
+  password: "${quiz.password || 'CHEMARENA'}",
   subject: "${processedQuiz.subject}",
   questions: ${JSON.stringify(processedQuiz.questions, null, 4)},
   gameMode: "${settings.gameMode || 'standard'}",
@@ -77,11 +77,21 @@ export const GAME_STATE_INIT = {
     // Scrive il nuovo file di configurazione
     fs.writeFileSync(configPath, configContent, 'utf8')
 
+    // CRITICO: Aggiorna anche global.currentQuizConfig con gameMode e gameSettings
+    global.currentQuizConfig = {
+      password: quiz.password || 'CHEMARENA',
+      subject: processedQuiz.subject,
+      questions: processedQuiz.questions,
+      gameMode: settings.gameMode || 'standard',
+      gameSettings: settings
+    }
+
     console.log('✅ File config.mjs aggiornato con successo')
     console.log(`📝 Quiz: ${processedQuiz.subject}`)
     console.log(`🔑 Quiz configuration updated with new password`)
     console.log(`🎮 Game Mode: ${settings.gameMode || 'standard'}`)
     console.log(`📊 Domande: ${processedQuiz.questions.length}`)
+    console.log(`🌐 Global config aggiornato con gameMode: ${global.currentQuizConfig.gameMode}`)
 
     res.status(200).json({ 
       success: true, 

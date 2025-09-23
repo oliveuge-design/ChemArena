@@ -90,13 +90,14 @@ export default function ManagerPassword({ onCreateRoom }) {
           const quiz = JSON.parse(currentQuiz)
           console.log(`🎯 QUIZ SELEZIONATO RILEVATO: ${quiz.title}`)
 
-          // Prepara i dati del quiz per la room
+          // Prepara i dati del quiz per la room (password rimossa - serve solo per studenti)
           quizData = {
-            password: quiz.password || 'CHEMARENA',
             subject: quiz.subject || 'Quiz',
             questions: quiz.questions || [],
             quizTitle: quiz.title,
-            quizId: quiz.id
+            quizId: quiz.id,
+            gameMode: quiz.gameMode || 'standard',
+            gameSettings: quiz.gameSettings || {}
           }
 
           console.log(`📊 Dati quiz preparati:`, {

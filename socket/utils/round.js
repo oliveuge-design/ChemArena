@@ -7,6 +7,7 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
   const modeConfig = QuizModeEngine.getModeConfig(gameMode, question, game.gameSettings)
 
   console.log(`🔍 StartRound: questionIndex=${game.currentQuestion}, started=${game.started}, room=${game.room}, mode=${gameMode}`)
+  console.log(`🎮 MODE CONFIG: ${JSON.stringify(modeConfig)} - Timer: ${modeConfig.questionTime}s`)
 
   // Funzione helper per verificare se la room esiste ancora
   const isRoomValid = () => {
@@ -194,4 +195,48 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
   })
 
   game.playersAnswer = []
+
+  // AUTO-AVANZAMENTO: Se abilitato, passa automaticamente alla domanda successiva
+  if (game.gameSettings && game.gameSettings.autoAdvance) {
+    console.log(`⏩ Auto-advance abilitato, passando alla domanda successiva in 3 secondi...`)
+
+    setTimeout(async () => {
+      // Verifica che la room sia ancora valida
+      if (!multiRoomManager || !multiRoomManager.getRoomState(game.room)) {
+        console.log(`❌ Auto-advance aborted: room ${game.room} no longer exists`)
+        return
+      }
+
+      const currentGame = multiRoomManager.getRoomState(game.room)
+      if (!currentGame || !currentGame.started) {
+        console.log(`❌ Auto-advance aborted: game not started`)
+        return
+      }
+
+      // Controlla se ci sono altre domande
+      if (currentGame.currentQuestion + 1 < currentGame.questions.length) {
+        console.log(`⏩ Auto-advance: Avanzando dalla domanda ${currentGame.currentQuestion + 1} alla ${currentGame.currentQuestion + 2}`)
+
+        // Avanza alla domanda successiva
+        currentGame.currentQuestion++
+
+        // Avvia automaticamente il prossimo round
+        const { startRound } = await import('./round.js')
+        await startRound(currentGame, io, socket, multiRoomManager)
+      } else {
+        console.log(`🏁 Auto-advance: Quiz completato, non ci sono altre domande`)
+
+        // Fine del quiz - mostra risultati finali
+        io.to(currentGame.room).emit("game:status", {
+          name: "END",
+          data: {
+            leaderboard: currentGame.players
+              .filter(p => !currentGame.eliminatedPlayers || !currentGame.eliminatedPlayers.includes(p.id))
+              .sort((a, b) => b.points - a.points),
+            gameMode: currentGame.gameMode || 'standard'
+          }
+        })
+      }
+    }, 3000) // 3 secondi di pausa prima dell'auto-advance
+  }
 }

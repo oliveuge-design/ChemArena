@@ -62,6 +62,28 @@ class MultiRoomManager {
         }
       }
 
+      // CRITICO: Applica gameMode e gameSettings dal config o roomData
+      if (roomData.gameMode) {
+        gameState.gameMode = roomData.gameMode;
+        console.log(`   🎮 Modalità: ${roomData.gameMode}`);
+      }
+      if (roomData.gameSettings) {
+        gameState.gameSettings = roomData.gameSettings;
+        console.log(`   ⚙️ Impostazioni modalità: ${JSON.stringify(roomData.gameSettings)}`);
+      }
+
+      // Fallback: Applica global config se disponibile
+      if (global.currentQuizConfig) {
+        if (!gameState.gameMode && global.currentQuizConfig.gameMode) {
+          gameState.gameMode = global.currentQuizConfig.gameMode;
+          console.log(`   🎮 Modalità (da global): ${global.currentQuizConfig.gameMode}`);
+        }
+        if (!gameState.gameSettings && global.currentQuizConfig.gameSettings) {
+          gameState.gameSettings = global.currentQuizConfig.gameSettings;
+          console.log(`   ⚙️ Impostazioni (da global): ${JSON.stringify(global.currentQuizConfig.gameSettings)}`);
+        }
+      }
+
       // 4. Registra la room
       this.gameRooms.set(roomId, gameState);
       this.managerToRoom.set(managerId, roomId);

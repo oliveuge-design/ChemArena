@@ -15,12 +15,17 @@ export default function GameLauncher() {
     showLeaderboardBetweenQuestions: true,
     shuffleQuestions: false,
     shuffleAnswers: false,
-    gameMode: 'standard', // standard, chase, appearingAnswers, timed, untimed
-    chaseMode: false,
-    appearingAnswers: false,
-    timedMode: true,
+    gameMode: 'standard', // standard, chase, appearing, timed, untimed, survival
     bonusForSpeed: true,
-    backgroundTheme: 'laboratory' // Nuovo: tema sfondo
+    backgroundTheme: 'laboratory',
+    // Nuove funzionalità avanzate
+    showHints: false,
+    customTime: 10,
+    lives: 1,
+    pointsMultiplier: 1,
+    maxPlayers: 50,
+    autoAdvance: false,
+    playSound: true
   })
   const [currentGameQuiz, setCurrentGameQuiz] = useState(null)
   const [configStatus, setConfigStatus] = useState('unknown') // 'unknown', 'updated', 'needs-update'
@@ -74,13 +79,86 @@ export default function GameLauncher() {
     }
   }
 
-  const handleQuizSelection = (quiz) => {
+  // Helper per aggiornare modalità con auto-sync del config
+  const handleModeChange = async (newMode) => {
+    setGameSettings(prev => ({ ...prev, gameMode: newMode }))
+    console.log('🎮 Modalità cambiata a:', newMode)
+
+    if (selectedQuiz) {
+      try {
+        console.log('🔧 Auto-aggiornamento config per modalità:', newMode)
+        const newSettings = { ...gameSettings, gameMode: newMode }
+
+        const response = await fetch('/api/update-config', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            quiz: selectedQuiz,
+            settings: { ...newSettings, password: selectedQuiz.password }
+          })
+        })
+
+        if (response.ok) {
+          const data = await response.json()
+          localStorage.setItem('game-settings', JSON.stringify(newSettings))
+          setConfigStatus('updated')
+          toast.success(`⚙️ Modalità aggiornata: ${newMode}!`)
+          console.log('✅ Config modalità aggiornato per:', newMode)
+        } else {
+          toast.error('Errore aggiornamento modalità')
+        }
+      } catch (error) {
+        console.error('❌ Errore aggiornamento modalità:', error)
+        toast.error('Errore durante l\'aggiornamento')
+      }
+    }
+  }
+
+  const handleQuizSelection = async (quiz) => {
+    console.log('📝 Quiz selezionato:', quiz.title, '- Modalità corrente:', gameSettings.gameMode)
     setSelectedQuiz(quiz)
-    
+
     // Salva come quiz attivo
     localStorage.setItem('current-game-quiz', JSON.stringify(quiz))
     setCurrentGameQuiz(quiz)
-    
+
+    // AGGIORNA IMMEDIATAMENTE il config con le modalità correnti
+    try {
+      console.log('🔧 Aggiornamento automatico configurazione...')
+      console.log('📊 Modalità da applicare:', gameSettings.gameMode)
+
+      const response = await fetch('/api/update-config', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          quiz: quiz,
+          settings: {
+            ...gameSettings,
+            password: quiz.password
+          }
+        }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        localStorage.setItem('game-settings', JSON.stringify(gameSettings))
+        localStorage.setItem('last-config-update', new Date().toISOString())
+        setConfigStatus('updated')
+
+        toast.success(`✅ Quiz "${quiz.title}" configurato con modalità ${gameSettings.gameMode}!`)
+        console.log('✅ Config automatico applicato per quiz:', quiz.title)
+      } else {
+        toast.error('Errore configurazione: ' + data.message)
+        console.error('❌ Errore API:', data)
+      }
+    } catch (error) {
+      console.error('❌ Errore aggiornamento automatico:', error)
+      toast.error('Errore durante la configurazione automatica')
+    }
+
     // Aggiorna lo stato della configurazione
     setTimeout(checkConfigStatus, 100)
   }
@@ -92,17 +170,22 @@ export default function GameLauncher() {
     }
 
     try {
-      console.log('Aggiornamento configurazione in corso...')
-      
-      // Usa la nuova API per caricare il quiz nel config
-      const response = await fetch('/api/load-quiz', {
+      console.log('🔧 Aggiornamento configurazione completa in corso...')
+      console.log('📊 Modalità:', gameSettings.gameMode)
+      console.log('⚙️ Settings:', gameSettings)
+
+      // Usa la API update-config che include gameMode e gameSettings
+      const response = await fetch('/api/update-config', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          quizId: selectedQuiz.id,
-          password: selectedQuiz.password // Usa la password del quiz stesso
+          quiz: selectedQuiz,
+          settings: {
+            ...gameSettings,
+            password: selectedQuiz.password // Usa la password del quiz
+          }
         }),
       })
 
@@ -113,17 +196,19 @@ export default function GameLauncher() {
         localStorage.setItem('current-game-quiz', JSON.stringify(selectedQuiz))
         localStorage.setItem('game-settings', JSON.stringify(gameSettings))
         localStorage.setItem('last-config-update', new Date().toISOString())
-        
+
         // Aggiorna lo stato
         setConfigStatus('updated')
-        
-        toast.success(`Quiz "${data.quiz}" caricato nel gioco!`)
+
+        toast.success(`✅ Quiz "${data.quiz.subject}" configurato con modalità ${gameSettings.gameMode}!`)
+        console.log('✅ Config aggiornato per:', selectedQuiz.title)
       } else {
-        toast.error('Errore: ' + data.error)
+        toast.error('Errore: ' + data.message)
+        console.error('❌ Errore API:', data)
       }
 
     } catch (error) {
-      console.error('Errore durante l\'aggiornamento:', error)
+      console.error('❌ Errore durante l\'aggiornamento:', error)
       toast.error('Errore durante l\'aggiornamento della configurazione')
     }
   }
@@ -146,15 +231,9 @@ export default function GameLauncher() {
       JSON.stringify(gameSettings) !== lastGameSettings
     )
 
-    if (needsUpdate) {
-      const confirmUpdate = confirm(
-        '🔄 Il quiz o le impostazioni sono cambiate.\n\nVuoi aggiornare la configurazione del server prima di lanciare il gioco?'
-      )
-      
-      if (confirmUpdate) {
-        await updateGameConfig()
-      }
-    }
+    // FORZA sempre l'aggiornamento del config per assicurare modalità corretta
+    console.log('🚀 Forzando aggiornamento config per modalità:', gameSettings.gameMode)
+    await updateGameConfig()
 
     // Salva il quiz attivo
     localStorage.setItem('current-game-quiz', JSON.stringify(selectedQuiz))
@@ -431,6 +510,21 @@ export default function GameLauncher() {
                 </div>
               </div>
             </div>
+
+            {/* Status Configurazione Semplificato */}
+            <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-3">
+              <div className="text-sm text-blue-800">
+                🎮 <strong>Modalità attiva:</strong> {
+                  gameSettings.gameMode === 'standard' ? 'Standard' :
+                  gameSettings.gameMode === 'chase' ? 'Inseguimento' :
+                  gameSettings.gameMode === 'appearing' ? 'Risposte a Comparsa' :
+                  gameSettings.gameMode === 'timed' ? 'Quiz a Tempo' :
+                  gameSettings.gameMode === 'untimed' ? 'Senza Tempo' :
+                  gameSettings.gameMode === 'survival' ? 'Sopravvivenza' : 'Standard'
+                } |
+                ⏩ <strong>Auto-advance:</strong> {gameSettings.autoAdvance ? 'ON' : 'OFF'}
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -454,8 +548,7 @@ export default function GameLauncher() {
                     value="standard"
                     checked={gameSettings.gameMode === 'standard'}
                     onChange={(e) => {
-                      setGameSettings(prev => ({ ...prev, gameMode: e.target.value }))
-                      setTimeout(checkConfigStatus, 100)
+                      handleModeChange(e.target.value)
                     }}
                     className="sr-only"
                   />
@@ -476,8 +569,7 @@ export default function GameLauncher() {
                     value="chase"
                     checked={gameSettings.gameMode === 'chase'}
                     onChange={(e) => {
-                      setGameSettings(prev => ({ ...prev, gameMode: e.target.value }))
-                      setTimeout(checkConfigStatus, 100)
+                      handleModeChange(e.target.value)
                     }}
                     className="sr-only"
                   />
@@ -498,8 +590,7 @@ export default function GameLauncher() {
                     value="appearing"
                     checked={gameSettings.gameMode === 'appearing'}
                     onChange={(e) => {
-                      setGameSettings(prev => ({ ...prev, gameMode: e.target.value }))
-                      setTimeout(checkConfigStatus, 100)
+                      handleModeChange(e.target.value)
                     }}
                     className="sr-only"
                   />
@@ -520,8 +611,7 @@ export default function GameLauncher() {
                     value="timed"
                     checked={gameSettings.gameMode === 'timed'}
                     onChange={(e) => {
-                      setGameSettings(prev => ({ ...prev, gameMode: e.target.value }))
-                      setTimeout(checkConfigStatus, 100)
+                      handleModeChange(e.target.value)
                     }}
                     className="sr-only"
                   />
@@ -542,8 +632,7 @@ export default function GameLauncher() {
                     value="untimed"
                     checked={gameSettings.gameMode === 'untimed'}
                     onChange={(e) => {
-                      setGameSettings(prev => ({ ...prev, gameMode: e.target.value }))
-                      setTimeout(checkConfigStatus, 100)
+                      handleModeChange(e.target.value)
                     }}
                     className="sr-only"
                   />
@@ -564,8 +653,7 @@ export default function GameLauncher() {
                     value="survival"
                     checked={gameSettings.gameMode === 'survival'}
                     onChange={(e) => {
-                      setGameSettings(prev => ({ ...prev, gameMode: e.target.value }))
-                      setTimeout(checkConfigStatus, 100)
+                      handleModeChange(e.target.value)
                     }}
                     className="sr-only"
                   />
@@ -646,6 +734,164 @@ export default function GameLauncher() {
                   <div>
                     <div className="font-medium text-gray-900">Mescola Risposte</div>
                     <div className="text-sm text-gray-600">Ordine casuale delle opzioni</div>
+                  </div>
+                </label>
+
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={gameSettings.bonusForSpeed}
+                    onChange={(e) => {
+                      setGameSettings(prev => ({ ...prev, bonusForSpeed: e.target.checked }))
+                      setTimeout(checkConfigStatus, 100)
+                    }}
+                    className="mr-3 w-4 h-4 text-blue-600"
+                  />
+                  <div>
+                    <div className="font-medium text-gray-900">🚀 Bonus Velocità</div>
+                    <div className="text-sm text-gray-600">Punti extra per risposte veloci</div>
+                  </div>
+                </label>
+
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={gameSettings.showHints || false}
+                    onChange={(e) => {
+                      setGameSettings(prev => ({ ...prev, showHints: e.target.checked }))
+                      setTimeout(checkConfigStatus, 100)
+                    }}
+                    className="mr-3 w-4 h-4 text-blue-600"
+                  />
+                  <div>
+                    <div className="font-medium text-gray-900">💡 Suggerimenti</div>
+                    <div className="text-sm text-gray-600">Mostra suggerimenti dopo tempo limite</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            {/* Opzioni Avanzate */}
+            <div>
+              <h4 className="font-medium text-gray-900 mb-3">🎯 Configurazioni Avanzate</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                {/* Timer Personalizzato */}
+                {gameSettings.gameMode === 'timed' && (
+                  <div className="space-y-3">
+                    <label className="block">
+                      <div className="font-medium text-gray-900 mb-2">⏱️ Tempo Personalizzato</div>
+                      <input
+                        type="number"
+                        min="5"
+                        max="60"
+                        value={gameSettings.customTime || 10}
+                        onChange={(e) => {
+                          setGameSettings(prev => ({ ...prev, customTime: parseInt(e.target.value) }))
+                          setTimeout(checkConfigStatus, 100)
+                        }}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                      />
+                      <div className="text-sm text-gray-600 mt-1">Secondi per domanda (5-60)</div>
+                    </label>
+                  </div>
+                )}
+
+                {/* Vite Sopravvivenza */}
+                {gameSettings.gameMode === 'survival' && (
+                  <div className="space-y-3">
+                    <label className="block">
+                      <div className="font-medium text-gray-900 mb-2">💀 Numero Vite</div>
+                      <select
+                        value={gameSettings.lives || 1}
+                        onChange={(e) => {
+                          setGameSettings(prev => ({ ...prev, lives: parseInt(e.target.value) }))
+                          setTimeout(checkConfigStatus, 100)
+                        }}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                      >
+                        <option value={1}>1 vita (eliminazione immediata)</option>
+                        <option value={2}>2 vite</option>
+                        <option value={3}>3 vite</option>
+                        <option value={5}>5 vite</option>
+                      </select>
+                      <div className="text-sm text-gray-600 mt-1">Errori consentiti prima dell'eliminazione</div>
+                    </label>
+                  </div>
+                )}
+
+                {/* Moltiplicatore Punti */}
+                <div className="space-y-3">
+                  <label className="block">
+                    <div className="font-medium text-gray-900 mb-2">📊 Moltiplicatore Punti</div>
+                    <select
+                      value={gameSettings.pointsMultiplier || 1}
+                      onChange={(e) => {
+                        setGameSettings(prev => ({ ...prev, pointsMultiplier: parseFloat(e.target.value) }))
+                        setTimeout(checkConfigStatus, 100)
+                      }}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    >
+                      <option value={0.5}>0.5x (Facile)</option>
+                      <option value={1}>1x (Standard)</option>
+                      <option value={1.5}>1.5x (Sfida)</option>
+                      <option value={2}>2x (Difficile)</option>
+                      <option value={3}>3x (Estremo)</option>
+                    </select>
+                    <div className="text-sm text-gray-600 mt-1">Moltiplicatore per tutti i punteggi</div>
+                  </label>
+                </div>
+
+                {/* Limite Partecipanti */}
+                <div className="space-y-3">
+                  <label className="block">
+                    <div className="font-medium text-gray-900 mb-2">👥 Limite Partecipanti</div>
+                    <input
+                      type="number"
+                      min="1"
+                      max="100"
+                      value={gameSettings.maxPlayers || 50}
+                      onChange={(e) => {
+                        setGameSettings(prev => ({ ...prev, maxPlayers: parseInt(e.target.value) }))
+                        setTimeout(checkConfigStatus, 100)
+                      }}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    />
+                    <div className="text-sm text-gray-600 mt-1">Numero massimo di studenti (1-100)</div>
+                  </label>
+                </div>
+
+                {/* Auto-avanzamento */}
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={gameSettings.autoAdvance || false}
+                    onChange={(e) => {
+                      setGameSettings(prev => ({ ...prev, autoAdvance: e.target.checked }))
+                      setTimeout(checkConfigStatus, 100)
+                    }}
+                    className="mr-3 w-4 h-4 text-blue-600"
+                  />
+                  <div>
+                    <div className="font-medium text-gray-900">⏩ Auto-avanzamento</div>
+                    <div className="text-sm text-gray-600">Passa automaticamente alla domanda successiva</div>
+                  </div>
+                </label>
+
+                {/* Suoni e Notifiche */}
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={gameSettings.playSound || true}
+                    onChange={(e) => {
+                      setGameSettings(prev => ({ ...prev, playSound: e.target.checked }))
+                      setTimeout(checkConfigStatus, 100)
+                    }}
+                    className="mr-3 w-4 h-4 text-blue-600"
+                  />
+                  <div>
+                    <div className="font-medium text-gray-900">🔊 Suoni e Effetti</div>
+                    <div className="text-sm text-gray-600">Abilita notifiche audio durante il gioco</div>
                   </div>
                 </label>
 
