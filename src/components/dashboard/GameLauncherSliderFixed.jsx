@@ -29,6 +29,7 @@ export default function GameLauncherSliderFixed() {
     playSound: true
   })
   const [isLaunching, setIsLaunching] = useState(false)
+  const [hasError, setHasError] = useState(false)
 
   // Helper per valori sicuri - versione migliorata anti-errori React
   const safeLength = (arr) => {
@@ -92,20 +93,55 @@ export default function GameLauncherSliderFixed() {
   }
 
   useEffect(() => {
-    loadQuizzesFromArchive()
+    let isMounted = true
+
+    const loadData = async () => {
+      try {
+        if (isMounted) {
+          await loadQuizzesFromArchive()
+        }
+      } catch (error) {
+        if (isMounted) {
+          console.error('Errore caricamento quiz:', error)
+        }
+      }
+    }
+
+    loadData()
+
+    return () => {
+      isMounted = false
+    }
   }, [])
 
   const loadQuizzesFromArchive = async () => {
     try {
       const data = await QuizArchive.getAllQuizzes()
-      const quizList = data.quizzes || []
-      setQuizzes(quizList)
+      const quizList = Array.isArray(data.quizzes) ? data.quizzes : []
 
-      const categorySet = new Set(quizList.map(quiz => quiz.subject || 'Generale'))
+      // Validazione e sanitizzazione dei quiz
+      const validQuizzes = quizList.filter(quiz =>
+        quiz &&
+        typeof quiz === 'object' &&
+        quiz.id &&
+        typeof quiz.id === 'string'
+      )
+
+      setQuizzes(validQuizzes)
+
+      const categorySet = new Set(
+        validQuizzes
+          .map(quiz => quiz.subject || 'Generale')
+          .filter(subject => typeof subject === 'string' && subject.trim())
+      )
       setCategories(Array.from(categorySet).sort())
     } catch (error) {
       console.error('Errore caricamento quiz:', error)
       toast.error('Errore nel caricamento dei quiz')
+      // Fallback per prevenire crash
+      setQuizzes([])
+      setCategories([])
+      setHasError(true)
     }
   }
 
@@ -299,8 +335,31 @@ export default function GameLauncherSliderFixed() {
     }
   }
 
-  return (
-    <div className="h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
+  // Error boundary fallback
+  if (hasError) {
+    return (
+      <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
+        <div className="text-center">
+          <div className="text-6xl mb-4">⚠️</div>
+          <h2 className="text-3xl font-bold text-red-800 mb-4">Errore di Sistema</h2>
+          <p className="text-red-600 mb-6">Si è verificato un errore nel caricamento del launcher</p>
+          <button
+            onClick={() => {
+              setHasError(false)
+              window.location.reload()
+            }}
+            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            🔄 Ricarica Pagina
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  try {
+    return (
+      <div className="h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header fisso */}
       <div className="bg-white shadow-sm border-b px-6 py-4">
         <div className="flex items-center justify-between">
@@ -540,5 +599,24 @@ export default function GameLauncherSliderFixed() {
         </div>
       </div>
     </div>
-  )
+    )
+  } catch (error) {
+    console.error('Errore critico nel GameLauncher:', error)
+    setHasError(true)
+    return (
+      <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
+        <div className="text-center">
+          <div className="text-6xl mb-4">💥</div>
+          <h2 className="text-3xl font-bold text-red-800 mb-4">Crash del Componente</h2>
+          <p className="text-red-600 mb-6">Il launcher ha riscontrato un errore critico</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            🔄 Ricarica Pagina
+          </button>
+        </div>
+      </div>
+    )
+  }
 }
