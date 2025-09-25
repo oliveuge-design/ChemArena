@@ -366,9 +366,12 @@ export default function GameLauncherSliderFixed() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900">🚀 Lancia Nuovo Quiz</h2>
             <p className="text-gray-600 text-sm">
-              {currentSlide === 0 && "Scegli una categoria"}
-              {currentSlide === 1 && `Quiz disponibili: ${selectedCategory}`}
-              {currentSlide === 2 && `Configurazione: ${selectedQuiz?.title || 'Quiz'}`}
+              {String(
+                currentSlide === 0 ? "Scegli una categoria" :
+                currentSlide === 1 ? `Quiz disponibili: ${selectedCategory || ''}` :
+                currentSlide === 2 ? `Configurazione: ${selectedQuiz?.title || 'Quiz'}` :
+                "Navigazione"
+              )}
             </p>
           </div>
 
@@ -411,7 +414,7 @@ export default function GameLauncherSliderFixed() {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {/* Slide 1: Selezione Categoria */}
-          <div className="w-full flex-shrink-0 p-6">
+          <div key="slide-categories" className="w-full flex-shrink-0 p-6">
             <div className="h-full flex flex-col">
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">📚</div>
@@ -458,7 +461,7 @@ export default function GameLauncherSliderFixed() {
           </div>
 
           {/* Slide 2: Selezione Quiz */}
-          <div className="w-full flex-shrink-0 p-6">
+          <div key="slide-quizzes" className="w-full flex-shrink-0 p-6">
             <div className="h-full flex flex-col">
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">{getCategoryIcon(selectedCategory || '')}</div>
@@ -475,12 +478,12 @@ export default function GameLauncherSliderFixed() {
           </div>
 
           {/* Slide 3: Configurazione */}
-          <div className="w-full flex-shrink-0 p-6">
+          <div key="slide-config" className="w-full flex-shrink-0 p-6">
             <div className="h-full flex flex-col max-w-4xl mx-auto">
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">⚙️</div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">Configurazione Quiz</h3>
-                <p className="text-gray-600">{selectedQuiz?.title || 'Quiz'}</p>
+                <p className="text-gray-600">{String(selectedQuiz?.title || 'Quiz')}</p>
               </div>
 
               <div className="flex-1 overflow-y-auto space-y-8">
