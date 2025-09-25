@@ -229,59 +229,74 @@ export default function GameLauncherSliderFixed() {
   }
 
   const renderQuizCards = () => {
-    if (!Array.isArray(filteredQuizzes) || filteredQuizzes.length === 0) {
+    try {
+      if (!Array.isArray(filteredQuizzes) || filteredQuizzes.length === 0) {
+        return (
+          <div className="text-center py-16" key="no-quizzes">
+            <div className="text-6xl mb-4">📝</div>
+            <h4 className="text-xl font-semibold text-gray-700 mb-2">Nessun quiz trovato</h4>
+            <p className="text-gray-500">Non ci sono quiz disponibili per la categoria "{String(selectedCategory || '')}"</p>
+          </div>
+        )
+      }
+
+      const validQuizzes = filteredQuizzes.filter(quiz =>
+        quiz && typeof quiz === 'object' && quiz.id && typeof quiz.id === 'string'
+      )
+
+      return validQuizzes.map((quiz, index) => {
+        const quizKey = `quiz-${quiz.id}-${index}`
+
+        return (
+          <button
+            key={quizKey}
+            onClick={() => handleQuizSelect(quiz)}
+            className="w-full p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] text-left group border-2 border-transparent hover:border-blue-200"
+          >
+            <div className="flex justify-between items-start">
+              <div className="flex-1">
+                <h4 className="font-bold text-xl text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  {String(quiz.title || 'Quiz senza titolo')}
+                </h4>
+                <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                  <span className="flex items-center">
+                    <span className="mr-1">📝</span>
+                    {safeLength(quiz.questions)} domande
+                  </span>
+                  <span className="flex items-center">
+                    <span className="mr-1">⏱️</span>
+                    Tempo medio: {safeAverage(quiz.questions, 'time', 15)}s
+                  </span>
+                  <span className="flex items-center">
+                    <span className="mr-1">🎯</span>
+                    {safeMath(() => (Array.isArray(quiz.questions) ? quiz.questions.length : 0) * 1000)} punti max
+                  </span>
+                  {quiz.password && (
+                    <span className="flex items-center">
+                      <span className="mr-1">🔑</span>
+                      Password: {String(quiz.password)}
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-gray-500 mt-2">Creato il {String(quiz.created || 'Data sconosciuta')}</p>
+              </div>
+              <div className="ml-4 text-2xl group-hover:scale-110 transition-transform duration-300">
+                🚀
+              </div>
+            </div>
+          </button>
+        )
+      })
+    } catch (error) {
+      console.error('Errore rendering quiz cards:', error)
       return (
-        <div className="text-center py-16">
-          <div className="text-6xl mb-4">📝</div>
-          <h4 className="text-xl font-semibold text-gray-700 mb-2">Nessun quiz trovato</h4>
-          <p className="text-gray-500">Non ci sono quiz disponibili per la categoria "{selectedCategory}"</p>
+        <div className="text-center py-16" key="error-fallback">
+          <div className="text-6xl mb-4">⚠️</div>
+          <h4 className="text-xl font-semibold text-red-600 mb-2">Errore di caricamento</h4>
+          <p className="text-gray-500">Si è verificato un errore nel caricamento dei quiz</p>
         </div>
       )
     }
-
-    return filteredQuizzes.map((quiz) => {
-      if (!quiz || typeof quiz !== 'object' || !quiz.id) return null
-
-      return (
-        <button
-          key={quiz.id}
-          onClick={() => handleQuizSelect(quiz)}
-          className="w-full p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] text-left group border-2 border-transparent hover:border-blue-200"
-        >
-          <div className="flex justify-between items-start">
-            <div className="flex-1">
-              <h4 className="font-bold text-xl text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                {quiz.title || 'Quiz senza titolo'}
-              </h4>
-              <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                <span className="flex items-center">
-                  <span className="mr-1">📝</span>
-                  {safeLength(quiz.questions)} domande
-                </span>
-                <span className="flex items-center">
-                  <span className="mr-1">⏱️</span>
-                  Tempo medio: {safeAverage(quiz.questions, 'time', 15)}s
-                </span>
-                <span className="flex items-center">
-                  <span className="mr-1">🎯</span>
-                  {safeMath(() => (Array.isArray(quiz.questions) ? quiz.questions.length : 0) * 1000)} punti max
-                </span>
-                {quiz.password && (
-                  <span className="flex items-center">
-                    <span className="mr-1">🔑</span>
-                    Password: {quiz.password}
-                  </span>
-                )}
-              </div>
-              <p className="text-xs text-gray-500 mt-2">Creato il {quiz.created || 'Data sconosciuta'}</p>
-            </div>
-            <div className="ml-4 text-2xl group-hover:scale-110 transition-transform duration-300">
-              🚀
-            </div>
-          </div>
-        </button>
-      )
-    }).filter(Boolean)
   }
 
   return (
@@ -356,24 +371,26 @@ export default function GameLauncherSliderFixed() {
                 ) : (
                   <div className="max-w-6xl mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 py-6">
-                      {Array.isArray(categories) && categories.map((category) => {
-                        if (!category || typeof category !== 'string') return null
-                        return (
-                          <button
-                            key={category}
-                            onClick={() => handleCategorySelect(category)}
-                            className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-blue-200"
-                          >
-                            <div className="text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                              {getCategoryIcon(category)}
-                            </div>
-                            <div className="font-semibold text-gray-900 text-lg mb-1">{String(category)}</div>
-                            <div className="text-sm text-gray-500">
-                              {safeQuizCount(category)} quiz
-                            </div>
-                          </button>
-                        )
-                      })}
+                      {Array.isArray(categories) && categories
+                        .filter(category => category && typeof category === 'string')
+                        .map((category, index) => {
+                          const categoryKey = `category-${category}-${index}`
+                          return (
+                            <button
+                              key={categoryKey}
+                              onClick={() => handleCategorySelect(category)}
+                              className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-blue-200"
+                            >
+                              <div className="text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                                {getCategoryIcon(category)}
+                              </div>
+                              <div className="font-semibold text-gray-900 text-lg mb-1">{String(category)}</div>
+                              <div className="text-sm text-gray-500">
+                                {safeQuizCount(category)} quiz
+                              </div>
+                            </button>
+                          )
+                        })}
                     </div>
                   </div>
                 )}
