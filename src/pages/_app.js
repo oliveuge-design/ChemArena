@@ -11,9 +11,9 @@ import { useEffect } from "react"
 const montserrat = Montserrat({ subsets: ["latin"] })
 
 export default function App({ Component, pageProps }) {
-  // Service Worker registration per PWA
+  // Service Worker registration per PWA - TEMPORANEAMENTE DISABILITATO per debug
   useEffect(() => {
-    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+    if ('serviceWorker' in navigator && false) { // DISABILITATO
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {

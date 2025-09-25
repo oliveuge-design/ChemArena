@@ -287,7 +287,7 @@ export default function GameLauncherSliderFixed() {
           <button
             key={quizKey}
             onClick={() => handleQuizSelect(quiz)}
-            className="w-full p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] text-left group border-2 border-transparent hover:border-blue-200"
+            className="w-full p-6 bg-white rounded-xl shadow-md hover:shadow-lg text-left group border-2 border-transparent hover:border-blue-200"
           >
             <div className="flex justify-between items-start">
               <div className="flex-1">
@@ -407,7 +407,7 @@ export default function GameLauncherSliderFixed() {
       {/* Container slide */}
       <div className="flex-1 overflow-hidden">
         <div
-          className="flex h-full transition-transform duration-500 ease-out"
+          className="flex h-full"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {/* Slide 1: Selezione Categoria */}
@@ -438,7 +438,7 @@ export default function GameLauncherSliderFixed() {
                             <button
                               key={categoryKey}
                               onClick={() => handleCategorySelect(category)}
-                              className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-transparent hover:border-blue-200"
+                              className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-xl border-2 border-transparent hover:border-blue-200"
                             >
                               <div className="text-5xl mb-3 group-hover:scale-110 transition-transform duration-300">
                                 {getCategoryIcon(category)}
