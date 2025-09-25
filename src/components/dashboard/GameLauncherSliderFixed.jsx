@@ -271,7 +271,7 @@ export default function GameLauncherSliderFixed() {
           <div className="text-center py-16" key="no-quizzes">
             <div className="text-6xl mb-4">📝</div>
             <h4 className="text-xl font-semibold text-gray-700 mb-2">Nessun quiz trovato</h4>
-            <p className="text-gray-500">Non ci sono quiz disponibili per la categoria "{String(selectedCategory || '')}"</p>
+            <div className="text-gray-500">Non ci sono quiz disponibili per la categoria "{String(selectedCategory || '')}"</div>
           </div>
         )
       }
@@ -314,7 +314,7 @@ export default function GameLauncherSliderFixed() {
                     </span>
                   )}
                 </div>
-                <p className="text-xs text-gray-500 mt-2">Creato il {String(quiz.created || 'Data sconosciuta')}</p>
+                <div className="text-xs text-gray-500 mt-2">Creato il {String(quiz.created || 'Data sconosciuta')}</div>
               </div>
               <div className="ml-4 text-2xl group-hover:scale-110 transition-transform duration-300">
                 🚀
@@ -329,7 +329,7 @@ export default function GameLauncherSliderFixed() {
         <div className="text-center py-16" key="error-fallback">
           <div className="text-6xl mb-4">⚠️</div>
           <h4 className="text-xl font-semibold text-red-600 mb-2">Errore di caricamento</h4>
-          <p className="text-gray-500">Si è verificato un errore nel caricamento dei quiz</p>
+          <div className="text-gray-500">Si è verificato un errore nel caricamento dei quiz</div>
         </div>
       )
     }
@@ -342,7 +342,7 @@ export default function GameLauncherSliderFixed() {
         <div className="text-center">
           <div className="text-6xl mb-4">⚠️</div>
           <h2 className="text-3xl font-bold text-red-800 mb-4">Errore di Sistema</h2>
-          <p className="text-red-600 mb-6">Si è verificato un errore nel caricamento del launcher</p>
+          <div className="text-red-600 mb-6">Si è verificato un errore nel caricamento del launcher</div>
           <button
             onClick={() => {
               setHasError(false)
@@ -365,14 +365,14 @@ export default function GameLauncherSliderFixed() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">🚀 Lancia Nuovo Quiz</h2>
-            <p className="text-gray-600 text-sm">
+            <div className="text-gray-600 text-sm">
               {String(
                 currentSlide === 0 ? "Scegli una categoria" :
                 currentSlide === 1 ? `Quiz disponibili: ${selectedCategory || ''}` :
                 currentSlide === 2 ? `Configurazione: ${selectedQuiz?.title || 'Quiz'}` :
                 "Navigazione"
               )}
-            </p>
+            </div>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -419,7 +419,7 @@ export default function GameLauncherSliderFixed() {
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">📚</div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">Seleziona Categoria</h3>
-                <p className="text-gray-600">Scegli la materia del quiz che vuoi lanciare</p>
+                <div className="text-gray-600">Scegli la materia del quiz che vuoi lanciare</div>
               </div>
 
               <div className="flex-1 overflow-y-auto">
@@ -427,7 +427,7 @@ export default function GameLauncherSliderFixed() {
                   <div className="flex items-center justify-center h-full">
                     <div className="text-center">
                       <div className="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"></div>
-                      <p className="text-gray-600">Caricamento categorie...</p>
+                      <div className="text-gray-600">Caricamento categorie...</div>
                     </div>
                   </div>
                 ) : (
@@ -466,7 +466,7 @@ export default function GameLauncherSliderFixed() {
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">{getCategoryIcon(selectedCategory || '')}</div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">{String(selectedCategory || 'Categoria')}</h3>
-                <p className="text-gray-600">Seleziona il quiz da lanciare</p>
+                <div className="text-gray-600">Seleziona il quiz da lanciare</div>
               </div>
 
               <div className="flex-1 overflow-y-auto">
@@ -483,7 +483,7 @@ export default function GameLauncherSliderFixed() {
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">⚙️</div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">Configurazione Quiz</h3>
-                <p className="text-gray-600">{String(selectedQuiz?.title || 'Quiz')}</p>
+                <div className="text-gray-600">{String(selectedQuiz?.title || 'Quiz')}</div>
               </div>
 
               <div className="flex-1 overflow-y-auto space-y-8">
@@ -592,9 +592,9 @@ export default function GameLauncherSliderFixed() {
                   >
                     {isLaunching ? "🔄 Avvio in corso..." : "🚀 LANCIA QUIZ"}
                   </Button>
-                  <p className="text-sm text-gray-500 mt-3">
+                  <div className="text-sm text-gray-500 mt-3">
                     Ti porterà alla pagina manager per generare il PIN studenti
-                  </p>
+                  </div>
                 </div>
               )}
             </div>
@@ -611,7 +611,7 @@ export default function GameLauncherSliderFixed() {
         <div className="text-center">
           <div className="text-6xl mb-4">💥</div>
           <h2 className="text-3xl font-bold text-red-800 mb-4">Crash del Componente</h2>
-          <p className="text-red-600 mb-6">Il launcher ha riscontrato un errore critico</p>
+          <div className="text-red-600 mb-6">Il launcher ha riscontrato un errore critico</div>
           <button
             onClick={() => window.location.reload()}
             className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold"
