@@ -508,11 +508,12 @@ export default function Answers({
           </div>
         )}
 
-        <div className={`mx-auto mb-4 grid w-full max-w-7xl gap-4 px-4 text-lg font-bold text-white md:text-xl ${
-          answers.length <= 2 ? 'grid-cols-2' :
+        <div className={`mx-auto mb-4 grid w-full max-w-7xl gap-3 px-4 text-lg font-bold text-white md:text-xl ${
+          answers.length <= 2 ? 'grid-cols-1 md:grid-cols-2 max-w-4xl' :
           answers.length <= 4 ? 'grid-cols-2' :
-          answers.length <= 6 ? 'grid-cols-3' :
-          'grid-cols-4'
+          answers.length <= 6 ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-2' :
+          answers.length <= 8 ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-2' :
+          'grid-cols-3 md:grid-cols-4'
         }`}>
           {answers.map((answer, key) => {
             // Supporta sia il formato stringa che oggetto
@@ -531,6 +532,7 @@ export default function Answers({
                   })}
                   icon={ANSWERS_ICONS[key]}
                   answerImage={answerImage}
+                  totalAnswers={answers.length}
                   onClick={() => handleAnswer(key)}
                 >
                   {answerText}

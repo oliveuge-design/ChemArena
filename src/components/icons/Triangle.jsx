@@ -1,4 +1,4 @@
-export default function Triangle({ className, fill = "#FFF" }) {
+export default function Triangle({ className, fill = "currentColor" }) {
   return (
     <svg
       className={className}

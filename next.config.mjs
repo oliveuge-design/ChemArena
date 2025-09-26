@@ -9,6 +9,22 @@ const nextConfig = {
     // Skip TypeScript checks during builds
     ignoreBuildErrors: true,
   },
+  // Production optimizations
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+
+  // Bundle analyzer in development
+  ...(process.env.ANALYZE === 'true' && {
+    webpack: (config) => {
+      config.plugins.push(
+        new (require('@next/bundle-analyzer')({
+          enabled: true,
+        }))()
+      )
+      return config
+    },
+  }),
   images: {
     remotePatterns: [
       {

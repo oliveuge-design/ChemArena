@@ -1399,6 +1399,7 @@ export default function Home() {
           letter-spacing: 1px;
           transition: all 0.3s ease;
           box-shadow: 0 0 20px rgba(107, 114, 128, 0.3);
+          margin-right: 3cm;
         }
 
         .tron-back-btn:hover:not(:disabled) {

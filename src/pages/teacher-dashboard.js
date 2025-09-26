@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Button from "@/components/Button"
-import SmartGameLauncher from "@/components/dashboard/SmartGameLauncher"
+import GameLauncherSliderFixed from "@/components/dashboard/GameLauncherSliderFixed"
 import QuizArchiveManager from "@/components/dashboard/QuizArchiveManager"
 import Statistics from "@/components/dashboard/Statistics"
 import toast from 'react-hot-toast'
@@ -166,7 +166,7 @@ export default function TeacherDashboard() {
         <div className="bg-white rounded-lg shadow-sm border">
           {activeTab === 'launch' && (
             <div className="p-6">
-              <SmartGameLauncher />
+              <GameLauncherSliderFixed />
             </div>
           )}
           

@@ -1,19 +1,15 @@
-export default function Rhombus({ className, fill = "#FFF" }) {
+export default function Rhombus({ className, fill = "currentColor" }) {
   return (
     <svg
       className={className}
       fill={fill}
-      viewBox="-56.32 -56.32 624.64 624.64"
+      viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      transform="rotate(45)"
     >
-      <g strokeWidth="0" />
-
-      <g strokeLinecap="round" strokeLinejoin="round" />
-
-      <g>
-        <rect x="48" y="48" width="416" height="416" />
-      </g>
+      <path
+        d="M12 2L22 12L12 22L2 12L12 2Z"
+        fill={fill}
+      />
     </svg>
   )
 }

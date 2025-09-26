@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo, useCallback } from "react"
 import { useRouter } from "next/router"
 import Button from "@/components/Button"
 import { QuizArchive } from "../../utils/quizArchive"
 import toast from "react-hot-toast"
+import { dashboardLogger } from "@/utils/logger"
 
 export default function GameLauncherSliderFixed() {
   const router = useRouter()
@@ -207,7 +208,7 @@ export default function GameLauncherSliderFixed() {
       })
 
       if (response.ok) {
-        console.log('✅ Config aggiornato:', settings.gameMode)
+        dashboardLogger.debug('Config aggiornato:', settings.gameMode)
       }
     } catch (error) {
       console.error('❌ Errore config:', error)

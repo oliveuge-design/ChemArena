@@ -24,22 +24,57 @@ export default function Result({
   }, [sfxResults])
 
   return (
-    <section className="anim-show relative mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center">
+    <section className="anim-show relative mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center pb-8">
       {correct ? (
         <CricleCheck className="aspect-square max-h-60 w-full" />
       ) : (
         <CricleXmark className=" aspect-square max-h-60 w-full" />
       )}
-      <h2 className="mt-1 text-4xl font-bold text-white drop-shadow-lg">
+
+      <h2 className="mt-4 text-4xl font-bold text-white drop-shadow-lg text-center">
         {message}
       </h2>
-      <p className="mt-1 text-xl font-bold text-white drop-shadow-lg">
-        {`You are top ${rank}` + (aheadOfMe ? ", behind " + aheadOfMe : "")}
-      </p>
+
+      {/* Punteggio totale prominente */}
+      <div className="mt-6 bg-black/70 backdrop-blur-sm rounded-2xl border-2 border-cyan-400/50 p-6 shadow-[0_0_30px_rgba(34,211,238,0.5)]">
+        <div className="text-center">
+          <p className="text-lg text-cyan-300 font-semibold mb-2">PUNTEGGIO TOTALE</p>
+          <p className="text-5xl font-bold text-cyan-100 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
+            {myPoints}
+          </p>
+        </div>
+      </div>
+
+      {/* Posizione in classifica */}
+      <div className="mt-4 bg-black/60 backdrop-blur-sm rounded-xl border border-yellow-400/40 px-6 py-3 shadow-[0_0_20px_rgba(234,179,8,0.4)]">
+        <div className="flex items-center gap-3">
+          <div className="text-2xl">🏆</div>
+          <div>
+            <p className="text-yellow-200 text-lg font-bold">
+              {rank === 1 ? "🥇 1° POSTO!" :
+               rank === 2 ? "🥈 2° Posto" :
+               rank === 3 ? "🥉 3° Posto" :
+               `${rank}° Posto`}
+            </p>
+            {aheadOfMe && (
+              <p className="text-yellow-300/80 text-sm">
+                Dietro a {aheadOfMe}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Bonus punti per risposta corretta */}
       {correct && (
-        <span className="mt-2 rounded bg-black/40 px-4 py-2 text-2xl font-bold text-white drop-shadow-lg">
-          +{points}
-        </span>
+        <div className="mt-4 bg-green-600/80 backdrop-blur-sm rounded-xl border border-green-400/50 px-6 py-3 shadow-[0_0_20px_rgba(34,197,94,0.6)] animate-pulse">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">✨</span>
+            <span className="text-2xl font-bold text-white drop-shadow-lg">
+              +{points} punti
+            </span>
+          </div>
+        </div>
       )}
     </section>
   )

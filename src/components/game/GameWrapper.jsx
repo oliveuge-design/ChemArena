@@ -67,14 +67,14 @@ export default function GameWrapper({ children, textNext, onNext, manager, backg
         )}
 
         {manager && (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 mt-8" style={{transform: 'scale(1.1)'}}>
             <Button
               className="self-end bg-white px-4 !text-black"
               onClick={() => onNext()}
             >
               {textNext}
             </Button>
-            
+
             {/* Pulsante di emergenza solo per manager */}
             <Button
               className="self-end bg-red-600 hover:bg-red-700 text-white px-2 py-1 text-xs"
@@ -86,11 +86,11 @@ export default function GameWrapper({ children, textNext, onNext, manager, backg
                     emit("manager:forceReset")
                     console.log('🚨 Emergency force reset: server state resettato')
                   }
-                  
+
                   // Determina il dashboard corretto basato sul ruolo dell'utente
                   const savedTeacher = localStorage.getItem('teacher-auth')
                   let dashboardUrl = '/dashboard?emergency=true' // Default per admin
-                  
+
                   if (savedTeacher) {
                     try {
                       const teacherData = JSON.parse(savedTeacher)
@@ -101,7 +101,7 @@ export default function GameWrapper({ children, textNext, onNext, manager, backg
                       console.error('Errore parsing teacher data:', error)
                     }
                   }
-                  
+
                   // Naviga al dashboard corretto dopo reset server
                   setTimeout(() => {
                     window.location.href = dashboardUrl
@@ -118,10 +118,10 @@ export default function GameWrapper({ children, textNext, onNext, manager, backg
       {children}
 
       {!manager && (
-        <div className="z-50 flex items-center justify-between bg-white px-4 py-2 text-lg font-bold text-white">
-          <p className="text-gray-800">{!!player && player.username}</p>
-          <div className="rounded-sm bg-gray-800 px-3 py-1 text-lg">
-            {!!player && player.points}
+        <div className="z-50 flex items-center justify-between bg-white px-4 py-3 text-lg font-bold text-white shadow-[0_-4px_15px_rgba(0,0,0,0.3)]">
+          <p className="text-gray-800 truncate max-w-[60%]">{!!player && player.username}</p>
+          <div className="rounded-lg bg-gradient-to-r from-gray-800 to-gray-700 px-4 py-2 text-lg shadow-lg border border-gray-600">
+            <span className="text-cyan-100 font-bold drop-shadow-sm">{!!player && player.points}</span>
           </div>
         </div>
       )}

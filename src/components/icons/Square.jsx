@@ -1,4 +1,4 @@
-export default function Square({ className, fill = "#FFF" }) {
+export default function Square({ className, fill = "currentColor" }) {
   return (
     <svg
       className={className}
