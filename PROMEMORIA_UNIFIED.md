@@ -26,6 +26,18 @@
 
 ## 🎯 STATO ATTUALE PROGETTO (Settembre 2025)
 
+### ✅ **SESSIONE 2025-09-26 - UX IMPROVEMENTS + SISTEMA BACKUP QUIZ**
+- **UI/UX Miglioramenti**: ✅ COMPLETATO - 8 icone ottimizzate, layout responsivo 6+ opzioni
+- **Layout Quiz**: ✅ RIPARATO - Grid 3x2 per 6 opzioni, dimensioni adattive, Pentagon corretto
+- **Punteggi Visibili**: ✅ IMPLEMENTATO - Sistema punteggio cyberpunk + posizione classifica
+- **Controlli Posizionamento**: ✅ OTTIMIZZATO - Pulsanti manager e studenti spostati correttamente
+- **🚨 SISTEMA BACKUP QUIZ**: ✅ **IMPLEMENTATO** - **CRITICO: Mai più quiz persi durante deploy!**
+  - `npm run deploy:safe` - Deploy sicuro con backup automatico
+  - `npm run quiz:backup` - Backup manuale da Render
+  - `npm run quiz:merge` - Merge intelligente Render + locale
+  - **28 quiz attuali** salvati e protetti dal sistema
+- **Status**: 🚀 **ENTERPRISE-READY** - Sistema completo + protezione dati
+
 ### ✅ **SESSIONE 2025-09-25 - OTTIMIZZAZIONE COMPLETA + TEST FUNZIONALITÀ**
 - **Codebase Cleanup**: ✅ COMPLETATO - Rimossi 4 GameLauncher obsoleti + 2 AIQuizGenerator
 - **Dependencies**: ✅ OTTIMIZZATE - Rimosse 6 dipendenze inutili (-51 packages)
@@ -249,6 +261,23 @@ npm run dev
 # Dashboard: http://localhost:3000/dashboard
 # Studenti: http://localhost:3000
 # Manager: http://localhost:3000/manager
+```
+
+### **🛡️ BACKUP QUIZ - COMANDI CRITICI**
+```bash
+# 🚨 DEPLOY SICURO (SEMPRE USARE QUESTO)
+npm run deploy:safe
+
+# Dopo che Render completa il deploy
+npm run post-deploy
+
+# Backup manuale (se necessario)
+npm run quiz:backup   # Scarica da Render
+npm run quiz:restore  # Ripristina da backup locale
+npm run quiz:merge    # Merge intelligente
+
+# ⚠️ IMPORTANTE: Mai fare git push diretto!
+# Usa sempre deploy:safe per preservare tutti i quiz
 ```
 
 ### **🐛 TROUBLESHOOTING**

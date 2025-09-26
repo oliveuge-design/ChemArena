@@ -1,0 +1,3311 @@
+{
+  "quizzes": [
+    {
+      "id": "quiz_1",
+      "title": "Geografia Mondiale",
+      "subject": "Geografia",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Qual è la capitale della Francia?",
+          "answers": [
+            "Berlino",
+            "Parigi",
+            "Madrid",
+            "Roma"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q2",
+          "question": "Quale fiume è il più lungo del mondo?",
+          "answers": [
+            "Nilo",
+            "Amazon",
+            "Mississippi",
+            "Yangtze"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q3",
+          "question": "Quanti continenti ci sono?",
+          "answers": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q4",
+          "question": "Qual è il monte più alto del mondo?",
+          "answers": [
+            "K2",
+            "Everest",
+            "Makalu",
+            "Cho Oyu"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q5",
+          "question": "Quale paese ha più fusi orari?",
+          "answers": [
+            "Russia",
+            "USA",
+            "Cina",
+            "Canada"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "cultura",
+      "subcategory": "geografia"
+    },
+    {
+      "id": "quiz_2",
+      "title": "Storia dell'Arte",
+      "subject": "Arte",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q6",
+          "question": "Chi ha dipinto la Monna Lisa?",
+          "answers": [
+            "Michelangelo",
+            "Leonardo da Vinci",
+            "Raffaello",
+            "Donatello"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q7",
+          "question": "In quale museo si trova la Gioconda?",
+          "answers": [
+            "Uffizi",
+            "Louvre",
+            "Prado",
+            "Metropolitan"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q8",
+          "question": "Chi ha scolpito il David?",
+          "answers": [
+            "Donatello",
+            "Bernini",
+            "Michelangelo",
+            "Rodin"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q9",
+          "question": "Qual è lo stile artistico di Van Gogh?",
+          "answers": [
+            "Impressionismo",
+            "Post-impressionismo",
+            "Cubismo",
+            "Surrealismo"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q10",
+          "question": "In quale periodo artistico si colloca Picasso?",
+          "answers": [
+            "Rinascimento",
+            "Barocco",
+            "Moderno",
+            "Medievale"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "cultura",
+      "subcategory": "arte"
+    },
+    {
+      "id": "quiz_3",
+      "title": "Scienze Naturali",
+      "subject": "Scienze",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q11",
+          "question": "Quale gas rappresenta la maggior parte dell'atmosfera terrestre?",
+          "answers": [
+            "Ossigeno",
+            "Azoto",
+            "Anidride carbonica",
+            "Argon"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q12",
+          "question": "Quanti cuori ha un polpo?",
+          "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q13",
+          "question": "Quale pianeta è noto come il 'pianeta rosso'?",
+          "answers": [
+            "Venere",
+            "Marte",
+            "Giove",
+            "Saturno"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q14",
+          "question": "Qual è l'elemento più abbondante nell'universo?",
+          "answers": [
+            "Elio",
+            "Idrogeno",
+            "Ossigeno",
+            "Carbonio"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q15",
+          "question": "Quante ossa ha il corpo umano adulto?",
+          "answers": [
+            "206",
+            "208",
+            "210",
+            "212"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "cultura",
+      "subcategory": "generale"
+    },
+    {
+      "id": "quiz_4",
+      "title": "Tecnologia e Informatica",
+      "subject": "Informatica",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q16",
+          "question": "Chi ha fondato Microsoft?",
+          "answers": [
+            "Steve Jobs",
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Jeff Bezos"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q17",
+          "question": "Cosa significa 'WWW'?",
+          "answers": [
+            "World Wide Web",
+            "World Web Wide",
+            "Wide World Web",
+            "Web World Wide"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q18",
+          "question": "In quale anno è stato inventato Internet?",
+          "answers": [
+            "1969",
+            "1975",
+            "1981",
+            "1990"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q19",
+          "question": "Qual è il linguaggio di programmazione più usato nel 2024?",
+          "answers": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "C++"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q20",
+          "question": "Cosa significa 'AI' in informatica?",
+          "answers": [
+            "Auto Intelligence",
+            "Artificial Intelligence",
+            "Advanced Intelligence",
+            "Applied Intelligence"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "tecnologia",
+      "subcategory": "informatica"
+    },
+    {
+      "id": "quiz_5",
+      "title": "Sport e Competizioni",
+      "subject": "Sport",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q21",
+          "question": "Ogni quanti anni si svolgono le Olimpiadi estive?",
+          "answers": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q22",
+          "question": "In quale sport si usa un 'putter'?",
+          "answers": [
+            "Tennis",
+            "Golf",
+            "Baseball",
+            "Hockey"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q23",
+          "question": "Quanti giocatori ci sono in una squadra di calcio in campo?",
+          "answers": [
+            "10",
+            "11",
+            "12",
+            "13"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q24",
+          "question": "Chi ha vinto più Mondiali di Formula 1?",
+          "answers": [
+            "Michael Schumacher",
+            "Lewis Hamilton",
+            "Ayrton Senna",
+            "Alain Prost"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q25",
+          "question": "In quale sport si gioca a 'tre set'?",
+          "answers": [
+            "Pallavolo",
+            "Tennis",
+            "Badminton",
+            "Ping pong"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "cultura",
+      "subcategory": "sport"
+    },
+    {
+      "id": "quiz_6",
+      "title": "Cultura Generale",
+      "subject": "Cultura",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q26",
+          "question": "Quante lettere ha l'alfabeto italiano?",
+          "answers": [
+            "21",
+            "22",
+            "23",
+            "24"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q27",
+          "question": "Chi ha scritto 'I Promessi Sposi'?",
+          "answers": [
+            "Dante Alighieri",
+            "Alessandro Manzoni",
+            "Giovanni Boccaccio",
+            "Italo Calvino"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q28",
+          "question": "In quale anno è caduto il Muro di Berlino?",
+          "answers": [
+            "1987",
+            "1989",
+            "1991",
+            "1993"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q29",
+          "question": "Qual è la moneta del Giappone?",
+          "answers": [
+            "Won",
+            "Yuan",
+            "Yen",
+            "Dong"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q30",
+          "question": "Chi ha composto 'La Nona Sinfonia'?",
+          "answers": [
+            "Mozart",
+            "Beethoven",
+            "Bach",
+            "Chopin"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "cultura",
+      "subcategory": "generale"
+    },
+    {
+      "id": "quiz_1757435542637",
+      "title": "Analisi",
+      "subject": "Chimica",
+      "created": "2025-09-09",
+      "author": "Utente",
+      "questions": [
+        {
+          "id": "q1757435542638_0",
+          "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+          "answers": [
+            "Risonanza magnetica dei nuclei atomici",
+            "Diffusione dei raggi X",
+            "Separazione dei componenti in fase liquida",
+            "Assorbimento della luce da parte degli elettroni"
+          ],
+          "solution": 3,
+          "time": 15,
+          "cooldown": 5,
+          "image": "/api/images/arte_monalisa.jpg"
+        },
+        {
+          "id": "q1757435542638_1",
+          "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+          "answers": [
+            "Cromatografia gas-liquido",
+            "Spettroscopia di assorbimento atomico (AAS)",
+            "Polarimetria",
+            "Elettroforesi"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    },
+    {
+      "id": "quiz_chimica_analitica",
+      "title": "Chimica Analitica Strumentale - Potenziometria e Conduttimetria",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-10",
+      "author": "Sistema",
+      "password": "analitica123",
+      "questions": [
+        {
+          "id": "qa1",
+          "question": "Quale principio fisico è alla base della potenziometria?",
+          "answers": [
+            "Conduttività elettrica della soluzione",
+            "Differenza di potenziale tra elettrodi",
+            "Assorbimento di radiazioni elettromagnetiche",
+            "Velocità di reazione chimica"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa2",
+          "question": "In una cella potenziometrica, quale elettrodo mantiene un potenziale costante?",
+          "answers": [
+            "Elettrodo di lavoro",
+            "Elettrodo ausiliario",
+            "Elettrodo di riferimento",
+            "Controelettrodo"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa3",
+          "question": "L'equazione di Nernst correla il potenziale dell'elettrodo con:",
+          "answers": [
+            "La temperatura e la pressione",
+            "La concentrazione degli ioni",
+            "La superficie dell'elettrodo",
+            "La velocità di agitazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa4",
+          "question": "Quale tipo di elettrodo è più comunemente usato per misurare il pH?",
+          "answers": [
+            "Elettrodo a calomelano",
+            "Elettrodo ad argento/cloruro di argento",
+            "Elettrodo di vetro",
+            "Elettrodo di platino"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa5",
+          "question": "In conduttimetria, la conducibilità di una soluzione dipende da:",
+          "answers": [
+            "Solo dalla concentrazione degli ioni",
+            "Dalla mobilità e concentrazione degli ioni",
+            "Solo dalla temperatura",
+            "Solo dal pH della soluzione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa6",
+          "question": "L'unità di misura della conducibilità elettrica specifica è:",
+          "answers": [
+            "Ohm (Ω)",
+            "Siemens per metro (S/m)",
+            "Ampere (A)",
+            "Volt per metro (V/m)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa7",
+          "question": "Quale fattore NON influenza la conducibilità di una soluzione elettrolitica?",
+          "answers": [
+            "Temperatura",
+            "Concentrazione degli ioni",
+            "Colore della soluzione",
+            "Natura degli ioni presenti"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa8",
+          "question": "In una titolazione conduttimetrica, il punto di equivalenza è identificato da:",
+          "answers": [
+            "Il massimo valore di conducibilità",
+            "Il minimo valore di conducibilità",
+            "Un cambiamento nella pendenza della curva",
+            "Il colore della soluzione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa9",
+          "question": "La costante di cella in conduttimetria è:",
+          "answers": [
+            "Il rapporto tra distanza e area degli elettrodi",
+            "La resistenza della soluzione",
+            "La temperatura della misura",
+            "La concentrazione dell'elettrolita"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa10",
+          "question": "Quale tecnica è più appropriata per determinare il punto finale di una titolazione di acido forte con base forte?",
+          "answers": [
+            "Solo potenziometria",
+            "Solo conduttimetria",
+            "Entrambe le tecniche sono appropriate",
+            "Nessuna delle due tecniche"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    },
+    {
+      "id": "medicina_quiz_1",
+      "title": "Test Medicina - Biologia e Scienze Naturali",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med1_q1",
+          "question": "Quale organello cellulare è responsabile della produzione di ATP?",
+          "answers": [
+            "Ribosomi",
+            "Mitocondri",
+            "Reticolo endoplasmatico",
+            "Apparato di Golgi"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q2",
+          "question": "Il DNA è costituito da quale tipo di zucchero?",
+          "answers": [
+            "Ribosio",
+            "Saccarosio",
+            "Desossiribosio",
+            "Fruttosio"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q3",
+          "question": "Quante camere ha il cuore umano?",
+          "answers": [
+            "Due",
+            "Tre",
+            "Quattro",
+            "Sei"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q4",
+          "question": "Quale gas viene eliminato dai polmoni durante l'espirazione?",
+          "answers": [
+            "Ossigeno",
+            "Azoto",
+            "Anidride carbonica",
+            "Vapore acqueo"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q5",
+          "question": "Il tessuto che collega i muscoli alle ossa è chiamato:",
+          "answers": [
+            "Legamento",
+            "Tendine",
+            "Cartilagine",
+            "Fascia"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "medicina"
+    },
+    {
+      "id": "medicina_quiz_2",
+      "title": "Test Medicina - Chimica e Biochimica",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med2_q1",
+          "question": "Quale elemento chimico ha simbolo 'Fe'?",
+          "answers": [
+            "Fluoro",
+            "Ferro",
+            "Fosforo",
+            "Francio"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q2",
+          "question": "Il pH dell'acqua pura a 25°C è:",
+          "answers": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q3",
+          "question": "Gli amminoacidi sono i costituenti base di:",
+          "answers": [
+            "Carboidrati",
+            "Lipidi",
+            "Proteine",
+            "Acidi nucleici"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q4",
+          "question": "Quale tipo di legame tiene insieme le due catene del DNA?",
+          "answers": [
+            "Legami ionici",
+            "Legami covalenti",
+            "Legami idrogeno",
+            "Forze di Van der Waals"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q5",
+          "question": "L'emoglobina contiene quale ione metallico?",
+          "answers": [
+            "Calcio (Ca²⁺)",
+            "Ferro (Fe²⁺)",
+            "Zinco (Zn²⁺)",
+            "Magnesio (Mg²⁺)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    },
+    {
+      "id": "medicina_quiz_3",
+      "title": "Test Medicina - Fisica e Matematica",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med3_q1",
+          "question": "L'unità di misura della pressione nel Sistema Internazionale è:",
+          "answers": [
+            "Pascal (Pa)",
+            "Torr",
+            "Atmosfera (atm)",
+            "Bar"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q2",
+          "question": "La velocità della luce nel vuoto è approssimativamente:",
+          "answers": [
+            "300.000 km/h",
+            "300.000 km/s",
+            "3.000.000 km/s",
+            "30.000 km/s"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q3",
+          "question": "Qual è la derivata di x² rispetto a x?",
+          "answers": [
+            "x",
+            "2x",
+            "x²/2",
+            "2"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q4",
+          "question": "La frequenza è l'inverso di quale grandezza fisica?",
+          "answers": [
+            "Lunghezza d'onda",
+            "Velocità",
+            "Periodo",
+            "Ampiezza"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q5",
+          "question": "In un triangolo rettangolo, il teorema di Pitagora stabilisce che:",
+          "answers": [
+            "a + b = c",
+            "a² + b² = c²",
+            "a × b = c²",
+            "a² × b² = c²"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "medicina"
+    },
+    {
+      "id": "medicina_quiz_4",
+      "title": "Test Medicina - Logica e Cultura Generale",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med4_q1",
+          "question": "Se tutti i medici sono laureati e Mario è un medico, allora:",
+          "answers": [
+            "Mario non è laureato",
+            "Mario è laureato",
+            "Non si può determinare",
+            "Mario è un dottore"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q2",
+          "question": "Quale Nobel per la Medicina ha scoperto la penicillina?",
+          "answers": [
+            "Louis Pasteur",
+            "Alexander Fleming",
+            "Marie Curie",
+            "Albert Einstein"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q3",
+          "question": "Il giuramento professionale dei medici prende il nome da:",
+          "answers": [
+            "Ippocrate",
+            "Galeno",
+            "Avicenna",
+            "Paracelso"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q4",
+          "question": "In una serie: 2, 4, 8, 16, ... quale numero segue?",
+          "answers": [
+            "24",
+            "30",
+            "32",
+            "20"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q5",
+          "question": "L'OMS (Organizzazione Mondiale della Sanità) ha sede a:",
+          "answers": [
+            "New York",
+            "Ginevra",
+            "Bruxelles",
+            "Vienna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "medicina"
+    },
+    {
+      "id": "medicina_quiz_5",
+      "title": "Test Medicina - Anatomia e Fisiologia",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med5_q1",
+          "question": "Il cranio umano è costituito da quante ossa?",
+          "answers": [
+            "20",
+            "22",
+            "24",
+            "26"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q2",
+          "question": "Quale ghiandola produce l'insulina?",
+          "answers": [
+            "Fegato",
+            "Pancreas",
+            "Tiroide",
+            "Surrene"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q3",
+          "question": "Il sistema nervoso simpatico e parasimpatico fanno parte di:",
+          "answers": [
+            "Sistema nervoso centrale",
+            "Sistema nervoso periferico",
+            "Sistema nervoso autonomo",
+            "Sistema nervoso somatico"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q4",
+          "question": "Quale vaso sanguigno porta il sangue dal cuore ai polmoni?",
+          "answers": [
+            "Aorta",
+            "Arteria polmonare",
+            "Vena cava",
+            "Arteria coronaria"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q5",
+          "question": "La filtrazione del sangue avviene principalmente in quale organo?",
+          "answers": [
+            "Fegato",
+            "Polmoni",
+            "Reni",
+            "Milza"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "medicina"
+    },
+    {
+      "id": "quiz_1757828391780",
+      "title": "Test Quiz",
+      "subject": "Test",
+      "created": "2025-09-14",
+      "author": "Utente",
+      "questions": [
+        {
+          "id": "q1757828391780_0",
+          "question": "Test?",
+          "answers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "test",
+      "subcategory": "sistema"
+    },
+    {
+      "id": "arduino_elettronica_base",
+      "title": "Elettronica di Base - Resistori, Pile e Circuiti",
+      "subject": "Elettronica",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "password": "elettronica123",
+      "questions": [
+        {
+          "id": "elb_q1",
+          "question": "Quale componente elettronico limita il flusso di corrente in un circuito?",
+          "answers": [
+            "Condensatore",
+            "Resistore",
+            "Induttore",
+            "Diodo"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q2",
+          "question": "In una pila da 9V, quale polo è quello positivo?",
+          "answers": [
+            "Il polo più grande",
+            "Il polo più piccolo",
+            "Il polo rosso",
+            "Non ha importanza"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q3",
+          "question": "Come si collegano le resistenze per ottenere una resistenza totale maggiore?",
+          "answers": [
+            "In parallelo",
+            "In serie",
+            "A croce",
+            "Non cambia"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q4",
+          "question": "Quale strumento serve per misurare la resistenza elettrica?",
+          "answers": [
+            "Voltmetro",
+            "Amperometro",
+            "Ohmetro",
+            "Wattmetro"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q5",
+          "question": "In un circuito semplice con una pila e un LED, quale componente è obbligatorio aggiungere?",
+          "answers": [
+            "Condensatore",
+            "Resistore di limitazione",
+            "Interruttore",
+            "Potenziometro"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q6",
+          "question": "Cosa succede se si collega direttamente un LED a una pila da 9V senza resistenza?",
+          "answers": [
+            "Il LED si illumina normalmente",
+            "Il LED lampeggia",
+            "Il LED si brucia",
+            "Non succede nulla"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "tecnologia",
+      "subcategory": "elettronica"
+    },
+    {
+      "id": "arduino_grandezze_elettriche",
+      "title": "Grandezze Elettriche - Volt, Ampere e Ohm",
+      "subject": "Elettronica",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "password": "elettronica123",
+      "questions": [
+        {
+          "id": "gre_q1",
+          "question": "L'unità di misura della tensione elettrica è:",
+          "answers": [
+            "Ampere (A)",
+            "Volt (V)",
+            "Ohm (Ω)",
+            "Watt (W)"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q2",
+          "question": "L'intensità di corrente si misura in:",
+          "answers": [
+            "Volt (V)",
+            "Ampere (A)",
+            "Ohm (Ω)",
+            "Coulomb (C)"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q3",
+          "question": "La prima legge di Ohm afferma che V = I × R. Se V = 12V e R = 4Ω, quanto vale I?",
+          "answers": [
+            "3 A",
+            "8 A",
+            "16 A",
+            "48 A"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q4",
+          "question": "Se aumentiamo la resistenza in un circuito mantenendo costante la tensione, la corrente:",
+          "answers": [
+            "Aumenta",
+            "Diminuisce",
+            "Rimane uguale",
+            "Diventa negativa"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q5",
+          "question": "Un multimetro può misurare:",
+          "answers": [
+            "Solo tensione",
+            "Solo corrente",
+            "Solo resistenza",
+            "Tensione, corrente e resistenza"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q6",
+          "question": "La potenza elettrica si calcola con la formula:",
+          "answers": [
+            "P = V / I",
+            "P = V × I",
+            "P = V - I",
+            "P = V + I"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "tecnologia",
+      "subcategory": "elettronica"
+    },
+    {
+      "id": "arduino_hardware_componenti",
+      "title": "Arduino Hardware - Servo, LED, Tastierino, Display I2C",
+      "subject": "Arduino",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "password": "arduino123",
+      "questions": [
+        {
+          "id": "ahw_q1",
+          "question": "Quanti fili servono per controllare un servomotore standard?",
+          "answers": [
+            "2 fili (alimentazione)",
+            "3 fili (alimentazione + segnale)",
+            "4 fili (alimentazione + segnali)",
+            "5 fili (completo)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q2",
+          "question": "Il colore del filo del segnale PWM nei servi è solitamente:",
+          "answers": [
+            "Rosso",
+            "Nero/Marrone",
+            "Bianco/Giallo/Arancione",
+            "Verde"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q3",
+          "question": "Un display LCD 16x2 con interfaccia I2C richiede quanti pin di Arduino?",
+          "answers": [
+            "6 pin (modalità parallela)",
+            "4 pin (modalità seriale)",
+            "2 pin (SDA e SCL)",
+            "1 pin (solo dati)"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q4",
+          "question": "Per collegare un LED ad Arduino è consigliabile usare:",
+          "answers": [
+            "Solo il LED direttamente",
+            "LED + resistenza di limitazione",
+            "LED + condensatore",
+            "LED + induttore"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q5",
+          "question": "Un tastierino 4x4 matriciale ha solitamente quanti pin di connessione?",
+          "answers": [
+            "16 pin (uno per tasto)",
+            "8 pin (4 righe + 4 colonne)",
+            "4 pin (multiplexed)",
+            "2 pin (seriale)"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q6",
+          "question": "I pin SDA e SCL di Arduino Uno sono rispettivamente:",
+          "answers": [
+            "Pin 2 e 3",
+            "Pin 10 e 11",
+            "Pin A4 e A5",
+            "Pin 12 e 13"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "tecnologia",
+      "subcategory": "elettronica"
+    },
+    {
+      "id": "arduino_programmazione_base",
+      "title": "Programmazione Arduino Base - Pin, digitalWrite, digitalRead",
+      "subject": "Arduino",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "password": "arduino123",
+      "questions": [
+        {
+          "id": "apb_q1",
+          "question": "Quale funzione configura un pin come output in Arduino?",
+          "answers": [
+            "digitalWrite()",
+            "digitalRead()",
+            "pinMode()",
+            "analogWrite()"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q2",
+          "question": "Il codice 'digitalWrite(13, HIGH)' serve a:",
+          "answers": [
+            "Leggere lo stato del pin 13",
+            "Configurare il pin 13",
+            "Accendere il pin 13 (5V)",
+            "Spegnere il pin 13 (0V)"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q3",
+          "question": "Per leggere lo stato di un pulsante collegato al pin 7, si usa:",
+          "answers": [
+            "digitalWrite(7)",
+            "digitalRead(7)",
+            "analogRead(7)",
+            "pinMode(7, INPUT)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q4",
+          "question": "La funzione setup() viene eseguita:",
+          "answers": [
+            "Continuamente",
+            "Solo una volta all'avvio",
+            "Solo quando premuto reset",
+            "Mai"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q5",
+          "question": "Per far lampeggiare un LED ogni secondo, quale funzione si usa per la pausa?",
+          "answers": [
+            "wait(1000)",
+            "pause(1000)",
+            "delay(1000)",
+            "sleep(1000)"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q6",
+          "question": "Cosa restituisce digitalRead() quando legge un pin a 5V?",
+          "answers": [
+            "1",
+            "HIGH",
+            "true",
+            "Tutte le risposte sono corrette"
+          ],
+          "solution": 3,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "tecnologia",
+      "subcategory": "informatica"
+    },
+    {
+      "id": "arduino_progetti_pratici",
+      "title": "Arduino Progetti Pratici - LED, Potenziometro, Sensori",
+      "subject": "Arduino",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "password": "arduino123",
+      "questions": [
+        {
+          "id": "app_q1",
+          "question": "Per leggere il valore di un potenziometro si usa:",
+          "answers": [
+            "digitalRead()",
+            "analogRead()",
+            "digitalRead() + analogRead()",
+            "pinMode()"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q2",
+          "question": "Il valore restituito da analogRead() è compreso tra:",
+          "answers": [
+            "0 e 255",
+            "0 e 512",
+            "0 e 1023",
+            "0 e 5000"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q3",
+          "question": "Per controllare la luminosità di un LED si usa:",
+          "answers": [
+            "digitalWrite() con HIGH/LOW",
+            "analogWrite() con PWM",
+            "digitalRead()",
+            "Serial.print()"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q4",
+          "question": "Un sensore di temperatura analogico si collega ai pin:",
+          "answers": [
+            "Digitali (2-13)",
+            "Analogici (A0-A5)",
+            "PWM (~3,5,6,9,10,11)",
+            "I2C (SDA, SCL)"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q5",
+          "question": "Per mappare un valore da 0-1023 a 0-255 si usa:",
+          "answers": [
+            "map(valore, 0, 1023, 0, 255)",
+            "convert(valore)",
+            "scale(valore, 255)",
+            "valore / 4"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q6",
+          "question": "Per inviare dati al monitor seriale si usa:",
+          "answers": [
+            "Serial.write()",
+            "Serial.print()",
+            "Serial.send()",
+            "monitor.print()"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "tecnologia",
+      "subcategory": "elettronica"
+    },
+    {
+      "id": "titolazioni_teoria",
+      "title": "Titolazioni - Teoria e Principi Fondamentali",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-16",
+      "author": "Sistema Didattico",
+      "password": "titolazioni123",
+      "questions": [
+        {
+          "id": "tt_q1",
+          "question": "Cosa indica il punto di equivalenza in una titolazione?",
+          "answers": [
+            "Il momento in cui l'indicatore cambia colore",
+            "Il punto in cui analita e titolante sono in rapporto stechiometrico",
+            "Il volume finale della titolazione",
+            "La concentrazione dell'analita"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q2",
+          "question": "Qual è la differenza tra punto di equivalenza e punto finale?",
+          "answers": [
+            "Sono la stessa cosa",
+            "Il punto finale è teorico, quello di equivalenza è pratico",
+            "Il punto di equivalenza è teorico, quello finale è rilevato dall'indicatore",
+            "Il punto finale avviene sempre prima del punto di equivalenza"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q3",
+          "question": "In una titolazione acido-base, cosa determina la scelta dell'indicatore?",
+          "answers": [
+            "Il colore preferito del chimico",
+            "Il pH del punto di equivalenza",
+            "La concentrazione dell'acido",
+            "Il volume della buretta"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q4",
+          "question": "Cosa rappresenta la curva di titolazione?",
+          "answers": [
+            "La variazione di temperatura durante la titolazione",
+            "La variazione di pH in funzione del volume di titolante aggiunto",
+            "La velocità di reazione",
+            "La concentrazione dell'analita"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q5",
+          "question": "Qual è il requisito principale per una reazione di titolazione?",
+          "answers": [
+            "Deve essere endotermica",
+            "Deve essere veloce, quantitativa e stechiometricamente definita",
+            "Deve produrre un precipitato",
+            "Deve avvenire in ambiente basico"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q6",
+          "question": "In che unità si esprime tipicamente la concentrazione di una soluzione titolante?",
+          "answers": [
+            "g/L",
+            "Molarità (mol/L)",
+            "ppm",
+            "Percentuale in peso"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    },
+    {
+      "id": "titolazioni_stechiometria",
+      "title": "Titolazioni - Stechiometria e Calcoli",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-16",
+      "author": "Sistema Didattico",
+      "password": "titolazioni123",
+      "questions": [
+        {
+          "id": "ts_q1",
+          "question": "Se si titolano 25.0 mL di HCl 0.1 M con NaOH 0.1 M, quale volume di titolante serve al punto di equivalenza?",
+          "answers": [
+            "12.5 mL",
+            "25.0 mL",
+            "50.0 mL",
+            "100.0 mL"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q2",
+          "question": "Per la titolazione H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, il rapporto stechiometrico è:",
+          "answers": [
+            "1:1",
+            "1:2",
+            "2:1",
+            "1:3"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q3",
+          "question": "Se 20.0 mL di H₂SO₄ richiedono 40.0 mL di NaOH 0.2 M per la neutralizzazione, qual è la molarità di H₂SO₄?",
+          "answers": [
+            "0.1 M",
+            "0.2 M",
+            "0.4 M",
+            "0.8 M"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q4",
+          "question": "La formula per calcolare la concentrazione dell'analita è:",
+          "answers": [
+            "C₁V₁ = C₂V₂",
+            "C_analita = (C_titolante × V_titolante × fattore_stechiometrico) / V_analita",
+            "C = n/V",
+            "Tutte le precedenti sono corrette"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q5",
+          "question": "In una titolazione redox Fe²⁺ + MnO₄⁻ → Fe³⁺ + Mn²⁺, quanti elettroni sono scambiati per ogni ione MnO₄⁻?",
+          "answers": [
+            "1 elettrone",
+            "3 elettroni",
+            "5 elettroni",
+            "7 elettroni"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q6",
+          "question": "Per una titolazione complessometrica EDTA-Ca²⁺, il rapporto stechiometrico è sempre:",
+          "answers": [
+            "1:1",
+            "1:2",
+            "2:1",
+            "Dipende dal pH"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    },
+    {
+      "id": "titolazioni_pratica",
+      "title": "Titolazioni - Esecuzione Pratica e Tecniche di Laboratorio",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-16",
+      "author": "Sistema Didattico",
+      "password": "titolazioni123",
+      "questions": [
+        {
+          "id": "tp_q1",
+          "question": "Prima di iniziare una titolazione, cosa si deve fare con la buretta?",
+          "answers": [
+            "Riempirla direttamente con la soluzione titolante",
+            "Risciacquarla con acqua distillata e poi con la soluzione titolante",
+            "Asciugarla perfettamente",
+            "Tarrare la bilancia"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q2",
+          "question": "Perché si deve eliminare la bolla d'aria dal beccuccio della buretta?",
+          "answers": [
+            "Per motivi estetici",
+            "Per evitare errori nella lettura del volume",
+            "Per aumentare la velocità di titolazione",
+            "Non è necessario eliminarla"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q3",
+          "question": "Durante la titolazione, come si deve aggiungere il titolante vicino al punto finale?",
+          "answers": [
+            "Velocemente per finire prima",
+            "Goccia a goccia con agitazione continua",
+            "A piccoli volumi senza agitare",
+            "Il modo di aggiunta non influenza il risultato"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q4",
+          "question": "Come si legge correttamente il volume in una buretta?",
+          "answers": [
+            "Dalla parte superiore del menisco",
+            "Dalla parte inferiore del menisco, a livello degli occhi",
+            "Dal centro del menisco",
+            "Non ha importanza"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q5",
+          "question": "Perché si deve agitare la soluzione durante la titolazione?",
+          "answers": [
+            "Per riscaldare la soluzione",
+            "Per assicurare la completa miscelazione dei reagenti",
+            "Per accelerare la reazione",
+            "Per evitare la formazione di precipitati"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q6",
+          "question": "Cosa si deve fare se si supera il punto finale durante una titolazione?",
+          "answers": [
+            "Continuare la titolazione",
+            "Aggiungere più analita per compensare",
+            "Annotare l'errore e ripetere la titolazione",
+            "Calcolare ugualmente il risultato"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    },
+    {
+      "id": "quiz_1758292015236",
+      "title": "Quiz di Conduttimetria",
+      "subject": "piolo",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758292015236_0",
+          "question": "Qual è il principale utilizzo della conduttimetria in laboratorio?",
+          "answers": [
+            "Determinazione della temperatura",
+            "Misurazione della conducibilità di soluzioni",
+            "Analisi del pH",
+            "Calcolo della densità"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_1",
+          "question": "Quale dei seguenti fattori influisce sulla conduttività elettrica di una soluzione?",
+          "answers": [
+            "Il colore della soluzione",
+            "La temperatura della soluzione",
+            "Il volume della soluzione",
+            "La pressione atmosferica"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_2",
+          "question": "In quale modo la concentrazione di ioni in soluzione influisce sulla conduttività?",
+          "answers": [
+            "Aumenta la conduttività con la diminuzione della concentrazione",
+            "Non ha alcun effetto sulla conduttività",
+            "Aumenta la conduttività con l'aumento della concentrazione",
+            "Diminuisce la conduttività con l'aumento della temperatura"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_3",
+          "question": "Quale apparecchiatura è comunemente usata per misurare la conduttività di una soluzione?",
+          "answers": [
+            "Spettrofotometro",
+            "Conduttimetro",
+            "Termometro",
+            "Barometro"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_4",
+          "question": "Qual è l'unità di misura della conduttività elettrica?",
+          "answers": [
+            "Ohm",
+            "Siemens",
+            "Volt",
+            "Ampere"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_5",
+          "question": "Cosa indica un valore di conduttività molto elevato in una soluzione?",
+          "answers": [
+            "Presenza di sostanze inerti",
+            "Elevata purezza della soluzione",
+            "Presenza di un'alta concentrazione di ioni",
+            "Bassa temperatura della soluzione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_6",
+          "question": "Quale delle seguenti affermazioni è vera riguardo alla conduttività di soluzioni acide e basiche?",
+          "answers": [
+            "Le soluzioni acide hanno sempre conduttività inferiore rispetto alle basiche",
+            "Le soluzioni basiche sono sempre più conduttive delle soluzioni neutre",
+            "La conduttività dipende dalla concentrazione di ioni presenti",
+            "Le soluzioni neutre hanno la conduttività più alta"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_7",
+          "question": "Come si può migliorare la precisione di una misurazione di conduttività?",
+          "answers": [
+            "Utilizzando un campione più grande",
+            "Controllando la temperatura della soluzione",
+            "Aggiungendo più acqua distillata",
+            "Utilizzando un conduttimetro di dimensioni maggiori"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_8",
+          "question": "Qual è un esempio di applicazione pratica della conduttimetria in campo ambientale?",
+          "answers": [
+            "Misurazione della temperatura dell'aria",
+            "Analisi della qualità dell'acqua",
+            "Determinazione della pressione del suolo",
+            "Misurazione del livello di radiazioni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_9",
+          "question": "In un esperimento, si osserva un aumento della conduttività dopo aver aggiunto un sale a una soluzione. Qual è l'interpretazione corretta di questo fenomeno?",
+          "answers": [
+            "Il sale non influisce sulla conduttività",
+            "Il sale si dissocia in ioni che aumentano la conduttività",
+            "Il sale riduce la temperatura della soluzione",
+            "Il sale aumenta la densità della soluzione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "test",
+      "subcategory": "sistema"
+    },
+    {
+      "id": "quiz_1758296617098",
+      "title": "Verifica Tecnologie Chimiche",
+      "subject": "aaaa",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758296617098_0",
+          "question": "Quale dei seguenti processi non produce Idrogeno?",
+          "answers": [
+            "Steam Reforming",
+            "Gassificazione del carbone",
+            "Sintesi dell'ammoniaca",
+            "Cracking del petrolio"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_1",
+          "question": "Nello Steam Reforming, quale operazione è condotta per evitare il danneggiamento del catalizzatore?",
+          "answers": [
+            "Aggiunta di acido solforico",
+            "Desolforazione",
+            "Aumento della temperatura",
+            "Riduzione della pressione"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_2",
+          "question": "Qual è la principale reazione durante il reforming primario nello Steam Reforming?",
+          "answers": [
+            "Tra gas naturale e vapore per produrre CO e H2",
+            "Tra CO2 e H2 per produrre metano",
+            "Tra ZnO e H2S per produrre ZnS",
+            "Tra gas naturale e ossigeno"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_3",
+          "question": "Quale dei seguenti fattori influisce sulla conversione della reazione di sintesi dell'ammoniaca?",
+          "answers": [
+            "La temperatura e la pressione",
+            "La concentrazione di ammoniaca",
+            "L'uso di catalizzatori",
+            "La presenza di impurità"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_4",
+          "question": "Qual è la funzione del catalizzatore nella sintesi dell'ammoniaca?",
+          "answers": [
+            "Aumentare l'entalpia della reazione",
+            "Ridurre l'energia di attivazione",
+            "Cambiare la direzione dell'equilibrio",
+            "Incrementare la temperatura di reazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_5",
+          "question": "La legge di Hess è utilizzata per determinare:",
+          "answers": [
+            "La variazione di entalpia di una reazione chimica",
+            "La costante di equilibrio",
+            "La velocità di reazione",
+            "La variazione di disordine"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_6",
+          "question": "Quali sono le condizioni ottimali di temperatura e pressione per il processo di Steam Reforming?",
+          "answers": [
+            "Pressione tra 28 e 40 bar e temperatura tra 700°C e 900°C",
+            "Pressione tra 280 e 400 bar e temperatura tra 150°C e 250°C",
+            "Pressione atmosferica e temperatura ambiente",
+            "Pressione negativa e temperatura alta"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_7",
+          "question": "Nella reazione di sintesi dell'ammoniaca, quale fattore può portare a una conversione parziale?",
+          "answers": [
+            "La bassa energia di attivazione",
+            "La tossicità dell'ammoniaca",
+            "L'elevata energia di attivazione",
+            "L'uso di un catalizzatore"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_8",
+          "question": "Le fasi del ciclo di sintesi dell'ammoniaca seguono un certo ordine. Qual è la sequenza corretta?",
+          "answers": [
+            "Compressione, reazione, separazione, riciclo",
+            "Separazione, reazione, compressione, riciclo",
+            "Riciclo, compressione, reazione, separazione",
+            "Reazione, compressione, separazione, riciclo"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_9",
+          "question": "Quale dei seguenti è un rischio associato alla produzione di ammoniaca?",
+          "answers": [
+            "Tossicità dell'ammoniaca",
+            "Esplosività dell'idrogeno",
+            "Presenza di apparecchiature in pressione",
+            "Tutti i precedenti"
+          ],
+          "solution": 3,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "test",
+      "subcategory": "sistema"
+    },
+    {
+      "id": "quiz_1758303316332",
+      "title": "Quiz ammoniaca e idrogeno",
+      "subject": "ammoniaca e idrogeno",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758303316332_0",
+          "question": "Qual è la composizione del gas di sintesi?",
+          "answers": [
+            "H2",
+            "CO",
+            "CH4",
+            "H2 + CO"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_1",
+          "question": "Quale processo non produce H2?",
+          "answers": [
+            "Steam Reforming",
+            "Gassificazione del carbone",
+            "Sintesi dell'ammoniaca",
+            "Cracking del petrolio"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_2",
+          "question": "Qual è una frase errata sui rischi dell'idrogeno?",
+          "answers": [
+            "Esplosività con aria",
+            "Emissione di composti solforati",
+            "Tossicità del CO",
+            "Elevate temperature dei processi"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_3",
+          "question": "Qual è la reazione dello steam reforming del gas naturale?",
+          "answers": [
+            "CH4 + H2O -> CO + 3H2",
+            "2CH4 + O2 -> 2CO + 4H2",
+            "FeO + H2O -> Fe3O4 + H2",
+            "C + H2O -> CO + H2"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_4",
+          "question": "In quale produzione si usa H2?",
+          "answers": [
+            "Sintesi H2SO4",
+            "Sintesi NH3",
+            "Sintesi HNO3",
+            "Ossidazione parziale degli idrocarburi"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_5",
+          "question": "La desolforazione nello steam reforming serve a?",
+          "answers": [
+            "Aggiungere composti solforati",
+            "Eliminare composti solforati",
+            "Modificare il pH",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_6",
+          "question": "Durante il reforming primario avviene?",
+          "answers": [
+            "Reazione tra gas naturale e vapore",
+            "Reazione tra ZnO e H2S",
+            "Reazione di ossidazione parziale",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_7",
+          "question": "Qual è la condizione termodinamica dello steam reforming?",
+          "answers": [
+            "28-40 bar e 700-900°C",
+            "280-400 bar e 700-900°C",
+            "28-40 bar e 150-250°C",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_8",
+          "question": "I catalizzatori nello steam reforming sono?",
+          "answers": [
+            "Acidi di Lewis",
+            "Basi di Bronsted",
+            "Metalli di transizione",
+            "Non si usano catalizzatori"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_9",
+          "question": "La legge di Hess definisce?",
+          "answers": [
+            "Variazione di entalpia",
+            "Variazione di entropia",
+            "Variazione di energia libera",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_10",
+          "question": "Il ΔH°rT consente di conoscere?",
+          "answers": [
+            "Se una reazione è esotermica",
+            "Se una reazione è endotermica",
+            "La variazione di disordine",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_11",
+          "question": "Il ΔG°rT se negativo indica?",
+          "answers": [
+            "Reazione spontanea",
+            "Reazione non spontanea",
+            "Nessuna delle risposte",
+            "Misura il lavoro prodotto"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_12",
+          "question": "L’entalpia standard di formazione è definita come?",
+          "answers": [
+            "Reazione di formazione a partire da composti",
+            "Reazione di polimerizzazione",
+            "Reazione a partire dagli elementi",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_13",
+          "question": "Quale settore utilizza l’ammoniaca?",
+          "answers": [
+            "Fertilizzanti",
+            "Esplosivi",
+            "Polimeri sintetici",
+            "Tutti i settori"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_14",
+          "question": "La sintesi dell’ammoniaca è?",
+          "answers": [
+            "Endotermica e bassa pressione",
+            "Endotermica e alta pressione",
+            "Esotermica con conversione completa",
+            "Esotermica e bassa pressione"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_15",
+          "question": "L’ammoniaca a 20°C è?",
+          "answers": [
+            "Sempre gas",
+            "Sempre liquida",
+            "Solida",
+            "Vapore a 1 bar"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_16",
+          "question": "Il ΔG°rT della sintesi dell’ammoniaca è?",
+          "answers": [
+            "Sempre positivo",
+            "Sempre negativo",
+            "Dipende dalla temperatura",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_17",
+          "question": "Per aumentare la conversione della sintesi dell’ammoniaca, la pressione è?",
+          "answers": [
+            "Negativa",
+            "150 atmosfere",
+            "Tra 30 e 40 bar",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_18",
+          "question": "La reazione di sintesi dell’ammoniaca ha un catalizzatore perché?",
+          "answers": [
+            "Abbassa l’entalpia",
+            "Rende la reazione più veloce",
+            "Aumenta la resa",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_19",
+          "question": "Il catalizzatore tradizionale è costituito da?",
+          "answers": [
+            "Metalli nobili",
+            "K2O e Al2O3",
+            "Ferro metallico con K2O",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_20",
+          "question": "Il reattore di sintesi opera a?",
+          "answers": [
+            "Temperature inferiori a 180°C",
+            "Temperature superiori a 1000°C",
+            "Temperature tra 350°C e 500°C",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_21",
+          "question": "L'operazione di quench serve a?",
+          "answers": [
+            "Alzare la temperatura",
+            "Abbassare la temperatura con reagenti freschi",
+            "Abbassare la temperatura con acqua",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_22",
+          "question": "Il controllo della temperatura nei letti catalitici avviene tramite?",
+          "answers": [
+            "Scambio con acqua di raffreddamento",
+            "Scambio tra reagenti e miscela fresca",
+            "Aggiunta di acqua",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_23",
+          "question": "Le fasi del ciclo di sintesi dell’ammoniaca sono?",
+          "answers": [
+            "Separazione, Reazione, Compressione",
+            "Riciclo, Compressione, Reazione",
+            "Reazione, Compressione, Separazione",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_24",
+          "question": "La presenza di inerti nel gas di sintesi?",
+          "answers": [
+            "Diminuisce la resa",
+            "Aumenta la resa",
+            "Non influenza la resa",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_25",
+          "question": "La reazione di sintesi dell’ammoniaca porta a?",
+          "answers": [
+            "Conversione completa",
+            "Conversione parziale",
+            "Nessuna conversione",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_26",
+          "question": "La separazione dell’ammoniaca avviene?",
+          "answers": [
+            "Con refrigerazione e separatori",
+            "Con elio liquido",
+            "Con acqua di raffreddamento",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_27",
+          "question": "I principali rischi della produzione di ammoniaca sono?",
+          "answers": [
+            "Stoccaggio di grandi quantità",
+            "Tossicità",
+            "Infiammabilità",
+            "Tutti i rischi"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_28",
+          "question": "Il catalizzatore della sintesi è definito piroforico perché?",
+          "answers": [
+            "Deve essere incendiato",
+            "Si incendia facilmente",
+            "Incendia il gas di sintesi",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_29",
+          "question": "Il surriscaldamento del catalizzatore comporta?",
+          "answers": [
+            "Maggiore resa",
+            "Reazione più veloce",
+            "Accorcia la vita del catalizzatore",
+            "Nessuna delle risposte"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_30",
+          "question": "Il processo di produzione dell’ammoniaca richiede?",
+          "answers": [
+            "Catalizzatori",
+            "Elevate pressioni",
+            "Temperature controllate",
+            "Tutti i fattori"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_31",
+          "question": "La cinetica della reazione di sintesi è ostacolata da?",
+          "answers": [
+            "Energia di attivazione alta",
+            "Temperatura bassa",
+            "Reazione esotermica",
+            "Nessuna delle risposte"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_32",
+          "question": "La sintesi dell'ammoniaca è influenzata da?",
+          "answers": [
+            "Pressione",
+            "Temperatura",
+            "Concentrazione",
+            "Tutti i fattori"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_33",
+          "question": "Quale gas è un prodotto della reazione di sintesi dell’ammoniaca?",
+          "answers": [
+            "H2",
+            "N2",
+            "O2",
+            "CO2"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_34",
+          "question": "Il raffreddamento del reattore è fondamentale per?",
+          "answers": [
+            "Aumentare la pressione",
+            "Controllare la temperatura",
+            "Mantenere l'equilibrio",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758303316332_35",
+          "question": "Quale dei seguenti processi utilizza l’ammoniaca?",
+          "answers": [
+            "Produzione di plastica",
+            "Fertilizzanti",
+            "Combustibili",
+            "Nessuna delle risposte"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    },
+    {
+      "id": "quiz_1758380601467",
+      "title": "dd",
+      "subject": "dd",
+      "created": "2025-09-20",
+      "author": "Manager",
+      "questions": [
+        {
+          "id": "q1758380601467_0",
+          "question": "dd",
+          "answers": [
+            "ddd",
+            "dd",
+            "dddd",
+            "dddd"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "cultura",
+      "subcategory": "generale"
+    },
+    {
+      "id": "quiz_1758380632155",
+      "title": "dddd",
+      "subject": "dddd",
+      "created": "2025-09-20",
+      "author": "Manager",
+      "questions": [
+        {
+          "id": "q1758380632155_0",
+          "question": "dd",
+          "answers": [
+            "dd",
+            "dd",
+            "dd",
+            "dd",
+            "dddd",
+            "dddd"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "test",
+      "subcategory": "sistema"
+    },
+    {
+      "id": "quiz_1758381328851",
+      "title": "Quiz rr ammoniaca",
+      "subject": "rr ammoniaca",
+      "created": "2025-09-20",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758381328851_0",
+          "question": "Qual è uno dei principali componenti del gas di sintesi?",
+          "answers": [
+            "H2",
+            "CO",
+            "CH4",
+            "N2",
+            "H2 + CO2"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_1",
+          "question": "Quale processo non produce idrogeno?",
+          "answers": [
+            "Steam Reforming",
+            "Gassificazione del carbone",
+            "Sintesi dell'ammoniaca",
+            "Cracking del petrolio",
+            "Elettrolisi dell'acqua"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_2",
+          "question": "Quale dei seguenti è un rischio della produzione di idrogeno?",
+          "answers": [
+            "Esplosività con l'aria",
+            "Emissione di SO2",
+            "Tossicità del CO",
+            "Elevate temperature",
+            "Tossicità dell'azoto"
+          ],
+          "solution": 4,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_3",
+          "question": "Qual è la reazione dello steam reforming del gas naturale?",
+          "answers": [
+            "CH4 + H2O → CO + 3H2",
+            "2CH4 + O2 → 2CO + 4H2",
+            "FeO + H2O → Fe3O4 + H2",
+            "C + H2O → CO + H2",
+            "Nessuna"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_4",
+          "question": "Dove si usa l'idrogeno in ambito industriale?",
+          "answers": [
+            "Sintesi H2SO4",
+            "Sintesi NH3",
+            "Sintesi HNO3",
+            "Ossidazione parziale degli idrocarburi",
+            "Ossidazione dell'ammoniaca"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_5",
+          "question": "Qual è la funzione della desolforazione nello steam reforming?",
+          "answers": [
+            "Aggiunge composti solforati",
+            "Elimina composti solforati",
+            "Modifica il pH",
+            "Rigenera il catalizzatore",
+            "Nessuna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_6",
+          "question": "Cosa avviene durante il reforming primario nello steam reforming?",
+          "answers": [
+            "Gas naturale e vapore producono CO e H2",
+            "ZnO e H2S producono ZnS e acqua",
+            "CO2 e H2 producono metano",
+            "Ossidazione parziale del gas non convertito",
+            "Nessuna"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_7",
+          "question": "Cosa si produce durante la metanazione nello steam reforming?",
+          "answers": [
+            "CO e H2",
+            "ZnS e acqua",
+            "Metano e acqua",
+            "Ossidazione del gas naturale",
+            "Nessuna"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_8",
+          "question": "Quali sono le condizioni termodinamiche dello steam reforming?",
+          "answers": [
+            "28-40 bar e 700-900°C",
+            "280-400 bar e 700-900°C",
+            "28-40 bar e 150-250°C",
+            "Pressione negativa e temperatura ambiente",
+            "Nessuna"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_9",
+          "question": "Quali catalizzatori si usano nello steam reforming?",
+          "answers": [
+            "Acidi di Lewis",
+            "Basi di Bronsted",
+            "Metalli di transizione su allumina",
+            "Ammine organiche",
+            "Nessuno"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_10",
+          "question": "Cosa descrive la legge di Hess?",
+          "answers": [
+            "Variazione di entalpia",
+            "Variazione di entropia",
+            "Energia libera della reazione",
+            "Modifica dell'equilibrio chimico",
+            "Nessuna"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_11",
+          "question": "Cosa indica un ΔH°rT negativo?",
+          "answers": [
+            "Reazione esotermica",
+            "Reazione endotermica",
+            "Reazione spontanea",
+            "Variazione di disordine",
+            "Misura del lavoro prodotto"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_12",
+          "question": "Cosa indica un ΔG°rT negativo?",
+          "answers": [
+            "Misura di lavoro prodotto",
+            "Reazione spontanea",
+            "Variazione di disordine",
+            "Reazione non spontanea",
+            "Nessuna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_13",
+          "question": "Come si calcola l'energia libera di una trasformazione?",
+          "answers": [
+            "ΔG°rT = ΔH°rT + TΔS°rT",
+            "ΔG°rT = ΔH°rT – TΔS°rT",
+            "ΔG°rT = TΔH°rT – ΔS°rT",
+            "ΔG°rT = – ΔH°rT /RT + ΔS°rT/R",
+            "Nessuna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_14",
+          "question": "Cosa definisce l'entalpia standard di formazione?",
+          "answers": [
+            "Reazione di formazione a partire da composti",
+            "Reazione di polimerizzazione",
+            "Reazione di formazione a partire da elementi",
+            "Reazione di formazione a partire da elementi nel loro stato di riferimento",
+            "Nessuna"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_15",
+          "question": "In quale settore si usa l'ammoniaca?",
+          "answers": [
+            "Fertilizzanti",
+            "Esplosivi",
+            "Polimeri",
+            "Refrigerazione",
+            "Tutti"
+          ],
+          "solution": 4,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_16",
+          "question": "Qual è la natura della sintesi dell'ammoniaca?",
+          "answers": [
+            "Endotermica a bassa pressione",
+            "Endotermica ad alta pressione",
+            "Esotermica a conversione completa",
+            "Esotermica a bassa pressione",
+            "Esotermica ad alta pressione"
+          ],
+          "solution": 4,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_17",
+          "question": "A 20°C, l'ammoniaca è:",
+          "answers": [
+            "Gas sempre",
+            "Liquido sempre",
+            "Solido sempre",
+            "Vapore a 1 bar, liquido a 10 bar",
+            "Supercritica"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_18",
+          "question": "Il ΔG°rT della sintesi dell'ammoniaca è:",
+          "answers": [
+            "Sempre positivo",
+            "Sempre negativo",
+            "Dipende dalla temperatura",
+            "Negativo a temperature inferiori a 455K",
+            "Nessuna"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_19",
+          "question": "Per aumentare la conversione della sintesi dell'ammoniaca, la pressione è mantenuta:",
+          "answers": [
+            "Negativa",
+            "150 atmosfere",
+            "Tra 30 e 40 bar",
+            "Superior a 1000 bar",
+            "Nessuna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_20",
+          "question": "Cosa ostacola l'applicazione industriale della sintesi dell'ammoniaca?",
+          "answers": [
+            "Reazione esotermica troppo veloce",
+            "Reazione endotermica lenta",
+            "Alta energia di attivazione",
+            "Reazione di equilibrio",
+            "Bassa energia di attivazione"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_21",
+          "question": "Perché è necessario un catalizzatore nella sintesi dell'ammoniaca?",
+          "answers": [
+            "Riduce l'entalpia di reazione",
+            "Consente temperature più basse",
+            "Spinge l'equilibrio verso i prodotti",
+            "Aumenta l'entalpia di reazione",
+            "Nessuna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_22",
+          "question": "Qual è il catalizzatore tradizionale per la sintesi dell'ammoniaca?",
+          "answers": [
+            "Metalli nobili su allumina",
+            "K2O poroso",
+            "Fe metallico con promotori",
+            "Catalizzatori metallocenici",
+            "Fe altamente poroso"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_23",
+          "question": "A quale temperatura opera il reattore di sintesi dell'ammoniaca?",
+          "answers": [
+            "Sotto 180°C",
+            "Sopra 1000°C",
+            "Tra 350°C e 500°C",
+            "A temperatura ambiente",
+            "Tra 750°C e 900°C"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_24",
+          "question": "Cosa si intende per operazione di quench?",
+          "answers": [
+            "Abbassare temperatura con reagenti freschi",
+            "Alzare temperatura con reagenti preriscaldati",
+            "Abbassare temperatura con acqua fredda",
+            "Abbassare temperatura con ammoniaca liquida",
+            "Nessuna"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_25",
+          "question": "Come si controlla la temperatura nei letti catalitici?",
+          "answers": [
+            "Scambio con acqua di raffreddamento",
+            "Scambio tra reagenti e miscela fresca",
+            "Aggiunta di acqua",
+            "Uso di ammoniaca liquida",
+            "Nessuna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_26",
+          "question": "Qual è la corretta sequenza delle fasi nel ciclo di sintesi dell'ammoniaca?",
+          "answers": [
+            "Separazione, Reazione, Compressione, Riciclo",
+            "Riciclo, Compressione, Reazione, Separazione",
+            "Reazione, Compressione, Separazione, Riciclo",
+            "Compressione, Reazione, Separazione, Riciclo",
+            "Nessuna"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_27",
+          "question": "Cosa comporta la presenza di inerti nel gas di sintesi?",
+          "answers": [
+            "Diminuisce la resa all'equilibrio",
+            "Aumenta la resa all'equilibrio",
+            "Diminuisce la resa a pressione maggiore",
+            "Diminuisce la resa a pressione superiore",
+            "Non influenza la resa"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_28",
+          "question": "Perché la sintesi dell'ammoniaca porta a conversione parziale?",
+          "answers": [
+            "Bassa energia di attivazione",
+            "Pericoli di concentrazioni elevate",
+            "Alta energia di attivazione",
+            "Bassa temperatura sfavorita",
+            "Nessuna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_29",
+          "question": "Come avviene la separazione dell'ammoniaca dai reagenti?",
+          "answers": [
+            "Refrigerazione con acqua e ammoniaca",
+            "Refrigerazione con elio",
+            "Refrigerazione con acqua e separatore",
+            "Refrigerazione con ammoniaca liquida",
+            "Nessuna"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_30",
+          "question": "Quali sono i rischi nella produzione di ammoniaca?",
+          "answers": [
+            "Stoccaggio di ammoniaca",
+            "Tossicità dell'ammoniaca",
+            "Apparecchiature in pressione",
+            "Infiammabilità del gas di sintesi",
+            "Tutti"
+          ],
+          "solution": 4,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_31",
+          "question": "Perché il catalizzatore della sintesi dell'ammoniaca è definito piroforico?",
+          "answers": [
+            "Deve essere incendiato con ossigeno",
+            "Si tratta ad alta temperatura",
+            "Si incendia facilmente",
+            "Incendia il gas di sintesi",
+            "Nessuna"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_32",
+          "question": "Cosa comporta il surriscaldamento del catalizzatore nella sintesi dell'ammoniaca?",
+          "answers": [
+            "Maggiore resa di reazione",
+            "Non cambia la resa",
+            "Accorcia vita del catalizzatore",
+            "Rigenera il catalizzatore",
+            "Nessuna"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_33",
+          "question": "Qual è il risultato della reazione di sintesi dell'ammoniaca?",
+          "answers": [
+            "NH3",
+            "N2 + H2",
+            "N2H4",
+            "H2O",
+            "Nessuna"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_34",
+          "question": "Quali sono le principali applicazioni dell'ammoniaca?",
+          "answers": [
+            "Fertilizzanti",
+            "Refrigerazione",
+            "Esplosivi",
+            "Polimeri",
+            "Tutte"
+          ],
+          "solution": 4,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758381328851_35",
+          "question": "Quale tecnica è usata per aumentare l'efficienza della sintesi dell'ammoniaca?",
+          "answers": [
+            "Aumentare la pressione",
+            "Ridurre la temperatura",
+            "Aggiungere inerti",
+            "Aumentare il volume",
+            "Nessuna"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "scienze",
+      "subcategory": "chimica"
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "version": "1.1",
+    "lastUpdate": "2025-09-20",
+    "totalQuizzes": 28,
+    "totalQuestions": 210
+  }
+}

@@ -1,5 +1,7 @@
 import AnswerButton from "../../AnswerButton"
+import MobileAnswerButton from "../../MobileAnswerButton"
 import { useSocketContext } from "@/context/socket"
+import { useIsMobile } from "@/hooks/useIsMobile"
 import { useEffect, useRef, useState, createElement } from "react"
 import clsx from "clsx"
 import {
@@ -39,6 +41,7 @@ export default function Answers({
 }) {
   const { socket, emit, on, off } = useSocketContext()
   const { player } = usePlayerContext()
+  const { isMobile, isLoading } = useIsMobile()
 
   const [percentages, setPercentages] = useState([])
   const [cooldown, setCooldown] = useState(time)
@@ -508,12 +511,22 @@ export default function Answers({
           </div>
         )}
 
-        <div className={`mx-auto mb-4 grid w-full max-w-7xl gap-3 px-4 text-lg font-bold text-white md:text-xl ${
-          answers.length <= 2 ? 'grid-cols-1 md:grid-cols-2 max-w-4xl' :
-          answers.length <= 4 ? 'grid-cols-2' :
-          answers.length <= 6 ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-2' :
-          answers.length <= 8 ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-2' :
-          'grid-cols-3 md:grid-cols-4'
+        <div className={`mx-auto mb-4 grid w-full ${isMobile ? 'max-w-sm' : 'max-w-7xl'} gap-3 px-4 text-lg font-bold text-white md:text-xl ${
+          // Layout ottimizzato per mobile (cerchi compatti) vs desktop (pulsanti estesi)
+          isMobile ? (
+            // Mobile: Layout compatto circolare
+            answers.length <= 2 ? 'grid-cols-2 gap-6' :
+            answers.length <= 4 ? 'grid-cols-2 gap-4' :
+            answers.length <= 6 ? 'grid-cols-3 gap-3' :
+            'grid-cols-4 gap-2'
+          ) : (
+            // Desktop: Layout originale esteso
+            answers.length <= 2 ? 'grid-cols-1 md:grid-cols-2 max-w-4xl' :
+            answers.length <= 4 ? 'grid-cols-2' :
+            answers.length <= 6 ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-y-2' :
+            answers.length <= 8 ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-2' :
+            'grid-cols-3 md:grid-cols-4'
+          )
         }`}>
           {answers.map((answer, key) => {
             // Supporta sia il formato stringa che oggetto
@@ -521,22 +534,42 @@ export default function Answers({
             const answerImage = typeof answer === 'object' ? answer.image : '';
 
             return (
-              <div key={key} className="relative group">
-                {/* Effetto glow che si espande al hover */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-500"></div>
+              <div key={key} className="relative group flex justify-center">
+                {/* Effetto glow adattivo per mobile/desktop */}
+                <div className={clsx(
+                  "absolute blur opacity-25 group-hover:opacity-75 transition duration-500",
+                  isMobile ?
+                    "-inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-full" :
+                    "-inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-xl"
+                )}></div>
 
-                <AnswerButton
-                  className={clsx(ANSWERS_COLORS[key], {
-                    "opacity-50 grayscale": responses && correct !== key,
-                    "animate-pulse ring-4 ring-green-400 ring-opacity-75": responses && correct === key,
-                  })}
-                  icon={ANSWERS_ICONS[key]}
-                  answerImage={answerImage}
-                  totalAnswers={answers.length}
-                  onClick={() => handleAnswer(key)}
-                >
-                  {answerText}
-                </AnswerButton>
+                {/* Rendering condizionale: Mobile vs Desktop */}
+                {isMobile ? (
+                  <MobileAnswerButton
+                    className={clsx(ANSWERS_COLORS[key], {
+                      "opacity-50 grayscale": responses && correct !== key,
+                      "animate-pulse ring-4 ring-green-400 ring-opacity-75": responses && correct === key,
+                    })}
+                    icon={ANSWERS_ICONS[key]}
+                    totalAnswers={answers.length}
+                    onClick={() => handleAnswer(key)}
+                  >
+                    {answerText}
+                  </MobileAnswerButton>
+                ) : (
+                  <AnswerButton
+                    className={clsx(ANSWERS_COLORS[key], {
+                      "opacity-50 grayscale": responses && correct !== key,
+                      "animate-pulse ring-4 ring-green-400 ring-opacity-75": responses && correct === key,
+                    })}
+                    icon={ANSWERS_ICONS[key]}
+                    answerImage={answerImage}
+                    totalAnswers={answers.length}
+                    onClick={() => handleAnswer(key)}
+                  >
+                    {answerText}
+                  </AnswerButton>
+                )}
 
                 {/* Indicatore di risposta corretta */}
                 {responses && correct === key && (
