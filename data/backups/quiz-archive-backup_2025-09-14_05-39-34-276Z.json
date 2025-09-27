@@ -1,0 +1,1072 @@
+{
+  "quizzes": [
+    {
+      "id": "quiz_1",
+      "title": "Geografia Mondiale",
+      "subject": "Geografia",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Qual è la capitale della Francia?",
+          "answers": [
+            "Berlino",
+            "Parigi",
+            "Madrid",
+            "Roma"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q2",
+          "question": "Quale fiume è il più lungo del mondo?",
+          "answers": [
+            "Nilo",
+            "Amazon",
+            "Mississippi",
+            "Yangtze"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q3",
+          "question": "Quanti continenti ci sono?",
+          "answers": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q4",
+          "question": "Qual è il monte più alto del mondo?",
+          "answers": [
+            "K2",
+            "Everest",
+            "Makalu",
+            "Cho Oyu"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q5",
+          "question": "Quale paese ha più fusi orari?",
+          "answers": [
+            "Russia",
+            "USA",
+            "Cina",
+            "Canada"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_2",
+      "title": "Storia dell'Arte",
+      "subject": "Arte",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q6",
+          "question": "Chi ha dipinto la Monna Lisa?",
+          "answers": [
+            "Michelangelo",
+            "Leonardo da Vinci",
+            "Raffaello",
+            "Donatello"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q7",
+          "question": "In quale museo si trova la Gioconda?",
+          "answers": [
+            "Uffizi",
+            "Louvre",
+            "Prado",
+            "Metropolitan"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q8",
+          "question": "Chi ha scolpito il David?",
+          "answers": [
+            "Donatello",
+            "Bernini",
+            "Michelangelo",
+            "Rodin"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q9",
+          "question": "Qual è lo stile artistico di Van Gogh?",
+          "answers": [
+            "Impressionismo",
+            "Post-impressionismo",
+            "Cubismo",
+            "Surrealismo"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q10",
+          "question": "In quale periodo artistico si colloca Picasso?",
+          "answers": [
+            "Rinascimento",
+            "Barocco",
+            "Moderno",
+            "Medievale"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_3",
+      "title": "Scienze Naturali",
+      "subject": "Scienze",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q11",
+          "question": "Quale gas rappresenta la maggior parte dell'atmosfera terrestre?",
+          "answers": [
+            "Ossigeno",
+            "Azoto",
+            "Anidride carbonica",
+            "Argon"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q12",
+          "question": "Quanti cuori ha un polpo?",
+          "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q13",
+          "question": "Quale pianeta è noto come il 'pianeta rosso'?",
+          "answers": [
+            "Venere",
+            "Marte",
+            "Giove",
+            "Saturno"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q14",
+          "question": "Qual è l'elemento più abbondante nell'universo?",
+          "answers": [
+            "Elio",
+            "Idrogeno",
+            "Ossigeno",
+            "Carbonio"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q15",
+          "question": "Quante ossa ha il corpo umano adulto?",
+          "answers": [
+            "206",
+            "208",
+            "210",
+            "212"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_4",
+      "title": "Tecnologia e Informatica",
+      "subject": "Informatica",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q16",
+          "question": "Chi ha fondato Microsoft?",
+          "answers": [
+            "Steve Jobs",
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Jeff Bezos"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q17",
+          "question": "Cosa significa 'WWW'?",
+          "answers": [
+            "World Wide Web",
+            "World Web Wide",
+            "Wide World Web",
+            "Web World Wide"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q18",
+          "question": "In quale anno è stato inventato Internet?",
+          "answers": [
+            "1969",
+            "1975",
+            "1981",
+            "1990"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q19",
+          "question": "Qual è il linguaggio di programmazione più usato nel 2024?",
+          "answers": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "C++"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q20",
+          "question": "Cosa significa 'AI' in informatica?",
+          "answers": [
+            "Auto Intelligence",
+            "Artificial Intelligence",
+            "Advanced Intelligence",
+            "Applied Intelligence"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_5",
+      "title": "Sport e Competizioni",
+      "subject": "Sport",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q21",
+          "question": "Ogni quanti anni si svolgono le Olimpiadi estive?",
+          "answers": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q22",
+          "question": "In quale sport si usa un 'putter'?",
+          "answers": [
+            "Tennis",
+            "Golf",
+            "Baseball",
+            "Hockey"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q23",
+          "question": "Quanti giocatori ci sono in una squadra di calcio in campo?",
+          "answers": [
+            "10",
+            "11",
+            "12",
+            "13"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q24",
+          "question": "Chi ha vinto più Mondiali di Formula 1?",
+          "answers": [
+            "Michael Schumacher",
+            "Lewis Hamilton",
+            "Ayrton Senna",
+            "Alain Prost"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q25",
+          "question": "In quale sport si gioca a 'tre set'?",
+          "answers": [
+            "Pallavolo",
+            "Tennis",
+            "Badminton",
+            "Ping pong"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_6",
+      "title": "Cultura Generale",
+      "subject": "Cultura",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q26",
+          "question": "Quante lettere ha l'alfabeto italiano?",
+          "answers": [
+            "21",
+            "22",
+            "23",
+            "24"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q27",
+          "question": "Chi ha scritto 'I Promessi Sposi'?",
+          "answers": [
+            "Dante Alighieri",
+            "Alessandro Manzoni",
+            "Giovanni Boccaccio",
+            "Italo Calvino"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q28",
+          "question": "In quale anno è caduto il Muro di Berlino?",
+          "answers": [
+            "1987",
+            "1989",
+            "1991",
+            "1993"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q29",
+          "question": "Qual è la moneta del Giappone?",
+          "answers": [
+            "Won",
+            "Yuan",
+            "Yen",
+            "Dong"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q30",
+          "question": "Chi ha composto 'La Nona Sinfonia'?",
+          "answers": [
+            "Mozart",
+            "Beethoven",
+            "Bach",
+            "Chopin"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_1757435542637",
+      "title": "Analisi",
+      "subject": "Chimica",
+      "created": "2025-09-09",
+      "author": "Utente",
+      "questions": [
+        {
+          "id": "q1757435542638_0",
+          "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+          "answers": [
+            "Risonanza magnetica dei nuclei atomici",
+            "Diffusione dei raggi X",
+            "Separazione dei componenti in fase liquida",
+            "Assorbimento della luce da parte degli elettroni"
+          ],
+          "solution": 3,
+          "time": 15,
+          "cooldown": 5,
+          "image": "/api/images/arte_monalisa.jpg"
+        },
+        {
+          "id": "q1757435542638_1",
+          "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+          "answers": [
+            "Cromatografia gas-liquido",
+            "Spettroscopia di assorbimento atomico (AAS)",
+            "Polarimetria",
+            "Elettroforesi"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_chimica_analitica",
+      "title": "Chimica Analitica Strumentale - Potenziometria e Conduttimetria",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-10",
+      "author": "Sistema",
+      "password": "analitica123",
+      "questions": [
+        {
+          "id": "qa1",
+          "question": "Quale principio fisico è alla base della potenziometria?",
+          "answers": [
+            "Conduttività elettrica della soluzione",
+            "Differenza di potenziale tra elettrodi",
+            "Assorbimento di radiazioni elettromagnetiche",
+            "Velocità di reazione chimica"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa2",
+          "question": "In una cella potenziometrica, quale elettrodo mantiene un potenziale costante?",
+          "answers": [
+            "Elettrodo di lavoro",
+            "Elettrodo ausiliario",
+            "Elettrodo di riferimento",
+            "Controelettrodo"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa3",
+          "question": "L'equazione di Nernst correla il potenziale dell'elettrodo con:",
+          "answers": [
+            "La temperatura e la pressione",
+            "La concentrazione degli ioni",
+            "La superficie dell'elettrodo",
+            "La velocità di agitazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa4",
+          "question": "Quale tipo di elettrodo è più comunemente usato per misurare il pH?",
+          "answers": [
+            "Elettrodo a calomelano",
+            "Elettrodo ad argento/cloruro di argento",
+            "Elettrodo di vetro",
+            "Elettrodo di platino"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa5",
+          "question": "In conduttimetria, la conducibilità di una soluzione dipende da:",
+          "answers": [
+            "Solo dalla concentrazione degli ioni",
+            "Dalla mobilità e concentrazione degli ioni",
+            "Solo dalla temperatura",
+            "Solo dal pH della soluzione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa6",
+          "question": "L'unità di misura della conducibilità elettrica specifica è:",
+          "answers": [
+            "Ohm (Ω)",
+            "Siemens per metro (S/m)",
+            "Ampere (A)",
+            "Volt per metro (V/m)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa7",
+          "question": "Quale fattore NON influenza la conducibilità di una soluzione elettrolitica?",
+          "answers": [
+            "Temperatura",
+            "Concentrazione degli ioni",
+            "Colore della soluzione",
+            "Natura degli ioni presenti"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa8",
+          "question": "In una titolazione conduttimetrica, il punto di equivalenza è identificato da:",
+          "answers": [
+            "Il massimo valore di conducibilità",
+            "Il minimo valore di conducibilità",
+            "Un cambiamento nella pendenza della curva",
+            "Il colore della soluzione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa9",
+          "question": "La costante di cella in conduttimetria è:",
+          "answers": [
+            "Il rapporto tra distanza e area degli elettrodi",
+            "La resistenza della soluzione",
+            "La temperatura della misura",
+            "La concentrazione dell'elettrolita"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa10",
+          "question": "Quale tecnica è più appropriata per determinare il punto finale di una titolazione di acido forte con base forte?",
+          "answers": [
+            "Solo potenziometria",
+            "Solo conduttimetria",
+            "Entrambe le tecniche sono appropriate",
+            "Nessuna delle due tecniche"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "medicina_quiz_1",
+      "title": "Test Medicina - Biologia e Scienze Naturali",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med1_q1",
+          "question": "Quale organello cellulare è responsabile della produzione di ATP?",
+          "answers": [
+            "Ribosomi",
+            "Mitocondri",
+            "Reticolo endoplasmatico",
+            "Apparato di Golgi"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q2",
+          "question": "Il DNA è costituito da quale tipo di zucchero?",
+          "answers": [
+            "Ribosio",
+            "Saccarosio",
+            "Desossiribosio",
+            "Fruttosio"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q3",
+          "question": "Quante camere ha il cuore umano?",
+          "answers": [
+            "Due",
+            "Tre",
+            "Quattro",
+            "Sei"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q4",
+          "question": "Quale gas viene eliminato dai polmoni durante l'espirazione?",
+          "answers": [
+            "Ossigeno",
+            "Azoto",
+            "Anidride carbonica",
+            "Vapore acqueo"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q5",
+          "question": "Il tessuto che collega i muscoli alle ossa è chiamato:",
+          "answers": [
+            "Legamento",
+            "Tendine",
+            "Cartilagine",
+            "Fascia"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "medicina_quiz_2",
+      "title": "Test Medicina - Chimica e Biochimica",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med2_q1",
+          "question": "Quale elemento chimico ha simbolo 'Fe'?",
+          "answers": [
+            "Fluoro",
+            "Ferro",
+            "Fosforo",
+            "Francio"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q2",
+          "question": "Il pH dell'acqua pura a 25°C è:",
+          "answers": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q3",
+          "question": "Gli amminoacidi sono i costituenti base di:",
+          "answers": [
+            "Carboidrati",
+            "Lipidi",
+            "Proteine",
+            "Acidi nucleici"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q4",
+          "question": "Quale tipo di legame tiene insieme le due catene del DNA?",
+          "answers": [
+            "Legami ionici",
+            "Legami covalenti",
+            "Legami idrogeno",
+            "Forze di Van der Waals"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q5",
+          "question": "L'emoglobina contiene quale ione metallico?",
+          "answers": [
+            "Calcio (Ca²⁺)",
+            "Ferro (Fe²⁺)",
+            "Zinco (Zn²⁺)",
+            "Magnesio (Mg²⁺)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "medicina_quiz_3",
+      "title": "Test Medicina - Fisica e Matematica",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med3_q1",
+          "question": "L'unità di misura della pressione nel Sistema Internazionale è:",
+          "answers": [
+            "Pascal (Pa)",
+            "Torr",
+            "Atmosfera (atm)",
+            "Bar"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q2",
+          "question": "La velocità della luce nel vuoto è approssimativamente:",
+          "answers": [
+            "300.000 km/h",
+            "300.000 km/s",
+            "3.000.000 km/s",
+            "30.000 km/s"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q3",
+          "question": "Qual è la derivata di x² rispetto a x?",
+          "answers": [
+            "x",
+            "2x",
+            "x²/2",
+            "2"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q4",
+          "question": "La frequenza è l'inverso di quale grandezza fisica?",
+          "answers": [
+            "Lunghezza d'onda",
+            "Velocità",
+            "Periodo",
+            "Ampiezza"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q5",
+          "question": "In un triangolo rettangolo, il teorema di Pitagora stabilisce che:",
+          "answers": [
+            "a + b = c",
+            "a² + b² = c²",
+            "a × b = c²",
+            "a² × b² = c²"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "medicina_quiz_4",
+      "title": "Test Medicina - Logica e Cultura Generale",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med4_q1",
+          "question": "Se tutti i medici sono laureati e Mario è un medico, allora:",
+          "answers": [
+            "Mario non è laureato",
+            "Mario è laureato",
+            "Non si può determinare",
+            "Mario è un dottore"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q2",
+          "question": "Quale Nobel per la Medicina ha scoperto la penicillina?",
+          "answers": [
+            "Louis Pasteur",
+            "Alexander Fleming",
+            "Marie Curie",
+            "Albert Einstein"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q3",
+          "question": "Il giuramento professionale dei medici prende il nome da:",
+          "answers": [
+            "Ippocrate",
+            "Galeno",
+            "Avicenna",
+            "Paracelso"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q4",
+          "question": "In una serie: 2, 4, 8, 16, ... quale numero segue?",
+          "answers": [
+            "24",
+            "30",
+            "32",
+            "20"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q5",
+          "question": "L'OMS (Organizzazione Mondiale della Sanità) ha sede a:",
+          "answers": [
+            "New York",
+            "Ginevra",
+            "Bruxelles",
+            "Vienna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "medicina_quiz_5",
+      "title": "Test Medicina - Anatomia e Fisiologia",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "password": "medicina123",
+      "questions": [
+        {
+          "id": "med5_q1",
+          "question": "Il cranio umano è costituito da quante ossa?",
+          "answers": [
+            "20",
+            "22",
+            "24",
+            "26"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q2",
+          "question": "Quale ghiandola produce l'insulina?",
+          "answers": [
+            "Fegato",
+            "Pancreas",
+            "Tiroide",
+            "Surrene"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q3",
+          "question": "Il sistema nervoso simpatico e parasimpatico fanno parte di:",
+          "answers": [
+            "Sistema nervoso centrale",
+            "Sistema nervoso periferico",
+            "Sistema nervoso autonomo",
+            "Sistema nervoso somatico"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q4",
+          "question": "Quale vaso sanguigno porta il sangue dal cuore ai polmoni?",
+          "answers": [
+            "Aorta",
+            "Arteria polmonare",
+            "Vena cava",
+            "Arteria coronaria"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q5",
+          "question": "La filtrazione del sangue avviene principalmente in quale organo?",
+          "answers": [
+            "Fegato",
+            "Polmoni",
+            "Reni",
+            "Milza"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    }
+  ],
+  "images": [],
+  "metadata": {
+    "version": "1.0",
+    "lastUpdate": "2025-09-13",
+    "totalQuizzes": 13,
+    "totalQuestions": 67
+  }
+}

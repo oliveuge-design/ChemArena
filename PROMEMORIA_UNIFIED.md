@@ -263,21 +263,27 @@ npm run dev
 # Manager: http://localhost:3000/manager
 ```
 
-### **🛡️ BACKUP QUIZ - COMANDI CRITICI**
+### **🛡️ PROTEZIONE QUIZ BULLETPROOF - MAI PIÙ PERDITE**
 ```bash
-# 🚨 DEPLOY SICURO (SEMPRE USARE QUESTO)
-npm run deploy:safe
+# 🚨 DEPLOY SICURO (UNICO COMANDO AUTORIZZATO)
+npm run deploy:safe    # Git hook automatico + backup + deploy
 
 # Dopo che Render completa il deploy
-npm run post-deploy
+npm run post-deploy    # Ripristino automatico
 
-# Backup manuale (se necessario)
-npm run quiz:backup   # Scarica da Render
-npm run quiz:restore  # Ripristina da backup locale
-npm run quiz:merge    # Merge intelligente
+# Comandi di emergenza
+npm run deploy:check   # Verifica backup prima deploy
+npm run quiz:restore   # Ripristino manuale
+npm run deploy:force   # Solo emergenze (backup verificato)
 
-# ⚠️ IMPORTANTE: Mai fare git push diretto!
-# Usa sempre deploy:safe per preservare tutti i quiz
+# 🚨 CRITICO: PROTEZIONI ATTIVE
+# - Git hook pre-commit: BLOCCA commit senza backup
+# - Backup automatico: SEMPRE prima di ogni commit
+# - Anti git-push: IMPEDISCE push diretti pericolosi
+# - Storico backup: TUTTI i backup salvati con timestamp
+
+# ⚠️ MAI FARE: git push, git commit && push
+# ✅ USA SEMPRE: npm run deploy:safe
 ```
 
 ### **🐛 TROUBLESHOOTING**

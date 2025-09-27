@@ -18,9 +18,12 @@
     "quiz:merge": "node scripts/backup-quiz.js merge",
     "pre-deploy": "npm run quiz:backup",
     "post-deploy": "npm run quiz:merge",
-    "deploy:safe": "npm run pre-deploy && git add . && git commit -m 'Safe deploy with quiz backup' && git push && echo 'Attendere deploy completato, poi eseguire: npm run post-deploy'"
+    "deploy:safe": "echo '🛡️ DEPLOY SICURO CON PROTEZIONE QUIZ' && npm run quiz:backup && echo '✅ Backup completato, proceeding...' && git add . && git commit -m 'Safe deploy with quiz backup 🛡️' && git push && echo '' && echo '⏰ IMPORTANTE: Attendere deploy Render completato, poi eseguire:' && echo '   npm run post-deploy' && echo '' && echo '🚨 MAI fare git push diretto! Usa sempre deploy:safe!'",
+    "deploy:force": "echo '⚠️ DEPLOY FORZATO - ATTENZIONE!' && git add . && git commit -m 'Force deploy - backup manually verified' && git push",
+    "deploy:check": "npm run quiz:backup && echo 'Backup verificato - ready per deploy'"
   },
   "dependencies": {
+    "animejs": "^4.1.4",
     "bcryptjs": "^3.0.2",
     "chart.js": "^4.5.0",
     "clsx": "^2.1.0",

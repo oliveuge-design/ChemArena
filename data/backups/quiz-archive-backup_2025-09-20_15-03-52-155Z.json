@@ -77,9 +77,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "cultura",
-      "subcategory": "geografia"
+      ]
     },
     {
       "id": "quiz_2",
@@ -158,9 +156,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "cultura",
-      "subcategory": "arte"
+      ]
     },
     {
       "id": "quiz_3",
@@ -239,9 +235,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "cultura",
-      "subcategory": "generale"
+      ]
     },
     {
       "id": "quiz_4",
@@ -320,9 +314,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "tecnologia",
-      "subcategory": "informatica"
+      ]
     },
     {
       "id": "quiz_5",
@@ -401,9 +393,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "cultura",
-      "subcategory": "sport"
+      ]
     },
     {
       "id": "quiz_6",
@@ -482,9 +472,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "cultura",
-      "subcategory": "generale"
+      ]
     },
     {
       "id": "quiz_1757435542637",
@@ -521,9 +509,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      ]
     },
     {
       "id": "quiz_chimica_analitica",
@@ -673,9 +659,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      ]
     },
     {
       "id": "medicina_quiz_1",
@@ -755,9 +739,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "medicina"
+      ]
     },
     {
       "id": "medicina_quiz_2",
@@ -837,9 +819,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      ]
     },
     {
       "id": "medicina_quiz_3",
@@ -919,9 +899,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "medicina"
+      ]
     },
     {
       "id": "medicina_quiz_4",
@@ -1001,9 +979,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "medicina"
+      ]
     },
     {
       "id": "medicina_quiz_5",
@@ -1083,9 +1059,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "medicina"
+      ]
     },
     {
       "id": "quiz_1757828391780",
@@ -1108,9 +1082,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "test",
-      "subcategory": "sistema"
+      ]
     },
     {
       "id": "arduino_elettronica_base",
@@ -1204,9 +1176,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      ]
     },
     {
       "id": "arduino_grandezze_elettriche",
@@ -1300,9 +1270,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      ]
     },
     {
       "id": "arduino_hardware_componenti",
@@ -1396,9 +1364,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      ]
     },
     {
       "id": "arduino_programmazione_base",
@@ -1492,9 +1458,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "tecnologia",
-      "subcategory": "informatica"
+      ]
     },
     {
       "id": "arduino_progetti_pratici",
@@ -1588,9 +1552,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      ]
     },
     {
       "id": "titolazioni_teoria",
@@ -1684,9 +1646,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      ]
     },
     {
       "id": "titolazioni_stechiometria",
@@ -1780,9 +1740,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      ]
     },
     {
       "id": "titolazioni_pratica",
@@ -1876,9 +1834,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      ]
     },
     {
       "id": "quiz_1758292015236",
@@ -2027,9 +1983,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "test",
-      "subcategory": "sistema"
+      ]
     },
     {
       "id": "quiz_1758296617098",
@@ -2178,9 +2132,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "test",
-      "subcategory": "sistema"
+      ]
     },
     {
       "id": "quiz_1758303316332",
@@ -2693,9 +2645,7 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      ]
     },
     {
       "id": "quiz_1758380601467",
@@ -2718,897 +2668,14 @@
           "cooldown": 5,
           "image": ""
         }
-      ],
-      "category": "cultura",
-      "subcategory": "generale"
-    },
-    {
-      "id": "quiz_1758380632155",
-      "title": "dddd",
-      "subject": "dddd",
-      "created": "2025-09-20",
-      "author": "Manager",
-      "questions": [
-        {
-          "id": "q1758380632155_0",
-          "question": "dd",
-          "answers": [
-            "dd",
-            "dd",
-            "dd",
-            "dd",
-            "dddd",
-            "dddd"
-          ],
-          "solution": 0,
-          "time": 15,
-          "cooldown": 5,
-          "image": ""
-        }
-      ],
-      "category": "test",
-      "subcategory": "sistema"
-    },
-    {
-      "id": "quiz_1758381328851",
-      "title": "Quiz rr ammoniaca",
-      "subject": "rr ammoniaca",
-      "created": "2025-09-20",
-      "author": "AI Generator",
-      "questions": [
-        {
-          "id": "q1758381328851_0",
-          "question": "Qual è uno dei principali componenti del gas di sintesi?",
-          "answers": [
-            "H2",
-            "CO",
-            "CH4",
-            "N2",
-            "H2 + CO2"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_1",
-          "question": "Quale processo non produce idrogeno?",
-          "answers": [
-            "Steam Reforming",
-            "Gassificazione del carbone",
-            "Sintesi dell'ammoniaca",
-            "Cracking del petrolio",
-            "Elettrolisi dell'acqua"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_2",
-          "question": "Quale dei seguenti è un rischio della produzione di idrogeno?",
-          "answers": [
-            "Esplosività con l'aria",
-            "Emissione di SO2",
-            "Tossicità del CO",
-            "Elevate temperature",
-            "Tossicità dell'azoto"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_3",
-          "question": "Qual è la reazione dello steam reforming del gas naturale?",
-          "answers": [
-            "CH4 + H2O → CO + 3H2",
-            "2CH4 + O2 → 2CO + 4H2",
-            "FeO + H2O → Fe3O4 + H2",
-            "C + H2O → CO + H2",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_4",
-          "question": "Dove si usa l'idrogeno in ambito industriale?",
-          "answers": [
-            "Sintesi H2SO4",
-            "Sintesi NH3",
-            "Sintesi HNO3",
-            "Ossidazione parziale degli idrocarburi",
-            "Ossidazione dell'ammoniaca"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_5",
-          "question": "Qual è la funzione della desolforazione nello steam reforming?",
-          "answers": [
-            "Aggiunge composti solforati",
-            "Elimina composti solforati",
-            "Modifica il pH",
-            "Rigenera il catalizzatore",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_6",
-          "question": "Cosa avviene durante il reforming primario nello steam reforming?",
-          "answers": [
-            "Gas naturale e vapore producono CO e H2",
-            "ZnO e H2S producono ZnS e acqua",
-            "CO2 e H2 producono metano",
-            "Ossidazione parziale del gas non convertito",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_7",
-          "question": "Cosa si produce durante la metanazione nello steam reforming?",
-          "answers": [
-            "CO e H2",
-            "ZnS e acqua",
-            "Metano e acqua",
-            "Ossidazione del gas naturale",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_8",
-          "question": "Quali sono le condizioni termodinamiche dello steam reforming?",
-          "answers": [
-            "28-40 bar e 700-900°C",
-            "280-400 bar e 700-900°C",
-            "28-40 bar e 150-250°C",
-            "Pressione negativa e temperatura ambiente",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_9",
-          "question": "Quali catalizzatori si usano nello steam reforming?",
-          "answers": [
-            "Acidi di Lewis",
-            "Basi di Bronsted",
-            "Metalli di transizione su allumina",
-            "Ammine organiche",
-            "Nessuno"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_10",
-          "question": "Cosa descrive la legge di Hess?",
-          "answers": [
-            "Variazione di entalpia",
-            "Variazione di entropia",
-            "Energia libera della reazione",
-            "Modifica dell'equilibrio chimico",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_11",
-          "question": "Cosa indica un ΔH°rT negativo?",
-          "answers": [
-            "Reazione esotermica",
-            "Reazione endotermica",
-            "Reazione spontanea",
-            "Variazione di disordine",
-            "Misura del lavoro prodotto"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_12",
-          "question": "Cosa indica un ΔG°rT negativo?",
-          "answers": [
-            "Misura di lavoro prodotto",
-            "Reazione spontanea",
-            "Variazione di disordine",
-            "Reazione non spontanea",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_13",
-          "question": "Come si calcola l'energia libera di una trasformazione?",
-          "answers": [
-            "ΔG°rT = ΔH°rT + TΔS°rT",
-            "ΔG°rT = ΔH°rT – TΔS°rT",
-            "ΔG°rT = TΔH°rT – ΔS°rT",
-            "ΔG°rT = – ΔH°rT /RT + ΔS°rT/R",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_14",
-          "question": "Cosa definisce l'entalpia standard di formazione?",
-          "answers": [
-            "Reazione di formazione a partire da composti",
-            "Reazione di polimerizzazione",
-            "Reazione di formazione a partire da elementi",
-            "Reazione di formazione a partire da elementi nel loro stato di riferimento",
-            "Nessuna"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_15",
-          "question": "In quale settore si usa l'ammoniaca?",
-          "answers": [
-            "Fertilizzanti",
-            "Esplosivi",
-            "Polimeri",
-            "Refrigerazione",
-            "Tutti"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_16",
-          "question": "Qual è la natura della sintesi dell'ammoniaca?",
-          "answers": [
-            "Endotermica a bassa pressione",
-            "Endotermica ad alta pressione",
-            "Esotermica a conversione completa",
-            "Esotermica a bassa pressione",
-            "Esotermica ad alta pressione"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_17",
-          "question": "A 20°C, l'ammoniaca è:",
-          "answers": [
-            "Gas sempre",
-            "Liquido sempre",
-            "Solido sempre",
-            "Vapore a 1 bar, liquido a 10 bar",
-            "Supercritica"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_18",
-          "question": "Il ΔG°rT della sintesi dell'ammoniaca è:",
-          "answers": [
-            "Sempre positivo",
-            "Sempre negativo",
-            "Dipende dalla temperatura",
-            "Negativo a temperature inferiori a 455K",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_19",
-          "question": "Per aumentare la conversione della sintesi dell'ammoniaca, la pressione è mantenuta:",
-          "answers": [
-            "Negativa",
-            "150 atmosfere",
-            "Tra 30 e 40 bar",
-            "Superior a 1000 bar",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_20",
-          "question": "Cosa ostacola l'applicazione industriale della sintesi dell'ammoniaca?",
-          "answers": [
-            "Reazione esotermica troppo veloce",
-            "Reazione endotermica lenta",
-            "Alta energia di attivazione",
-            "Reazione di equilibrio",
-            "Bassa energia di attivazione"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_21",
-          "question": "Perché è necessario un catalizzatore nella sintesi dell'ammoniaca?",
-          "answers": [
-            "Riduce l'entalpia di reazione",
-            "Consente temperature più basse",
-            "Spinge l'equilibrio verso i prodotti",
-            "Aumenta l'entalpia di reazione",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_22",
-          "question": "Qual è il catalizzatore tradizionale per la sintesi dell'ammoniaca?",
-          "answers": [
-            "Metalli nobili su allumina",
-            "K2O poroso",
-            "Fe metallico con promotori",
-            "Catalizzatori metallocenici",
-            "Fe altamente poroso"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_23",
-          "question": "A quale temperatura opera il reattore di sintesi dell'ammoniaca?",
-          "answers": [
-            "Sotto 180°C",
-            "Sopra 1000°C",
-            "Tra 350°C e 500°C",
-            "A temperatura ambiente",
-            "Tra 750°C e 900°C"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_24",
-          "question": "Cosa si intende per operazione di quench?",
-          "answers": [
-            "Abbassare temperatura con reagenti freschi",
-            "Alzare temperatura con reagenti preriscaldati",
-            "Abbassare temperatura con acqua fredda",
-            "Abbassare temperatura con ammoniaca liquida",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_25",
-          "question": "Come si controlla la temperatura nei letti catalitici?",
-          "answers": [
-            "Scambio con acqua di raffreddamento",
-            "Scambio tra reagenti e miscela fresca",
-            "Aggiunta di acqua",
-            "Uso di ammoniaca liquida",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_26",
-          "question": "Qual è la corretta sequenza delle fasi nel ciclo di sintesi dell'ammoniaca?",
-          "answers": [
-            "Separazione, Reazione, Compressione, Riciclo",
-            "Riciclo, Compressione, Reazione, Separazione",
-            "Reazione, Compressione, Separazione, Riciclo",
-            "Compressione, Reazione, Separazione, Riciclo",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_27",
-          "question": "Cosa comporta la presenza di inerti nel gas di sintesi?",
-          "answers": [
-            "Diminuisce la resa all'equilibrio",
-            "Aumenta la resa all'equilibrio",
-            "Diminuisce la resa a pressione maggiore",
-            "Diminuisce la resa a pressione superiore",
-            "Non influenza la resa"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_28",
-          "question": "Perché la sintesi dell'ammoniaca porta a conversione parziale?",
-          "answers": [
-            "Bassa energia di attivazione",
-            "Pericoli di concentrazioni elevate",
-            "Alta energia di attivazione",
-            "Bassa temperatura sfavorita",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_29",
-          "question": "Come avviene la separazione dell'ammoniaca dai reagenti?",
-          "answers": [
-            "Refrigerazione con acqua e ammoniaca",
-            "Refrigerazione con elio",
-            "Refrigerazione con acqua e separatore",
-            "Refrigerazione con ammoniaca liquida",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_30",
-          "question": "Quali sono i rischi nella produzione di ammoniaca?",
-          "answers": [
-            "Stoccaggio di ammoniaca",
-            "Tossicità dell'ammoniaca",
-            "Apparecchiature in pressione",
-            "Infiammabilità del gas di sintesi",
-            "Tutti"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_31",
-          "question": "Perché il catalizzatore della sintesi dell'ammoniaca è definito piroforico?",
-          "answers": [
-            "Deve essere incendiato con ossigeno",
-            "Si tratta ad alta temperatura",
-            "Si incendia facilmente",
-            "Incendia il gas di sintesi",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_32",
-          "question": "Cosa comporta il surriscaldamento del catalizzatore nella sintesi dell'ammoniaca?",
-          "answers": [
-            "Maggiore resa di reazione",
-            "Non cambia la resa",
-            "Accorcia vita del catalizzatore",
-            "Rigenera il catalizzatore",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_33",
-          "question": "Qual è il risultato della reazione di sintesi dell'ammoniaca?",
-          "answers": [
-            "NH3",
-            "N2 + H2",
-            "N2H4",
-            "H2O",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_34",
-          "question": "Quali sono le principali applicazioni dell'ammoniaca?",
-          "answers": [
-            "Fertilizzanti",
-            "Refrigerazione",
-            "Esplosivi",
-            "Polimeri",
-            "Tutte"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_35",
-          "question": "Quale tecnica è usata per aumentare l'efficienza della sintesi dell'ammoniaca?",
-          "answers": [
-            "Aumentare la pressione",
-            "Ridurre la temperatura",
-            "Aggiungere inerti",
-            "Aumentare il volume",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
-    },
-    {
-      "id": "quiz_1758916249334",
-      "title": "Quiz Microbiologia",
-      "subject": "Microbiologia",
-      "created": "2025-09-26",
-      "author": "AI Generator",
-      "questions": [
-        {
-          "id": "q1758916249334_0",
-          "question": "Qual è la funzione principale del condensatore in un microscopio ottico?",
-          "answers": [
-            "Concentrare la luce sul campione",
-            "Regolare l'intensità della lampada",
-            "Mantenere il campione in posizione",
-            "Controllare la messa a fuoco"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_1",
-          "question": "Qual è il rapporto di ingrandimento totale se si utilizza un obiettivo 40x e un oculare 10x?",
-          "answers": [
-            "400x",
-            "40x",
-            "100x",
-            "10x"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_2",
-          "question": "Quale delle seguenti affermazioni è vera riguardo all'uso del microscopio?",
-          "answers": [
-            "Iniziare sempre con obiettivi ad alto ingrandimento",
-            "Pulire sempre le lenti con carta specifica",
-            "Non è necessario spegnere la lampada dopo l'uso",
-            "La messa a fuoco macrometrica è inutile"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_3",
-          "question": "Qual è la dimensione ideale delle cellule di lievito per l'osservazione al microscopio?",
-          "answers": [
-            "1-2 micrometri",
-            "5-10 micrometri",
-            "20-30 micrometri",
-            "50 micrometri"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_4",
-          "question": "Qual è il segno di vitalità delle cellule di lievito osservate al microscopio?",
-          "answers": [
-            "Colore blu intenso",
-            "Assenza di movimento",
-            "Citoplasma chiaro e omogeneo",
-            "Forma irregolare"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_5",
-          "question": "Cosa potrebbe indicare un'alta percentuale di cellule blu dopo la colorazione con blu di metilene?",
-          "answers": [
-            "Lievito molto vitale",
-            "Lievito poco vitale",
-            "Cellule in movimento",
-            "Cellule in divisione"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_6",
-          "question": "Quale metodo è consigliato per la preparazione della sospensione di lievito?",
-          "answers": [
-            "Utilizzare acqua fredda",
-            "Mescolare energicamente per 10 minuti",
-            "Lasciare riposare dopo la miscelazione",
-            "Aggiungere troppo lievito per volume"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_7",
-          "question": "Qual è il tempo ottimale di contatto per la colorazione con blu di metilene?",
-          "answers": [
-            "5 minuti",
-            "10 minuti",
-            "15 minuti",
-            "20 minuti"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_8",
-          "question": "Cosa fare se il campo visivo è troppo scuro durante l'osservazione?",
-          "answers": [
-            "Aumentare l'intensità della lampada",
-            "Ridurre l'ingrandimento",
-            "Pulire l'obiettivo",
-            "Cambiare il campione"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916249334_9",
-          "question": "Quale preparazione è necessaria per un vetrino a fresco con lievito?",
-          "answers": [
-            "Utilizzare un coprioggetti posizionato verticalmente",
-            "Applicare una goccia troppo grande di sospensione",
-            "Pulire il vetrino con acqua distillata",
-            "Posizionare il coprioggetti con angolo di 45°"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": "quiz_1758916321024",
-      "title": "Quiz microbiologia microscopio",
-      "subject": "microbiologia microscopio",
-      "created": "2025-09-26",
-      "author": "AI Generator",
-      "questions": [
-        {
-          "id": "q1758916321024_0",
-          "question": "Qual è il percorso corretto della luce in un microscopio ottico?",
-          "answers": [
-            "Lampada → Obiettivo → Campione → Oculare → Occhio",
-            "Lampada → Condensatore → Campione → Oculare → Occhio",
-            "Lampada → Condensatore → Oculare → Campione → Occhio",
-            "Lampada → Obiettivo → Oculare → Condensatore → Occhio"
-          ],
-          "solution": 1,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_1",
-          "question": "Quale obiettivo è consigliato come punto di partenza per la messa a fuoco?",
-          "answers": [
-            "40x",
-            "10x",
-            "4x",
-            "100x"
-          ],
-          "solution": 2,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_2",
-          "question": "Quale delle seguenti affermazioni descrive meglio la morfologia tipica del lievito osservato al microscopio?",
-          "answers": [
-            "Cellule a forma di bastoncino con contorno sfocato",
-            "Cellule ovali/rotonde con parete cellulare spessa",
-            "Cellule con forma irregolare e contorno assente",
-            "Cellule a forma di disco con citoplasma granuloso"
-          ],
-          "solution": 1,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_3",
-          "question": "Cosa indica la presenza di cellule blu durante la colorazione con il blu di metilene?",
-          "answers": [
-            "Cellule vive che riducono il colorante",
-            "Cellule morte che non riducono il colorante",
-            "Cellule in fase di divisione",
-            "Cellule con alta vitalità"
-          ],
-          "solution": 1,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_4",
-          "question": "Quale è una delle regole di sicurezza durante l'uso del microscopio ottico?",
-          "answers": [
-            "Iniziare sempre con obiettivo 100x",
-            "Forzare le viti di messa a fuoco per una migliore visibilità",
-            "Pulire le lenti con qualsiasi tipo di carta",
-            "Spegnere la lampada quando non si usa il microscopio"
-          ],
-          "solution": 3,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_5",
-          "question": "Qual è il ruolo del condensatore nel microscopio ottico?",
-          "answers": [
-            "Regolare l'intensità luminosa",
-            "Concentrare la luce sul campione",
-            "Fornire ingrandimento al campione",
-            "Controllare il movimento del tavolino"
-          ],
-          "solution": 1,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_6",
-          "question": "Qual è la conseguenza di una sovracolorazione durante l'uso del blu di metilene?",
-          "answers": [
-            "Risultato ottimale per la visualizzazione delle cellule",
-            "Colorazione imprecisa che rende difficile l'interpretazione",
-            "Rischio di tossicità per le cellule",
-            "Nessuna conseguenza rilevante"
-          ],
-          "solution": 1,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_7",
-          "question": "Cosa deve essere fatto se il campo visivo è troppo scuro durante l'osservazione?",
-          "answers": [
-            "Aumentare l'intensità della lampada e aprire il diaframma",
-            "Ridurre l'intensità della lampada",
-            "Spostare il campione in un'area più illuminata",
-            "Cambiare l'obiettivo a uno con ingrandimento maggiore"
-          ],
-          "solution": 0,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_8",
-          "question": "Come si può valutare la vitalità del lievito in base alla percentuale di cellule incolori osservate?",
-          "answers": [
-            ">80% cellule incolori: Lievito poco vitale",
-            "50-80% cellule incolori: Lievito molto vitale",
-            "<50% cellule incolori: Vitalità accettabile",
-            ">80% cellule incolori: Lievito molto vitale"
-          ],
-          "solution": 3,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758916321024_9",
-          "question": "Qual è l'importanza dell'osservazione sistematica in microbiologia?",
-          "answers": [
-            "Permette di evitare errori e garantire risultati accurati",
-            "È un metodo casuale che non richiede preparazione",
-            "Fornisce risultati solo in caso di campioni morti",
-            "Non ha rilevanza nelle tecniche di laboratorio"
-          ],
-          "solution": 0,
-          "time": 30,
-          "cooldown": 5,
-          "image": ""
-        }
       ]
     }
   ],
   "images": [],
   "metadata": {
-    "version": "1.1",
-    "lastUpdate": "2025-09-27T19:53:55.816Z",
-    "totalQuizzes": 30,
-    "totalQuestions": 230,
-    "mergeInfo": {
-      "renderQuizzes": 28,
-      "localOnlyQuizzes": 2,
-      "totalMerged": 30
-    }
+    "version": "1.0",
+    "lastUpdate": "2025-09-20",
+    "totalQuizzes": 26,
+    "totalQuestions": 173
   }
 }

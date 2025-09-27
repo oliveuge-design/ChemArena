@@ -41,9 +41,13 @@ nul
 *.tsbuildinfo
 next-env.d.ts
 
-# Backup files
+# Backup files (ma NON i backup quiz che sono critici)
 *.backup
-/data/backups/*.json
+
+# 🛡️ PROTEZIONE QUIZ CRITICA: NON ignorare mai questi file
+# !/backups/
+# !/data/quiz-archive.json
+# NOTA: I backup quiz devono essere SEMPRE committati per evitare perdite
 
 # Windows batch files
 *.bat
