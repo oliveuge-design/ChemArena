@@ -38,7 +38,8 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       totalAnswers: game.questions[game.currentQuestion].answers.length,
       questionNumber: game.currentQuestion + 1,
       gameMode: gameMode,
-      modeMessage: QuizModeEngine.getModeStatusMessage(gameMode, game)
+      modeMessage: QuizModeEngine.getModeStatusMessage(gameMode, game),
+      backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
     },
   })
 
@@ -57,6 +58,7 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       image: question.image,
       cooldown: question.cooldown,
       gameMode: gameMode,
+      backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
     },
   })
 
@@ -84,15 +86,30 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
         image: question.image,
         time: modeConfig.questionTime, // Usa il tempo della modalità
         totalPlayer: game.players.length,
-        gameMode: gameMode,
-        modeConfig: modeConfig
+        gameMode: gameMode, // 🎯 Passa modalità al frontend
+        modeConfig: modeConfig,
+        backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
       },
     })
   }
 
-  console.log(`🔍 Starting question cooldown for ${modeConfig.questionTime} seconds (mode: ${gameMode})...`)
-  await cooldown(modeConfig.questionTime, io, game.room)
-  console.log(`🔍 After question cooldown, game.started=${game.started}, room=${game.room}`)
+  // 🎯 MODALITÀ SENZA TEMPO: Nessun timer automatico
+  if (gameMode === 'untimed') {
+    console.log(`🎯 UNTIMED MODE: Waiting for manual skip by manager, no automatic timeout`)
+    // Emetti stato speciale per manager con controllo skip
+    io.to(game.room).emit('manager:untimedWaiting', {
+      questionIndex: game.currentQuestion,
+      totalQuestions: game.questions.length,
+      message: 'Modalità senza tempo - Usa il pulsante "Prossima Domanda" per continuare'
+    })
+
+    // Aspetta segnale manuale (gestito in manager.js)
+    return 'WAITING_MANUAL_SKIP'
+  } else {
+    console.log(`🔍 Starting question cooldown for ${modeConfig.questionTime} seconds (mode: ${gameMode})...`)
+    await cooldown(modeConfig.questionTime, io, game.room)
+    console.log(`🔍 After question cooldown, game.started=${game.started}, room=${game.room}`)
+  }
 
   if (!isRoomValid()) {
     console.log(`❌ StartRound aborted after question timeout: room no longer valid`)
@@ -110,6 +127,21 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
     let isCorrect = playerAnswer
       ? playerAnswer.answer === question.solution
       : false
+
+    // 📊 TRACKING DETTAGLIATO RISPOSTE PER STATISTICHE
+    if (!player.detailedAnswers) {
+      player.detailedAnswers = []
+    }
+    player.detailedAnswers.push({
+      questionIndex: game.currentQuestion,
+      questionText: question.question,
+      playerAnswer: playerAnswer ? playerAnswer.answer : null,
+      correctAnswer: question.solution,
+      isCorrect: isCorrect,
+      answerTime: playerAnswer ? (playerAnswer.timestamp - game.roundStartTime) / 1000 : null,
+      pointsEarned: 0, // Verrà aggiornato sotto
+      timestamp: Date.now()
+    })
 
     // Calcola punteggio con il sistema delle modalità
     let basePoints = (isCorrect && Math.round(playerAnswer && playerAnswer.points)) || 0
@@ -135,12 +167,26 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       player.points += points
     }
 
+    // 📊 Aggiorna punti nel tracking dettagliato
+    if (player.detailedAnswers && player.detailedAnswers.length > 0) {
+      player.detailedAnswers[player.detailedAnswers.length - 1].pointsEarned = points
+    }
+
     let sortPlayers = game.players
       .filter(p => !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id))
       .sort((a, b) => b.points - a.points)
 
-    let rank = sortPlayers.findIndex((p) => p.id === player.id) + 1
-    let aheadPlayer = sortPlayers[rank - 2]
+    // Calcola rank corretto considerando punteggi uguali
+    let rank = 1
+    for (let i = 0; i < sortPlayers.length; i++) {
+      if (sortPlayers[i].id === player.id) {
+        // Trova quanti giocatori hanno punteggio maggiore (non uguale)
+        rank = sortPlayers.filter(p => p.points > player.points).length + 1
+        break
+      }
+    }
+
+    let aheadPlayer = sortPlayers.find(p => p.points > player.points && p.id !== player.id)
 
     let resultMessage = isCorrect ? "Nice !" : "Too bad"
     if (survivalResult.eliminated) {
@@ -161,7 +207,8 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
         gameMode: gameMode,
         eliminated: survivalResult.eliminated,
         livesRemaining: survivalResult.livesRemaining,
-        speedBonus: points > basePoints ? points - basePoints : 0
+        speedBonus: points > basePoints ? points - basePoints : 0,
+        backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
       },
     })
   })
@@ -190,7 +237,8 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       activePlayers: activePlayers.length,
       totalPlayers: game.players.length,
       eliminatedPlayers: game.eliminatedPlayers ? game.eliminatedPlayers.length : 0,
-      canGameContinue: QuizModeEngine.canGameContinue(game)
+      canGameContinue: QuizModeEngine.canGameContinue(game),
+      backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
     },
   })
 
@@ -233,7 +281,8 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
             leaderboard: currentGame.players
               .filter(p => !currentGame.eliminatedPlayers || !currentGame.eliminatedPlayers.includes(p.id))
               .sort((a, b) => b.points - a.points),
-            gameMode: currentGame.gameMode || 'standard'
+            gameMode: currentGame.gameMode || 'standard',
+            backgroundTheme: currentGame.gameSettings?.backgroundTheme || 'laboratory'
           }
         })
       }

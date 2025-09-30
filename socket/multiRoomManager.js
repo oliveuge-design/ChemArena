@@ -25,6 +25,15 @@ class MultiRoomManager {
    * Crea una nuova room per un quiz
    */
   createRoom(managerId, teacherId, roomData = {}) {
+    // DEBUG: Log completo di roomData ricevuto
+    console.log(`🔍 DEBUG createRoom - roomData ricevuto:`, {
+      quizTitle: roomData.quizTitle,
+      quizId: roomData.quizId,
+      subject: roomData.subject,
+      questionsCount: roomData.questions?.length,
+      firstQuestion: roomData.questions?.[0]?.question?.substring(0, 50)
+    });
+
     // 1. Controllo limiti di sicurezza
     const limitCheck = roomLimiter.canCreateRoom(teacherId);
     if (!limitCheck.allowed) {
@@ -54,6 +63,7 @@ class MultiRoomManager {
         gameState.questions = roomData.questions;
         console.log(`🎯 QUIZ CARICATO IN ROOM ${roomId}:`);
         console.log(`   📝 Titolo: ${roomData.quizTitle || 'Non specificato'}`);
+        console.log(`   🆔 Quiz ID: ${roomData.quizId || 'Non specificato'}`);
         console.log(`   📚 Materia: ${roomData.subject || 'Non specificata'}`);
         console.log(`   🔢 Domande: ${roomData.questions.length}`);
         console.log(`   🔑 Password: ${roomData.password || 'Default'}`);

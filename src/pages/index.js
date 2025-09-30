@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
+
 import TronButton from '@/components/TronButton'
 import PWAInstallButton from '@/components/PWAInstallButton'
+import AnimatedLeaderboard from '@/components/AnimatedLeaderboard'
 
 export default function Home() {
   const router = useRouter()
@@ -187,7 +189,6 @@ export default function Home() {
                   href="/teacher-dashboard"
                   variant="primary"
                 />
-                
                 <TronButton
                   title="STUDENTE"
                   subtitle="Partecipa o registrati"
@@ -195,15 +196,15 @@ export default function Home() {
                   onClick={() => setShowStudentOptions(!showStudentOptions)}
                   variant="secondary"
                 />
-                
                 <TronButton
                   title="QUIZ LIBERO"
-                  subtitle="Modalità di pratica"
-                  icon="🧪"
-                  href="/dashboard"
+                  subtitle="Quiz pubblici gratuiti"
+                  icon="🎮"
+                  href="/quiz-libero"
                   variant="accent"
                 />
               </div>
+
               
               {/* Accesso rapido studente */}
               {showQuickJoin && (

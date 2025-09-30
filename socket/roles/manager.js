@@ -103,6 +103,7 @@ const Manager = {
       data: {
         time: 3,
         subject: game.subject,
+        backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1',
       },
     })
 
@@ -128,6 +129,139 @@ const Manager = {
 
     game.currentQuestion++
     startRound(game, io, socket, multiRoomManager)
+  },
+
+  // 🎯 NUOVO: Skip manuale per modalità senza tempo
+  skipQuestion: async (game, io, socket, multiRoomManager = null) => {
+    console.log(`🎯 Manual skip called by ${socket.id} - Mode: ${game.gameMode}, Question: ${game.currentQuestion + 1}/${game.questions.length}`)
+
+    if (socket.id !== game.manager) {
+      console.log(`❌ Unauthorized skip attempt by ${socket.id}`)
+      return
+    }
+
+    if (game.gameMode !== 'untimed') {
+      console.log(`❌ Skip only allowed in untimed mode, current: ${game.gameMode}`)
+      socket.emit('game:errorMessage', 'Skip manuale disponibile solo in modalità "Senza Tempo"')
+      return
+    }
+
+    // Processa le risposte attuali e mostra risultati
+    await Manager.processCurrentAnswers(game, io, socket)
+
+    // Passa alla prossima domanda o termina
+    if (game.questions[game.currentQuestion + 1]) {
+      game.currentQuestion++
+      console.log(`➡️ Moving to question ${game.currentQuestion + 1}/${game.questions.length}`)
+      startRound(game, io, socket, multiRoomManager)
+    } else {
+      console.log(`🏁 Quiz completed, showing final results`)
+      Manager.showLeaderboard(game, io, socket)
+    }
+  },
+
+  // 📊 Processa risposte per domanda corrente (per modalità untimed)
+  processCurrentAnswers: async (game, io, socket) => {
+    const question = game.questions[game.currentQuestion]
+    const gameMode = game.gameMode || 'standard'
+
+    console.log(`📊 Processing answers for question ${game.currentQuestion + 1} in ${gameMode} mode`)
+
+    // Importa QuizModeEngine qui per evitare circular import
+    const { default: QuizModeEngine } = await import('../utils/QuizModeEngine.js')
+    const modeConfig = QuizModeEngine.getModeConfig(gameMode, question, game.gameSettings)
+
+    // Processa ogni giocatore
+    for (const player of game.players) {
+      if (!QuizModeEngine.canPlayerAnswer(game, player.id)) {
+        continue // Salta giocatori eliminati
+      }
+
+      let playerAnswer = game.playersAnswer.find((p) => p.id === player.id)
+      let isCorrect = playerAnswer ? playerAnswer.answer === question.solution : false
+
+      // 📊 Aggiorna tracking dettagliato
+      if (!player.detailedAnswers) {
+        player.detailedAnswers = []
+      }
+      player.detailedAnswers.push({
+        questionIndex: game.currentQuestion,
+        questionText: question.question,
+        playerAnswer: playerAnswer ? playerAnswer.answer : null,
+        correctAnswer: question.solution,
+        isCorrect: isCorrect,
+        answerTime: playerAnswer ? (playerAnswer.timestamp - game.roundStartTime) / 1000 : null,
+        pointsEarned: 0, // Verrà aggiornato sotto
+        timestamp: Date.now()
+      })
+
+      // Calcola punteggio
+      let basePoints = (isCorrect && Math.round(playerAnswer && playerAnswer.points)) || 0
+      let answerTime = playerAnswer ? (playerAnswer.timestamp - game.roundStartTime) / 1000 : 300 // Default per untimed
+      let playerLives = game.playerLives ? game.playerLives[player.id] : null
+
+      let points = QuizModeEngine.calculateScore(
+        gameMode,
+        basePoints,
+        answerTime,
+        modeConfig.questionTime || 300,
+        isCorrect,
+        playerLives
+      )
+
+      player.points += points
+
+      // Aggiorna punti nel tracking
+      if (player.detailedAnswers && player.detailedAnswers.length > 0) {
+        player.detailedAnswers[player.detailedAnswers.length - 1].pointsEarned = points
+      }
+
+      // Aggiorna classifica - Calcola rank corretto considerando punteggi uguali
+      let sortPlayers = game.players
+        .filter(p => !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id))
+        .sort((a, b) => b.points - a.points)
+
+      let rank = sortPlayers.filter(p => p.points > player.points).length + 1
+      let aheadPlayer = sortPlayers.find(p => p.points > player.points && p.id !== player.id)
+
+      let resultMessage = isCorrect ? "Corretto! 🎉" : "Sbagliato 😕"
+
+      // Invia risultato al giocatore
+      io.to(player.id).emit("game:status", {
+        name: "ROUND_RESULT",
+        data: {
+          message: resultMessage,
+          isCorrect: isCorrect,
+          solution: question.solution,
+          points: points,
+          totalPoints: player.points,
+          rank: rank,
+          aheadPlayer: aheadPlayer,
+          gameMode: gameMode,
+          backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
+        },
+      })
+    }
+
+    // Invia risultati al manager
+    let leaderboard = game.players
+      .filter(p => !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id))
+      .sort((a, b) => b.points - a.points)
+      .slice(0, 10)
+
+    io.to(socket.id).emit("manager:roundResults", {
+      question: question.question,
+      solution: question.solution,
+      leaderboard: leaderboard,
+      questionNumber: game.currentQuestion + 1,
+      totalQuestions: game.questions.length,
+      gameMode: gameMode
+    })
+
+    // Reset answers per prossima domanda
+    game.playersAnswer = []
+
+    console.log(`✅ Answers processed, leaderboard updated`)
   },
 
   abortQuiz: (game, io, socket) => {
@@ -218,6 +352,7 @@ const Manager = {
         data: {
           subject: game.subject,
           top: uniquePlayersFinish.sort((a, b) => b.points - a.points).slice(0, 3),
+          backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
         },
       })
 
@@ -247,6 +382,7 @@ const Manager = {
         leaderboard: uniquePlayers
           .sort((a, b) => b.points - a.points)
           .slice(0, 5),
+        backgroundTheme: game.gameSettings?.backgroundTheme || 'laboratory'
       },
     })
   },

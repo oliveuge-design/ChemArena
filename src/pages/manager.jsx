@@ -1,7 +1,8 @@
 import Button from "@/components/Button"
 import GameWrapper from "@/components/game/GameWrapper"
 import ManagerPassword from "@/components/ManagerPassword"
-import { GAME_STATES, GAME_STATE_COMPONENTS_MANAGER } from "@/constants"
+import { GAME_STATES } from "@/constants"
+import { GAME_STATE_COMPONENTS_MANAGER } from "@/constants/gameComponents"
 import { usePlayerContext } from "@/context/player"
 import { useSocketContext } from "@/context/socket"
 import { useRouter } from "next/router"
@@ -12,6 +13,8 @@ export default function Manager() {
   const router = useRouter()
 
   const [nextText, setNextText] = useState("Start")
+  const [isUntimedMode, setIsUntimedMode] = useState(false)
+  const [showSkipButton, setShowSkipButton] = useState(false)
   const [state, setState] = useState({
     ...GAME_STATES,
     status: {
@@ -39,8 +42,12 @@ export default function Manager() {
         case "FINISH":
           setNextText("🏠 Nuovo Quiz")
           break
+        case "UNTIMED_WAITING":
+          setNextText("🎯 Prossima Domanda")
+          setShowSkipButton(true)
+          break
         default:
-          setNextText("Skip")
+          setNextText(isUntimedMode ? "🎯 Prossima" : "Skip")
           break
       }
     })
@@ -80,10 +87,42 @@ export default function Manager() {
       }))
     })
 
+    // 🎯 Listener per modalità senza tempo
+    on("manager:untimedWaiting", (data) => {
+      console.log(`🎯 Untimed mode waiting: Question ${data.questionIndex + 1}/${data.totalQuestions}`)
+      setIsUntimedMode(true)
+      setShowSkipButton(true)
+      setNextText("🎯 Prossima Domanda")
+
+      // Aggiorna stato per mostrare messaggio senza tempo
+      setState(prevState => ({
+        ...prevState,
+        status: {
+          name: "UNTIMED_WAITING",
+          data: {
+            ...data,
+            message: "Modalità senza tempo attiva - Usa il pulsante per passare alla prossima domanda"
+          }
+        }
+      }))
+    })
+
+    // Rileva modalità dal localStorage al caricamento
+    try {
+      const gameSettings = JSON.parse(localStorage.getItem('game-settings') || '{}')
+      if (gameSettings.gameMode === 'untimed') {
+        setIsUntimedMode(true)
+        console.log('🎯 Untimed mode detected from settings')
+      }
+    } catch (error) {
+      console.error('Error reading game settings:', error)
+    }
+
     return () => {
       off("game:status")
       off("game:saveStats")
       off("manager:inviteCode")
+      off("manager:untimedWaiting")
     }
   }, [on, off])
 
@@ -98,10 +137,11 @@ export default function Manager() {
 
       if (currentQuiz) {
         const quiz = JSON.parse(currentQuiz)
-        console.log('📝 QUIZ SELEZIONATO RILEVATO:', quiz.title)
+        console.log('📝 QUIZ SELEZIONATO RILEVATO:', quiz.title, `(ID: ${quiz.id})`)
         console.log('📚 Materia:', quiz.subject)
         console.log('🔢 Domande:', quiz.questions?.length || 0)
         console.log('🔑 Password:', quiz.password || 'CHEMARENA')
+        console.log('🔍 VERIFICA QUIZ ID:', quiz.id, '- TITLE:', quiz.title)
 
         // Carica anche le impostazioni di gioco
         const gameSettings = JSON.parse(localStorage.getItem('game-settings') || '{}')
@@ -179,7 +219,12 @@ export default function Manager() {
         break
 
       case "SELECT_ANSWER":
-        if (socket && emit) emit("manager:abortQuiz")
+        // 🎯 Modalità senza tempo: usa skip manuale
+        if (isUntimedMode) {
+          if (socket && emit) emit("manager:skipQuestion")
+        } else {
+          if (socket && emit) emit("manager:abortQuiz")
+        }
         break
 
       case "SHOW_RESPONSES":
@@ -188,6 +233,12 @@ export default function Manager() {
 
       case "SHOW_LEADERBOARD":
         if (socket && emit) emit("manager:nextQuestion")
+        break
+
+      case "UNTIMED_WAITING":
+        // 🎯 Skip manuale in modalità senza tempo
+        console.log('🎯 Manual skip in untimed mode')
+        if (socket && emit) emit("manager:skipQuestion")
         break
 
       case "FINISH":
