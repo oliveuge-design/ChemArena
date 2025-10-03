@@ -56,42 +56,51 @@ class MultiRoomManager {
       gameState.teacherId = teacherId;
       gameState.createdAt = Date.now();
 
-      // Applica dati quiz se forniti
-      if (roomData.password) gameState.password = roomData.password;
-      if (roomData.subject) gameState.subject = roomData.subject;
-      if (roomData.questions) {
+      // ✅ PRIORITÀ 1: Applica dati quiz da roomData (da localStorage)
+      if (roomData.questions && roomData.questions.length > 0) {
+        // Quiz fornito direttamente - USA QUESTO (da localStorage)
+        gameState.password = roomData.password || 'CHEMARENA';
+        gameState.subject = roomData.subject || 'Quiz';
         gameState.questions = roomData.questions;
-        console.log(`🎯 QUIZ CARICATO IN ROOM ${roomId}:`);
-        console.log(`   📝 Titolo: ${roomData.quizTitle || 'Non specificato'}`);
-        console.log(`   🆔 Quiz ID: ${roomData.quizId || 'Non specificato'}`);
-        console.log(`   📚 Materia: ${roomData.subject || 'Non specificata'}`);
+        gameState.quizTitle = roomData.quizTitle;
+        gameState.quizId = roomData.quizId;
+
+        console.log(`🎯 QUIZ CARICATO DA ROOMDATA (localStorage):`);
+        console.log(`   📝 Titolo: ${roomData.quizTitle}`);
+        console.log(`   🆔 Quiz ID: ${roomData.quizId}`);
+        console.log(`   📚 Materia: ${roomData.subject}`);
         console.log(`   🔢 Domande: ${roomData.questions.length}`);
-        console.log(`   🔑 Password: ${roomData.password || 'Default'}`);
-        if (roomData.questions.length > 0) {
-          console.log(`   ❓ Prima domanda: ${roomData.questions[0].question?.substring(0, 60)}...`);
-        }
+        console.log(`   ❓ Prima domanda: ${roomData.questions[0].question?.substring(0, 60)}...`);
+
+      } else if (global.currentQuizConfig && global.currentQuizConfig.questions) {
+        // ⚠️ FALLBACK: Usa global config solo se roomData non ha quiz
+        console.log(`⚠️ WARNING: No quiz in roomData, using global.currentQuizConfig as fallback`);
+        gameState.password = global.currentQuizConfig.password || 'CHEMARENA';
+        gameState.subject = global.currentQuizConfig.subject || 'Quiz';
+        gameState.questions = global.currentQuizConfig.questions;
+        gameState.quizTitle = global.currentQuizConfig.quizTitle;
+        gameState.quizId = global.currentQuizConfig.quizId;
+
+        console.log(`📦 Quiz caricato da global config (fallback):`);
+        console.log(`   📚 Materia: ${gameState.subject}`);
+        console.log(`   🔢 Domande: ${gameState.questions.length}`);
       }
 
-      // CRITICO: Applica gameMode e gameSettings dal config o roomData
+      // CRITICO: Applica gameMode e gameSettings (sempre da roomData se presente)
       if (roomData.gameMode) {
         gameState.gameMode = roomData.gameMode;
         console.log(`   🎮 Modalità: ${roomData.gameMode}`);
-      }
-      if (roomData.gameSettings) {
-        gameState.gameSettings = roomData.gameSettings;
-        console.log(`   ⚙️ Impostazioni modalità: ${JSON.stringify(roomData.gameSettings)}`);
+      } else if (global.currentQuizConfig && global.currentQuizConfig.gameMode) {
+        gameState.gameMode = global.currentQuizConfig.gameMode;
+        console.log(`   🎮 Modalità (da global): ${global.currentQuizConfig.gameMode}`);
       }
 
-      // Fallback: Applica global config se disponibile
-      if (global.currentQuizConfig) {
-        if (!gameState.gameMode && global.currentQuizConfig.gameMode) {
-          gameState.gameMode = global.currentQuizConfig.gameMode;
-          console.log(`   🎮 Modalità (da global): ${global.currentQuizConfig.gameMode}`);
-        }
-        if (!gameState.gameSettings && global.currentQuizConfig.gameSettings) {
-          gameState.gameSettings = global.currentQuizConfig.gameSettings;
-          console.log(`   ⚙️ Impostazioni (da global): ${JSON.stringify(global.currentQuizConfig.gameSettings)}`);
-        }
+      if (roomData.gameSettings) {
+        gameState.gameSettings = roomData.gameSettings;
+        console.log(`   ⚙️ Impostazioni: ${JSON.stringify(roomData.gameSettings)}`);
+      } else if (global.currentQuizConfig && global.currentQuizConfig.gameSettings) {
+        gameState.gameSettings = global.currentQuizConfig.gameSettings;
+        console.log(`   ⚙️ Impostazioni (da global): ${JSON.stringify(global.currentQuizConfig.gameSettings)}`);
       }
 
       // 4. Registra la room
