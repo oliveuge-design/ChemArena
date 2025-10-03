@@ -25,14 +25,26 @@ class MultiRoomManager {
    * Crea una nuova room per un quiz
    */
   createRoom(managerId, teacherId, roomData = {}) {
-    // DEBUG: Log completo di roomData ricevuto
-    console.log(`🔍 DEBUG createRoom - roomData ricevuto:`, {
-      quizTitle: roomData.quizTitle,
-      quizId: roomData.quizId,
-      subject: roomData.subject,
-      questionsCount: roomData.questions?.length,
-      firstQuestion: roomData.questions?.[0]?.question?.substring(0, 50)
-    });
+    // 🔍 DEBUG COMPLETO: Log di TUTTO roomData ricevuto
+    console.log(`\n========== 🔍 CREATE ROOM DEBUG ==========`);
+    console.log(`Manager ID: ${managerId}`);
+    console.log(`Teacher ID: ${teacherId}`);
+    console.log(`RoomData keys:`, Object.keys(roomData));
+    console.log(`RoomData completo:`, JSON.stringify(roomData, null, 2));
+    console.log(`Has questions:`, !!roomData.questions);
+    console.log(`Questions count:`, roomData.questions?.length || 0);
+    console.log(`Quiz ID:`, roomData.quizId);
+    console.log(`Quiz Title:`, roomData.quizTitle);
+    console.log(`Subject:`, roomData.subject);
+    if (roomData.questions && roomData.questions.length > 0) {
+      console.log(`First question preview:`, roomData.questions[0].question?.substring(0, 80));
+    }
+    console.log(`Global currentQuizConfig exists:`, !!global.currentQuizConfig);
+    if (global.currentQuizConfig) {
+      console.log(`Global quiz subject:`, global.currentQuizConfig.subject);
+      console.log(`Global quiz questions:`, global.currentQuizConfig.questions?.length);
+    }
+    console.log(`==========================================\n`);
 
     // 1. Controllo limiti di sicurezza
     const limitCheck = roomLimiter.canCreateRoom(teacherId);
