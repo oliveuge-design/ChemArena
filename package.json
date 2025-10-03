@@ -23,6 +23,8 @@
     "deploy:check": "npm run quiz:backup && echo 'Backup verificato - ready per deploy'"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.3.0",
     "animejs": "^4.1.4",
     "bcryptjs": "^3.0.2",
     "chart.js": "^4.5.0",
@@ -39,6 +41,7 @@
     "react-hot-toast": "^2.4.1",
     "socket.io": "^4.7.4",
     "socket.io-client": "^4.7.4",
+    "three": "^0.180.0",
     "use-sound": "^4.0.1",
     "yup": "^1.7.1"
   },

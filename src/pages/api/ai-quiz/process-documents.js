@@ -119,28 +119,34 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Crea directory temporanea cross-platform
-    const uploadDir = path.join(os.tmpdir(), 'chemarena-uploads')
-
-    // Assicurati che la directory esista
-    if (!fs.existsSync(uploadDir)) {
-      fs.mkdirSync(uploadDir, { recursive: true })
-    }
+    // Usa direttamente /tmp per compatibilità Render serverless
+    // Render NON permette creazione di subdirectories custom
+    const uploadDir = os.tmpdir()
 
     const form = formidable({
       uploadDir: uploadDir,
       keepExtensions: true,
-      maxFileSize: 50 * 1024 * 1024, // 50MB
+      maxFileSize: 4 * 1024 * 1024, // 4MB - limite Render API routes
       multiples: true
     })
 
     const [fields, files] = await form.parse(req)
 
     const config = JSON.parse(fields.config[0])
-    const apiKey = fields.apiKey[0]
+    const clientApiKey = fields.apiKey?.[0]
+
+    // Priorità: API key server-side (sicura) > client-side (fallback)
+    const apiKey = process.env.OPENAI_API_KEY || clientApiKey
 
     if (!apiKey) {
-      return res.status(400).json({ error: 'API Key OpenAI richiesta' })
+      return res.status(400).json({
+        error: 'API Key OpenAI non configurata. Contattare l\'amministratore per configurare OPENAI_API_KEY su Render.'
+      })
+    }
+
+    // Log warning se si usa API key client-side (insicuro)
+    if (!process.env.OPENAI_API_KEY && clientApiKey) {
+      console.warn('⚠️ SECURITY: Usando API key client-side. Configurare OPENAI_API_KEY su Render.')
     }
 
     // Processa tutti i file caricati

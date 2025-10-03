@@ -4,12 +4,26 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { content, config, apiKey } = req.body
+    const { content, config, apiKey: clientApiKey } = req.body
 
-    if (!content || !config || !apiKey) {
+    // Priorità: API key server-side (sicura) > client-side (fallback)
+    const apiKey = process.env.OPENAI_API_KEY || clientApiKey
+
+    if (!content || !config) {
       return res.status(400).json({
-        error: 'Contenuto, configurazione e API Key sono richiesti'
+        error: 'Contenuto e configurazione sono richiesti'
       })
+    }
+
+    if (!apiKey) {
+      return res.status(400).json({
+        error: 'API Key OpenAI non configurata. Contattare l\'amministratore per configurare OPENAI_API_KEY su Render.'
+      })
+    }
+
+    // Log warning se si usa API key client-side (insicuro)
+    if (!process.env.OPENAI_API_KEY && clientApiKey) {
+      console.warn('⚠️ SECURITY: Usando API key client-side. Configurare OPENAI_API_KEY su Render.')
     }
 
     // Costruisci il prompt per OpenAI basato sulla configurazione
@@ -53,28 +67,37 @@ export default async function handler(req, res) {
             ? Math.min(10000, numQuestions * 250 + 1000) // GPT-4o-mini può gestire di più
             : Math.min(4000, numQuestions * 180 + 800)   // Modello base
 
-        openaiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${apiKey}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            model: model,
-            messages: [
-              {
-                role: 'system',
-                content: 'Sei un esperto creatore di quiz educativi. Generi domande a scelta multipla di alta qualità basate sui contenuti forniti. IMPORTANTE: Genera SEMPRE un JSON valido e completo.'
-              },
-              {
-                role: 'user',
-                content: prompt
-              }
-            ],
-            temperature: 0.7,
-            max_tokens: dynamicMaxTokens
+        // Timeout per Render (max 30s per API route)
+        const controller = new AbortController()
+        const timeoutId = setTimeout(() => controller.abort(), 25000) // 25s timeout
+
+        try {
+          openaiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${apiKey}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              model: model,
+              messages: [
+                {
+                  role: 'system',
+                  content: 'Sei un esperto creatore di quiz educativi. Generi domande a scelta multipla di alta qualità basate sui contenuti forniti. IMPORTANTE: Genera SEMPRE un JSON valido e completo.'
+                },
+                {
+                  role: 'user',
+                  content: prompt
+                }
+              ],
+              temperature: 0.7,
+              max_tokens: dynamicMaxTokens
+            }),
+            signal: controller.signal
           })
-        })
+        } finally {
+          clearTimeout(timeoutId)
+        }
 
         if (openaiResponse.ok) {
           console.log(`✅ Successo con modello: ${model}`)
@@ -86,8 +109,13 @@ export default async function handler(req, res) {
           openaiResponse = null
         }
       } catch (error) {
-        lastError = error.message
-        console.log(`❌ Errore connessione con ${model}: ${lastError}`)
+        if (error.name === 'AbortError') {
+          lastError = `Timeout - ${model} ha impiegato più di 25s (limite Render)`
+          console.log(`⏱️ Timeout con ${model}`)
+        } else {
+          lastError = error.message
+          console.log(`❌ Errore connessione con ${model}: ${lastError}`)
+        }
         openaiResponse = null
       }
     }

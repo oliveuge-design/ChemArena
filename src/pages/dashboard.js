@@ -31,6 +31,9 @@ const GoogleSheetsImport = dynamic(() => import("@/components/dashboard/GoogleSh
 const AnalyticsDashboard = dynamic(() => import("@/components/dashboard/AnalyticsDashboard"), {
   loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
 })
+const MoleculeManager = dynamic(() => import("@/components/dashboard/MoleculeManager"), {
+  loading: () => <div className="animate-pulse bg-gray-700 h-96 rounded-lg"></div>
+})
 
 // Import sincroni per componenti leggeri (<300 righe)
 import QuizManager from "@/components/dashboard/QuizManager"
@@ -88,7 +91,7 @@ function DashboardContent() {
     // Controlla se c'è un tab specificato nella query string
     const urlParams = new URLSearchParams(window.location.search)
     const tabParam = urlParams.get('tab')
-    if (tabParam && ['archive', 'quizzes', 'create', 'ai-generator', 'launch', 'analytics', 'statistics', 'teachers', 'classes', 'import', 'server', 'themes'].includes(tabParam)) {
+    if (tabParam && ['archive', 'quizzes', 'create', 'ai-generator', 'launch', 'analytics', 'statistics', 'teachers', 'classes', 'import', 'server', 'themes', 'molecules'].includes(tabParam)) {
       setActiveTab(tabParam)
     }
 
@@ -194,6 +197,7 @@ function DashboardContent() {
     { id: 'create', name: 'Crea Quiz', icon: '➕' },
     { id: 'ai-generator', name: 'AI Quiz Generator', icon: '🤖' },
     { id: 'launch', name: 'Lancia Gioco', icon: '🚀' },
+    { id: 'molecules', name: 'Molecole 3D', icon: '⚛️' },
     { id: 'analytics', name: 'Analytics', icon: '🔬' },
     { id: 'themes', name: 'Personalizzazione', icon: '🎨' },
     { id: 'statistics', name: 'Statistiche', icon: '📊' },
@@ -357,6 +361,11 @@ function DashboardContent() {
                 <GameLauncherLazy />
               </DashboardErrorBoundary>
             </div>
+          )}
+          {activeTab === 'molecules' && (
+            <DashboardErrorBoundary>
+              <MoleculeManager />
+            </DashboardErrorBoundary>
           )}
           {activeTab === 'analytics' && (
             <DashboardErrorBoundary>
