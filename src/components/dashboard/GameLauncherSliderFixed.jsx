@@ -163,6 +163,10 @@ export default function GameLauncherSliderFixed() {
     try {
       setSelectedQuiz(quiz)
 
+      // ✅ CRITICO: Salva il quiz in localStorage per il manager
+      localStorage.setItem('current-game-quiz', JSON.stringify(quiz))
+      console.log(`💾 Quiz salvato in localStorage: ${quiz.title} (ID: ${quiz.id})`)
+
       const response = await fetch('/api/update-config', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
