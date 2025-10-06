@@ -64,11 +64,20 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
 
   await sleep(question.cooldown)
   console.log(`🔍 After cooldown sleep, game.started=${game.started}, room=${game.room}`)
+  console.log(`🔍 Checking room validity... multiRoomManager=${!!multiRoomManager}`)
 
   if (!isRoomValid()) {
     console.log(`❌ StartRound aborted after cooldown: room no longer valid`)
+    console.log(`   - game.started: ${game.started}`)
+    console.log(`   - game.room: ${game.room}`)
+    if (multiRoomManager) {
+      const roomState = multiRoomManager.getRoomState(game.room)
+      console.log(`   - multiRoomManager.getRoomState: ${!!roomState}`)
+    }
     return
   }
+
+  console.log(`✅ Room valid, sending SELECT_ANSWER...`)
 
   game.roundStartTime = Date.now()
 
@@ -111,10 +120,19 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
     console.log(`🔍 After question cooldown, game.started=${game.started}, room=${game.room}`)
   }
 
+  console.log(`🔍 Checking room validity after question timeout...`)
   if (!isRoomValid()) {
     console.log(`❌ StartRound aborted after question timeout: room no longer valid`)
+    console.log(`   - game.started: ${game.started}`)
+    console.log(`   - game.room: ${game.room}`)
+    if (multiRoomManager) {
+      const roomState = multiRoomManager.getRoomState(game.room)
+      console.log(`   - multiRoomManager.getRoomState: ${!!roomState}`)
+    }
     return
   }
+
+  console.log(`✅ Room valid after timeout, processing answers...`)
 
   // 🔧 FIX RANK BUG: Prima calcola TUTTI i punteggi, POI calcola i rank
   // Questo evita race condition dove player confronta punti nuovi vs vecchi
