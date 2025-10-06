@@ -29,6 +29,13 @@ export default function AnimatedLeaderboard({ players }) {
   useEffect(() => {
     if (!players || players.length === 0) return;
 
+    // 🔍 DEBUG: Log players ricevuti
+    console.log('🏆 [AnimatedLeaderboard] Players received:', players.map(p => ({
+      name: p.name || p.username,
+      score: p.score,
+      points: p.points
+    })))
+
     // Effetto count-up animato sui punti con stile digitale
     const intervals = players.map((player, i) => {
       let current = 0;

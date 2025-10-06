@@ -25,6 +25,12 @@ export default function Manager() {
 
   useEffect(() => {
     on("game:status", (status) => {
+      // 🔧 FIX: Manager NON deve vedere WAIT (è solo per studenti)
+      if (status.name === 'WAIT') {
+        console.log('🚫 [MANAGER] Ignoring WAIT event (student-only state)')
+        return
+      }
+
       setState(prevState => ({
         ...prevState,
         status: status,
