@@ -50,7 +50,7 @@ export default function AnimatedLeaderboard({ players }) {
   if (!players || players.length === 0) return null;
 
   return (
-    <div className="flex justify-center items-end gap-6 mt-8 px-4">
+    <div className="flex justify-center items-end gap-6 mt-8 px-4 -translate-y-12">
       {players.slice(0, 3).map((player, i) => (
         <motion.div
           key={player.name || `player-${i}`}
