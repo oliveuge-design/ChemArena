@@ -4,10 +4,57 @@
 
 ## 📋 AGGIORNAMENTI RECENTI
 
-### ✅ **SESSIONE 2025-10-06 - FIX COMPLETO PODIO FINALE**
-**Commits**: `3ee9608` + `5ae8bed` - ✅ Podio con DNA/Atomo/Microscopio funzionante
+### ✅ **SESSIONE 2025-10-06 FINALE - 10 NUOVI QUIZ + FIX COMPLETI**
+**Commits**: `5e14639` (quiz) + `94c541b` (WAIT) + `9abdbe0` (manager) + tutti fix precedenti
 
-#### 🎯 PROBLEMA PRINCIPALE RISOLTO:
+#### 📚 **NUOVI QUIZ AGGIUNTI** (10 quiz, 100 domande):
+
+**Chimica Analitica Classica:**
+1. Titolazioni e Analisi Volumetrica (10 domande)
+2. Equilibri Chimici in Soluzione (10 domande)
+
+**Chimica Analitica Strumentale:**
+3. Spettroscopia e Tecniche Ottiche (10 domande)
+4. Cromatografia e Tecniche Separative (10 domande)
+
+**Chimica Organica:**
+5. Reazioni e Meccanismi (10 domande)
+6. Composti Organici e Gruppi Funzionali (10 domande)
+
+**Tecnologie Chimiche Industriali:**
+7. Processi Chimici Industriali (10 domande)
+8. Impianti e Operazioni Unitarie (10 domande)
+
+**Arduino/Elettronica:**
+9. Programmazione Arduino - Fondamenti (10 domande)
+10. Arduino - Sensori e Attuatori (10 domande)
+
+**STATISTICHE FINALI**:
+- Totale quiz: 30 → **40** (+10)
+- Totale domande: 230 → **330** (+100)
+- Script: [generate-10-quizzes.js](scripts/generate-10-quizzes.js), [part2](scripts/add-quizzes-part2.js), [part3](scripts/add-quizzes-part3.js)
+
+#### ✅ **FIX TECNICI COMPLETATI**:
+
+1. **"Sei dentro..." appare SOLO per studente dopo login** - [socket/roles/player.js:83-89](socket/roles/player.js#L83-L89) + [src/pages/manager.jsx:23-26](src/pages/manager.jsx#L23-L26)
+   - ✅ Dopo `successJoin`, server invia `game:status WAIT` allo studente
+   - ✅ Manager inizializza con `SHOW_ROOM` pulito (senza dati WAIT)
+   - ✅ Manager ignora eventi WAIT dal socket
+
+2. **Podio finale con DNA/Atomo/Microscopio funzionante**
+   - ✅ `FINISH` aggiunto a GAME_STATE_COMPONENTS
+   - ✅ `nextQuestion()` chiama showLeaderboard quando finisce quiz
+   - ✅ Auto-advance usa showLeaderboard invece di "END"
+
+3. **Modalità "Appearing Answers" riparata** - [socket/utils/QuizModeEngine.js:239-253](socket/utils/QuizModeEngine.js#L239-L253)
+   - ✅ Dopo reveal risposte, invia SELECT_ANSWER
+   - ✅ Studenti possono rispondere
+
+4. **Banner podio ottimizzato** - [src/components/game/states/Podium.jsx:108](src/components/game/states/Podium.jsx#L108)
+   - ✅ Spostato in alto a destra
+   - ✅ Ridotto e non copre punteggi
+
+#### 🎯 PROBLEMA PRINCIPALE RISOLTO (Podio):
 **Il podio finale con icone scientifiche (🧬 DNA / ⚛️ Atomo / 🔬 Microscopio) non appariva MAI**
 
 #### 🔍 ROOT CAUSE ANALYSIS:
