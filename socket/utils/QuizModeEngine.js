@@ -235,6 +235,22 @@ const QuizModeEngine = {
       answers: question.answers,
       questionTime: config.questionTime
     })
+
+    // 🔧 FIX: Dopo reveal, invia SELECT_ANSWER per far scegliere agli studenti
+    console.log(`✅ All answers revealed, sending SELECT_ANSWER...`)
+    io.to(game.room).emit("game:status", {
+      name: "SELECT_ANSWER",
+      data: {
+        question: question.question,
+        answers: question.answers,
+        image: question.image,
+        time: config.questionTime,
+        totalPlayer: game.players.length,
+        gameMode: 'appearing',
+        modeConfig: config,
+        backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
+      },
+    })
   },
 
   /**
