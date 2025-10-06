@@ -116,13 +116,19 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
     return
   }
 
-  game.players.map(async (player) => {
+  // 🔧 FIX RANK BUG: Prima calcola TUTTI i punteggi, POI calcola i rank
+  // Questo evita race condition dove player confronta punti nuovi vs vecchi
+
+  // FASE 1: Calcola e assegna punti a TUTTI i player
+  const playerResults = []
+
+  for (const player of game.players) {
     // Verifica se il giocatore può ancora partecipare (modalità sopravvivenza)
     if (!QuizModeEngine.canPlayerAnswer(game, player.id)) {
-      return // Salta giocatori eliminati
+      continue // Salta giocatori eliminati
     }
 
-    let playerAnswer = await game.playersAnswer.find((p) => p.id === player.id)
+    let playerAnswer = game.playersAnswer.find((p) => p.id === player.id)
 
     let isCorrect = playerAnswer
       ? playerAnswer.answer === question.solution
@@ -144,7 +150,7 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
     })
 
     // Calcola punteggio con il sistema delle modalità
-    let basePoints = (isCorrect && Math.round(playerAnswer && playerAnswer.points)) || 0
+    let basePoints = (isCorrect && playerAnswer) ? Math.round(playerAnswer.points) : 0
     let answerTime = playerAnswer ? (playerAnswer.timestamp - game.roundStartTime) / 1000 : modeConfig.questionTime
     let playerLives = game.playerLives ? game.playerLives[player.id] : null
 
@@ -163,6 +169,7 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       survivalResult = QuizModeEngine.handleSurvivalElimination(game, player.id, isCorrect)
     }
 
+    // ✅ AGGIORNA PUNTI (prima del calcolo rank!)
     if (!survivalResult.eliminated) {
       player.points += points
     }
@@ -172,10 +179,26 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       player.detailedAnswers[player.detailedAnswers.length - 1].pointsEarned = points
     }
 
-    let sortPlayers = game.players
-      .filter(p => !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id))
-      .sort((a, b) => b.points - a.points)
+    // Salva risultato per calcolo rank successivo
+    playerResults.push({
+      player,
+      isCorrect,
+      points,
+      basePoints,
+      survivalResult
+    })
+  }
 
+  // FASE 2: Ora che TUTTI hanno i punti aggiornati, calcola i rank
+  const sortPlayers = game.players
+    .filter(p => !game.eliminatedPlayers || !game.eliminatedPlayers.includes(p.id))
+    .sort((a, b) => b.points - a.points)
+
+  // FASE 3: Invia risultati con rank corretti
+  console.log('🎯 PHASE 3: Sending results to players')
+  console.log('📊 sortPlayers:', sortPlayers.map(p => ({ username: p.username, points: p.points, id: p.id })))
+
+  playerResults.forEach(({ player, isCorrect, points, basePoints, survivalResult }) => {
     // Calcola rank corretto considerando punteggi uguali
     let rank = 1
     for (let i = 0; i < sortPlayers.length; i++) {
@@ -195,21 +218,32 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
       resultMessage += ` (Vite: ${survivalResult.livesRemaining})`
     }
 
+    const resultData = {
+      correct: isCorrect,
+      message: resultMessage,
+      points: points,
+      myPoints: player.points, // ✅ Punteggio totale aggiornato
+      rank: survivalResult.eliminated ? 'ELIMINATO' : rank, // ✅ Rank corretto
+      aheadOfMe: aheadPlayer ? aheadPlayer.username : null,
+      gameMode: gameMode,
+      eliminated: survivalResult.eliminated,
+      livesRemaining: survivalResult.livesRemaining,
+      speedBonus: points > basePoints ? points - basePoints : 0,
+      backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
+    }
+
+    console.log(`🎯 Sending SHOW_RESULT to ${player.username} (${player.id}):`, {
+      username: player.username,
+      correct: resultData.correct,
+      points: resultData.points,
+      myPoints: resultData.myPoints,
+      rank: resultData.rank,
+      aheadOfMe: resultData.aheadOfMe
+    })
+
     io.to(player.id).emit("game:status", {
       name: "SHOW_RESULT",
-      data: {
-        correct: isCorrect,
-        message: resultMessage,
-        points: points,
-        myPoints: player.points,
-        rank: survivalResult.eliminated ? 'ELIMINATO' : rank,
-        aheadOfMe: aheadPlayer ? aheadPlayer.username : null,
-        gameMode: gameMode,
-        eliminated: survivalResult.eliminated,
-        livesRemaining: survivalResult.livesRemaining,
-        speedBonus: points > basePoints ? points - basePoints : 0,
-        backgroundTheme: game.gameSettings?.backgroundTheme || 'gaming1'
-      },
+      data: resultData,
     })
   })
 
@@ -272,19 +306,11 @@ export const startRound = async (game, io, socket, multiRoomManager = null) => {
         const { startRound } = await import('./round.js')
         await startRound(currentGame, io, socket, multiRoomManager)
       } else {
-        console.log(`🏁 Auto-advance: Quiz completato, non ci sono altre domande`)
+        console.log(`🏁 Auto-advance: Quiz completato, chiamando showLeaderboard per FINISH`)
 
-        // Fine del quiz - mostra risultati finali
-        io.to(currentGame.room).emit("game:status", {
-          name: "END",
-          data: {
-            leaderboard: currentGame.players
-              .filter(p => !currentGame.eliminatedPlayers || !currentGame.eliminatedPlayers.includes(p.id))
-              .sort((a, b) => b.points - a.points),
-            gameMode: currentGame.gameMode || 'standard',
-            backgroundTheme: currentGame.gameSettings?.backgroundTheme || 'laboratory'
-          }
-        })
+        // Fine del quiz - chiama showLeaderboard che invia FINISH corretto
+        const { default: Manager } = await import('../roles/manager.js')
+        await Manager.showLeaderboard(currentGame, io, socket)
       }
     }, 3000) // 3 secondi di pausa prima dell'auto-advance
   }

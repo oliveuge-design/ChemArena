@@ -124,6 +124,8 @@ const Manager = {
     }
 
     if (!game.questions[game.currentQuestion + 1]) {
+      console.log(`🏁 No more questions, showing final podium`)
+      Manager.showLeaderboard(game, io, socket)
       return
     }
 
