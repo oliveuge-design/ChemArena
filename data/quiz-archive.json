@@ -3597,14 +3597,1534 @@
           "image": ""
         }
       ]
+    },
+    {
+      "id": "quiz_analitica_titolazioni_1759770803182",
+      "title": "Titolazioni e Analisi Volumetrica",
+      "subject": "Chimica Analitica",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "scienze",
+      "subcategory": "chimica",
+      "difficulty": "media",
+      "questions": [
+        {
+          "id": "q1759770803182_1_1",
+          "question": "Quale indicatore è più adatto per una titolazione acido forte-base forte?",
+          "answers": [
+            "Fenolftaleina",
+            "Metilarancio",
+            "Blu di bromotimolo",
+            "Tutti e tre"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_2",
+          "question": "Il punto equivalente di una titolazione corrisponde a:",
+          "answers": [
+            "Il cambio di colore dell'indicatore",
+            "La completa neutralizzazione stechiometrica",
+            "Il pH = 7",
+            "Il punto di semi-neutralizzazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_3",
+          "question": "In una titolazione acido debole-base forte, il pH al punto equivalente è:",
+          "answers": [
+            "pH < 7",
+            "pH = 7",
+            "pH > 7",
+            "Dipende dalla temperatura"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_4",
+          "question": "La standardizzazione di una soluzione serve a:",
+          "answers": [
+            "Determinarne la concentrazione esatta",
+            "Verificarne la purezza",
+            "Misurarne il pH",
+            "Controllarne la temperatura"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_5",
+          "question": "Il titolante è:",
+          "answers": [
+            "La soluzione da analizzare",
+            "La soluzione a concentrazione nota",
+            "L'indicatore colorato",
+            "Il catalizzatore della reazione"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_6",
+          "question": "Una buretta deve essere lavata con:",
+          "answers": [
+            "Acqua distillata e asciugata",
+            "La soluzione che conterrà",
+            "Acetone",
+            "Sapone neutro"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_7",
+          "question": "Il carbonato di sodio è uno standard primario per:",
+          "answers": [
+            "Acidi forti",
+            "Basi forti",
+            "Agenti ossidanti",
+            "Agenti riducenti"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_8",
+          "question": "L'equazione di Henderson-Hasselbalch è utilizzata per calcolare:",
+          "answers": [
+            "La concentrazione molare",
+            "Il pH di soluzioni tampone",
+            "La densità delle soluzioni",
+            "La temperatura di ebollizione"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_9",
+          "question": "In una titolazione complessometrica con EDTA, l'indicatore metallico:",
+          "answers": [
+            "Forma un complesso meno stabile del complesso metallo-EDTA",
+            "Forma un complesso più stabile del complesso metallo-EDTA",
+            "Non forma complessi",
+            "Precipita con il metallo"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_1_10",
+          "question": "La retrotitolazione è utile quando:",
+          "answers": [
+            "Il titolante è troppo costoso",
+            "La reazione diretta è troppo lenta o incompleta",
+            "Si vuole risparmiare tempo",
+            "L'indicatore non è disponibile"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_analitica_equilibri_1759770803182",
+      "title": "Equilibri Chimici in Soluzione",
+      "subject": "Chimica Analitica",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "scienze",
+      "subcategory": "chimica",
+      "difficulty": "media",
+      "questions": [
+        {
+          "id": "q1759770803182_2_1",
+          "question": "La costante di equilibrio Kw dell'acqua a 25°C vale:",
+          "answers": [
+            "1.0 × 10⁻⁷",
+            "1.0 × 10⁻¹⁴",
+            "1.0 × 10⁻¹⁰",
+            "1.0 × 10⁻⁵"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_2",
+          "question": "Un tampone è efficace quando pH = pKa ±:",
+          "answers": [
+            "0.5",
+            "1",
+            "2",
+            "3"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_3",
+          "question": "Il prodotto di solubilità Kps esprime:",
+          "answers": [
+            "La solubilità in g/L",
+            "Il prodotto delle concentrazioni ioniche in soluzione satura",
+            "La velocità di dissoluzione",
+            "Il calore di solubilizzazione"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_4",
+          "question": "L'effetto del ione comune causa:",
+          "answers": [
+            "Aumento della solubilità",
+            "Diminuzione della solubilità",
+            "Nessun effetto",
+            "Dipende dalla temperatura"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_5",
+          "question": "Una soluzione tampone resiste variazioni di:",
+          "answers": [
+            "Temperatura",
+            "pH",
+            "Pressione",
+            "Volume"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_6",
+          "question": "Il punto isoelettrico di un amminoacido è il pH al quale:",
+          "answers": [
+            "Predomina la forma cationica",
+            "Predomina la forma anionica",
+            "La carica netta è zero",
+            "Si decompone"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_7",
+          "question": "La legge di Le Châtelier afferma che un sistema all'equilibrio reagisce a una perturbazione:",
+          "answers": [
+            "Spostando l'equilibrio nella direzione che contrasta la perturbazione",
+            "Annullando completamente la perturbazione",
+            "Non reagisce",
+            "Raggiunge un nuovo equilibrio casuale"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_8",
+          "question": "Un acido poliprotico rilascia protoni:",
+          "answers": [
+            "Simultaneamente",
+            "In stadi successivi",
+            "Solo in ambiente basico",
+            "Solo ad alte temperature"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_9",
+          "question": "La capacità tampone è massima quando:",
+          "answers": [
+            "pH = pKa",
+            "pH = 7",
+            "pH = 14",
+            "pH = 0"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770803182_2_10",
+          "question": "La formazione di complessi può aumentare la solubilità di un sale poco solubile per:",
+          "answers": [
+            "Effetto dello ione comune",
+            "Diminuzione del Kps",
+            "Rimozione di uno ione dall'equilibrio",
+            "Aumento della temperatura"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_strumentale_spettroscopia_1759770871651",
+      "title": "Spettroscopia e Tecniche Ottiche",
+      "subject": "Chimica Analitica Strumentale",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "scienze",
+      "subcategory": "chimica",
+      "difficulty": "avanzata",
+      "questions": [
+        {
+          "id": "q1759770871651_3_1",
+          "question": "La legge di Lambert-Beer correla l'assorbanza con:",
+          "answers": [
+            "Concentrazione e cammino ottico",
+            "Temperatura e pressione",
+            "pH e conducibilità",
+            "Densità e viscosità"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_2",
+          "question": "Nella spettroscopia UV-Vis, le transizioni elettroniche coinvolgono:",
+          "answers": [
+            "Elettroni di core",
+            "Elettroni di valenza",
+            "Protoni nucleari",
+            "Neutroni"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_3",
+          "question": "L'IR (infrarosso) rileva:",
+          "answers": [
+            "Transizioni elettroniche",
+            "Vibrazioni molecolari",
+            "Spin nucleare",
+            "Emissione di elettroni"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_4",
+          "question": "Il gruppo carbonilico C=O assorbe in IR a circa:",
+          "answers": [
+            "3300 cm⁻¹",
+            "1700 cm⁻¹",
+            "2900 cm⁻¹",
+            "1000 cm⁻¹"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_5",
+          "question": "Nella spettroscopia di assorbimento atomico (AAS), la sorgente è:",
+          "answers": [
+            "Lampada al tungsteno",
+            "Lampada a catodo cavo dell'elemento specifico",
+            "Laser",
+            "LED"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_6",
+          "question": "La fluorescenza è:",
+          "answers": [
+            "Emissione dopo assorbimento di energia",
+            "Riflessione della luce",
+            "Diffrazione",
+            "Rifrazione"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_7",
+          "question": "Il numero d'onda in spettroscopia IR si esprime in:",
+          "answers": [
+            "nm",
+            "cm⁻¹",
+            "Hz",
+            "eV"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_8",
+          "question": "La spettroscopia NMR studia:",
+          "answers": [
+            "Transizioni elettroniche",
+            "Vibrazioni molecolari",
+            "Spin nucleare",
+            "Rotazioni molecolari"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_9",
+          "question": "Il chemical shift in NMR è influenzato da:",
+          "answers": [
+            "L'ambiente chimico del nucleo",
+            "La massa molecolare",
+            "Il punto di ebollizione",
+            "La densità del campione"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_3_10",
+          "question": "Nella spettrometria di massa, il detector misura:",
+          "answers": [
+            "La massa assoluta",
+            "Il rapporto massa/carica (m/z)",
+            "La velocità degli ioni",
+            "La temperatura degli ioni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_strumentale_cromatografia_1759770871651",
+      "title": "Cromatografia e Tecniche Separative",
+      "subject": "Chimica Analitica Strumentale",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "scienze",
+      "subcategory": "chimica",
+      "difficulty": "avanzata",
+      "questions": [
+        {
+          "id": "q1759770871651_4_1",
+          "question": "In cromatografia, la fase stazionaria è:",
+          "answers": [
+            "Il solvente che scorre",
+            "Il supporto fisso che trattiene i composti",
+            "Il detector",
+            "Il campione da analizzare"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_2",
+          "question": "Il tempo di ritenzione dipende da:",
+          "answers": [
+            "Solo dalla temperatura",
+            "Dall'affinità del composto per fase stazionaria e mobile",
+            "Solo dal pH",
+            "Solo dalla pressione"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_3",
+          "question": "HPLC significa:",
+          "answers": [
+            "High Performance Liquid Chromatography",
+            "High Pressure Liquid Chemistry",
+            "High Power Light Calibration",
+            "High Precision Laboratory Chemistry"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_4",
+          "question": "Nella gas cromatografia (GC), la fase mobile è:",
+          "answers": [
+            "Un liquido organico",
+            "Un gas inerte (He, N₂, H₂)",
+            "Acqua",
+            "Una miscela di solventi"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_5",
+          "question": "La cromatografia su strato sottile (TLC) utilizza come fase stazionaria:",
+          "answers": [
+            "Silice o allumina su lastra",
+            "Una colonna di vetro",
+            "Un capillare",
+            "Una membrana polimerica"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_6",
+          "question": "L'Rf in TLC rappresenta:",
+          "answers": [
+            "Il rapporto tra distanza percorsa dal composto e dal solvente",
+            "La risoluzione del picco",
+            "Il fattore di ritardo",
+            "La risposta del detector"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_7",
+          "question": "Il detector FID in GC rileva:",
+          "answers": [
+            "Assorbimento UV",
+            "Ionizzazione di composti organici in fiamma",
+            "Fluorescenza",
+            "Indice di rifrazione"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_8",
+          "question": "La cromatografia a scambio ionico separa composti in base a:",
+          "answers": [
+            "Dimensioni molecolari",
+            "Carica elettrica",
+            "Punto di ebollizione",
+            "Solubilità"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_9",
+          "question": "L'efficienza di una colonna cromatografica è espressa da:",
+          "answers": [
+            "Il numero di piatti teorici (N)",
+            "La lunghezza della colonna",
+            "Il diametro della colonna",
+            "La temperatura di esercizio"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_4_10",
+          "question": "La cromatografia di affinità separa molecole in base a:",
+          "answers": [
+            "Massa molecolare",
+            "Carica",
+            "Interazioni specifiche ligando-recettore",
+            "Idrofobicità"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_organica_reazioni_1759770871651",
+      "title": "Reazioni e Meccanismi in Chimica Organica",
+      "subject": "Chimica Organica",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "scienze",
+      "subcategory": "chimica",
+      "difficulty": "media",
+      "questions": [
+        {
+          "id": "q1759770871651_5_1",
+          "question": "Una reazione di sostituzione nucleofila (SN2) procede con:",
+          "answers": [
+            "Inversione di configurazione",
+            "Ritenzione di configurazione",
+            "Racemizzazione",
+            "Nessun cambiamento stereochimico"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_2",
+          "question": "Gli alcheni reagiscono con HBr seguendo la regola di:",
+          "answers": [
+            "Hückel",
+            "Markovnikov",
+            "Zaitsev",
+            "Le Châtelier"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_3",
+          "question": "L'addizione di bromo a un alchene è una reazione:",
+          "answers": [
+            "Di sostituzione",
+            "Di eliminazione",
+            "Di addizione elettrofila",
+            "Di trasposizione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_4",
+          "question": "La regola di Zaitsev prevede che in un'eliminazione si formi:",
+          "answers": [
+            "L'alchene più sostituito",
+            "L'alchene meno sostituito",
+            "Sempre un alchino",
+            "Un cicloalcano"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_5",
+          "question": "I composti carbonilici reagiscono con nucleofili tramite:",
+          "answers": [
+            "Addizione al carbonio carbonilico",
+            "Sostituzione sull'ossigeno",
+            "Eliminazione",
+            "Raddrizzamento"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_6",
+          "question": "La reazione di Grignard utilizza reagenti:",
+          "answers": [
+            "Acidi forti",
+            "Basi forti",
+            "Organometallici (RMgX)",
+            "Ossidanti"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_7",
+          "question": "L'ossidazione di un alcol primario produce:",
+          "answers": [
+            "Un chetone",
+            "Un'aldeide poi acido carbossilico",
+            "Un etere",
+            "Un estere"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_8",
+          "question": "La condensazione aldolica coinvolge:",
+          "answers": [
+            "Due molecole di aldeide o chetone",
+            "Un alcol e un acido",
+            "Due alcheni",
+            "Un'ammina e un estere"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_9",
+          "question": "Un carbocatione è:",
+          "answers": [
+            "Un intermedio con carica negativa",
+            "Un intermedio con carica positiva sul carbonio",
+            "Un radicale libero",
+            "Un nucleofilo"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_5_10",
+          "question": "La riduzione di un chetone con NaBH₄ produce:",
+          "answers": [
+            "Un alcol secondario",
+            "Un alcol primario",
+            "Un'aldeide",
+            "Un acido"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_organica_composti_1759770871651",
+      "title": "Composti Organici e Gruppi Funzionali",
+      "subject": "Chimica Organica",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "scienze",
+      "subcategory": "chimica",
+      "difficulty": "media",
+      "questions": [
+        {
+          "id": "q1759770871651_6_1",
+          "question": "Un alcano è un idrocarburo:",
+          "answers": [
+            "Saturo con solo legami singoli",
+            "Insaturo con doppi legami",
+            "Aromatico",
+            "Con tripli legami"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_2",
+          "question": "Il gruppo funzionale degli alcoli è:",
+          "answers": [
+            "-COOH",
+            "-OH",
+            "-NH₂",
+            "-CHO"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_3",
+          "question": "Un etere ha formula generale:",
+          "answers": [
+            "R-OH",
+            "R-O-R'",
+            "R-COOH",
+            "R-CHO"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_4",
+          "question": "Il benzene è un composto:",
+          "answers": [
+            "Alifatico",
+            "Aromatico",
+            "Eterociclico",
+            "Polimerico"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_5",
+          "question": "Le ammine sono derivati dell':",
+          "answers": [
+            "Acqua",
+            "Ammoniaca",
+            "Metano",
+            "Etere"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_6",
+          "question": "Un estere si forma dalla reazione tra:",
+          "answers": [
+            "Un acido e un alcol",
+            "Due alcoli",
+            "Due acidi",
+            "Un alcol e un alchene"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_7",
+          "question": "Il gruppo carbossilico è caratteristico di:",
+          "answers": [
+            "Alcoli",
+            "Chetoni",
+            "Acidi carbossilici",
+            "Eteri"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_8",
+          "question": "Gli alchini contengono:",
+          "answers": [
+            "Solo legami singoli",
+            "Un legame doppio C=C",
+            "Un legame triplo C≡C",
+            "Anelli aromatici"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_9",
+          "question": "Un'ammide ha il gruppo funzionale:",
+          "answers": [
+            "-NH₂",
+            "-CONH₂",
+            "-NO₂",
+            "-CN"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770871651_6_10",
+          "question": "I composti eterociclici contengono:",
+          "answers": [
+            "Solo atomi di carbonio nell'anello",
+            "Atomi diversi dal carbonio nell'anello",
+            "Solo legami tripli",
+            "Solo gruppi funzionali esterni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_tecnologie_processi_1759770943597",
+      "title": "Processi Chimici Industriali",
+      "subject": "Tecnologie Chimiche Industriali",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "tecnologia",
+      "subcategory": "chimica_industriale",
+      "difficulty": "avanzata",
+      "questions": [
+        {
+          "id": "q1759770943597_7_1",
+          "question": "Il processo Haber-Bosch produce:",
+          "answers": [
+            "Acido solforico",
+            "Ammoniaca",
+            "Metanolo",
+            "Etilene"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_2",
+          "question": "Il cracking catalitico serve a:",
+          "answers": [
+            "Polimerizzare monomeri",
+            "Spezzare idrocarburi pesanti in frazioni leggere",
+            "Separare miscele",
+            "Neutralizzare acidi"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_3",
+          "question": "La distillazione frazionata del petrolio sfrutta:",
+          "answers": [
+            "Differenze di densità",
+            "Differenze di punti di ebollizione",
+            "Differenze di solubilità",
+            "Differenze di colore"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_4",
+          "question": "Il processo di contatto produce:",
+          "answers": [
+            "Ammoniaca",
+            "Acido solforico",
+            "Acido nitrico",
+            "Soda caustica"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_5",
+          "question": "La sintesi del metanolo industriale utilizza:",
+          "answers": [
+            "CO + H₂",
+            "CO₂ + H₂O",
+            "CH₄ + O₂",
+            "C + H₂O"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_6",
+          "question": "Il processo Solvay produce:",
+          "answers": [
+            "Ammoniaca",
+            "Carbonato di sodio",
+            "Cloro",
+            "Idrogeno"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_7",
+          "question": "L'elettrolisi della salamoia produce:",
+          "answers": [
+            "Ossigeno e idrogeno",
+            "Cloro, idrogeno e soda caustica",
+            "Solo cloro",
+            "Acido cloridrico"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_8",
+          "question": "Il reforming catalitico serve a:",
+          "answers": [
+            "Aumentare il numero di ottani della benzina",
+            "Produrre polimeri",
+            "Raffreddare reattori",
+            "Separare i gas"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_9",
+          "question": "La polimerizzazione dell'etilene produce:",
+          "answers": [
+            "PVC",
+            "Polietilene",
+            "Polistirene",
+            "Nylon"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_7_10",
+          "question": "Un catalizzatore in un processo industriale:",
+          "answers": [
+            "Viene consumato",
+            "Accelera la reazione senza essere consumato",
+            "Rallenta la reazione",
+            "Cambia i prodotti"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_tecnologie_impianti_1759770943597",
+      "title": "Impianti e Operazioni Unitarie",
+      "subject": "Tecnologie Chimiche Industriali",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "tecnologia",
+      "subcategory": "chimica_industriale",
+      "difficulty": "avanzata",
+      "questions": [
+        {
+          "id": "q1759770943597_8_1",
+          "question": "Un reattore batch è:",
+          "answers": [
+            "A flusso continuo",
+            "A caricamento discontinuo",
+            "Sempre adiabatico",
+            "Solo per reazioni esotermiche"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_2",
+          "question": "L'operazione unitaria di separazione per distillazione si basa su:",
+          "answers": [
+            "Differenza di densità",
+            "Differenza di volatilità",
+            "Differenza di solubilità",
+            "Differenza di pH"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_3",
+          "question": "Un reattore CSTR è:",
+          "answers": [
+            "Continuo perfettamente miscelato",
+            "Batch",
+            "Tubolare",
+            "Semi-batch"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_4",
+          "question": "L'estrazione liquido-liquido sfrutta:",
+          "answers": [
+            "Differenze di temperatura",
+            "Differenze di coefficiente di ripartizione",
+            "Differenze di pressione",
+            "Differenze di colore"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_5",
+          "question": "Gli scambiatori di calore trasferiscono:",
+          "answers": [
+            "Massa",
+            "Energia termica",
+            "Momento",
+            "Carica elettrica"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_6",
+          "question": "La cristallizzazione è un'operazione di:",
+          "answers": [
+            "Separazione solido-liquido",
+            "Miscelazione",
+            "Reazione chimica",
+            "Combustione"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_7",
+          "question": "Un reattore PFR (Plug Flow Reactor) ha:",
+          "answers": [
+            "Miscelazione perfetta",
+            "Flusso a pistone senza miscelazione radiale",
+            "Funzionamento batch",
+            "Ricircolo totale"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_8",
+          "question": "L'assorbimento gas-liquido rimuove:",
+          "answers": [
+            "Solidi da liquidi",
+            "Gas da correnti gassose",
+            "Liquidi da solidi",
+            "Ioni da soluzioni"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_9",
+          "question": "La filtrazione separa:",
+          "answers": [
+            "Liquidi immiscibili",
+            "Solidi da liquidi o gas",
+            "Gas da gas",
+            "Ioni da soluzioni"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_8_10",
+          "question": "Un'operazione adiabatica:",
+          "answers": [
+            "Scambia calore con l'esterno",
+            "Non scambia calore con l'esterno",
+            "Avviene a temperatura costante",
+            "Avviene a pressione variabile"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_arduino_programmazione_1759770943597",
+      "title": "Programmazione Arduino - Fondamenti",
+      "subject": "Arduino",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "tecnologia",
+      "subcategory": "elettronica",
+      "difficulty": "base",
+      "questions": [
+        {
+          "id": "q1759770943597_9_1",
+          "question": "La funzione setup() in Arduino viene eseguita:",
+          "answers": [
+            "Una sola volta all'avvio",
+            "Continuamente nel loop",
+            "Solo quando si preme un pulsante",
+            "Mai"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_2",
+          "question": "La funzione loop() in Arduino:",
+          "answers": [
+            "Si esegue una volta sola",
+            "Si ripete continuamente",
+            "Si esegue solo se chiamata",
+            "Non esiste"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_3",
+          "question": "Per configurare un pin come OUTPUT si usa:",
+          "answers": [
+            "pinMode(pin, OUTPUT)",
+            "setPin(pin, OUTPUT)",
+            "configurePin(pin)",
+            "outputPin(pin)"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_4",
+          "question": "La funzione digitalWrite(pin, HIGH) serve a:",
+          "answers": [
+            "Leggere un valore digitale",
+            "Scrivere 5V sul pin",
+            "Leggere un valore analogico",
+            "Configurare il pin"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_5",
+          "question": "La funzione delay(1000) causa:",
+          "answers": [
+            "Un'attesa di 1 secondo",
+            "Un'attesa di 1 millisecondo",
+            "Un'attesa di 1 microsecondo",
+            "Nessuna attesa"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_6",
+          "question": "La comunicazione seriale si inizializza con:",
+          "answers": [
+            "Serial.start()",
+            "Serial.begin(9600)",
+            "Serial.init()",
+            "Serial.open()"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_7",
+          "question": "La funzione analogRead() legge valori da:",
+          "answers": [
+            "0 a 1023",
+            "0 a 255",
+            "0 a 5V",
+            "0 a 100"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_8",
+          "question": "PWM (Pulse Width Modulation) permette di:",
+          "answers": [
+            "Leggere valori analogici",
+            "Simulare uscite analogiche con segnali digitali",
+            "Comunicare via wireless",
+            "Alimentare il board"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_9",
+          "question": "Il pin 13 di Arduino UNO ha:",
+          "answers": [
+            "Un LED integrato",
+            "Un potenziometro",
+            "Un sensore di temperatura",
+            "Nessun componente"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_9_10",
+          "question": "La tensione di alimentazione logica di Arduino UNO è:",
+          "answers": [
+            "3.3V",
+            "5V",
+            "12V",
+            "9V"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "quiz_arduino_sensori_1759770943597",
+      "title": "Arduino - Sensori e Attuatori",
+      "subject": "Arduino",
+      "created": "2025-10-06",
+      "author": "Sistema ChemArena",
+      "category": "tecnologia",
+      "subcategory": "elettronica",
+      "difficulty": "media",
+      "questions": [
+        {
+          "id": "q1759770943597_10_1",
+          "question": "Un sensore di temperatura DHT11 fornisce anche:",
+          "answers": [
+            "Pressione",
+            "Umidità",
+            "Luminosità",
+            "Suono"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_2",
+          "question": "Un sensore ultrasonico HC-SR04 misura:",
+          "answers": [
+            "Temperatura",
+            "Distanza",
+            "Luminosità",
+            "pH"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_3",
+          "question": "Un servomotore è controllato tramite:",
+          "answers": [
+            "Segnale PWM",
+            "Tensione analogica pura",
+            "Corrente",
+            "Resistenza"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_4",
+          "question": "Un fotoresistore (LDR) varia la sua resistenza in base a:",
+          "answers": [
+            "Temperatura",
+            "Umidità",
+            "Luminosità",
+            "Pressione"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_5",
+          "question": "Un display LCD 16x2 comunica tipicamente tramite:",
+          "answers": [
+            "Protocollo I2C o parallelo",
+            "Bluetooth",
+            "Wi-Fi",
+            "Infrarossi"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_6",
+          "question": "Un relè permette di:",
+          "answers": [
+            "Misurare temperatura",
+            "Controllare carichi ad alta potenza con segnali a bassa potenza",
+            "Generare suoni",
+            "Leggere sensori analogici"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_7",
+          "question": "Il sensore PIR rileva:",
+          "answers": [
+            "Temperatura",
+            "Movimento (infrarossi)",
+            "Gas",
+            "Suono"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_8",
+          "question": "Un potenziometro collegato a un pin analogico fornisce:",
+          "answers": [
+            "Un valore digitale 0 o 1",
+            "Un valore tra 0 e 1023",
+            "Una frequenza PWM",
+            "Una tensione costante"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_9",
+          "question": "Il modulo Bluetooth HC-05 permette:",
+          "answers": [
+            "Comunicazione wireless seriale",
+            "Misurare distanze",
+            "Controllare motori",
+            "Generare suoni"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759770943597_10_10",
+          "question": "Un buzzer piezoelettrico può:",
+          "answers": [
+            "Misurare suoni",
+            "Generare toni audio",
+            "Rilevare vibrazioni",
+            "Tutto quanto sopra"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ]
     }
   ],
   "images": [],
   "metadata": {
     "version": "1.1",
-    "lastUpdate": "2025-09-27T19:56:52.569Z",
-    "totalQuizzes": 30,
-    "totalQuestions": 230,
+    "lastUpdate": "2025-10-06T17:15:43.599Z",
+    "totalQuizzes": 40,
+    "totalQuestions": 330,
     "mergeInfo": {
       "renderQuizzes": 28,
       "localOnlyQuizzes": 2,
