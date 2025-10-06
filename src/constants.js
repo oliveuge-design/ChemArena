@@ -49,6 +49,8 @@ export const GAME_STATE_COMPONENTS = {
   SHOW_RESULT: Result,
   SHOW_PREPARED: Prepared,
   ENTER_USERNAME: Username,
+  SHOW_LEADERBOARD: Leaderboard,  // 🏆 Classifica parziale
+  FINISH: Podium,  // 🥇 Podio finale
 }
 
 export const GAME_STATE_COMPONENTS_MANAGER = {
