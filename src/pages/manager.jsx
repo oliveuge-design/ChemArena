@@ -16,10 +16,13 @@ export default function Manager() {
   const [isUntimedMode, setIsUntimedMode] = useState(false)
   const [showSkipButton, setShowSkipButton] = useState(false)
   const [state, setState] = useState({
-    ...GAME_STATES,
+    question: {
+      current: 1,
+      total: null,
+    },
     status: {
-      ...GAME_STATES.status,
       name: "SHOW_ROOM",
+      data: {},  // 🔧 FIX: Manager non usa data da WAIT
     },
   })
 
