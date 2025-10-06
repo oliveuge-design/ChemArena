@@ -4,8 +4,60 @@
 
 ## 📋 AGGIORNAMENTI RECENTI
 
-### ✅ **SESSIONE 2025-10-06 - FIX CLASSIFICA FINALE + WAIT STATE**
-**Commit**: `4d275c6` - 🐛 FIX: Classifica finale bloccata + Studente non vede WAIT
+### ✅ **SESSIONE 2025-10-06 - FIX COMPLETO PODIO FINALE**
+**Commits**: `3ee9608` + `5ae8bed` - ✅ Podio con DNA/Atomo/Microscopio funzionante
+
+#### 🎯 PROBLEMA PRINCIPALE RISOLTO:
+**Il podio finale con icone scientifiche (🧬 DNA / ⚛️ Atomo / 🔬 Microscopio) non appariva MAI**
+
+#### 🔍 ROOT CAUSE ANALYSIS:
+
+1. **GAME_STATE_COMPONENTS mancante** - [src/constants.js:44-52](src/constants.js#L44-L52)
+   - ❌ `FINISH` e `SHOW_LEADERBOARD` non erano mappati per gli studenti
+   - ✅ Aggiunti entrambi a GAME_STATE_COMPONENTS
+
+2. **nextQuestion() non chiudeva il quiz** - [socket/roles/manager.js:126-129](socket/roles/manager.js#L126-L129)
+   - ❌ Faceva `return` quando finivano le domande senza mostrare podio
+   - ✅ Ora chiama `Manager.showLeaderboard()` per inviare FINISH
+
+3. **Auto-advance inviava evento sbagliato** - [socket/utils/round.js:309-313](socket/utils/round.js#L309-L313)
+   - ❌ Inviava `"END"` (non esistente in GAME_STATE_COMPONENTS)
+   - ✅ Ora chiama `Manager.showLeaderboard()` che invia FINISH corretto
+
+4. **WAIT forzato interferiva** - [socket/roles/player.js:83-89](socket/roles/player.js#L83-L89) (RIMOSSO)
+   - ❌ Invio forzato di WAIT dopo join bloccava flusso domande
+   - ✅ Rimosso - WAIT è già gestito da GAME_STATES default
+
+#### ✅ FLUSSO CORRETTO IMPLEMENTATO:
+
+**📋 Modalità Normale (con click manager)**:
+1. Ultima domanda → studenti vedono SHOW_RESULT
+2. Manager vede SHOW_RESPONSES → clicca "Next"
+3. Backend: `emit("manager:showLeaderboard")`
+4. `Manager.showLeaderboard()` verifica `!game.questions[currentQuestion + 1]`
+5. `io.to(game.room).emit("FINISH")` → **TUTTI** ricevono evento
+6. Frontend: `GAME_STATE_COMPONENTS["FINISH"]` → `Podium.jsx`
+7. `Podium.jsx` → `AnimatedLeaderboard` con 🧬/⚛️/🔬
+
+**📋 Modalità Auto-advance**:
+- `round.js` rileva ultima domanda
+- Chiama `Manager.showLeaderboard()` invece di inviare "END"
+- Stesso flusso di sopra
+
+**📋 Fallback nextQuestion**:
+- Se manager clicca "Next" quando non ci sono domande
+- `nextQuestion()` chiama `Manager.showLeaderboard()` → FINISH
+
+#### 🎨 COMPONENTI VERIFICATI:
+- ✅ [manager.js:352](socket/roles/manager.js#L352) - `io.to(game.room).emit("FINISH")` broadcast
+- ✅ [Podium.jsx:97](src/components/game/states/Podium.jsx#L97) - Usa AnimatedLeaderboard
+- ✅ [AnimatedLeaderboard.jsx:23](src/components/AnimatedLeaderboard.jsx#L23) - `["🧬", "⚛️", "🔬"]`
+- ✅ [AnimatedLeaderboard.jsx:96](src/components/AnimatedLeaderboard.jsx#L96) - Rendering icone
+
+---
+
+### ⚠️ **SESSIONE 2025-10-06 - FIX PRECEDENTE (ROLLBACK)**
+**Commit**: `4d275c6` - 🐛 FIX: Classifica finale bloccata + Studente non vede WAIT (SUPERATO)
 
 #### 🎯 BUG RISOLTI:
 
@@ -38,13 +90,27 @@
 
 ---
 
-## 🎯 PROSSIMI PASSI
-1. **TEST COMPLETO** dopo riavvio:
-   - Login studente → Verifica messaggio "✅ Sei Dentro!"
-   - Quiz completo (2 domande) → Verifica podio finale appare
-   - Podio finale → Verifica DNA 🧬 / Atomo ⚛️ / Microscopio 🔬 appaiono
-2. **Pulizia processi**: Verificare che non ci siano processi Node zombie
-3. **Performance**: Monitorare loop salvataggio statistiche
+## 🎯 TEST DA ESEGUIRE
+
+**⚠️ IMPORTANTE**: Riavvia completamente il server prima di testare!
+
+### 📋 Test Completo Podio Finale:
+1. **Riavvia server**: Killa processi Node + `npm run dev`
+2. **Crea quiz** con 2 domande minimo
+3. **Manager**: Avvia quiz e aspetta risposte
+4. **Studenti**: Login → WAIT → rispondi a tutte le domande
+5. **Manager**: Dopo ultima domanda, clicca "Next"
+6. **VERIFICA PODIO**:
+   - ✅ Tutti vedono schermata FINISH
+   - ✅ Top 3 con 🧬 DNA (1°), ⚛️ Atomo (2°), 🔬 Microscopio (3°)
+   - ✅ Nomi giocatori visibili
+   - ✅ Punteggi animati
+   - ✅ Confetti per 1° posto
+
+### 🔍 Debug in caso di problemi:
+1. Console browser (studente): cerca `🎮 Game status received: FINISH`
+2. Console server: cerca `🏁 No more questions, showing final podium`
+3. Verifica network tab: evento `game:status` con `name: "FINISH"`
 
 ---
 
