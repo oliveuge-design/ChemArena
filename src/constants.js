@@ -33,7 +33,7 @@ export const ANSWERS_ICONS = [Triangle, Rhombus, Circle, Square, Pentagon, Cricl
 export const GAME_STATES = {
   status: {
     name: "WAIT",
-    data: { text: "Waiting for the players" },
+    data: { text: "✅ Sei dentro! Attendi l'inizio del quiz..." },
   },
   question: {
     current: 1,

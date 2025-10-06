@@ -68,7 +68,12 @@ export default function Game() {
   }, [player, pin, name, router])
 
   const [state, setState] = useState(GAME_STATES)
-  const [backgroundTheme, setBackgroundTheme] = useState("laboratory")
+  const [backgroundTheme, setBackgroundTheme] = useState("gaming1") // ✅ Match manager background
+
+  // 🔍 DEBUG: Log stato corrente
+  useEffect(() => {
+    console.log('🎯 [STUDENT] Current state:', state.status.name)
+  }, [state.status.name])
 
   // Load background theme from localStorage
   useEffect(() => {
@@ -86,8 +91,24 @@ export default function Game() {
   }, [])
 
   useEffect(() => {
+    if (!socket) return
+
     on("game:status", (status) => {
-      console.log(`🎮 Game status received:`, status)
+      console.log(`🎮 [STUDENT] Game status received:`, status.name, status)
+
+      // 🔍 DEBUG: Log dettagliato per ogni stato
+      if (status.name === 'SHOW_RESULT') {
+        console.log('📊 RESULT DATA:', status.data)
+      } else if (status.name === 'SHOW_QUESTION') {
+        console.log('❓ QUESTION:', status.data.question)
+      } else if (status.name === 'SELECT_ANSWER') {
+        console.log('✅ SELECT_ANSWER:', status.data.answers?.length, 'answers')
+      } else if (status.name === 'WAIT') {
+        console.log('⏳ WAIT:', status.data.text)
+      } else if (status.name === 'FINISH') {
+        console.log('🏆 FINISH:', status.data.top?.length, 'top players')
+      }
+
       setState({
         ...state,
         status: status,
@@ -107,11 +128,36 @@ export default function Game() {
       toast("The game has been reset by the host")
     })
 
+    // 🔧 PRODUCTION FIX: Gestione reconnection durante partita
+    on("reconnect", () => {
+      console.log("🔄 Player reconnected - rejoining room")
+      if (player?.room && player?.username) {
+        // Re-join automatico dopo reconnection
+        emit("player:join", {
+          username: player.username,
+          room: player.room,
+          displayName: player.displayName || player.username
+        })
+        toast.success("Reconnesso al quiz!")
+      }
+    })
+
+    on("connect_error", () => {
+      toast.error("Problemi di connessione - riconnessione in corso...")
+    })
+
+    on("reconnect_failed", () => {
+      toast.error("Impossibile riconnettersi - ricarica la pagina")
+    })
+
     return () => {
       off("game:status")
       off("game:reset")
+      off("reconnect")
+      off("connect_error")
+      off("reconnect_failed")
     }
-  }, [on, off, dispatch, router])
+  }, [on, off, dispatch, router, socket, player, emit])
 
   return (
     <GameWrapper backgroundTheme={backgroundTheme}>
