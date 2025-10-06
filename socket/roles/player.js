@@ -79,6 +79,14 @@ const Player = {
     }
 
     socket.emit("game:successJoin")
+
+    // 🔧 FIX: Dopo join, invia WAIT per mostrare "Sei dentro..."
+    socket.emit("game:status", {
+      name: "WAIT",
+      data: {
+        text: "✅ Sei dentro! Attendi l'inizio del quiz..."
+      }
+    })
   },
 
   selectedAnswer: (game, io, socket, answerKey) => {
