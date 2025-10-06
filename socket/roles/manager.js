@@ -347,7 +347,7 @@ const Manager = {
       })
       const uniquePlayersFinish = Array.from(finishMap.values())
 
-      socket.emit("game:status", {
+      io.to(game.room).emit("game:status", {
         name: "FINISH",
         data: {
           subject: game.subject,
