@@ -1,0 +1,5080 @@
+{
+  "quizzes": [
+    {
+      "id": "quiz_1",
+      "title": "Geografia Mondiale",
+      "subject": "Geografia",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Qual è la capitale della Francia?",
+          "answers": [
+            "Berlino",
+            "Parigi",
+            "Madrid",
+            "Roma"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q2",
+          "question": "Quale fiume è il più lungo del mondo?",
+          "answers": [
+            "Nilo",
+            "Amazon",
+            "Mississippi",
+            "Yangtze"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q3",
+          "question": "Quanti continenti ci sono?",
+          "answers": [
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q4",
+          "question": "Qual è il monte più alto del mondo?",
+          "answers": [
+            "K2",
+            "Everest",
+            "Makalu",
+            "Cho Oyu"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q5",
+          "question": "Quale paese ha più fusi orari?",
+          "answers": [
+            "Russia",
+            "USA",
+            "Cina",
+            "Canada"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": true
+    },
+    {
+      "id": "quiz_2",
+      "title": "Storia dell'Arte",
+      "subject": "Arte",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q6",
+          "question": "Chi ha dipinto la Monna Lisa?",
+          "answers": [
+            "Michelangelo",
+            "Leonardo da Vinci",
+            "Raffaello",
+            "Donatello"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q7",
+          "question": "In quale museo si trova la Gioconda?",
+          "answers": [
+            "Uffizi",
+            "Louvre",
+            "Prado",
+            "Metropolitan"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q8",
+          "question": "Chi ha scolpito il David?",
+          "answers": [
+            "Donatello",
+            "Bernini",
+            "Michelangelo",
+            "Rodin"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q9",
+          "question": "Qual è lo stile artistico di Van Gogh?",
+          "answers": [
+            "Impressionismo",
+            "Post-impressionismo",
+            "Cubismo",
+            "Surrealismo"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q10",
+          "question": "In quale periodo artistico si colloca Picasso?",
+          "answers": [
+            "Rinascimento",
+            "Barocco",
+            "Moderno",
+            "Medievale"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": true
+    },
+    {
+      "id": "quiz_3",
+      "title": "Scienze Naturali",
+      "subject": "Scienze",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q11",
+          "question": "Quale gas rappresenta la maggior parte dell'atmosfera terrestre?",
+          "answers": [
+            "Ossigeno",
+            "Azoto",
+            "Anidride carbonica",
+            "Argon"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q12",
+          "question": "Quanti cuori ha un polpo?",
+          "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q13",
+          "question": "Quale pianeta è noto come il 'pianeta rosso'?",
+          "answers": [
+            "Venere",
+            "Marte",
+            "Giove",
+            "Saturno"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q14",
+          "question": "Qual è l'elemento più abbondante nell'universo?",
+          "answers": [
+            "Elio",
+            "Idrogeno",
+            "Ossigeno",
+            "Carbonio"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q15",
+          "question": "Quante ossa ha il corpo umano adulto?",
+          "answers": [
+            "206",
+            "208",
+            "210",
+            "212"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_4",
+      "title": "Tecnologia e Informatica",
+      "subject": "Informatica",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q16",
+          "question": "Chi ha fondato Microsoft?",
+          "answers": [
+            "Steve Jobs",
+            "Bill Gates",
+            "Mark Zuckerberg",
+            "Jeff Bezos"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q17",
+          "question": "Cosa significa 'WWW'?",
+          "answers": [
+            "World Wide Web",
+            "World Web Wide",
+            "Wide World Web",
+            "Web World Wide"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q18",
+          "question": "In quale anno è stato inventato Internet?",
+          "answers": [
+            "1969",
+            "1975",
+            "1981",
+            "1990"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q19",
+          "question": "Qual è il linguaggio di programmazione più usato nel 2024?",
+          "answers": [
+            "Java",
+            "Python",
+            "JavaScript",
+            "C++"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q20",
+          "question": "Cosa significa 'AI' in informatica?",
+          "answers": [
+            "Auto Intelligence",
+            "Artificial Intelligence",
+            "Advanced Intelligence",
+            "Applied Intelligence"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_5",
+      "title": "Sport e Competizioni",
+      "subject": "Sport",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q21",
+          "question": "Ogni quanti anni si svolgono le Olimpiadi estive?",
+          "answers": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q22",
+          "question": "In quale sport si usa un 'putter'?",
+          "answers": [
+            "Tennis",
+            "Golf",
+            "Baseball",
+            "Hockey"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q23",
+          "question": "Quanti giocatori ci sono in una squadra di calcio in campo?",
+          "answers": [
+            "10",
+            "11",
+            "12",
+            "13"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q24",
+          "question": "Chi ha vinto più Mondiali di Formula 1?",
+          "answers": [
+            "Michael Schumacher",
+            "Lewis Hamilton",
+            "Ayrton Senna",
+            "Alain Prost"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q25",
+          "question": "In quale sport si gioca a 'tre set'?",
+          "answers": [
+            "Pallavolo",
+            "Tennis",
+            "Badminton",
+            "Ping pong"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_6",
+      "title": "Cultura Generale",
+      "subject": "Cultura",
+      "created": "2025-01-09",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "q26",
+          "question": "Quante lettere ha l'alfabeto italiano?",
+          "answers": [
+            "21",
+            "22",
+            "23",
+            "24"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q27",
+          "question": "Chi ha scritto 'I Promessi Sposi'?",
+          "answers": [
+            "Dante Alighieri",
+            "Alessandro Manzoni",
+            "Giovanni Boccaccio",
+            "Italo Calvino"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q28",
+          "question": "In quale anno è caduto il Muro di Berlino?",
+          "answers": [
+            "1987",
+            "1989",
+            "1991",
+            "1993"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q29",
+          "question": "Qual è la moneta del Giappone?",
+          "answers": [
+            "Won",
+            "Yuan",
+            "Yen",
+            "Dong"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q30",
+          "question": "Chi ha composto 'La Nona Sinfonia'?",
+          "answers": [
+            "Mozart",
+            "Beethoven",
+            "Bach",
+            "Chopin"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": true
+    },
+    {
+      "id": "quiz_chimica_analitica",
+      "title": "Chimica Analitica Strumentale - Potenziometria e Conduttimetria",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-10",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "qa1",
+          "question": "Quale principio fisico è alla base della potenziometria?",
+          "answers": [
+            "Conduttività elettrica della soluzione",
+            "Differenza di potenziale tra elettrodi",
+            "Assorbimento di radiazioni elettromagnetiche",
+            "Velocità di reazione chimica"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa2",
+          "question": "In una cella potenziometrica, quale elettrodo mantiene un potenziale costante?",
+          "answers": [
+            "Elettrodo di lavoro",
+            "Elettrodo ausiliario",
+            "Elettrodo di riferimento",
+            "Controelettrodo"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa3",
+          "question": "L'equazione di Nernst correla il potenziale dell'elettrodo con:",
+          "answers": [
+            "La temperatura e la pressione",
+            "La concentrazione degli ioni",
+            "La superficie dell'elettrodo",
+            "La velocità di agitazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa4",
+          "question": "Quale tipo di elettrodo è più comunemente usato per misurare il pH?",
+          "answers": [
+            "Elettrodo a calomelano",
+            "Elettrodo ad argento/cloruro di argento",
+            "Elettrodo di vetro",
+            "Elettrodo di platino"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa5",
+          "question": "In conduttimetria, la conducibilità di una soluzione dipende da:",
+          "answers": [
+            "Solo dalla concentrazione degli ioni",
+            "Dalla mobilità e concentrazione degli ioni",
+            "Solo dalla temperatura",
+            "Solo dal pH della soluzione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa6",
+          "question": "L'unità di misura della conducibilità elettrica specifica è:",
+          "answers": [
+            "Ohm (Ω)",
+            "Siemens per metro (S/m)",
+            "Ampere (A)",
+            "Volt per metro (V/m)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa7",
+          "question": "Quale fattore NON influenza la conducibilità di una soluzione elettrolitica?",
+          "answers": [
+            "Temperatura",
+            "Concentrazione degli ioni",
+            "Colore della soluzione",
+            "Natura degli ioni presenti"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa8",
+          "question": "In una titolazione conduttimetrica, il punto di equivalenza è identificato da:",
+          "answers": [
+            "Il massimo valore di conducibilità",
+            "Il minimo valore di conducibilità",
+            "Un cambiamento nella pendenza della curva",
+            "Il colore della soluzione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa9",
+          "question": "La costante di cella in conduttimetria è:",
+          "answers": [
+            "Il rapporto tra distanza e area degli elettrodi",
+            "La resistenza della soluzione",
+            "La temperatura della misura",
+            "La concentrazione dell'elettrolita"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa10",
+          "question": "Quale tecnica è più appropriata per determinare il punto finale di una titolazione di acido forte con base forte?",
+          "answers": [
+            "Solo potenziometria",
+            "Solo conduttimetria",
+            "Entrambe le tecniche sono appropriate",
+            "Nessuna delle due tecniche"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "medicina_quiz_1",
+      "title": "Test Medicina - Biologia e Scienze Naturali",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "med1_q1",
+          "question": "Quale organello cellulare è responsabile della produzione di ATP?",
+          "answers": [
+            "Ribosomi",
+            "Mitocondri",
+            "Reticolo endoplasmatico",
+            "Apparato di Golgi"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q2",
+          "question": "Il DNA è costituito da quale tipo di zucchero?",
+          "answers": [
+            "Ribosio",
+            "Saccarosio",
+            "Desossiribosio",
+            "Fruttosio"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q3",
+          "question": "Quante camere ha il cuore umano?",
+          "answers": [
+            "Due",
+            "Tre",
+            "Quattro",
+            "Sei"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q4",
+          "question": "Quale gas viene eliminato dai polmoni durante l'espirazione?",
+          "answers": [
+            "Ossigeno",
+            "Azoto",
+            "Anidride carbonica",
+            "Vapore acqueo"
+          ],
+          "solution": 2,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med1_q5",
+          "question": "Il tessuto che collega i muscoli alle ossa è chiamato:",
+          "answers": [
+            "Legamento",
+            "Tendine",
+            "Cartilagine",
+            "Fascia"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123",
+      "isPublic": false
+    },
+    {
+      "id": "medicina_quiz_2",
+      "title": "Test Medicina - Chimica e Biochimica",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "med2_q1",
+          "question": "Quale elemento chimico ha simbolo 'Fe'?",
+          "answers": [
+            "Fluoro",
+            "Ferro",
+            "Fosforo",
+            "Francio"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q2",
+          "question": "Il pH dell'acqua pura a 25°C è:",
+          "answers": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q3",
+          "question": "Gli amminoacidi sono i costituenti base di:",
+          "answers": [
+            "Carboidrati",
+            "Lipidi",
+            "Proteine",
+            "Acidi nucleici"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q4",
+          "question": "Quale tipo di legame tiene insieme le due catene del DNA?",
+          "answers": [
+            "Legami ionici",
+            "Legami covalenti",
+            "Legami idrogeno",
+            "Forze di Van der Waals"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med2_q5",
+          "question": "L'emoglobina contiene quale ione metallico?",
+          "answers": [
+            "Calcio (Ca²⁺)",
+            "Ferro (Fe²⁺)",
+            "Zinco (Zn²⁺)",
+            "Magnesio (Mg²⁺)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123",
+      "isPublic": false
+    },
+    {
+      "id": "medicina_quiz_3",
+      "title": "Test Medicina - Fisica e Matematica",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "med3_q1",
+          "question": "L'unità di misura della pressione nel Sistema Internazionale è:",
+          "answers": [
+            "Pascal (Pa)",
+            "Torr",
+            "Atmosfera (atm)",
+            "Bar"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q2",
+          "question": "La velocità della luce nel vuoto è approssimativamente:",
+          "answers": [
+            "300.000 km/h",
+            "300.000 km/s",
+            "3.000.000 km/s",
+            "30.000 km/s"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q3",
+          "question": "Qual è la derivata di x² rispetto a x?",
+          "answers": [
+            "x",
+            "2x",
+            "x²/2",
+            "2"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q4",
+          "question": "La frequenza è l'inverso di quale grandezza fisica?",
+          "answers": [
+            "Lunghezza d'onda",
+            "Velocità",
+            "Periodo",
+            "Ampiezza"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med3_q5",
+          "question": "In un triangolo rettangolo, il teorema di Pitagora stabilisce che:",
+          "answers": [
+            "a + b = c",
+            "a² + b² = c²",
+            "a × b = c²",
+            "a² × b² = c²"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123",
+      "isPublic": false
+    },
+    {
+      "id": "medicina_quiz_4",
+      "title": "Test Medicina - Logica e Cultura Generale",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "med4_q1",
+          "question": "Se tutti i medici sono laureati e Mario è un medico, allora:",
+          "answers": [
+            "Mario non è laureato",
+            "Mario è laureato",
+            "Non si può determinare",
+            "Mario è un dottore"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q2",
+          "question": "Quale Nobel per la Medicina ha scoperto la penicillina?",
+          "answers": [
+            "Louis Pasteur",
+            "Alexander Fleming",
+            "Marie Curie",
+            "Albert Einstein"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q3",
+          "question": "Il giuramento professionale dei medici prende il nome da:",
+          "answers": [
+            "Ippocrate",
+            "Galeno",
+            "Avicenna",
+            "Paracelso"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q4",
+          "question": "In una serie: 2, 4, 8, 16, ... quale numero segue?",
+          "answers": [
+            "24",
+            "30",
+            "32",
+            "20"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med4_q5",
+          "question": "L'OMS (Organizzazione Mondiale della Sanità) ha sede a:",
+          "answers": [
+            "New York",
+            "Ginevra",
+            "Bruxelles",
+            "Vienna"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123",
+      "isPublic": false
+    },
+    {
+      "id": "medicina_quiz_5",
+      "title": "Test Medicina - Anatomia e Fisiologia",
+      "subject": "Medicina",
+      "created": "2025-09-12",
+      "author": "Sistema",
+      "questions": [
+        {
+          "id": "med5_q1",
+          "question": "Il cranio umano è costituito da quante ossa?",
+          "answers": [
+            "20",
+            "22",
+            "24",
+            "26"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q2",
+          "question": "Quale ghiandola produce l'insulina?",
+          "answers": [
+            "Fegato",
+            "Pancreas",
+            "Tiroide",
+            "Surrene"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q3",
+          "question": "Il sistema nervoso simpatico e parasimpatico fanno parte di:",
+          "answers": [
+            "Sistema nervoso centrale",
+            "Sistema nervoso periferico",
+            "Sistema nervoso autonomo",
+            "Sistema nervoso somatico"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q4",
+          "question": "Quale vaso sanguigno porta il sangue dal cuore ai polmoni?",
+          "answers": [
+            "Aorta",
+            "Arteria polmonare",
+            "Vena cava",
+            "Arteria coronaria"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "med5_q5",
+          "question": "La filtrazione del sangue avviene principalmente in quale organo?",
+          "answers": [
+            "Fegato",
+            "Polmoni",
+            "Reni",
+            "Milza"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123",
+      "isPublic": false
+    },
+    {
+      "id": "arduino_elettronica_base",
+      "title": "Elettronica di Base - Resistori, Pile e Circuiti",
+      "subject": "Elettronica",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "elb_q1",
+          "question": "Quale componente elettronico limita il flusso di corrente in un circuito?",
+          "answers": [
+            "Condensatore",
+            "Resistore",
+            "Induttore",
+            "Diodo"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q2",
+          "question": "In una pila da 9V, quale polo è quello positivo?",
+          "answers": [
+            "Il polo più grande",
+            "Il polo più piccolo",
+            "Il polo rosso",
+            "Non ha importanza"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q3",
+          "question": "Come si collegano le resistenze per ottenere una resistenza totale maggiore?",
+          "answers": [
+            "In parallelo",
+            "In serie",
+            "A croce",
+            "Non cambia"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q4",
+          "question": "Quale strumento serve per misurare la resistenza elettrica?",
+          "answers": [
+            "Voltmetro",
+            "Amperometro",
+            "Ohmetro",
+            "Wattmetro"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q5",
+          "question": "In un circuito semplice con una pila e un LED, quale componente è obbligatorio aggiungere?",
+          "answers": [
+            "Condensatore",
+            "Resistore di limitazione",
+            "Interruttore",
+            "Potenziometro"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "elb_q6",
+          "question": "Cosa succede se si collega direttamente un LED a una pila da 9V senza resistenza?",
+          "answers": [
+            "Il LED si illumina normalmente",
+            "Il LED lampeggia",
+            "Il LED si brucia",
+            "Non succede nulla"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "elettronica123",
+      "isPublic": false
+    },
+    {
+      "id": "arduino_grandezze_elettriche",
+      "title": "Grandezze Elettriche - Volt, Ampere e Ohm",
+      "subject": "Elettronica",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "gre_q1",
+          "question": "L'unità di misura della tensione elettrica è:",
+          "answers": [
+            "Ampere (A)",
+            "Volt (V)",
+            "Ohm (Ω)",
+            "Watt (W)"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q2",
+          "question": "L'intensità di corrente si misura in:",
+          "answers": [
+            "Volt (V)",
+            "Ampere (A)",
+            "Ohm (Ω)",
+            "Coulomb (C)"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q3",
+          "question": "La prima legge di Ohm afferma che V = I × R. Se V = 12V e R = 4Ω, quanto vale I?",
+          "answers": [
+            "3 A",
+            "8 A",
+            "16 A",
+            "48 A"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q4",
+          "question": "Se aumentiamo la resistenza in un circuito mantenendo costante la tensione, la corrente:",
+          "answers": [
+            "Aumenta",
+            "Diminuisce",
+            "Rimane uguale",
+            "Diventa negativa"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q5",
+          "question": "Un multimetro può misurare:",
+          "answers": [
+            "Solo tensione",
+            "Solo corrente",
+            "Solo resistenza",
+            "Tensione, corrente e resistenza"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "gre_q6",
+          "question": "La potenza elettrica si calcola con la formula:",
+          "answers": [
+            "P = V / I",
+            "P = V × I",
+            "P = V - I",
+            "P = V + I"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "elettronica123",
+      "isPublic": false
+    },
+    {
+      "id": "arduino_hardware_componenti",
+      "title": "Arduino Hardware - Servo, LED, Tastierino, Display I2C",
+      "subject": "Arduino",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "ahw_q1",
+          "question": "Quanti fili servono per controllare un servomotore standard?",
+          "answers": [
+            "2 fili (alimentazione)",
+            "3 fili (alimentazione + segnale)",
+            "4 fili (alimentazione + segnali)",
+            "5 fili (completo)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q2",
+          "question": "Il colore del filo del segnale PWM nei servi è solitamente:",
+          "answers": [
+            "Rosso",
+            "Nero/Marrone",
+            "Bianco/Giallo/Arancione",
+            "Verde"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q3",
+          "question": "Un display LCD 16x2 con interfaccia I2C richiede quanti pin di Arduino?",
+          "answers": [
+            "6 pin (modalità parallela)",
+            "4 pin (modalità seriale)",
+            "2 pin (SDA e SCL)",
+            "1 pin (solo dati)"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q4",
+          "question": "Per collegare un LED ad Arduino è consigliabile usare:",
+          "answers": [
+            "Solo il LED direttamente",
+            "LED + resistenza di limitazione",
+            "LED + condensatore",
+            "LED + induttore"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q5",
+          "question": "Un tastierino 4x4 matriciale ha solitamente quanti pin di connessione?",
+          "answers": [
+            "16 pin (uno per tasto)",
+            "8 pin (4 righe + 4 colonne)",
+            "4 pin (multiplexed)",
+            "2 pin (seriale)"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ahw_q6",
+          "question": "I pin SDA e SCL di Arduino Uno sono rispettivamente:",
+          "answers": [
+            "Pin 2 e 3",
+            "Pin 10 e 11",
+            "Pin A4 e A5",
+            "Pin 12 e 13"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "arduino123",
+      "isPublic": false
+    },
+    {
+      "id": "arduino_programmazione_base",
+      "title": "Programmazione Arduino Base - Pin, digitalWrite, digitalRead",
+      "subject": "Arduino",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "apb_q1",
+          "question": "Quale funzione configura un pin come output in Arduino?",
+          "answers": [
+            "digitalWrite()",
+            "digitalRead()",
+            "pinMode()",
+            "analogWrite()"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q2",
+          "question": "Il codice 'digitalWrite(13, HIGH)' serve a:",
+          "answers": [
+            "Leggere lo stato del pin 13",
+            "Configurare il pin 13",
+            "Accendere il pin 13 (5V)",
+            "Spegnere il pin 13 (0V)"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q3",
+          "question": "Per leggere lo stato di un pulsante collegato al pin 7, si usa:",
+          "answers": [
+            "digitalWrite(7)",
+            "digitalRead(7)",
+            "analogRead(7)",
+            "pinMode(7, INPUT)"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q4",
+          "question": "La funzione setup() viene eseguita:",
+          "answers": [
+            "Continuamente",
+            "Solo una volta all'avvio",
+            "Solo quando premuto reset",
+            "Mai"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q5",
+          "question": "Per far lampeggiare un LED ogni secondo, quale funzione si usa per la pausa?",
+          "answers": [
+            "wait(1000)",
+            "pause(1000)",
+            "delay(1000)",
+            "sleep(1000)"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "apb_q6",
+          "question": "Cosa restituisce digitalRead() quando legge un pin a 5V?",
+          "answers": [
+            "1",
+            "HIGH",
+            "true",
+            "Tutte le risposte sono corrette"
+          ],
+          "solution": 3,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "arduino123",
+      "isPublic": false
+    },
+    {
+      "id": "arduino_progetti_pratici",
+      "title": "Arduino Progetti Pratici - LED, Potenziometro, Sensori",
+      "subject": "Arduino",
+      "created": "2025-09-15",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "app_q1",
+          "question": "Per leggere il valore di un potenziometro si usa:",
+          "answers": [
+            "digitalRead()",
+            "analogRead()",
+            "digitalRead() + analogRead()",
+            "pinMode()"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q2",
+          "question": "Il valore restituito da analogRead() è compreso tra:",
+          "answers": [
+            "0 e 255",
+            "0 e 512",
+            "0 e 1023",
+            "0 e 5000"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q3",
+          "question": "Per controllare la luminosità di un LED si usa:",
+          "answers": [
+            "digitalWrite() con HIGH/LOW",
+            "analogWrite() con PWM",
+            "digitalRead()",
+            "Serial.print()"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q4",
+          "question": "Un sensore di temperatura analogico si collega ai pin:",
+          "answers": [
+            "Digitali (2-13)",
+            "Analogici (A0-A5)",
+            "PWM (~3,5,6,9,10,11)",
+            "I2C (SDA, SCL)"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q5",
+          "question": "Per mappare un valore da 0-1023 a 0-255 si usa:",
+          "answers": [
+            "map(valore, 0, 1023, 0, 255)",
+            "convert(valore)",
+            "scale(valore, 255)",
+            "valore / 4"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "app_q6",
+          "question": "Per inviare dati al monitor seriale si usa:",
+          "answers": [
+            "Serial.write()",
+            "Serial.print()",
+            "Serial.send()",
+            "monitor.print()"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "arduino123",
+      "isPublic": false
+    },
+    {
+      "id": "titolazioni_teoria",
+      "title": "Titolazioni - Teoria e Principi Fondamentali",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-16",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "tt_q1",
+          "question": "Cosa indica il punto di equivalenza in una titolazione?",
+          "answers": [
+            "Il momento in cui l'indicatore cambia colore",
+            "Il punto in cui analita e titolante sono in rapporto stechiometrico",
+            "Il volume finale della titolazione",
+            "La concentrazione dell'analita"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q2",
+          "question": "Qual è la differenza tra punto di equivalenza e punto finale?",
+          "answers": [
+            "Sono la stessa cosa",
+            "Il punto finale è teorico, quello di equivalenza è pratico",
+            "Il punto di equivalenza è teorico, quello finale è rilevato dall'indicatore",
+            "Il punto finale avviene sempre prima del punto di equivalenza"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q3",
+          "question": "In una titolazione acido-base, cosa determina la scelta dell'indicatore?",
+          "answers": [
+            "Il colore preferito del chimico",
+            "Il pH del punto di equivalenza",
+            "La concentrazione dell'acido",
+            "Il volume della buretta"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q4",
+          "question": "Cosa rappresenta la curva di titolazione?",
+          "answers": [
+            "La variazione di temperatura durante la titolazione",
+            "La variazione di pH in funzione del volume di titolante aggiunto",
+            "La velocità di reazione",
+            "La concentrazione dell'analita"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q5",
+          "question": "Qual è il requisito principale per una reazione di titolazione?",
+          "answers": [
+            "Deve essere endotermica",
+            "Deve essere veloce, quantitativa e stechiometricamente definita",
+            "Deve produrre un precipitato",
+            "Deve avvenire in ambiente basico"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tt_q6",
+          "question": "In che unità si esprime tipicamente la concentrazione di una soluzione titolante?",
+          "answers": [
+            "g/L",
+            "Molarità (mol/L)",
+            "ppm",
+            "Percentuale in peso"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "titolazioni123",
+      "isPublic": false
+    },
+    {
+      "id": "titolazioni_stechiometria",
+      "title": "Titolazioni - Stechiometria e Calcoli",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-16",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "ts_q1",
+          "question": "Se si titolano 25.0 mL di HCl 0.1 M con NaOH 0.1 M, quale volume di titolante serve al punto di equivalenza?",
+          "answers": [
+            "12.5 mL",
+            "25.0 mL",
+            "50.0 mL",
+            "100.0 mL"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q2",
+          "question": "Per la titolazione H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, il rapporto stechiometrico è:",
+          "answers": [
+            "1:1",
+            "1:2",
+            "2:1",
+            "1:3"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q3",
+          "question": "Se 20.0 mL di H₂SO₄ richiedono 40.0 mL di NaOH 0.2 M per la neutralizzazione, qual è la molarità di H₂SO₄?",
+          "answers": [
+            "0.1 M",
+            "0.2 M",
+            "0.4 M",
+            "0.8 M"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q4",
+          "question": "La formula per calcolare la concentrazione dell'analita è:",
+          "answers": [
+            "C₁V₁ = C₂V₂",
+            "C_analita = (C_titolante × V_titolante × fattore_stechiometrico) / V_analita",
+            "C = n/V",
+            "Tutte le precedenti sono corrette"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q5",
+          "question": "In una titolazione redox Fe²⁺ + MnO₄⁻ → Fe³⁺ + Mn²⁺, quanti elettroni sono scambiati per ogni ione MnO₄⁻?",
+          "answers": [
+            "1 elettrone",
+            "3 elettroni",
+            "5 elettroni",
+            "7 elettroni"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "ts_q6",
+          "question": "Per una titolazione complessometrica EDTA-Ca²⁺, il rapporto stechiometrico è sempre:",
+          "answers": [
+            "1:1",
+            "1:2",
+            "2:1",
+            "Dipende dal pH"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "titolazioni123",
+      "isPublic": false
+    },
+    {
+      "id": "titolazioni_pratica",
+      "title": "Titolazioni - Esecuzione Pratica e Tecniche di Laboratorio",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-16",
+      "author": "Sistema Didattico",
+      "questions": [
+        {
+          "id": "tp_q1",
+          "question": "Prima di iniziare una titolazione, cosa si deve fare con la buretta?",
+          "answers": [
+            "Riempirla direttamente con la soluzione titolante",
+            "Risciacquarla con acqua distillata e poi con la soluzione titolante",
+            "Asciugarla perfettamente",
+            "Tarrare la bilancia"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q2",
+          "question": "Perché si deve eliminare la bolla d'aria dal beccuccio della buretta?",
+          "answers": [
+            "Per motivi estetici",
+            "Per evitare errori nella lettura del volume",
+            "Per aumentare la velocità di titolazione",
+            "Non è necessario eliminarla"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q3",
+          "question": "Durante la titolazione, come si deve aggiungere il titolante vicino al punto finale?",
+          "answers": [
+            "Velocemente per finire prima",
+            "Goccia a goccia con agitazione continua",
+            "A piccoli volumi senza agitare",
+            "Il modo di aggiunta non influenza il risultato"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q4",
+          "question": "Come si legge correttamente il volume in una buretta?",
+          "answers": [
+            "Dalla parte superiore del menisco",
+            "Dalla parte inferiore del menisco, a livello degli occhi",
+            "Dal centro del menisco",
+            "Non ha importanza"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q5",
+          "question": "Perché si deve agitare la soluzione durante la titolazione?",
+          "answers": [
+            "Per riscaldare la soluzione",
+            "Per assicurare la completa miscelazione dei reagenti",
+            "Per accelerare la reazione",
+            "Per evitare la formazione di precipitati"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "tp_q6",
+          "question": "Cosa si deve fare se si supera il punto finale durante una titolazione?",
+          "answers": [
+            "Continuare la titolazione",
+            "Aggiungere più analita per compensare",
+            "Annotare l'errore e ripetere la titolazione",
+            "Calcolare ugualmente il risultato"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "titolazioni123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_1758292015236",
+      "title": "Quiz di Conduttimetria",
+      "subject": "piolo",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758292015236_0",
+          "question": "Qual è il principale utilizzo della conduttimetria in laboratorio?",
+          "answers": [
+            "Determinazione della temperatura",
+            "Misurazione della conducibilità di soluzioni",
+            "Analisi del pH",
+            "Calcolo della densità"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_1",
+          "question": "Quale dei seguenti fattori influisce sulla conduttività elettrica di una soluzione?",
+          "answers": [
+            "Il colore della soluzione",
+            "La temperatura della soluzione",
+            "Il volume della soluzione",
+            "La pressione atmosferica"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_2",
+          "question": "In quale modo la concentrazione di ioni in soluzione influisce sulla conduttività?",
+          "answers": [
+            "Aumenta la conduttività con la diminuzione della concentrazione",
+            "Non ha alcun effetto sulla conduttività",
+            "Aumenta la conduttività con l'aumento della concentrazione",
+            "Diminuisce la conduttività con l'aumento della temperatura"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_3",
+          "question": "Quale apparecchiatura è comunemente usata per misurare la conduttività di una soluzione?",
+          "answers": [
+            "Spettrofotometro",
+            "Conduttimetro",
+            "Termometro",
+            "Barometro"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_4",
+          "question": "Qual è l'unità di misura della conduttività elettrica?",
+          "answers": [
+            "Ohm",
+            "Siemens",
+            "Volt",
+            "Ampere"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_5",
+          "question": "Cosa indica un valore di conduttività molto elevato in una soluzione?",
+          "answers": [
+            "Presenza di sostanze inerti",
+            "Elevata purezza della soluzione",
+            "Presenza di un'alta concentrazione di ioni",
+            "Bassa temperatura della soluzione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_6",
+          "question": "Quale delle seguenti affermazioni è vera riguardo alla conduttività di soluzioni acide e basiche?",
+          "answers": [
+            "Le soluzioni acide hanno sempre conduttività inferiore rispetto alle basiche",
+            "Le soluzioni basiche sono sempre più conduttive delle soluzioni neutre",
+            "La conduttività dipende dalla concentrazione di ioni presenti",
+            "Le soluzioni neutre hanno la conduttività più alta"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_7",
+          "question": "Come si può migliorare la precisione di una misurazione di conduttività?",
+          "answers": [
+            "Utilizzando un campione più grande",
+            "Controllando la temperatura della soluzione",
+            "Aggiungendo più acqua distillata",
+            "Utilizzando un conduttimetro di dimensioni maggiori"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_8",
+          "question": "Qual è un esempio di applicazione pratica della conduttimetria in campo ambientale?",
+          "answers": [
+            "Misurazione della temperatura dell'aria",
+            "Analisi della qualità dell'acqua",
+            "Determinazione della pressione del suolo",
+            "Misurazione del livello di radiazioni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758292015236_9",
+          "question": "In un esperimento, si osserva un aumento della conduttività dopo aver aggiunto un sale a una soluzione. Qual è l'interpretazione corretta di questo fenomeno?",
+          "answers": [
+            "Il sale non influisce sulla conduttività",
+            "Il sale si dissocia in ioni che aumentano la conduttività",
+            "Il sale riduce la temperatura della soluzione",
+            "Il sale aumenta la densità della soluzione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Varie",
+      "subcategory": "Misto",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_1758296617098",
+      "title": "Verifica Tecnologie Chimiche",
+      "subject": "aaaa",
+      "created": "2025-09-19",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1758296617098_0",
+          "question": "Quale dei seguenti processi non produce Idrogeno?",
+          "answers": [
+            "Steam Reforming",
+            "Gassificazione del carbone",
+            "Sintesi dell'ammoniaca",
+            "Cracking del petrolio"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_1",
+          "question": "Nello Steam Reforming, quale operazione è condotta per evitare il danneggiamento del catalizzatore?",
+          "answers": [
+            "Aggiunta di acido solforico",
+            "Desolforazione",
+            "Aumento della temperatura",
+            "Riduzione della pressione"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_2",
+          "question": "Qual è la principale reazione durante il reforming primario nello Steam Reforming?",
+          "answers": [
+            "Tra gas naturale e vapore per produrre CO e H2",
+            "Tra CO2 e H2 per produrre metano",
+            "Tra ZnO e H2S per produrre ZnS",
+            "Tra gas naturale e ossigeno"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_3",
+          "question": "Quale dei seguenti fattori influisce sulla conversione della reazione di sintesi dell'ammoniaca?",
+          "answers": [
+            "La temperatura e la pressione",
+            "La concentrazione di ammoniaca",
+            "L'uso di catalizzatori",
+            "La presenza di impurità"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_4",
+          "question": "Qual è la funzione del catalizzatore nella sintesi dell'ammoniaca?",
+          "answers": [
+            "Aumentare l'entalpia della reazione",
+            "Ridurre l'energia di attivazione",
+            "Cambiare la direzione dell'equilibrio",
+            "Incrementare la temperatura di reazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_5",
+          "question": "La legge di Hess è utilizzata per determinare:",
+          "answers": [
+            "La variazione di entalpia di una reazione chimica",
+            "La costante di equilibrio",
+            "La velocità di reazione",
+            "La variazione di disordine"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_6",
+          "question": "Quali sono le condizioni ottimali di temperatura e pressione per il processo di Steam Reforming?",
+          "answers": [
+            "Pressione tra 28 e 40 bar e temperatura tra 700°C e 900°C",
+            "Pressione tra 280 e 400 bar e temperatura tra 150°C e 250°C",
+            "Pressione atmosferica e temperatura ambiente",
+            "Pressione negativa e temperatura alta"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_7",
+          "question": "Nella reazione di sintesi dell'ammoniaca, quale fattore può portare a una conversione parziale?",
+          "answers": [
+            "La bassa energia di attivazione",
+            "La tossicità dell'ammoniaca",
+            "L'elevata energia di attivazione",
+            "L'uso di un catalizzatore"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_8",
+          "question": "Le fasi del ciclo di sintesi dell'ammoniaca seguono un certo ordine. Qual è la sequenza corretta?",
+          "answers": [
+            "Compressione, reazione, separazione, riciclo",
+            "Separazione, reazione, compressione, riciclo",
+            "Riciclo, compressione, reazione, separazione",
+            "Reazione, compressione, separazione, riciclo"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1758296617098_9",
+          "question": "Quale dei seguenti è un rischio associato alla produzione di ammoniaca?",
+          "answers": [
+            "Tossicità dell'ammoniaca",
+            "Esplosività dell'idrogeno",
+            "Presenza di apparecchiature in pressione",
+            "Tutti i precedenti"
+          ],
+          "solution": 3,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Varie",
+      "subcategory": "Misto",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_001",
+      "title": "Chimica Analitica - Introduzione Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa001_01",
+          "question": "Qual è l'unità di misura della concentrazione molare?",
+          "answers": [
+            "g/L",
+            "mol/L",
+            "mg/mL",
+            "%"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa001_02",
+          "question": "Cosa indica il pH?",
+          "answers": [
+            "Concentrazione di OH-",
+            "Concentrazione di H+",
+            "Attività degli ioni H+",
+            "Basicità"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa001_03",
+          "question": "Quale strumento si usa per misurare il volume esatto?",
+          "answers": [
+            "Becher",
+            "Buretta",
+            "Provetta",
+            "Imbuto"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa001_04",
+          "question": "Cosa è una titolazione?",
+          "answers": [
+            "Pesatura precisa",
+            "Determinazione quantitativa",
+            "Filtrazione",
+            "Distillazione"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa001_05",
+          "question": "Qual è il range di pH per soluzioni acide?",
+          "answers": [
+            "0-7",
+            "7-14",
+            "0-14",
+            "1-6"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_002",
+      "title": "Equilibri Acido-Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa002_01",
+          "question": "La costante di dissociazione acida Ka di CH3COOH è 1.8×10⁻⁵. Qual è il pKa?",
+          "answers": [
+            "4.74",
+            "5.26",
+            "4.26",
+            "5.74"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa002_02",
+          "question": "In una soluzione tampone, cosa mantiene costante il pH?",
+          "answers": [
+            "Solo l'acido debole",
+            "Solo la base coniugata",
+            "La coppia acido/base coniugata",
+            "Il solvente"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa002_03",
+          "question": "Qual è il pH di una soluzione 0.1 M di HCl?",
+          "answers": [
+            "1",
+            "0.1",
+            "13",
+            "7"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa002_04",
+          "question": "Cosa succede al pH quando si aggiunge acqua a una soluzione acida?",
+          "answers": [
+            "Diminuisce",
+            "Aumenta",
+            "Rimane costante",
+            "Diventa basico"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa002_05",
+          "question": "Il punto equivalente in una titolazione acido-base corrisponde a:",
+          "answers": [
+            "pH = 7",
+            "Neutralizzazione stechiometrica",
+            "Massima conducibilità",
+            "Minima temperatura"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_003",
+      "title": "Spettroscopia UV-Vis",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa003_01",
+          "question": "La legge di Beer-Lambert correla:",
+          "answers": [
+            "Assorbanza e concentrazione",
+            "Trasmittanza e pH",
+            "Lunghezza d'onda e temperatura",
+            "Intensità e tempo"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa003_02",
+          "question": "Cosa rappresenta il coefficiente di estinzione molare (ε)?",
+          "answers": [
+            "Capacità di assorbimento",
+            "Concentrazione",
+            "Cammino ottico",
+            "Intensità luminosa"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa003_03",
+          "question": "Quale transizione elettronica richiede più energia?",
+          "answers": [
+            "n→π*",
+            "π→π*",
+            "σ→σ*",
+            "n→σ*"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa003_04",
+          "question": "L'effetto ipsocromico è:",
+          "answers": [
+            "Spostamento verso lunghezze d'onda maggiori",
+            "Spostamento verso lunghezze d'onda minori",
+            "Aumento di intensità",
+            "Diminuzione di intensità"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa003_05",
+          "question": "In che range opera la spettroscopia UV-Vis?",
+          "answers": [
+            "100-400 nm",
+            "200-800 nm",
+            "400-700 nm",
+            "800-2500 nm"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_004",
+      "title": "Cromatografia HPLC",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa004_01",
+          "question": "Cosa determina la risoluzione cromatografica?",
+          "answers": [
+            "Solo l'efficienza",
+            "Solo la selettività",
+            "Efficienza, selettività e ritenzione",
+            "Solo la velocità"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa004_02",
+          "question": "In fase normale, la fase stazionaria è:",
+          "answers": [
+            "Polare",
+            "Apolare",
+            "Ionica",
+            "Neutra"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa004_03",
+          "question": "Il fattore di ritenzione k' è dato da:",
+          "answers": [
+            "tR/t0",
+            "(tR-t0)/t0",
+            "t0/tR",
+            "tR×t0"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa004_04",
+          "question": "Quale detector è più universale in HPLC?",
+          "answers": [
+            "UV",
+            "Fluorescenza",
+            "Indice di rifrazione",
+            "Conducibilità"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa004_05",
+          "question": "L'efficienza teorica N è correlata a:",
+          "answers": [
+            "Lunghezza colonna",
+            "Diametro particelle",
+            "Velocità flusso",
+            "Tutte le precedenti"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_005",
+      "title": "Spettrometria di Massa",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa005_01",
+          "question": "Nella ionizzazione ESI, cosa significa 'soft ionization'?",
+          "answers": [
+            "Bassa energia",
+            "Poca frammentazione",
+            "Ionizzazione multipla",
+            "Velocità ridotta"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa005_02",
+          "question": "L'analizzatore quadrupolare separa in base a:",
+          "answers": [
+            "Tempo di volo",
+            "Rapporto m/z",
+            "Energia cinetica",
+            "Carica"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa005_03",
+          "question": "Cosa indica il picco isotopico M+2 negli alogeni?",
+          "answers": [
+            "Frammento",
+            "Isotopo pesante",
+            "Addotto",
+            "Impurezza"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa005_04",
+          "question": "In MS/MS, la collision cell serve per:",
+          "answers": [
+            "Ionizzazione",
+            "Frammentazione controllata",
+            "Accelerazione",
+            "Rivelazione"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa005_05",
+          "question": "La risoluzione di massa R = m/Δm indica:",
+          "answers": [
+            "Accuratezza",
+            "Precisione",
+            "Capacità di separazione",
+            "Sensibilità"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_006",
+      "title": "Elettrochimica Analitica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa006_01",
+          "question": "L'equazione di Nernst correla:",
+          "answers": [
+            "Potenziale e concentrazione",
+            "Corrente e tensione",
+            "pH e conducibilità",
+            "Tempo e carica"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_02",
+          "question": "In voltammetria ciclica, il picco catodico corrisponde a:",
+          "answers": [
+            "Ossidazione",
+            "Riduzione",
+            "Adsorbimento",
+            "Desorbimento"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_03",
+          "question": "L'elettrodo di riferimento Ag/AgCl ha potenziale:",
+          "answers": [
+            "0.000 V",
+            "+0.197 V",
+            "+0.222 V",
+            "-0.197 V"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_04",
+          "question": "La conducibilità specifica si misura in:",
+          "answers": [
+            "S",
+            "S/m",
+            "S·cm",
+            "Ω"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_05",
+          "question": "In potenziometria, l'elettrodo vetro è selettivo per:",
+          "answers": [
+            "H+",
+            "OH-",
+            "Na+",
+            "Cl-"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_007",
+      "title": "Analisi Termica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa007_01",
+          "question": "In DSC, un picco endotermico indica:",
+          "answers": [
+            "Assorbimento di calore",
+            "Rilascio di calore",
+            "Variazione di massa",
+            "Cambiamento di colore"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa007_02",
+          "question": "La TGA misura principalmente:",
+          "answers": [
+            "Temperatura",
+            "Variazioni di massa",
+            "Calore specifico",
+            "Conducibilità"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa007_03",
+          "question": "La temperatura di transizione vetrosa (Tg) si osserva in:",
+          "answers": [
+            "TGA",
+            "DSC",
+            "TMA",
+            "DTA"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa007_04",
+          "question": "Quale atmosfera si usa per studi di ossidazione?",
+          "answers": [
+            "Azoto",
+            "Aria",
+            "Argon",
+            "Vuoto"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa007_05",
+          "question": "L'energia di attivazione si calcola da:",
+          "answers": [
+            "Curva DSC",
+            "Slope Arrhenius",
+            "Picco TGA",
+            "Baseline DTG"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_008",
+      "title": "Spettroscopia NMR",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa008_01",
+          "question": "Il chemical shift in ¹H-NMR del CHCl₃ è circa:",
+          "answers": [
+            "0.9 ppm",
+            "3.7 ppm",
+            "7.26 ppm",
+            "7.8 ppm"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_02",
+          "question": "L'accoppiamento ³J(H-H) è massimo quando l'angolo diedro è:",
+          "answers": [
+            "0°",
+            "60°",
+            "90°",
+            "180°"
+          ],
+          "solution": 3,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_03",
+          "question": "La regola n+1 in ¹H-NMR si applica a:",
+          "answers": [
+            "Chemical shift",
+            "Molteplicità",
+            "Integrazione",
+            "Tempo di rilassamento"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_04",
+          "question": "In ¹³C-NMR, i carboni quaternari appaiono:",
+          "answers": [
+            "Più intensi",
+            "Meno intensi",
+            "Spostati a campo alto",
+            "Accoppiati"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_05",
+          "question": "L'esperimento COSY rileva:",
+          "answers": [
+            "Accoppiamenti scalari H-H",
+            "Accoppiamenti dipolari",
+            "Chemical shift",
+            "Tempi di rilassamento"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_009",
+      "title": "Microanalisi Elementare",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa009_01",
+          "question": "L'analisi CHN combustione quantifica:",
+          "answers": [
+            "Solo C",
+            "C, H, N simultaneamente",
+            "Solo composti organici",
+            "Metalli"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_02",
+          "question": "Il rilevatore per CO₂ nell'analisi CHN è:",
+          "answers": [
+            "TCD",
+            "IR",
+            "FID",
+            "ECD"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_03",
+          "question": "La temperatura di combustione nell'analisi CHN è circa:",
+          "answers": [
+            "500°C",
+            "850°C",
+            "1000°C",
+            "1200°C"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_04",
+          "question": "Per determinare O per differenza, serve:",
+          "answers": [
+            "Solo C e H",
+            "C, H, N",
+            "Tutti gli elementi",
+            "Massa molecolare"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_05",
+          "question": "L'accuratezza tipica dell'analisi CHN è:",
+          "answers": [
+            "±10%",
+            "±1%",
+            "±0.3%",
+            "±0.1%"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_analitica_010",
+      "title": "Analisi Avanzata Multi-tecnica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa010_01",
+          "question": "Per caratterizzare completamente un farmaco sconosciuto, la sequenza ottimale è:",
+          "answers": [
+            "MS→NMR→IR",
+            "NMR→MS→IR",
+            "IR→NMR→MS",
+            "MS→IR→NMR"
+          ],
+          "solution": 0,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_02",
+          "question": "L'accoppiamento LC-MS/MS è ideale per:",
+          "answers": [
+            "Analisi qualitativa",
+            "Quantificazione tracce",
+            "Determinazione PM",
+            "Analisi elementare"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_03",
+          "question": "La validazione analitica FDA richiede parametri:",
+          "answers": [
+            "Solo accuratezza",
+            "Accuratezza e precisione",
+            "Linearità, accuratezza, precisione, specificità",
+            "Solo sensibilità"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_04",
+          "question": "L'incertezza di misura combinata si calcola come:",
+          "answers": [
+            "Somma degli errori",
+            "√(Σui²)",
+            "Prodotto delle deviazioni",
+            "Media pesata"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_05",
+          "question": "Il material di riferimento certificato (CRM) serve per:",
+          "answers": [
+            "Calibrazione",
+            "Controllo qualità",
+            "Validazione metodo",
+            "Tutte le precedenti"
+          ],
+          "solution": 3,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_001",
+      "title": "Chimica Organica - Strutture Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo001_01",
+          "question": "Quanti elettroni di valenza ha il carbonio?",
+          "answers": [
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo001_02",
+          "question": "Qual è la geometria del metano (CH₄)?",
+          "answers": [
+            "Lineare",
+            "Piana",
+            "Tetraedrica",
+            "Ottaedrica"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo001_03",
+          "question": "Un alcano con 5 atomi di carbonio si chiama:",
+          "answers": [
+            "Butano",
+            "Pentano",
+            "Esano",
+            "Eptano"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo001_04",
+          "question": "Il gruppo funzionale degli alcoli è:",
+          "answers": [
+            "-OH",
+            "-COOH",
+            "-CHO",
+            "-NH₂"
+          ],
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo001_05",
+          "question": "L'ibridazione del carbonio negli alcani è:",
+          "answers": [
+            "sp",
+            "sp²",
+            "sp³",
+            "sp³d"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_002",
+      "title": "Isomeria e Stereostruttura",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo002_01",
+          "question": "Gli enantiomeri hanno:",
+          "answers": [
+            "Stesse proprietà fisiche",
+            "Stesso potere rotatorio",
+            "Configurazione opposta",
+            "Stessa reattività"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_02",
+          "question": "Un centro stereogenico ha:",
+          "answers": [
+            "2 sostituenti uguali",
+            "4 sostituenti diversi",
+            "Simmetria planare",
+            "Ibridazione sp²"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_03",
+          "question": "Le regole di Cahn-Ingold-Prelog determinano:",
+          "answers": [
+            "Priorità dei sostituenti",
+            "Energia di attivazione",
+            "Velocità di reazione",
+            "Punto di ebollizione"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_04",
+          "question": "I diastereoisomeri sono stereoisomeri che:",
+          "answers": [
+            "Sono immagini speculari",
+            "Non sono immagini speculari",
+            "Hanno stessa configurazione",
+            "Sono conformeri"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_05",
+          "question": "La rotazione [α]D misura:",
+          "answers": [
+            "Temperatura",
+            "Concentrazione",
+            "Attività ottica",
+            "Purezza"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_003",
+      "title": "Meccanismi di Reazione",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo003_01",
+          "question": "Nella SN2, l'attacco nucleofilo avviene:",
+          "answers": [
+            "Dallo stesso lato",
+            "Dal lato opposto",
+            "Da qualsiasi lato",
+            "Non c'è attacco"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_02",
+          "question": "Un carbocatione terziario è:",
+          "answers": [
+            "Meno stabile del secondario",
+            "Più stabile del secondario",
+            "Ugualmente stabile",
+            "Instabile"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_03",
+          "question": "L'eliminazione E2 richiede geometria:",
+          "answers": [
+            "Sin",
+            "Anti",
+            "Gauche",
+            "Eclissata"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_04",
+          "question": "Un nucleofilo forte favorisce:",
+          "answers": [
+            "SN1",
+            "SN2",
+            "E1",
+            "Nessuna reazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_05",
+          "question": "Il riarrangiamento di Wagner-Meerwein coinvolge:",
+          "answers": [
+            "Radicali",
+            "Carbocationi",
+            "Carbanioni",
+            "Carbeni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_004",
+      "title": "Chimica Aromatica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo004_01",
+          "question": "La regola di Hückel per l'aromaticità richiede:",
+          "answers": [
+            "4n elettroni π",
+            "4n+2 elettroni π",
+            "2n elettroni π",
+            "n elettroni π"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_02",
+          "question": "Il benzene ha energia di risonanza di circa:",
+          "answers": [
+            "36 kcal/mol",
+            "20 kcal/mol",
+            "150 kJ/mol",
+            "50 kJ/mol"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_03",
+          "question": "I gruppi attivanti orto-para dirigenti sono:",
+          "answers": [
+            "Elettron-attrattori",
+            "Elettron-donatori",
+            "Solo alogeni",
+            "Acidi"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_04",
+          "question": "La nitrazione del benzene usa:",
+          "answers": [
+            "HNO₃ + H₂SO₄",
+            "NH₃ + O₂",
+            "N₂O₅",
+            "NO₂ + AlCl₃"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_05",
+          "question": "Il naftalene ha quanti elettroni π?",
+          "answers": [
+            "6",
+            "8",
+            "10",
+            "12"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_005",
+      "title": "Composti Carbonilici",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo005_01",
+          "question": "L'addizione nucleofila al carbonile forma:",
+          "answers": [
+            "Alcene",
+            "Estere",
+            "Emiacetale",
+            "Etere"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_02",
+          "question": "La condensazione aldolica richiede:",
+          "answers": [
+            "Acido",
+            "Base",
+            "Calore",
+            "Luce"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_03",
+          "question": "Il test di Tollens è positivo per:",
+          "answers": [
+            "Chetoni",
+            "Aldeidi",
+            "Alcoli",
+            "Eteri"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_04",
+          "question": "La riduzione di Wolff-Kishner converte:",
+          "answers": [
+            "C=O → CH₂",
+            "C=C → CH₂-CH₂",
+            "COOH → CH₃",
+            "CHO → CH₂OH"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_05",
+          "question": "L'effetto α del carbonile è dovuto a:",
+          "answers": [
+            "Iperoniugazione",
+            "Risonanza",
+            "Induzione",
+            "Van der Waals"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_006",
+      "title": "Reazioni Radicaliche",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo006_01",
+          "question": "I radicali alchilici sono stabilizzati da:",
+          "answers": [
+            "Effetto induttivo",
+            "Iperoniugazione",
+            "Risonanza",
+            "Tutte le precedenti"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_02",
+          "question": "La clorurazione radicalica è:",
+          "answers": [
+            "Altamente selettiva",
+            "Poco selettiva",
+            "Stereoselettiva",
+            "Regiospecifica"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_03",
+          "question": "L'energia di dissociazione C-H terziario è:",
+          "answers": [
+            "Maggiore del primario",
+            "Minore del primario",
+            "Uguale",
+            "Non misurabile"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_04",
+          "question": "La bromrurazione con NBS è selettiva per posizioni:",
+          "answers": [
+            "Primarie",
+            "Secondarie",
+            "Terziarie",
+            "Allilihe/benziliche"
+          ],
+          "solution": 3,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_05",
+          "question": "Gli inibitori radicalici agiscono per:",
+          "answers": [
+            "Initiazione",
+            "Propagazione",
+            "Terminazione",
+            "Ossidazione"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_007",
+      "title": "Sintesi Asimmetrica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo007_01",
+          "question": "La riduzione di Corey-Bakshi-Shibata usa:",
+          "answers": [
+            "NADH",
+            "Oxazaborolidine",
+            "BINAP",
+            "Tartrato"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_02",
+          "question": "L'eccesso enantiomerico si calcola come:",
+          "answers": [
+            "[α]/[α]max",
+            "|R-S|/(R+S)",
+            "R/S",
+            "(R-S)/2"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_03",
+          "question": "Il controllo di Cram predice stereoselecttvità in:",
+          "answers": [
+            "Alchilazioni",
+            "Addizioni nucleofile",
+            "Eliminazioni",
+            "Sostituzioni"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_04",
+          "question": "I catalizzatori Jacobsen sono complessi di:",
+          "answers": [
+            "Pd",
+            "Ru",
+            "Mn",
+            "Rh"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_05",
+          "question": "La risoluzione cinetica dinamica richiede:",
+          "answers": [
+            "Miscela racemica statica",
+            "Racemizzazione in situ",
+            "Due catalizzatori",
+            "Alte temperature"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_008",
+      "title": "Organometallica Avanzata",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo008_01",
+          "question": "Il ciclo catalitico Suzuki coinvolge:",
+          "answers": [
+            "Ossidazione-riduzione",
+            "Addizione ossidativa-eliminazione riduttiva",
+            "Solo sostituzione",
+            "β-eliminazione"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_02",
+          "question": "La metätesi olefinica è catalizzata da:",
+          "answers": [
+            "Carbeni di Ru",
+            "Fosfine di Pd",
+            "Sali di Cu",
+            "Idrizzi di Rh"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_03",
+          "question": "La regola dei 18 elettroni si applica a:",
+          "answers": [
+            "Tutti i metalli",
+            "Metalli di transizione",
+            "Solo Pd",
+            "Lantanidi"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_04",
+          "question": "Il coupling di Negishi usa:",
+          "answers": [
+            "Organozinco",
+            "Organoborano",
+            "Organostagno",
+            "Organosilicio"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_05",
+          "question": "L'attivazione C-H diretta evita:",
+          "answers": [
+            "Catalizzatori",
+            "Legami C-H",
+            "Pre-funzionalizzazione",
+            "Condizioni anidre"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_009",
+      "title": "Sintesi Totale Multistadio",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo009_01",
+          "question": "L'analisi retrosintetica identifica:",
+          "answers": [
+            "Solo il primo step",
+            "Trasformazioni chiave",
+            "Tutti i reagenti",
+            "Solo la resa"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_02",
+          "question": "Una disconnessione FGI è:",
+          "answers": [
+            "Functional Group Interconversion",
+            "Fast Group Integration",
+            "Final Group Isolation",
+            "First Generation Intermediate"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_03",
+          "question": "Il building block più versatile per la sintesi è:",
+          "answers": [
+            "Benzene",
+            "Acetone",
+            "Acetato",
+            "Acido acetico"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_04",
+          "question": "La protezione-deprotezione è necessaria per:",
+          "answers": [
+            "Aumentare resa",
+            "Controllo chemioselettività",
+            "Ridurre tempi",
+            "Evitare solventi"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_05",
+          "question": "L'economia atomica misura:",
+          "answers": [
+            "Resa in peso",
+            "Efficienza teorica",
+            "Incorporazione atomi nel prodotto",
+            "Purezza finale"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_organica_010",
+      "title": "Chimica Medicinale e Drug Design",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo010_01",
+          "question": "La regola dei 5 di Lipinski predice:",
+          "answers": [
+            "Tossicità",
+            "Biodisponibilità orale",
+            "Emivita",
+            "Distribuzione"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_02",
+          "question": "Un farmaco agonista:",
+          "answers": [
+            "Blocca il recettore",
+            "Attiva il recettore",
+            "Neutralizza il ligando",
+            "Degrada l'enzima"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_03",
+          "question": "La costante di dissociazione Kd misura:",
+          "answers": [
+            "Velocità binding",
+            "Affinità binding",
+            "Concentrazione plasmatica",
+            "Clearance renale"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_04",
+          "question": "Il metabolismo di fase I comprende:",
+          "answers": [
+            "Solo ossidazione",
+            "Ossidazione, riduzione, idrolisi",
+            "Solo coniugazione",
+            "Solo metilazione"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_05",
+          "question": "La progettazione structure-based drug design usa:",
+          "answers": [
+            "Solo saggi cellulari",
+            "Struttura 3D del target",
+            "Solo screening HTS",
+            "Analisi QSAR"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_001",
+      "title": "Processi Industriali Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi001_01",
+          "question": "Il processo Haber-Bosch produce:",
+          "answers": [
+            "Metanolo",
+            "Ammoniaca",
+            "Acido solforico",
+            "Etilene"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi001_02",
+          "question": "La temperatura tipica del processo Haber è:",
+          "answers": [
+            "200°C",
+            "450°C",
+            "800°C",
+            "1000°C"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi001_03",
+          "question": "Il catalizzatore del processo Haber è basato su:",
+          "answers": [
+            "Platino",
+            "Ferro",
+            "Nichel",
+            "Palladio"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi001_04",
+          "question": "Il cracking petrolifero serve per:",
+          "answers": [
+            "Aumentare ottani",
+            "Spezzare idrocarburi pesanti",
+            "Rimuovere zolfo",
+            "Additivare benzina"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi001_05",
+          "question": "La pressione nel processo Haber è circa:",
+          "answers": [
+            "1 atm",
+            "50 atm",
+            "200 atm",
+            "500 atm"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_002",
+      "title": "Processi Catalitici",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi002_01",
+          "question": "Il reforming catalitico produce:",
+          "answers": [
+            "Olefine",
+            "Aromati",
+            "Paraffine",
+            "Alogeni"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_02",
+          "question": "Il catalizzatore del reforming è:",
+          "answers": [
+            "Fe/Al₂O₃",
+            "Pt/Al₂O₃",
+            "Ni/SiO₂",
+            "Cu/ZnO"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_03",
+          "question": "Il processo Fischer-Tropsch converte:",
+          "answers": [
+            "CO + H₂ → idrocarburi",
+            "CH₄ → H₂",
+            "NH₃ → fertilizzanti",
+            "SO₂ → H₂SO₄"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_04",
+          "question": "La rigenerazione di catalizzatori serve per:",
+          "answers": [
+            "Aumentare selectività",
+            "Rimuovere depositi carboniosi",
+            "Cambiare fase attiva",
+            "Ridurre temperatura"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_05",
+          "question": "Il numero di ottano misura:",
+          "answers": [
+            "Viscosità",
+            "Densità",
+            "Resistenza detonazione",
+            "Punto ebollizione"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_003",
+      "title": "Separazioni Industriali",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi003_01",
+          "question": "La distillazione frazionata si basa su:",
+          "answers": [
+            "Differenze di solubilità",
+            "Differenze di volatilità",
+            "Differenze di densità",
+            "Differenze di polarità"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi003_02",
+          "question": "L'efficienza di una colonna di distillazione dipende da:",
+          "answers": [
+            "Solo temperatura",
+            "Solo pressione",
+            "Numero piatti teorici",
+            "Solo velocità flusso"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi003_03",
+          "question": "L'estrazione liquido-liquido richiede:",
+          "answers": [
+            "Fasi miscibili",
+            "Fasi immiscibili",
+            "Stessa densità",
+            "Stesso pH"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi003_04",
+          "question": "Il coefficiente di ripartizione K è:",
+          "answers": [
+            "C_organica/C_acquosa",
+            "C_acquosa/C_organica",
+            "C_totale/C_organica",
+            "Indipendente dalla concentrazione"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi003_05",
+          "question": "La cristallizzazione industriale è favorita da:",
+          "answers": [
+            "Alta temperatura",
+            "Rapido raffreddamento",
+            "Raffreddamento controllato",
+            "Alta pressione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_004",
+      "title": "Reattori Chimici",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi004_01",
+          "question": "Un reattore CSTR opera in:",
+          "answers": [
+            "Batch",
+            "Continuo perfettamente miscelato",
+            "Flusso pistone",
+            "Semi-batch"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_02",
+          "question": "Il tempo di residenza in un reattore continuo è:",
+          "answers": [
+            "V/Q",
+            "Q/V",
+            "V×Q",
+            "Q-V"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_03",
+          "question": "La conversione X si definisce come:",
+          "answers": [
+            "(C₀-C)/C",
+            "(C₀-C)/C₀",
+            "C/C₀",
+            "(C-C₀)/C₀"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_04",
+          "question": "Il numero di Damköhler confronta:",
+          "answers": [
+            "Reazione vs diffusione",
+            "Reazione vs convezione",
+            "Convezione vs diffusione",
+            "Calore vs massa"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_05",
+          "question": "Un reattore tubolare (PFR) assume:",
+          "answers": [
+            "Miscelamento radiale nullo",
+            "Miscelamento assiale nullo",
+            "Flusso pistone",
+            "Tutte le precedenti"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_005",
+      "title": "Controllo di Processo",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi005_01",
+          "question": "Un controller PID combina azioni:",
+          "answers": [
+            "Proporzionale + Integrale + Derivativa",
+            "Pressione + Intensità + Densità",
+            "Portata + Temperatura + Densità",
+            "Processo + Input + Display"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_02",
+          "question": "L'azione integrale serve per:",
+          "answers": [
+            "Velocità di risposta",
+            "Eliminare offset",
+            "Stabilità",
+            "Ridurre overshoot"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_03",
+          "question": "Un sistema in feedback:",
+          "answers": [
+            "Misura solo input",
+            "Misura solo output",
+            "Misura output e corregge input",
+            "Non misura nulla"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_04",
+          "question": "La funzione di trasferimento G(s) nel dominio di Laplace rappresenta:",
+          "answers": [
+            "Input/Output",
+            "Output/Input",
+            "Errore/Setpoint",
+            "Disturbo/Correzione"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_05",
+          "question": "Il guadagno critico Kc in un sistema è:",
+          "answers": [
+            "Massimo guadagno stabile",
+            "Guadagno per oscillazioni sostenute",
+            "Minimo guadagno efficace",
+            "Guadagno nominale"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_006",
+      "title": "Operazioni Unitarie Avanzate",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi006_01",
+          "question": "Il numero di Reynolds caratterizza:",
+          "answers": [
+            "Trasferimento di calore",
+            "Regime di flusso",
+            "Trasferimento di massa",
+            "Reazione chimica"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_02",
+          "question": "Il coefficiente di scambio termico h dipende da:",
+          "answers": [
+            "Solo temperatura",
+            "Solo velocità",
+            "Numero di Nusselt",
+            "Solo pressione"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_03",
+          "question": "La caduta di pressione in un letto impaccato segue:",
+          "answers": [
+            "Legge di Darcy",
+            "Equazione di Ergun",
+            "Legge di Fick",
+            "Equazione di Arrhenius"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_04",
+          "question": "La diffusività di Knudsen dipende da:",
+          "answers": [
+            "Pressione totale",
+            "Diametro pori",
+            "Concentrazione",
+            "Viscosità"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_05",
+          "question": "Il modulo di Thiele φ confronta:",
+          "answers": [
+            "Reazione vs diffusione",
+            "Calore vs massa",
+            "Convezione vs conduzione",
+            "Assorbimento vs desorbimento"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_007",
+      "title": "Sicurezza e Analisi Rischi",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi007_01",
+          "question": "L'analisi HAZOP identifica:",
+          "answers": [
+            "Solo esplosioni",
+            "Deviazioni e loro conseguenze",
+            "Solo inquinamento",
+            "Solo costi"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_02",
+          "question": "Il limite inferiore di esplosività (LEL) è:",
+          "answers": [
+            "Concentrazione massima combustibile",
+            "Concentrazione minima per accensione",
+            "Temperatura di autoaccensione",
+            "Pressione di vapore"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_03",
+          "question": "Un sistema SIL 2 ha probabilità di fallimento:",
+          "answers": [
+            "10⁻¹ - 10⁻²",
+            "10⁻² - 10⁻³",
+            "10⁻³ - 10⁻⁴",
+            "10⁻⁴ - 10⁻⁵"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_04",
+          "question": "La valvola di sicurezza PSV si apre quando:",
+          "answers": [
+            "Temperatura alta",
+            "Pressione > set point",
+            "Livello basso",
+            "Portata alta"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_05",
+          "question": "L'indice DOW Fire & Explosion considera:",
+          "answers": [
+            "Solo infiammabilità",
+            "Materiali + processi + controlli",
+            "Solo tossicità",
+            "Solo corrosività"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_008",
+      "title": "Ottimizzazione Processi",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi008_01",
+          "question": "Il metodo dei moltiplicatori di Lagrange risolve:",
+          "answers": [
+            "Equazioni differenziali",
+            "Ottimizzazione vincolata",
+            "Bilanci di massa",
+            "Trasferimento di calore"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_02",
+          "question": "L'integrazione di calore (heat integration) usa:",
+          "answers": [
+            "Solo riscaldatori",
+            "Solo refrigeratori",
+            "Pinch analysis",
+            "Solo isolamento"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_03",
+          "question": "La temperatura di pinch divide:",
+          "answers": [
+            "Zona di riscaldamento/raffreddamento",
+            "Reattori/separatori",
+            "Liquido/vapore",
+            "Catalizzatori/inerti"
+          ],
+          "solution": 0,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_04",
+          "question": "L'algoritmo genetico è utile per:",
+          "answers": [
+            "Bilanci stechiometrici",
+            "Ottimizzazione non-lineare",
+            "Calcoli termodinamici",
+            "Analisi spettroscopiche"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_05",
+          "question": "Il costo totale annualizzato (TAC) include:",
+          "answers": [
+            "Solo OPEX",
+            "Solo CAPEX",
+            "CAPEX annualizzato + OPEX",
+            "Solo energia"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_009",
+      "title": "Processi Sostenibili",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi009_01",
+          "question": "Il fattore E (environmental factor) misura:",
+          "answers": [
+            "Efficienza energetica",
+            "kg rifiuti/kg prodotto",
+            "Emissioni CO₂",
+            "Consumo acqua"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_02",
+          "question": "I 12 principi della Green Chemistry includono:",
+          "answers": [
+            "Solo catalisi",
+            "Prevenzione rifiuti + catalisi + rinnovabilità",
+            "Solo energia",
+            "Solo sicurezza"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_03",
+          "question": "L'analisi LCA (Life Cycle Assessment) valuta:",
+          "answers": [
+            "Solo produzione",
+            "Solo uso",
+            "Dall'estrazione al fine vita",
+            "Solo trasporto"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_04",
+          "question": "I solventi ionici sono vantaggiosi per:",
+          "answers": [
+            "Bassa viscosità",
+            "Pressione vapore trascurabile",
+            "Basso costo",
+            "Alta tossicità"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_05",
+          "question": "La bioraffineria integrata produce:",
+          "answers": [
+            "Solo biocarburanti",
+            "Solo biomateriali",
+            "Carburanti + chemicals + materiali",
+            "Solo energia elettrica"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_industriale_010",
+      "title": "Industria 4.0 e Digitalizzazione",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi010_01",
+          "question": "I digital twins in processi chimici sono:",
+          "answers": [
+            "Backup dei dati",
+            "Repliche virtuali real-time",
+            "Software di controllo",
+            "Sensori wireless"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_02",
+          "question": "Il machine learning predittivo può ottimizzare:",
+          "answers": [
+            "Solo temperatura",
+            "Solo pressione",
+            "Parametri multipli simultaneamente",
+            "Solo catalizzatori"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_03",
+          "question": "L'edge computing in impianti chimici serve per:",
+          "answers": [
+            "Elaborazione locale real-time",
+            "Solo storage dati",
+            "Solo comunicazione",
+            "Solo backup"
+          ],
+          "solution": 0,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_04",
+          "question": "I sensori IoT wireless comunicano via:",
+          "answers": [
+            "Solo cablato",
+            "WiFi + LoRaWAN + 5G",
+            "Solo WiFi",
+            "Solo Bluetooth"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_05",
+          "question": "La cybersecurity OT (Operational Technology) protegge:",
+          "answers": [
+            "Solo uffici",
+            "Solo server",
+            "Sistemi di controllo industriale",
+            "Solo database"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123",
+      "isPublic": false
+    },
+    {
+      "id": "quiz_1759089691983",
+      "title": "Chimica Analitica",
+      "subject": "Chimica Analitica",
+      "created": "2025-09-28",
+      "author": "Manager",
+      "questions": [
+        {
+          "id": "q1759089691983_0",
+          "question": "Qual è il principale utilizzo della conduttimetria in laboratorio?",
+          "answers": [
+            "Determinazione della temperatura",
+            "Misurazione della conducibilità di soluzioni",
+            "Analisi del pH",
+            "Calcolo della densità"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_1",
+          "question": "Quale dei seguenti fattori influisce sulla conduttività elettrica di una soluzione?",
+          "answers": [
+            "Il colore della soluzione",
+            "La temperatura della soluzione",
+            "Il volume della soluzione",
+            "La pressione atmosferica"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_2",
+          "question": "In quale modo la concentrazione di ioni in soluzione influisce sulla conduttività?",
+          "answers": [
+            "Aumenta la conduttività con la diminuzione della concentrazione",
+            "Non ha alcun effetto sulla conduttività",
+            "Aumenta la conduttività con l'aumento della concentrazione",
+            "Diminuisce la conduttività con l'aumento della temperatura"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_3",
+          "question": "Quale apparecchiatura è comunemente usata per misurare la conduttività di una soluzione?",
+          "answers": [
+            "Spettrofotometro",
+            "Conduttimetro",
+            "Termometro",
+            "Barometro"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_4",
+          "question": "Qual è l'unità di misura della conduttività elettrica?",
+          "answers": [
+            "Ohm",
+            "Siemens",
+            "Volt",
+            "Ampere"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_5",
+          "question": "Cosa indica un valore di conduttività molto elevato in una soluzione?",
+          "answers": [
+            "Presenza di sostanze inerti",
+            "Elevata purezza della soluzione",
+            "Presenza di un'alta concentrazione di ioni",
+            "Bassa temperatura della soluzione"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_6",
+          "question": "Quale delle seguenti affermazioni è vera riguardo alla conduttività di soluzioni acide e basiche?",
+          "answers": [
+            "Le soluzioni acide hanno sempre conduttività inferiore rispetto alle basiche",
+            "Le soluzioni basiche sono sempre più conduttive delle soluzioni neutre",
+            "La conduttività dipende dalla concentrazione di ioni presenti",
+            "Le soluzioni neutre hanno la conduttività più alta"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_7",
+          "question": "Come si può migliorare la precisione di una misurazione di conduttività?",
+          "answers": [
+            "Utilizzando un campione più grande",
+            "Controllando la temperatura della soluzione",
+            "Aggiungendo più acqua distillata",
+            "Utilizzando un conduttimetro di dimensioni maggiori"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_8",
+          "question": "Qual è un esempio di applicazione pratica della conduttimetria in campo ambientale?",
+          "answers": [
+            "Misurazione della temperatura dell'aria",
+            "Analisi della qualità dell'acqua",
+            "Determinazione della pressione del suolo",
+            "Misurazione del livello di radiazioni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759089691983_9",
+          "question": "In un esperimento, si osserva un aumento della conduttività dopo aver aggiunto un sale a una soluzione. Qual è l'interpretazione corretta di questo fenomeno?",
+          "answers": [
+            "Il sale non influisce sulla conduttività",
+            "Il sale si dissocia in ioni che aumentano la conduttività",
+            "Il sale riduce la temperatura della soluzione",
+            "Il sale aumenta la densità della soluzione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "isPublic": false
+    },
+    {
+      "id": "quiz_1759152796598",
+      "title": "Quiz Chimica Analitica Titolazioni",
+      "subject": "Chimica Analitica Titolazioni",
+      "created": "2025-09-29",
+      "author": "AI Generator",
+      "questions": [
+        {
+          "id": "q1759152796598_0",
+          "question": "Qual è il principio fondamentale della titolazione acido-base?",
+          "answers": [
+            "La neutralizzazione tra acido e base",
+            "La precipitazione di un sale",
+            "La complessazione di metalli",
+            "L'ossidazione di un composto"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_1",
+          "question": "Nella titolazione, cosa rappresenta il punto di equivalenza?",
+          "answers": [
+            "La quantità di titolante necessaria per neutralizzare completamente l'analita",
+            "La quantità di analita presente nella soluzione",
+            "Il cambiamento di colore dell'indicatore",
+            "La concentrazione dell'acido titolante"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_2",
+          "question": "Quale indicatore potrebbe essere più appropriato per una titolazione tra un acido forte e una base forte?",
+          "answers": [
+            "Fenolftaleina",
+            "Blu di bromotimolo",
+            "Metilarancio",
+            "Rosso di metile"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_3",
+          "question": "Qual è la funzione di un indicatore nella titolazione?",
+          "answers": [
+            "Stabilire la temperatura della reazione",
+            "Rivelare il punto finale della titolazione",
+            "Aumentare la solubilità dell'analita",
+            "Ridurre il pH della soluzione"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_4",
+          "question": "In una titolazione di un acido debole con una base forte, quale sarà il pH al punto di equivalenza?",
+          "answers": [
+            "7",
+            "Maggiore di 7",
+            "Minore di 7",
+            "Non determinabile"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_5",
+          "question": "Quale dei seguenti fattori può influenzare l'accuratezza di una titolazione?",
+          "answers": [
+            "La temperatura della soluzione",
+            "La velocità di agitazione",
+            "La purezza dei reagenti",
+            "Tutti i precedenti"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_6",
+          "question": "Qual è il metodo più comune per eseguire una titolazione?",
+          "answers": [
+            "Titolazione diretta",
+            "Titolazione indiretta",
+            "Titolazione redox",
+            "Titolazione di complessazione"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_7",
+          "question": "Durante una titolazione, cosa si intende per 'titolante'?",
+          "answers": [
+            "La sostanza che si sta analizzando",
+            "La sostanza di cui si conosce la concentrazione",
+            "L'indicatore utilizzato",
+            "Il solvente della soluzione"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_8",
+          "question": "Qual è il principale svantaggio della titolazione manuale rispetto alla titolazione automatica?",
+          "answers": [
+            "Maggiore precisione",
+            "Maggiore controllo della temperatura",
+            "Maggiore rischio di errore umano",
+            "Minor costo"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_9",
+          "question": "Che cosa si intende per 'titolazione retrograda'?",
+          "answers": [
+            "Una titolazione che utilizza un indicatore di colore",
+            "Una titolazione che avviene in modo inverso rispetto alla normale",
+            "Una titolazione che richiede un'analisi preliminare",
+            "Una titolazione che si svolge in condizioni di alta temperatura"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_10",
+          "question": "Qual è l'importanza della calibrazione del materiale di laboratorio nelle titolazioni?",
+          "answers": [
+            "Garantire che le sostanze siano misurate correttamente",
+            "Ridurre il tempo necessario per la titolazione",
+            "Aumentare il numero di titolazioni effettuabili",
+            "Non è importante"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "q1759152796598_11",
+          "question": "Nella titolazione di un sale, quale metodo è utilizzato per determinare la concentrazione dell'analita?",
+          "answers": [
+            "Titolazione acido-base",
+            "Titolazione redox",
+            "Titolazione di complessazione",
+            "Titolazione a precipitazione"
+          ],
+          "solution": 3,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "isPublic": false
+    }
+  ],
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdate": "2025-09-30",
+    "totalQuizzes": 54,
+    "totalQuestions": 305
+  }
+}

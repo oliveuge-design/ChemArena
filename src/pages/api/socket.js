@@ -22,19 +22,36 @@ let io
 
 console.log('🏢 Multi-Room System initialized in API route')
 
+// 🔧 PRODUCTION FIX: Disabilita bodyParser per WebSocket
+export const config = {
+  api: {
+    bodyParser: false,
+    externalResolver: true,
+  },
+}
+
 export default function handler(req, res) {
   if (!res.socket.server.io) {
     console.log('🚀 Starting Socket.IO server...')
 
-    // Create Socket.IO server
+    // Create Socket.IO server with production-grade config
     io = new Server(res.socket.server, {
       path: '/api/socket',
       cors: {
-        origin: process.env.NODE_ENV === 'production' 
-          ? ["https://*.onrender.com", "https://*.render.com"] 
+        origin: process.env.NODE_ENV === 'production'
+          ? ["https://*.onrender.com", "https://*.render.com"]
           : "*",
         credentials: true,
       },
+      // 🔧 PRODUCTION FIX: Configurazioni robuste per quiz live ad alto carico
+      transports: ['websocket', 'polling'], // WebSocket prioritario, fallback polling
+      pingTimeout: 60000,        // 60s - tolleranza reti mobili lente
+      pingInterval: 25000,       // 25s - heartbeat frequente
+      maxHttpBufferSize: 1e6,    // 1MB - supporto messaggi grandi (leaderboard)
+      allowUpgrades: true,       // Permetti upgrade polling→websocket
+      perMessageDeflate: false,  // Disabilita compressione per latency
+      httpCompression: true,     // Abilita compressione HTTP
+      connectTimeout: 45000,     // 45s timeout connessione iniziale
     })
 
     // Socket.IO event handlers

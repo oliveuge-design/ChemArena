@@ -5,9 +5,21 @@ import { usePlayerContext } from "@/context/player"
 import { useEffect } from "react"
 import useSound from "use-sound"
 
-export default function Result({
-  data: { correct, message, points, myPoints, totalPlayer, rank, aheadOfMe },
-}) {
+export default function Result({ data }) {
+  const { correct, message, points, myPoints, totalPlayer, rank, aheadOfMe } = data || {};
+
+  // 🔍 DEBUG: Verifica dati ricevuti
+  console.log('🎯 Result component received data object:', data);
+  console.log('🎯 Result component values:', {
+    correct,
+    message,
+    points,
+    myPoints,
+    rank,
+    aheadOfMe,
+    totalPlayer
+  })
+
   const { dispatch } = usePlayerContext()
 
   const [sfxResults] = useSound(SFX_RESULTS_SOUND, {
@@ -40,7 +52,7 @@ export default function Result({
         <div className="text-center">
           <p className="text-lg text-cyan-300 font-semibold mb-2">PUNTEGGIO TOTALE</p>
           <p className="text-5xl font-bold text-cyan-100 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">
-            {myPoints}
+            {myPoints !== undefined ? myPoints : 0}
           </p>
         </div>
       </div>
@@ -54,7 +66,7 @@ export default function Result({
               {rank === 1 ? "🥇 1° POSTO!" :
                rank === 2 ? "🥈 2° Posto" :
                rank === 3 ? "🥉 3° Posto" :
-               `${rank}° Posto`}
+               rank !== undefined ? `${rank}° Posto` : "Calcolando..."}
             </p>
             {aheadOfMe && (
               <p className="text-yellow-300/80 text-sm">

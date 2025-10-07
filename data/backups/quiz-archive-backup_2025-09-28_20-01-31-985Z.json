@@ -78,8 +78,11 @@
           "image": ""
         }
       ],
-      "category": "cultura",
-      "subcategory": "geografia"
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
       "id": "quiz_2",
@@ -159,8 +162,11 @@
           "image": ""
         }
       ],
-      "category": "cultura",
-      "subcategory": "arte"
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
       "id": "quiz_3",
@@ -240,8 +246,11 @@
           "image": ""
         }
       ],
-      "category": "cultura",
-      "subcategory": "generale"
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
       "id": "quiz_4",
@@ -321,8 +330,11 @@
           "image": ""
         }
       ],
-      "category": "tecnologia",
-      "subcategory": "informatica"
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
       "id": "quiz_5",
@@ -402,8 +414,11 @@
           "image": ""
         }
       ],
-      "category": "cultura",
-      "subcategory": "sport"
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
       "id": "quiz_6",
@@ -483,47 +498,11 @@
           "image": ""
         }
       ],
-      "category": "cultura",
-      "subcategory": "generale"
-    },
-    {
-      "id": "quiz_1757435542637",
-      "title": "Analisi",
-      "subject": "Chimica",
-      "created": "2025-09-09",
-      "author": "Utente",
-      "questions": [
-        {
-          "id": "q1757435542638_0",
-          "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
-          "answers": [
-            "Risonanza magnetica dei nuclei atomici",
-            "Diffusione dei raggi X",
-            "Separazione dei componenti in fase liquida",
-            "Assorbimento della luce da parte degli elettroni"
-          ],
-          "solution": 3,
-          "time": 15,
-          "cooldown": 5,
-          "image": "/api/images/arte_monalisa.jpg"
-        },
-        {
-          "id": "q1757435542638_1",
-          "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
-          "answers": [
-            "Cromatografia gas-liquido",
-            "Spettroscopia di assorbimento atomico (AAS)",
-            "Polarimetria",
-            "Elettroforesi"
-          ],
-          "solution": 1,
-          "time": 15,
-          "cooldown": 5,
-          "image": ""
-        }
-      ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Cultura Generale",
+      "subcategory": "Base",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
       "id": "quiz_chimica_analitica",
@@ -531,7 +510,6 @@
       "subject": "Chimica Analitica",
       "created": "2025-09-10",
       "author": "Sistema",
-      "password": "analitica123",
       "questions": [
         {
           "id": "qa1",
@@ -674,8 +652,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
     },
     {
       "id": "medicina_quiz_1",
@@ -683,7 +664,6 @@
       "subject": "Medicina",
       "created": "2025-09-12",
       "author": "Sistema",
-      "password": "medicina123",
       "questions": [
         {
           "id": "med1_q1",
@@ -756,8 +736,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "medicina"
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123"
     },
     {
       "id": "medicina_quiz_2",
@@ -765,7 +748,6 @@
       "subject": "Medicina",
       "created": "2025-09-12",
       "author": "Sistema",
-      "password": "medicina123",
       "questions": [
         {
           "id": "med2_q1",
@@ -838,8 +820,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123"
     },
     {
       "id": "medicina_quiz_3",
@@ -847,7 +832,6 @@
       "subject": "Medicina",
       "created": "2025-09-12",
       "author": "Sistema",
-      "password": "medicina123",
       "questions": [
         {
           "id": "med3_q1",
@@ -920,8 +904,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "medicina"
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123"
     },
     {
       "id": "medicina_quiz_4",
@@ -929,7 +916,6 @@
       "subject": "Medicina",
       "created": "2025-09-12",
       "author": "Sistema",
-      "password": "medicina123",
       "questions": [
         {
           "id": "med4_q1",
@@ -1002,8 +988,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "medicina"
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123"
     },
     {
       "id": "medicina_quiz_5",
@@ -1011,7 +1000,6 @@
       "subject": "Medicina",
       "created": "2025-09-12",
       "author": "Sistema",
-      "password": "medicina123",
       "questions": [
         {
           "id": "med5_q1",
@@ -1084,33 +1072,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "medicina"
-    },
-    {
-      "id": "quiz_1757828391780",
-      "title": "Test Quiz",
-      "subject": "Test",
-      "created": "2025-09-14",
-      "author": "Utente",
-      "questions": [
-        {
-          "id": "q1757828391780_0",
-          "question": "Test?",
-          "answers": [
-            "A",
-            "B",
-            "C",
-            "D"
-          ],
-          "solution": 0,
-          "time": 15,
-          "cooldown": 5,
-          "image": ""
-        }
-      ],
-      "category": "test",
-      "subcategory": "sistema"
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "medicina123"
     },
     {
       "id": "arduino_elettronica_base",
@@ -1118,7 +1084,6 @@
       "subject": "Elettronica",
       "created": "2025-09-15",
       "author": "Sistema Didattico",
-      "password": "elettronica123",
       "questions": [
         {
           "id": "elb_q1",
@@ -1205,8 +1170,11 @@
           "image": ""
         }
       ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "elettronica123"
     },
     {
       "id": "arduino_grandezze_elettriche",
@@ -1214,7 +1182,6 @@
       "subject": "Elettronica",
       "created": "2025-09-15",
       "author": "Sistema Didattico",
-      "password": "elettronica123",
       "questions": [
         {
           "id": "gre_q1",
@@ -1301,8 +1268,11 @@
           "image": ""
         }
       ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "elettronica123"
     },
     {
       "id": "arduino_hardware_componenti",
@@ -1310,7 +1280,6 @@
       "subject": "Arduino",
       "created": "2025-09-15",
       "author": "Sistema Didattico",
-      "password": "arduino123",
       "questions": [
         {
           "id": "ahw_q1",
@@ -1397,8 +1366,11 @@
           "image": ""
         }
       ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "arduino123"
     },
     {
       "id": "arduino_programmazione_base",
@@ -1406,7 +1378,6 @@
       "subject": "Arduino",
       "created": "2025-09-15",
       "author": "Sistema Didattico",
-      "password": "arduino123",
       "questions": [
         {
           "id": "apb_q1",
@@ -1493,8 +1464,11 @@
           "image": ""
         }
       ],
-      "category": "tecnologia",
-      "subcategory": "informatica"
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "arduino123"
     },
     {
       "id": "arduino_progetti_pratici",
@@ -1502,7 +1476,6 @@
       "subject": "Arduino",
       "created": "2025-09-15",
       "author": "Sistema Didattico",
-      "password": "arduino123",
       "questions": [
         {
           "id": "app_q1",
@@ -1589,8 +1562,11 @@
           "image": ""
         }
       ],
-      "category": "tecnologia",
-      "subcategory": "elettronica"
+      "category": "Tecnologia",
+      "subcategory": "Programmazione",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "arduino123"
     },
     {
       "id": "titolazioni_teoria",
@@ -1598,7 +1574,6 @@
       "subject": "Chimica Analitica",
       "created": "2025-09-16",
       "author": "Sistema Didattico",
-      "password": "titolazioni123",
       "questions": [
         {
           "id": "tt_q1",
@@ -1685,8 +1660,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "titolazioni123"
     },
     {
       "id": "titolazioni_stechiometria",
@@ -1694,7 +1672,6 @@
       "subject": "Chimica Analitica",
       "created": "2025-09-16",
       "author": "Sistema Didattico",
-      "password": "titolazioni123",
       "questions": [
         {
           "id": "ts_q1",
@@ -1781,8 +1758,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "titolazioni123"
     },
     {
       "id": "titolazioni_pratica",
@@ -1790,7 +1770,6 @@
       "subject": "Chimica Analitica",
       "created": "2025-09-16",
       "author": "Sistema Didattico",
-      "password": "titolazioni123",
       "questions": [
         {
           "id": "tp_q1",
@@ -1877,8 +1856,11 @@
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "titolazioni123"
     },
     {
       "id": "quiz_1758292015236",
@@ -2028,8 +2010,11 @@
           "image": ""
         }
       ],
-      "category": "test",
-      "subcategory": "sistema"
+      "category": "Varie",
+      "subcategory": "Misto",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
       "id": "quiz_1758296617098",
@@ -2179,136 +2164,41 @@
           "image": ""
         }
       ],
-      "category": "test",
-      "subcategory": "sistema"
+      "category": "Varie",
+      "subcategory": "Misto",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": ""
     },
     {
-      "id": "quiz_1758303316332",
-      "title": "Quiz ammoniaca e idrogeno",
-      "subject": "ammoniaca e idrogeno",
-      "created": "2025-09-19",
-      "author": "AI Generator",
+      "id": "quiz_analitica_001",
+      "title": "Chimica Analitica - Introduzione Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
       "questions": [
         {
-          "id": "q1758303316332_0",
-          "question": "Qual è la composizione del gas di sintesi?",
+          "id": "qa001_01",
+          "question": "Qual è l'unità di misura della concentrazione molare?",
           "answers": [
-            "H2",
-            "CO",
-            "CH4",
-            "H2 + CO"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_1",
-          "question": "Quale processo non produce H2?",
-          "answers": [
-            "Steam Reforming",
-            "Gassificazione del carbone",
-            "Sintesi dell'ammoniaca",
-            "Cracking del petrolio"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_2",
-          "question": "Qual è una frase errata sui rischi dell'idrogeno?",
-          "answers": [
-            "Esplosività con aria",
-            "Emissione di composti solforati",
-            "Tossicità del CO",
-            "Elevate temperature dei processi"
+            "g/L",
+            "mol/L",
+            "mg/mL",
+            "%"
           ],
           "solution": 1,
-          "time": 20,
+          "time": 15,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_3",
-          "question": "Qual è la reazione dello steam reforming del gas naturale?",
+          "id": "qa001_02",
+          "question": "Cosa indica il pH?",
           "answers": [
-            "CH4 + H2O -> CO + 3H2",
-            "2CH4 + O2 -> 2CO + 4H2",
-            "FeO + H2O -> Fe3O4 + H2",
-            "C + H2O -> CO + H2"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_4",
-          "question": "In quale produzione si usa H2?",
-          "answers": [
-            "Sintesi H2SO4",
-            "Sintesi NH3",
-            "Sintesi HNO3",
-            "Ossidazione parziale degli idrocarburi"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_5",
-          "question": "La desolforazione nello steam reforming serve a?",
-          "answers": [
-            "Aggiungere composti solforati",
-            "Eliminare composti solforati",
-            "Modificare il pH",
-            "Nessuna delle risposte"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_6",
-          "question": "Durante il reforming primario avviene?",
-          "answers": [
-            "Reazione tra gas naturale e vapore",
-            "Reazione tra ZnO e H2S",
-            "Reazione di ossidazione parziale",
-            "Nessuna delle risposte"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_7",
-          "question": "Qual è la condizione termodinamica dello steam reforming?",
-          "answers": [
-            "28-40 bar e 700-900°C",
-            "280-400 bar e 700-900°C",
-            "28-40 bar e 150-250°C",
-            "Nessuna delle risposte"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_8",
-          "question": "I catalizzatori nello steam reforming sono?",
-          "answers": [
-            "Acidi di Lewis",
-            "Basi di Bronsted",
-            "Metalli di transizione",
-            "Non si usano catalizzatori"
+            "Concentrazione di OH-",
+            "Concentrazione di H+",
+            "Attività degli ioni H+",
+            "Basicità"
           ],
           "solution": 2,
           "time": 20,
@@ -2316,125 +2206,27 @@
           "image": ""
         },
         {
-          "id": "q1758303316332_9",
-          "question": "La legge di Hess definisce?",
+          "id": "qa001_03",
+          "question": "Quale strumento si usa per misurare il volume esatto?",
           "answers": [
-            "Variazione di entalpia",
-            "Variazione di entropia",
-            "Variazione di energia libera",
-            "Nessuna delle risposte"
+            "Becher",
+            "Buretta",
+            "Provetta",
+            "Imbuto"
           ],
-          "solution": 0,
-          "time": 20,
+          "solution": 1,
+          "time": 15,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_10",
-          "question": "Il ΔH°rT consente di conoscere?",
+          "id": "qa001_04",
+          "question": "Cosa è una titolazione?",
           "answers": [
-            "Se una reazione è esotermica",
-            "Se una reazione è endotermica",
-            "La variazione di disordine",
-            "Nessuna delle risposte"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_11",
-          "question": "Il ΔG°rT se negativo indica?",
-          "answers": [
-            "Reazione spontanea",
-            "Reazione non spontanea",
-            "Nessuna delle risposte",
-            "Misura il lavoro prodotto"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_12",
-          "question": "L’entalpia standard di formazione è definita come?",
-          "answers": [
-            "Reazione di formazione a partire da composti",
-            "Reazione di polimerizzazione",
-            "Reazione a partire dagli elementi",
-            "Nessuna delle risposte"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_13",
-          "question": "Quale settore utilizza l’ammoniaca?",
-          "answers": [
-            "Fertilizzanti",
-            "Esplosivi",
-            "Polimeri sintetici",
-            "Tutti i settori"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_14",
-          "question": "La sintesi dell’ammoniaca è?",
-          "answers": [
-            "Endotermica e bassa pressione",
-            "Endotermica e alta pressione",
-            "Esotermica con conversione completa",
-            "Esotermica e bassa pressione"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_15",
-          "question": "L’ammoniaca a 20°C è?",
-          "answers": [
-            "Sempre gas",
-            "Sempre liquida",
-            "Solida",
-            "Vapore a 1 bar"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_16",
-          "question": "Il ΔG°rT della sintesi dell’ammoniaca è?",
-          "answers": [
-            "Sempre positivo",
-            "Sempre negativo",
-            "Dipende dalla temperatura",
-            "Nessuna delle risposte"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_17",
-          "question": "Per aumentare la conversione della sintesi dell’ammoniaca, la pressione è?",
-          "answers": [
-            "Negativa",
-            "150 atmosfere",
-            "Tra 30 e 40 bar",
-            "Nessuna delle risposte"
+            "Pesatura precisa",
+            "Determinazione quantitativa",
+            "Filtrazione",
+            "Distillazione"
           ],
           "solution": 1,
           "time": 20,
@@ -2442,27 +2234,55 @@
           "image": ""
         },
         {
-          "id": "q1758303316332_18",
-          "question": "La reazione di sintesi dell’ammoniaca ha un catalizzatore perché?",
+          "id": "qa001_05",
+          "question": "Qual è il range di pH per soluzioni acide?",
           "answers": [
-            "Abbassa l’entalpia",
-            "Rende la reazione più veloce",
-            "Aumenta la resa",
-            "Nessuna delle risposte"
+            "0-7",
+            "7-14",
+            "0-14",
+            "1-6"
           ],
-          "solution": 1,
-          "time": 20,
+          "solution": 0,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_002",
+      "title": "Equilibri Acido-Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa002_01",
+          "question": "La costante di dissociazione acida Ka di CH3COOH è 1.8×10⁻⁵. Qual è il pKa?",
+          "answers": [
+            "4.74",
+            "5.26",
+            "4.26",
+            "5.74"
+          ],
+          "solution": 0,
+          "time": 25,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_19",
-          "question": "Il catalizzatore tradizionale è costituito da?",
+          "id": "qa002_02",
+          "question": "In una soluzione tampone, cosa mantiene costante il pH?",
           "answers": [
-            "Metalli nobili",
-            "K2O e Al2O3",
-            "Ferro metallico con K2O",
-            "Nessuna delle risposte"
+            "Solo l'acido debole",
+            "Solo la base coniugata",
+            "La coppia acido/base coniugata",
+            "Il solvente"
           ],
           "solution": 2,
           "time": 20,
@@ -2470,41 +2290,27 @@
           "image": ""
         },
         {
-          "id": "q1758303316332_20",
-          "question": "Il reattore di sintesi opera a?",
+          "id": "qa002_03",
+          "question": "Qual è il pH di una soluzione 0.1 M di HCl?",
           "answers": [
-            "Temperature inferiori a 180°C",
-            "Temperature superiori a 1000°C",
-            "Temperature tra 350°C e 500°C",
-            "Nessuna delle risposte"
+            "1",
+            "0.1",
+            "13",
+            "7"
           ],
-          "solution": 2,
+          "solution": 0,
           "time": 20,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_21",
-          "question": "L'operazione di quench serve a?",
+          "id": "qa002_04",
+          "question": "Cosa succede al pH quando si aggiunge acqua a una soluzione acida?",
           "answers": [
-            "Alzare la temperatura",
-            "Abbassare la temperatura con reagenti freschi",
-            "Abbassare la temperatura con acqua",
-            "Nessuna delle risposte"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_22",
-          "question": "Il controllo della temperatura nei letti catalitici avviene tramite?",
-          "answers": [
-            "Scambio con acqua di raffreddamento",
-            "Scambio tra reagenti e miscela fresca",
-            "Aggiunta di acqua",
-            "Nessuna delle risposte"
+            "Diminuisce",
+            "Aumenta",
+            "Rimane costante",
+            "Diventa basico"
           ],
           "solution": 1,
           "time": 20,
@@ -2512,83 +2318,391 @@
           "image": ""
         },
         {
-          "id": "q1758303316332_23",
-          "question": "Le fasi del ciclo di sintesi dell’ammoniaca sono?",
+          "id": "qa002_05",
+          "question": "Il punto equivalente in una titolazione acido-base corrisponde a:",
           "answers": [
-            "Separazione, Reazione, Compressione",
-            "Riciclo, Compressione, Reazione",
-            "Reazione, Compressione, Separazione",
-            "Nessuna delle risposte"
+            "pH = 7",
+            "Neutralizzazione stechiometrica",
+            "Massima conducibilità",
+            "Minima temperatura"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_003",
+      "title": "Spettroscopia UV-Vis",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa003_01",
+          "question": "La legge di Beer-Lambert correla:",
+          "answers": [
+            "Assorbanza e concentrazione",
+            "Trasmittanza e pH",
+            "Lunghezza d'onda e temperatura",
+            "Intensità e tempo"
           ],
           "solution": 0,
-          "time": 20,
+          "time": 25,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_24",
-          "question": "La presenza di inerti nel gas di sintesi?",
+          "id": "qa003_02",
+          "question": "Cosa rappresenta il coefficiente di estinzione molare (ε)?",
           "answers": [
-            "Diminuisce la resa",
-            "Aumenta la resa",
-            "Non influenza la resa",
-            "Nessuna delle risposte"
+            "Capacità di assorbimento",
+            "Concentrazione",
+            "Cammino ottico",
+            "Intensità luminosa"
           ],
           "solution": 0,
-          "time": 20,
+          "time": 25,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_25",
-          "question": "La reazione di sintesi dell���ammoniaca porta a?",
+          "id": "qa003_03",
+          "question": "Quale transizione elettronica richiede più energia?",
           "answers": [
-            "Conversione completa",
-            "Conversione parziale",
-            "Nessuna conversione",
-            "Nessuna delle risposte"
+            "n→π*",
+            "π→π*",
+            "σ→σ*",
+            "n→σ*"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa003_04",
+          "question": "L'effetto ipsocromico è:",
+          "answers": [
+            "Spostamento verso lunghezze d'onda maggiori",
+            "Spostamento verso lunghezze d'onda minori",
+            "Aumento di intensità",
+            "Diminuzione di intensità"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa003_05",
+          "question": "In che range opera la spettroscopia UV-Vis?",
+          "answers": [
+            "100-400 nm",
+            "200-800 nm",
+            "400-700 nm",
+            "800-2500 nm"
           ],
           "solution": 1,
           "time": 20,
           "cooldown": 5,
           "image": ""
-        },
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_004",
+      "title": "Cromatografia HPLC",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
         {
-          "id": "q1758303316332_26",
-          "question": "La separazione dell’ammoniaca avviene?",
+          "id": "qa004_01",
+          "question": "Cosa determina la risoluzione cromatografica?",
           "answers": [
-            "Con refrigerazione e separatori",
-            "Con elio liquido",
-            "Con acqua di raffreddamento",
-            "Nessuna delle risposte"
+            "Solo l'efficienza",
+            "Solo la selettività",
+            "Efficienza, selettività e ritenzione",
+            "Solo la velocità"
           ],
-          "solution": 0,
-          "time": 20,
+          "solution": 2,
+          "time": 30,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_27",
-          "question": "I principali rischi della produzione di ammoniaca sono?",
+          "id": "qa004_02",
+          "question": "In fase normale, la fase stazionaria è:",
           "answers": [
-            "Stoccaggio di grandi quantità",
-            "Tossicità",
-            "Infiammabilità",
-            "Tutti i rischi"
+            "Polare",
+            "Apolare",
+            "Ionica",
+            "Neutra"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa004_03",
+          "question": "Il fattore di ritenzione k' è dato da:",
+          "answers": [
+            "tR/t0",
+            "(tR-t0)/t0",
+            "t0/tR",
+            "tR×t0"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa004_04",
+          "question": "Quale detector è più universale in HPLC?",
+          "answers": [
+            "UV",
+            "Fluorescenza",
+            "Indice di rifrazione",
+            "Conducibilità"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa004_05",
+          "question": "L'efficienza teorica N è correlata a:",
+          "answers": [
+            "Lunghezza colonna",
+            "Diametro particelle",
+            "Velocità flusso",
+            "Tutte le precedenti"
           ],
           "solution": 3,
-          "time": 20,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_005",
+      "title": "Spettrometria di Massa",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa005_01",
+          "question": "Nella ionizzazione ESI, cosa significa 'soft ionization'?",
+          "answers": [
+            "Bassa energia",
+            "Poca frammentazione",
+            "Ionizzazione multipla",
+            "Velocità ridotta"
+          ],
+          "solution": 1,
+          "time": 30,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_28",
-          "question": "Il catalizzatore della sintesi è definito piroforico perché?",
+          "id": "qa005_02",
+          "question": "L'analizzatore quadrupolare separa in base a:",
           "answers": [
-            "Deve essere incendiato",
-            "Si incendia facilmente",
-            "Incendia il gas di sintesi",
-            "Nessuna delle risposte"
+            "Tempo di volo",
+            "Rapporto m/z",
+            "Energia cinetica",
+            "Carica"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa005_03",
+          "question": "Cosa indica il picco isotopico M+2 negli alogeni?",
+          "answers": [
+            "Frammento",
+            "Isotopo pesante",
+            "Addotto",
+            "Impurezza"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa005_04",
+          "question": "In MS/MS, la collision cell serve per:",
+          "answers": [
+            "Ionizzazione",
+            "Frammentazione controllata",
+            "Accelerazione",
+            "Rivelazione"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa005_05",
+          "question": "La risoluzione di massa R = m/Δm indica:",
+          "answers": [
+            "Accuratezza",
+            "Precisione",
+            "Capacità di separazione",
+            "Sensibilità"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_006",
+      "title": "Elettrochimica Analitica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa006_01",
+          "question": "L'equazione di Nernst correla:",
+          "answers": [
+            "Potenziale e concentrazione",
+            "Corrente e tensione",
+            "pH e conducibilità",
+            "Tempo e carica"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_02",
+          "question": "In voltammetria ciclica, il picco catodico corrisponde a:",
+          "answers": [
+            "Ossidazione",
+            "Riduzione",
+            "Adsorbimento",
+            "Desorbimento"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_03",
+          "question": "L'elettrodo di riferimento Ag/AgCl ha potenziale:",
+          "answers": [
+            "0.000 V",
+            "+0.197 V",
+            "+0.222 V",
+            "-0.197 V"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_04",
+          "question": "La conducibilità specifica si misura in:",
+          "answers": [
+            "S",
+            "S/m",
+            "S·cm",
+            "Ω"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa006_05",
+          "question": "In potenziometria, l'elettrodo vetro è selettivo per:",
+          "answers": [
+            "H+",
+            "OH-",
+            "Na+",
+            "Cl-"
+          ],
+          "solution": 0,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_007",
+      "title": "Analisi Termica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa007_01",
+          "question": "In DSC, un picco endotermico indica:",
+          "answers": [
+            "Assorbimento di calore",
+            "Rilascio di calore",
+            "Variazione di massa",
+            "Cambiamento di colore"
+          ],
+          "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa007_02",
+          "question": "La TGA misura principalmente:",
+          "answers": [
+            "Temperatura",
+            "Variazioni di massa",
+            "Calore specifico",
+            "Conducibilità"
           ],
           "solution": 1,
           "time": 20,
@@ -2596,13 +2710,335 @@
           "image": ""
         },
         {
-          "id": "q1758303316332_29",
-          "question": "Il surriscaldamento del catalizzatore comporta?",
+          "id": "qa007_03",
+          "question": "La temperatura di transizione vetrosa (Tg) si osserva in:",
           "answers": [
-            "Maggiore resa",
-            "Reazione più veloce",
-            "Accorcia la vita del catalizzatore",
-            "Nessuna delle risposte"
+            "TGA",
+            "DSC",
+            "TMA",
+            "DTA"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa007_04",
+          "question": "Quale atmosfera si usa per studi di ossidazione?",
+          "answers": [
+            "Azoto",
+            "Aria",
+            "Argon",
+            "Vuoto"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa007_05",
+          "question": "L'energia di attivazione si calcola da:",
+          "answers": [
+            "Curva DSC",
+            "Slope Arrhenius",
+            "Picco TGA",
+            "Baseline DTG"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_008",
+      "title": "Spettroscopia NMR",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa008_01",
+          "question": "Il chemical shift in ¹H-NMR del CHCl₃ è circa:",
+          "answers": [
+            "0.9 ppm",
+            "3.7 ppm",
+            "7.26 ppm",
+            "7.8 ppm"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_02",
+          "question": "L'accoppiamento ³J(H-H) è massimo quando l'angolo diedro è:",
+          "answers": [
+            "0°",
+            "60°",
+            "90°",
+            "180°"
+          ],
+          "solution": 3,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_03",
+          "question": "La regola n+1 in ¹H-NMR si applica a:",
+          "answers": [
+            "Chemical shift",
+            "Molteplicità",
+            "Integrazione",
+            "Tempo di rilassamento"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_04",
+          "question": "In ¹³C-NMR, i carboni quaternari appaiono:",
+          "answers": [
+            "Più intensi",
+            "Meno intensi",
+            "Spostati a campo alto",
+            "Accoppiati"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa008_05",
+          "question": "L'esperimento COSY rileva:",
+          "answers": [
+            "Accoppiamenti scalari H-H",
+            "Accoppiamenti dipolari",
+            "Chemical shift",
+            "Tempi di rilassamento"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_009",
+      "title": "Microanalisi Elementare",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa009_01",
+          "question": "L'analisi CHN combustione quantifica:",
+          "answers": [
+            "Solo C",
+            "C, H, N simultaneamente",
+            "Solo composti organici",
+            "Metalli"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_02",
+          "question": "Il rilevatore per CO₂ nell'analisi CHN è:",
+          "answers": [
+            "TCD",
+            "IR",
+            "FID",
+            "ECD"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_03",
+          "question": "La temperatura di combustione nell'analisi CHN è circa:",
+          "answers": [
+            "500°C",
+            "850°C",
+            "1000°C",
+            "1200°C"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_04",
+          "question": "Per determinare O per differenza, serve:",
+          "answers": [
+            "Solo C e H",
+            "C, H, N",
+            "Tutti gli elementi",
+            "Massa molecolare"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa009_05",
+          "question": "L'accuratezza tipica dell'analisi CHN è:",
+          "answers": [
+            "±10%",
+            "±1%",
+            "±0.3%",
+            "±0.1%"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_analitica_010",
+      "title": "Analisi Avanzata Multi-tecnica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qa010_01",
+          "question": "Per caratterizzare completamente un farmaco sconosciuto, la sequenza ottimale è:",
+          "answers": [
+            "MS→NMR→IR",
+            "NMR→MS→IR",
+            "IR→NMR→MS",
+            "MS→IR→NMR"
+          ],
+          "solution": 0,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_02",
+          "question": "L'accoppiamento LC-MS/MS è ideale per:",
+          "answers": [
+            "Analisi qualitativa",
+            "Quantificazione tracce",
+            "Determinazione PM",
+            "Analisi elementare"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_03",
+          "question": "La validazione analitica FDA richiede parametri:",
+          "answers": [
+            "Solo accuratezza",
+            "Accuratezza e precisione",
+            "Linearità, accuratezza, precisione, specificità",
+            "Solo sensibilità"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_04",
+          "question": "L'incertezza di misura combinata si calcola come:",
+          "answers": [
+            "Somma degli errori",
+            "√(Σui²)",
+            "Prodotto delle deviazioni",
+            "Media pesata"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qa010_05",
+          "question": "Il material di riferimento certificato (CRM) serve per:",
+          "answers": [
+            "Calibrazione",
+            "Controllo qualità",
+            "Validazione metodo",
+            "Tutte le precedenti"
+          ],
+          "solution": 3,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "analitica123"
+    },
+    {
+      "id": "quiz_organica_001",
+      "title": "Chimica Organica - Strutture Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo001_01",
+          "question": "Quanti elettroni di valenza ha il carbonio?",
+          "answers": [
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "solution": 1,
+          "time": 15,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo001_02",
+          "question": "Qual è la geometria del metano (CH₄)?",
+          "answers": [
+            "Lineare",
+            "Piana",
+            "Tetraedrica",
+            "Ottaedrica"
           ],
           "solution": 2,
           "time": 20,
@@ -2610,702 +3046,1655 @@
           "image": ""
         },
         {
-          "id": "q1758303316332_30",
-          "question": "Il processo di produzione dell’ammoniaca richiede?",
+          "id": "qo001_03",
+          "question": "Un alcano con 5 atomi di carbonio si chiama:",
           "answers": [
-            "Catalizzatori",
-            "Elevate pressioni",
-            "Temperature controllate",
-            "Tutti i fattori"
+            "Butano",
+            "Pentano",
+            "Esano",
+            "Eptano"
           ],
-          "solution": 3,
-          "time": 20,
+          "solution": 1,
+          "time": 15,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_31",
-          "question": "La cinetica della reazione di sintesi è ostacolata da?",
+          "id": "qo001_04",
+          "question": "Il gruppo funzionale degli alcoli è:",
           "answers": [
-            "Energia di attivazione alta",
-            "Temperatura bassa",
-            "Reazione esotermica",
-            "Nessuna delle risposte"
+            "-OH",
+            "-COOH",
+            "-CHO",
+            "-NH₂"
           ],
           "solution": 0,
-          "time": 20,
+          "time": 15,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758303316332_32",
-          "question": "La sintesi dell'ammoniaca è influenzata da?",
+          "id": "qo001_05",
+          "question": "L'ibridazione del carbonio negli alcani è:",
           "answers": [
-            "Pressione",
+            "sp",
+            "sp²",
+            "sp³",
+            "sp³d"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_002",
+      "title": "Isomeria e Stereostruttura",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo002_01",
+          "question": "Gli enantiomeri hanno:",
+          "answers": [
+            "Stesse proprietà fisiche",
+            "Stesso potere rotatorio",
+            "Configurazione opposta",
+            "Stessa reattività"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_02",
+          "question": "Un centro stereogenico ha:",
+          "answers": [
+            "2 sostituenti uguali",
+            "4 sostituenti diversi",
+            "Simmetria planare",
+            "Ibridazione sp²"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_03",
+          "question": "Le regole di Cahn-Ingold-Prelog determinano:",
+          "answers": [
+            "Priorità dei sostituenti",
+            "Energia di attivazione",
+            "Velocità di reazione",
+            "Punto di ebollizione"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_04",
+          "question": "I diastereoisomeri sono stereoisomeri che:",
+          "answers": [
+            "Sono immagini speculari",
+            "Non sono immagini speculari",
+            "Hanno stessa configurazione",
+            "Sono conformeri"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo002_05",
+          "question": "La rotazione [α]D misura:",
+          "answers": [
             "Temperatura",
             "Concentrazione",
-            "Tutti i fattori"
+            "Attività ottica",
+            "Purezza"
           ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_33",
-          "question": "Quale gas è un prodotto della reazione di sintesi dell’ammoniaca?",
-          "answers": [
-            "H2",
-            "N2",
-            "O2",
-            "CO2"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_34",
-          "question": "Il raffreddamento del reattore è fondamentale per?",
-          "answers": [
-            "Aumentare la pressione",
-            "Controllare la temperatura",
-            "Mantenere l'equilibrio",
-            "Nessuna delle risposte"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758303316332_35",
-          "question": "Quale dei seguenti processi utilizza l’ammoniaca?",
-          "answers": [
-            "Produzione di plastica",
-            "Fertilizzanti",
-            "Combustibili",
-            "Nessuna delle risposte"
-          ],
-          "solution": 1,
+          "solution": 2,
           "time": 20,
           "cooldown": 5,
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
     },
     {
-      "id": "quiz_1758380601467",
-      "title": "dd",
-      "subject": "dd",
-      "created": "2025-09-20",
-      "author": "Manager",
+      "id": "quiz_organica_003",
+      "title": "Meccanismi di Reazione",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
       "questions": [
         {
-          "id": "q1758380601467_0",
-          "question": "dd",
+          "id": "qo003_01",
+          "question": "Nella SN2, l'attacco nucleofilo avviene:",
           "answers": [
-            "ddd",
-            "dd",
-            "dddd",
-            "dddd"
+            "Dallo stesso lato",
+            "Dal lato opposto",
+            "Da qualsiasi lato",
+            "Non c'è attacco"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_02",
+          "question": "Un carbocatione terziario è:",
+          "answers": [
+            "Meno stabile del secondario",
+            "Più stabile del secondario",
+            "Ugualmente stabile",
+            "Instabile"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_03",
+          "question": "L'eliminazione E2 richiede geometria:",
+          "answers": [
+            "Sin",
+            "Anti",
+            "Gauche",
+            "Eclissata"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_04",
+          "question": "Un nucleofilo forte favorisce:",
+          "answers": [
+            "SN1",
+            "SN2",
+            "E1",
+            "Nessuna reazione"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo003_05",
+          "question": "Il riarrangiamento di Wagner-Meerwein coinvolge:",
+          "answers": [
+            "Radicali",
+            "Carbocationi",
+            "Carbanioni",
+            "Carbeni"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_004",
+      "title": "Chimica Aromatica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo004_01",
+          "question": "La regola di Hückel per l'aromaticità richiede:",
+          "answers": [
+            "4n elettroni π",
+            "4n+2 elettroni π",
+            "2n elettroni π",
+            "n elettroni π"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_02",
+          "question": "Il benzene ha energia di risonanza di circa:",
+          "answers": [
+            "36 kcal/mol",
+            "20 kcal/mol",
+            "150 kJ/mol",
+            "50 kJ/mol"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_03",
+          "question": "I gruppi attivanti orto-para dirigenti sono:",
+          "answers": [
+            "Elettron-attrattori",
+            "Elettron-donatori",
+            "Solo alogeni",
+            "Acidi"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_04",
+          "question": "La nitrazione del benzene usa:",
+          "answers": [
+            "HNO₃ + H₂SO₄",
+            "NH₃ + O₂",
+            "N₂O₅",
+            "NO₂ + AlCl₃"
           ],
           "solution": 0,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo004_05",
+          "question": "Il naftalene ha quanti elettroni π?",
+          "answers": [
+            "6",
+            "8",
+            "10",
+            "12"
+          ],
+          "solution": 2,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_005",
+      "title": "Composti Carbonilici",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo005_01",
+          "question": "L'addizione nucleofila al carbonile forma:",
+          "answers": [
+            "Alcene",
+            "Estere",
+            "Emiacetale",
+            "Etere"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_02",
+          "question": "La condensazione aldolica richiede:",
+          "answers": [
+            "Acido",
+            "Base",
+            "Calore",
+            "Luce"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_03",
+          "question": "Il test di Tollens è positivo per:",
+          "answers": [
+            "Chetoni",
+            "Aldeidi",
+            "Alcoli",
+            "Eteri"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_04",
+          "question": "La riduzione di Wolff-Kishner converte:",
+          "answers": [
+            "C=O → CH₂",
+            "C=C → CH₂-CH₂",
+            "COOH → CH₃",
+            "CHO → CH₂OH"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo005_05",
+          "question": "L'effetto α del carbonile è dovuto a:",
+          "answers": [
+            "Iperoniugazione",
+            "Risonanza",
+            "Induzione",
+            "Van der Waals"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_006",
+      "title": "Reazioni Radicaliche",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo006_01",
+          "question": "I radicali alchilici sono stabilizzati da:",
+          "answers": [
+            "Effetto induttivo",
+            "Iperoniugazione",
+            "Risonanza",
+            "Tutte le precedenti"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_02",
+          "question": "La clorurazione radicalica è:",
+          "answers": [
+            "Altamente selettiva",
+            "Poco selettiva",
+            "Stereoselettiva",
+            "Regiospecifica"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_03",
+          "question": "L'energia di dissociazione C-H terziario è:",
+          "answers": [
+            "Maggiore del primario",
+            "Minore del primario",
+            "Uguale",
+            "Non misurabile"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_04",
+          "question": "La bromrurazione con NBS è selettiva per posizioni:",
+          "answers": [
+            "Primarie",
+            "Secondarie",
+            "Terziarie",
+            "Allilihe/benziliche"
+          ],
+          "solution": 3,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo006_05",
+          "question": "Gli inibitori radicalici agiscono per:",
+          "answers": [
+            "Initiazione",
+            "Propagazione",
+            "Terminazione",
+            "Ossidazione"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_007",
+      "title": "Sintesi Asimmetrica",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo007_01",
+          "question": "La riduzione di Corey-Bakshi-Shibata usa:",
+          "answers": [
+            "NADH",
+            "Oxazaborolidine",
+            "BINAP",
+            "Tartrato"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_02",
+          "question": "L'eccesso enantiomerico si calcola come:",
+          "answers": [
+            "[α]/[α]max",
+            "|R-S|/(R+S)",
+            "R/S",
+            "(R-S)/2"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_03",
+          "question": "Il controllo di Cram predice stereoselecttvità in:",
+          "answers": [
+            "Alchilazioni",
+            "Addizioni nucleofile",
+            "Eliminazioni",
+            "Sostituzioni"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_04",
+          "question": "I catalizzatori Jacobsen sono complessi di:",
+          "answers": [
+            "Pd",
+            "Ru",
+            "Mn",
+            "Rh"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo007_05",
+          "question": "La risoluzione cinetica dinamica richiede:",
+          "answers": [
+            "Miscela racemica statica",
+            "Racemizzazione in situ",
+            "Due catalizzatori",
+            "Alte temperature"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_008",
+      "title": "Organometallica Avanzata",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo008_01",
+          "question": "Il ciclo catalitico Suzuki coinvolge:",
+          "answers": [
+            "Ossidazione-riduzione",
+            "Addizione ossidativa-eliminazione riduttiva",
+            "Solo sostituzione",
+            "β-eliminazione"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_02",
+          "question": "La metätesi olefinica è catalizzata da:",
+          "answers": [
+            "Carbeni di Ru",
+            "Fosfine di Pd",
+            "Sali di Cu",
+            "Idrizzi di Rh"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_03",
+          "question": "La regola dei 18 elettroni si applica a:",
+          "answers": [
+            "Tutti i metalli",
+            "Metalli di transizione",
+            "Solo Pd",
+            "Lantanidi"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_04",
+          "question": "Il coupling di Negishi usa:",
+          "answers": [
+            "Organozinco",
+            "Organoborano",
+            "Organostagno",
+            "Organosilicio"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo008_05",
+          "question": "L'attivazione C-H diretta evita:",
+          "answers": [
+            "Catalizzatori",
+            "Legami C-H",
+            "Pre-funzionalizzazione",
+            "Condizioni anidre"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_009",
+      "title": "Sintesi Totale Multistadio",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo009_01",
+          "question": "L'analisi retrosintetica identifica:",
+          "answers": [
+            "Solo il primo step",
+            "Trasformazioni chiave",
+            "Tutti i reagenti",
+            "Solo la resa"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_02",
+          "question": "Una disconnessione FGI è:",
+          "answers": [
+            "Functional Group Interconversion",
+            "Fast Group Integration",
+            "Final Group Isolation",
+            "First Generation Intermediate"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_03",
+          "question": "Il building block più versatile per la sintesi è:",
+          "answers": [
+            "Benzene",
+            "Acetone",
+            "Acetato",
+            "Acido acetico"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_04",
+          "question": "La protezione-deprotezione è necessaria per:",
+          "answers": [
+            "Aumentare resa",
+            "Controllo chemioselettività",
+            "Ridurre tempi",
+            "Evitare solventi"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo009_05",
+          "question": "L'economia atomica misura:",
+          "answers": [
+            "Resa in peso",
+            "Efficienza teorica",
+            "Incorporazione atomi nel prodotto",
+            "Purezza finale"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_organica_010",
+      "title": "Chimica Medicinale e Drug Design",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qo010_01",
+          "question": "La regola dei 5 di Lipinski predice:",
+          "answers": [
+            "Tossicità",
+            "Biodisponibilità orale",
+            "Emivita",
+            "Distribuzione"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_02",
+          "question": "Un farmaco agonista:",
+          "answers": [
+            "Blocca il recettore",
+            "Attiva il recettore",
+            "Neutralizza il ligando",
+            "Degrada l'enzima"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_03",
+          "question": "La costante di dissociazione Kd misura:",
+          "answers": [
+            "Velocità binding",
+            "Affinità binding",
+            "Concentrazione plasmatica",
+            "Clearance renale"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_04",
+          "question": "Il metabolismo di fase I comprende:",
+          "answers": [
+            "Solo ossidazione",
+            "Ossidazione, riduzione, idrolisi",
+            "Solo coniugazione",
+            "Solo metilazione"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qo010_05",
+          "question": "La progettazione structure-based drug design usa:",
+          "answers": [
+            "Solo saggi cellulari",
+            "Struttura 3D del target",
+            "Solo screening HTS",
+            "Analisi QSAR"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Medicina",
+      "subcategory": "Test Ingresso",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "organica123"
+    },
+    {
+      "id": "quiz_industriale_001",
+      "title": "Processi Industriali Base",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi001_01",
+          "question": "Il processo Haber-Bosch produce:",
+          "answers": [
+            "Metanolo",
+            "Ammoniaca",
+            "Acido solforico",
+            "Etilene"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi001_02",
+          "question": "La temperatura tipica del processo Haber è:",
+          "answers": [
+            "200°C",
+            "450°C",
+            "800°C",
+            "1000°C"
+          ],
+          "solution": 1,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi001_03",
+          "question": "Il catalizzatore del processo Haber è basato su:",
+          "answers": [
+            "Platino",
+            "Ferro",
+            "Nichel",
+            "Palladio"
+          ],
+          "solution": 1,
           "time": 15,
           "cooldown": 5,
           "image": ""
+        },
+        {
+          "id": "qi001_04",
+          "question": "Il cracking petrolifero serve per:",
+          "answers": [
+            "Aumentare ottani",
+            "Spezzare idrocarburi pesanti",
+            "Rimuovere zolfo",
+            "Additivare benzina"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi001_05",
+          "question": "La pressione nel processo Haber è circa:",
+          "answers": [
+            "1 atm",
+            "50 atm",
+            "200 atm",
+            "500 atm"
+          ],
+          "solution": 2,
+          "time": 20,
+          "cooldown": 5,
+          "image": ""
         }
       ],
-      "category": "cultura",
-      "subcategory": "generale"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
     },
     {
-      "id": "quiz_1758380632155",
-      "title": "dddd",
-      "subject": "dddd",
-      "created": "2025-09-20",
-      "author": "Manager",
+      "id": "quiz_industriale_002",
+      "title": "Processi Catalitici",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
       "questions": [
         {
-          "id": "q1758380632155_0",
-          "question": "dd",
+          "id": "qi002_01",
+          "question": "Il reforming catalitico produce:",
           "answers": [
-            "dd",
-            "dd",
-            "dd",
-            "dd",
-            "dddd",
-            "dddd"
+            "Olefine",
+            "Aromati",
+            "Paraffine",
+            "Alogeni"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_02",
+          "question": "Il catalizzatore del reforming è:",
+          "answers": [
+            "Fe/Al₂O₃",
+            "Pt/Al₂O₃",
+            "Ni/SiO₂",
+            "Cu/ZnO"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_03",
+          "question": "Il processo Fischer-Tropsch converte:",
+          "answers": [
+            "CO + H₂ → idrocarburi",
+            "CH₄ → H₂",
+            "NH₃ → fertilizzanti",
+            "SO₂ → H₂SO₄"
           ],
           "solution": 0,
-          "time": 15,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_04",
+          "question": "La rigenerazione di catalizzatori serve per:",
+          "answers": [
+            "Aumentare selectività",
+            "Rimuovere depositi carboniosi",
+            "Cambiare fase attiva",
+            "Ridurre temperatura"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi002_05",
+          "question": "Il numero di ottano misura:",
+          "answers": [
+            "Viscosità",
+            "Densità",
+            "Resistenza detonazione",
+            "Punto ebollizione"
+          ],
+          "solution": 2,
+          "time": 20,
           "cooldown": 5,
           "image": ""
         }
       ],
-      "category": "test",
-      "subcategory": "sistema"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
     },
     {
-      "id": "quiz_1758381328851",
-      "title": "Quiz rr ammoniaca",
-      "subject": "rr ammoniaca",
-      "created": "2025-09-20",
-      "author": "AI Generator",
+      "id": "quiz_industriale_003",
+      "title": "Separazioni Industriali",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
       "questions": [
         {
-          "id": "q1758381328851_0",
-          "question": "Qual è uno dei principali componenti del gas di sintesi?",
+          "id": "qi003_01",
+          "question": "La distillazione frazionata si basa su:",
           "answers": [
-            "H2",
-            "CO",
-            "CH4",
-            "N2",
-            "H2 + CO2"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_1",
-          "question": "Quale processo non produce idrogeno?",
-          "answers": [
-            "Steam Reforming",
-            "Gassificazione del carbone",
-            "Sintesi dell'ammoniaca",
-            "Cracking del petrolio",
-            "Elettrolisi dell'acqua"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_2",
-          "question": "Quale dei seguenti è un rischio della produzione di idrogeno?",
-          "answers": [
-            "Esplosività con l'aria",
-            "Emissione di SO2",
-            "Tossicità del CO",
-            "Elevate temperature",
-            "Tossicità dell'azoto"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_3",
-          "question": "Qual è la reazione dello steam reforming del gas naturale?",
-          "answers": [
-            "CH4 + H2O → CO + 3H2",
-            "2CH4 + O2 → 2CO + 4H2",
-            "FeO + H2O → Fe3O4 + H2",
-            "C + H2O → CO + H2",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_4",
-          "question": "Dove si usa l'idrogeno in ambito industriale?",
-          "answers": [
-            "Sintesi H2SO4",
-            "Sintesi NH3",
-            "Sintesi HNO3",
-            "Ossidazione parziale degli idrocarburi",
-            "Ossidazione dell'ammoniaca"
+            "Differenze di solubilità",
+            "Differenze di volatilità",
+            "Differenze di densità",
+            "Differenze di polarità"
           ],
           "solution": 1,
-          "time": 20,
+          "time": 25,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758381328851_5",
-          "question": "Qual è la funzione della desolforazione nello steam reforming?",
+          "id": "qi003_02",
+          "question": "L'efficienza di una colonna di distillazione dipende da:",
           "answers": [
-            "Aggiunge composti solforati",
-            "Elimina composti solforati",
-            "Modifica il pH",
-            "Rigenera il catalizzatore",
-            "Nessuna"
+            "Solo temperatura",
+            "Solo pressione",
+            "Numero piatti teorici",
+            "Solo velocità flusso"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi003_03",
+          "question": "L'estrazione liquido-liquido richiede:",
+          "answers": [
+            "Fasi miscibili",
+            "Fasi immiscibili",
+            "Stessa densità",
+            "Stesso pH"
           ],
           "solution": 1,
-          "time": 20,
+          "time": 25,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758381328851_6",
-          "question": "Cosa avviene durante il reforming primario nello steam reforming?",
+          "id": "qi003_04",
+          "question": "Il coefficiente di ripartizione K è:",
           "answers": [
-            "Gas naturale e vapore producono CO e H2",
-            "ZnO e H2S producono ZnS e acqua",
-            "CO2 e H2 producono metano",
-            "Ossidazione parziale del gas non convertito",
-            "Nessuna"
+            "C_organica/C_acquosa",
+            "C_acquosa/C_organica",
+            "C_totale/C_organica",
+            "Indipendente dalla concentrazione"
           ],
           "solution": 0,
-          "time": 20,
+          "time": 30,
           "cooldown": 5,
           "image": ""
         },
         {
-          "id": "q1758381328851_7",
-          "question": "Cosa si produce durante la metanazione nello steam reforming?",
+          "id": "qi003_05",
+          "question": "La cristallizzazione industriale è favorita da:",
           "answers": [
-            "CO e H2",
-            "ZnS e acqua",
-            "Metano e acqua",
-            "Ossidazione del gas naturale",
-            "Nessuna"
+            "Alta temperatura",
+            "Rapido raffreddamento",
+            "Raffreddamento controllato",
+            "Alta pressione"
           ],
           "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_8",
-          "question": "Quali sono le condizioni termodinamiche dello steam reforming?",
-          "answers": [
-            "28-40 bar e 700-900°C",
-            "280-400 bar e 700-900°C",
-            "28-40 bar e 150-250°C",
-            "Pressione negativa e temperatura ambiente",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_9",
-          "question": "Quali catalizzatori si usano nello steam reforming?",
-          "answers": [
-            "Acidi di Lewis",
-            "Basi di Bronsted",
-            "Metalli di transizione su allumina",
-            "Ammine organiche",
-            "Nessuno"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_10",
-          "question": "Cosa descrive la legge di Hess?",
-          "answers": [
-            "Variazione di entalpia",
-            "Variazione di entropia",
-            "Energia libera della reazione",
-            "Modifica dell'equilibrio chimico",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_11",
-          "question": "Cosa indica un ΔH°rT negativo?",
-          "answers": [
-            "Reazione esotermica",
-            "Reazione endotermica",
-            "Reazione spontanea",
-            "Variazione di disordine",
-            "Misura del lavoro prodotto"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_12",
-          "question": "Cosa indica un ΔG°rT negativo?",
-          "answers": [
-            "Misura di lavoro prodotto",
-            "Reazione spontanea",
-            "Variazione di disordine",
-            "Reazione non spontanea",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_13",
-          "question": "Come si calcola l'energia libera di una trasformazione?",
-          "answers": [
-            "ΔG°rT = ΔH°rT + TΔS°rT",
-            "ΔG°rT = ΔH°rT – TΔS°rT",
-            "ΔG°rT = TΔH°rT – ΔS°rT",
-            "ΔG°rT = – ΔH°rT /RT + ΔS°rT/R",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_14",
-          "question": "Cosa definisce l'entalpia standard di formazione?",
-          "answers": [
-            "Reazione di formazione a partire da composti",
-            "Reazione di polimerizzazione",
-            "Reazione di formazione a partire da elementi",
-            "Reazione di formazione a partire da elementi nel loro stato di riferimento",
-            "Nessuna"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_15",
-          "question": "In quale settore si usa l'ammoniaca?",
-          "answers": [
-            "Fertilizzanti",
-            "Esplosivi",
-            "Polimeri",
-            "Refrigerazione",
-            "Tutti"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_16",
-          "question": "Qual è la natura della sintesi dell'ammoniaca?",
-          "answers": [
-            "Endotermica a bassa pressione",
-            "Endotermica ad alta pressione",
-            "Esotermica a conversione completa",
-            "Esotermica a bassa pressione",
-            "Esotermica ad alta pressione"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_17",
-          "question": "A 20°C, l'ammoniaca è:",
-          "answers": [
-            "Gas sempre",
-            "Liquido sempre",
-            "Solido sempre",
-            "Vapore a 1 bar, liquido a 10 bar",
-            "Supercritica"
-          ],
-          "solution": 3,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_18",
-          "question": "Il ΔG°rT della sintesi dell'ammoniaca è:",
-          "answers": [
-            "Sempre positivo",
-            "Sempre negativo",
-            "Dipende dalla temperatura",
-            "Negativo a temperature inferiori a 455K",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_19",
-          "question": "Per aumentare la conversione della sintesi dell'ammoniaca, la pressione è mantenuta:",
-          "answers": [
-            "Negativa",
-            "150 atmosfere",
-            "Tra 30 e 40 bar",
-            "Superior a 1000 bar",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_20",
-          "question": "Cosa ostacola l'applicazione industriale della sintesi dell'ammoniaca?",
-          "answers": [
-            "Reazione esotermica troppo veloce",
-            "Reazione endotermica lenta",
-            "Alta energia di attivazione",
-            "Reazione di equilibrio",
-            "Bassa energia di attivazione"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_21",
-          "question": "Perché è necessario un catalizzatore nella sintesi dell'ammoniaca?",
-          "answers": [
-            "Riduce l'entalpia di reazione",
-            "Consente temperature più basse",
-            "Spinge l'equilibrio verso i prodotti",
-            "Aumenta l'entalpia di reazione",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_22",
-          "question": "Qual è il catalizzatore tradizionale per la sintesi dell'ammoniaca?",
-          "answers": [
-            "Metalli nobili su allumina",
-            "K2O poroso",
-            "Fe metallico con promotori",
-            "Catalizzatori metallocenici",
-            "Fe altamente poroso"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_23",
-          "question": "A quale temperatura opera il reattore di sintesi dell'ammoniaca?",
-          "answers": [
-            "Sotto 180°C",
-            "Sopra 1000°C",
-            "Tra 350°C e 500°C",
-            "A temperatura ambiente",
-            "Tra 750°C e 900°C"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_24",
-          "question": "Cosa si intende per operazione di quench?",
-          "answers": [
-            "Abbassare temperatura con reagenti freschi",
-            "Alzare temperatura con reagenti preriscaldati",
-            "Abbassare temperatura con acqua fredda",
-            "Abbassare temperatura con ammoniaca liquida",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_25",
-          "question": "Come si controlla la temperatura nei letti catalitici?",
-          "answers": [
-            "Scambio con acqua di raffreddamento",
-            "Scambio tra reagenti e miscela fresca",
-            "Aggiunta di acqua",
-            "Uso di ammoniaca liquida",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_26",
-          "question": "Qual è la corretta sequenza delle fasi nel ciclo di sintesi dell'ammoniaca?",
-          "answers": [
-            "Separazione, Reazione, Compressione, Riciclo",
-            "Riciclo, Compressione, Reazione, Separazione",
-            "Reazione, Compressione, Separazione, Riciclo",
-            "Compressione, Reazione, Separazione, Riciclo",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_27",
-          "question": "Cosa comporta la presenza di inerti nel gas di sintesi?",
-          "answers": [
-            "Diminuisce la resa all'equilibrio",
-            "Aumenta la resa all'equilibrio",
-            "Diminuisce la resa a pressione maggiore",
-            "Diminuisce la resa a pressione superiore",
-            "Non influenza la resa"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_28",
-          "question": "Perché la sintesi dell'ammoniaca porta a conversione parziale?",
-          "answers": [
-            "Bassa energia di attivazione",
-            "Pericoli di concentrazioni elevate",
-            "Alta energia di attivazione",
-            "Bassa temperatura sfavorita",
-            "Nessuna"
-          ],
-          "solution": 1,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_29",
-          "question": "Come avviene la separazione dell'ammoniaca dai reagenti?",
-          "answers": [
-            "Refrigerazione con acqua e ammoniaca",
-            "Refrigerazione con elio",
-            "Refrigerazione con acqua e separatore",
-            "Refrigerazione con ammoniaca liquida",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_30",
-          "question": "Quali sono i rischi nella produzione di ammoniaca?",
-          "answers": [
-            "Stoccaggio di ammoniaca",
-            "Tossicità dell'ammoniaca",
-            "Apparecchiature in pressione",
-            "Infiammabilità del gas di sintesi",
-            "Tutti"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_31",
-          "question": "Perché il catalizzatore della sintesi dell'ammoniaca è definito piroforico?",
-          "answers": [
-            "Deve essere incendiato con ossigeno",
-            "Si tratta ad alta temperatura",
-            "Si incendia facilmente",
-            "Incendia il gas di sintesi",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_32",
-          "question": "Cosa comporta il surriscaldamento del catalizzatore nella sintesi dell'ammoniaca?",
-          "answers": [
-            "Maggiore resa di reazione",
-            "Non cambia la resa",
-            "Accorcia vita del catalizzatore",
-            "Rigenera il catalizzatore",
-            "Nessuna"
-          ],
-          "solution": 2,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_33",
-          "question": "Qual è il risultato della reazione di sintesi dell'ammoniaca?",
-          "answers": [
-            "NH3",
-            "N2 + H2",
-            "N2H4",
-            "H2O",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_34",
-          "question": "Quali sono le principali applicazioni dell'ammoniaca?",
-          "answers": [
-            "Fertilizzanti",
-            "Refrigerazione",
-            "Esplosivi",
-            "Polimeri",
-            "Tutte"
-          ],
-          "solution": 4,
-          "time": 20,
-          "cooldown": 5,
-          "image": ""
-        },
-        {
-          "id": "q1758381328851_35",
-          "question": "Quale tecnica è usata per aumentare l'efficienza della sintesi dell'ammoniaca?",
-          "answers": [
-            "Aumentare la pressione",
-            "Ridurre la temperatura",
-            "Aggiungere inerti",
-            "Aumentare il volume",
-            "Nessuna"
-          ],
-          "solution": 0,
-          "time": 20,
+          "time": 25,
           "cooldown": 5,
           "image": ""
         }
       ],
-      "category": "scienze",
-      "subcategory": "chimica"
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
+    },
+    {
+      "id": "quiz_industriale_004",
+      "title": "Reattori Chimici",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi004_01",
+          "question": "Un reattore CSTR opera in:",
+          "answers": [
+            "Batch",
+            "Continuo perfettamente miscelato",
+            "Flusso pistone",
+            "Semi-batch"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_02",
+          "question": "Il tempo di residenza in un reattore continuo è:",
+          "answers": [
+            "V/Q",
+            "Q/V",
+            "V×Q",
+            "Q-V"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_03",
+          "question": "La conversione X si definisce come:",
+          "answers": [
+            "(C₀-C)/C",
+            "(C₀-C)/C₀",
+            "C/C₀",
+            "(C-C₀)/C₀"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_04",
+          "question": "Il numero di Damköhler confronta:",
+          "answers": [
+            "Reazione vs diffusione",
+            "Reazione vs convezione",
+            "Convezione vs diffusione",
+            "Calore vs massa"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi004_05",
+          "question": "Un reattore tubolare (PFR) assume:",
+          "answers": [
+            "Miscelamento radiale nullo",
+            "Miscelamento assiale nullo",
+            "Flusso pistone",
+            "Tutte le precedenti"
+          ],
+          "solution": 3,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
+    },
+    {
+      "id": "quiz_industriale_005",
+      "title": "Controllo di Processo",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi005_01",
+          "question": "Un controller PID combina azioni:",
+          "answers": [
+            "Proporzionale + Integrale + Derivativa",
+            "Pressione + Intensità + Densità",
+            "Portata + Temperatura + Densità",
+            "Processo + Input + Display"
+          ],
+          "solution": 0,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_02",
+          "question": "L'azione integrale serve per:",
+          "answers": [
+            "Velocità di risposta",
+            "Eliminare offset",
+            "Stabilità",
+            "Ridurre overshoot"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_03",
+          "question": "Un sistema in feedback:",
+          "answers": [
+            "Misura solo input",
+            "Misura solo output",
+            "Misura output e corregge input",
+            "Non misura nulla"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_04",
+          "question": "La funzione di trasferimento G(s) nel dominio di Laplace rappresenta:",
+          "answers": [
+            "Input/Output",
+            "Output/Input",
+            "Errore/Setpoint",
+            "Disturbo/Correzione"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi005_05",
+          "question": "Il guadagno critico Kc in un sistema è:",
+          "answers": [
+            "Massimo guadagno stabile",
+            "Guadagno per oscillazioni sostenute",
+            "Minimo guadagno efficace",
+            "Guadagno nominale"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
+    },
+    {
+      "id": "quiz_industriale_006",
+      "title": "Operazioni Unitarie Avanzate",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi006_01",
+          "question": "Il numero di Reynolds caratterizza:",
+          "answers": [
+            "Trasferimento di calore",
+            "Regime di flusso",
+            "Trasferimento di massa",
+            "Reazione chimica"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_02",
+          "question": "Il coefficiente di scambio termico h dipende da:",
+          "answers": [
+            "Solo temperatura",
+            "Solo velocità",
+            "Numero di Nusselt",
+            "Solo pressione"
+          ],
+          "solution": 2,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_03",
+          "question": "La caduta di pressione in un letto impaccato segue:",
+          "answers": [
+            "Legge di Darcy",
+            "Equazione di Ergun",
+            "Legge di Fick",
+            "Equazione di Arrhenius"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_04",
+          "question": "La diffusività di Knudsen dipende da:",
+          "answers": [
+            "Pressione totale",
+            "Diametro pori",
+            "Concentrazione",
+            "Viscosità"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi006_05",
+          "question": "Il modulo di Thiele φ confronta:",
+          "answers": [
+            "Reazione vs diffusione",
+            "Calore vs massa",
+            "Convezione vs conduzione",
+            "Assorbimento vs desorbimento"
+          ],
+          "solution": 0,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
+    },
+    {
+      "id": "quiz_industriale_007",
+      "title": "Sicurezza e Analisi Rischi",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi007_01",
+          "question": "L'analisi HAZOP identifica:",
+          "answers": [
+            "Solo esplosioni",
+            "Deviazioni e loro conseguenze",
+            "Solo inquinamento",
+            "Solo costi"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_02",
+          "question": "Il limite inferiore di esplosività (LEL) è:",
+          "answers": [
+            "Concentrazione massima combustibile",
+            "Concentrazione minima per accensione",
+            "Temperatura di autoaccensione",
+            "Pressione di vapore"
+          ],
+          "solution": 1,
+          "time": 30,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_03",
+          "question": "Un sistema SIL 2 ha probabilità di fallimento:",
+          "answers": [
+            "10⁻¹ - 10⁻²",
+            "10⁻² - 10⁻³",
+            "10⁻³ - 10⁻⁴",
+            "10⁻⁴ - 10⁻⁵"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_04",
+          "question": "La valvola di sicurezza PSV si apre quando:",
+          "answers": [
+            "Temperatura alta",
+            "Pressione > set point",
+            "Livello basso",
+            "Portata alta"
+          ],
+          "solution": 1,
+          "time": 25,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi007_05",
+          "question": "L'indice DOW Fire & Explosion considera:",
+          "answers": [
+            "Solo infiammabilità",
+            "Materiali + processi + controlli",
+            "Solo tossicità",
+            "Solo corrosività"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
+    },
+    {
+      "id": "quiz_industriale_008",
+      "title": "Ottimizzazione Processi",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi008_01",
+          "question": "Il metodo dei moltiplicatori di Lagrange risolve:",
+          "answers": [
+            "Equazioni differenziali",
+            "Ottimizzazione vincolata",
+            "Bilanci di massa",
+            "Trasferimento di calore"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_02",
+          "question": "L'integrazione di calore (heat integration) usa:",
+          "answers": [
+            "Solo riscaldatori",
+            "Solo refrigeratori",
+            "Pinch analysis",
+            "Solo isolamento"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_03",
+          "question": "La temperatura di pinch divide:",
+          "answers": [
+            "Zona di riscaldamento/raffreddamento",
+            "Reattori/separatori",
+            "Liquido/vapore",
+            "Catalizzatori/inerti"
+          ],
+          "solution": 0,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_04",
+          "question": "L'algoritmo genetico è utile per:",
+          "answers": [
+            "Bilanci stechiometrici",
+            "Ottimizzazione non-lineare",
+            "Calcoli termodinamici",
+            "Analisi spettroscopiche"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi008_05",
+          "question": "Il costo totale annualizzato (TAC) include:",
+          "answers": [
+            "Solo OPEX",
+            "Solo CAPEX",
+            "CAPEX annualizzato + OPEX",
+            "Solo energia"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
+    },
+    {
+      "id": "quiz_industriale_009",
+      "title": "Processi Sostenibili",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi009_01",
+          "question": "Il fattore E (environmental factor) misura:",
+          "answers": [
+            "Efficienza energetica",
+            "kg rifiuti/kg prodotto",
+            "Emissioni CO₂",
+            "Consumo acqua"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_02",
+          "question": "I 12 principi della Green Chemistry includono:",
+          "answers": [
+            "Solo catalisi",
+            "Prevenzione rifiuti + catalisi + rinnovabilità",
+            "Solo energia",
+            "Solo sicurezza"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_03",
+          "question": "L'analisi LCA (Life Cycle Assessment) valuta:",
+          "answers": [
+            "Solo produzione",
+            "Solo uso",
+            "Dall'estrazione al fine vita",
+            "Solo trasporto"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_04",
+          "question": "I solventi ionici sono vantaggiosi per:",
+          "answers": [
+            "Bassa viscosità",
+            "Pressione vapore trascurabile",
+            "Basso costo",
+            "Alta tossicità"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi009_05",
+          "question": "La bioraffineria integrata produce:",
+          "answers": [
+            "Solo biocarburanti",
+            "Solo biomateriali",
+            "Carburanti + chemicals + materiali",
+            "Solo energia elettrica"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
+    },
+    {
+      "id": "quiz_industriale_010",
+      "title": "Industria 4.0 e Digitalizzazione",
+      "subject": "Chimica",
+      "created": "2025-09-28",
+      "author": "ChemArena System",
+      "questions": [
+        {
+          "id": "qi010_01",
+          "question": "I digital twins in processi chimici sono:",
+          "answers": [
+            "Backup dei dati",
+            "Repliche virtuali real-time",
+            "Software di controllo",
+            "Sensori wireless"
+          ],
+          "solution": 1,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_02",
+          "question": "Il machine learning predittivo può ottimizzare:",
+          "answers": [
+            "Solo temperatura",
+            "Solo pressione",
+            "Parametri multipli simultaneamente",
+            "Solo catalizzatori"
+          ],
+          "solution": 2,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_03",
+          "question": "L'edge computing in impianti chimici serve per:",
+          "answers": [
+            "Elaborazione locale real-time",
+            "Solo storage dati",
+            "Solo comunicazione",
+            "Solo backup"
+          ],
+          "solution": 0,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_04",
+          "question": "I sensori IoT wireless comunicano via:",
+          "answers": [
+            "Solo cablato",
+            "WiFi + LoRaWAN + 5G",
+            "Solo WiFi",
+            "Solo Bluetooth"
+          ],
+          "solution": 1,
+          "time": 35,
+          "cooldown": 5,
+          "image": ""
+        },
+        {
+          "id": "qi010_05",
+          "question": "La cybersecurity OT (Operational Technology) protegge:",
+          "answers": [
+            "Solo uffici",
+            "Solo server",
+            "Sistemi di controllo industriale",
+            "Solo database"
+          ],
+          "solution": 2,
+          "time": 40,
+          "cooldown": 5,
+          "image": ""
+        }
+      ],
+      "category": "Scienze",
+      "subcategory": "Chimica",
+      "tags": [],
+      "difficulty": "Medio",
+      "password": "industriale123"
     }
   ],
-  "images": [],
   "metadata": {
-    "version": "1.1",
-    "lastUpdate": "2025-09-20",
-    "totalQuizzes": 28,
-    "totalQuestions": 210
+    "version": "2.0.0",
+    "lastUpdate": "2025-09-28",
+    "totalQuizzes": 52,
+    "totalQuestions": 283
   }
 }

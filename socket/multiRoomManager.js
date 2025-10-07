@@ -194,6 +194,7 @@ class MultiRoomManager {
       gameState.players.push({
         id: playerId,
         ...playerData,
+        points: 0, // ✅ INIZIALIZZA PUNTI A 0
         joinedAt: Date.now()
       });
 

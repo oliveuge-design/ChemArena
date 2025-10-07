@@ -1045,6 +1045,982 @@
           "slowestAnswer": null
         }
       }
+    },
+    {
+      "id": "game_1759731547079_q6gipsh3o",
+      "timestamp": "2025-10-06T06:19:07.079Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "standard",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 502072,
+        "totalPlayers": 3,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "frullo",
+          "fullName": "frullo",
+          "score": 0,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 502072,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "stallo",
+          "fullName": "stallo",
+          "score": 0,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 2,
+          "timeSpent": 502072,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "trallo",
+          "fullName": "trallo",
+          "score": 0,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 3,
+          "timeSpent": 502072,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 0,
+        "medianScore": 0,
+        "minScore": 0,
+        "maxScore": 0,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759733345297_l8ftjxf1p",
+      "timestamp": "2025-10-06T06:49:05.297Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "standard",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 131700,
+        "totalPlayers": 4,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "dretto",
+          "fullName": "dretto",
+          "score": 1450,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 131700,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "fretto",
+          "fullName": "fretto",
+          "score": 1419,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 2,
+          "timeSpent": 131700,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "polletto",
+          "fullName": "polletto",
+          "score": 1401,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 3,
+          "timeSpent": 131700,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "frtuuioo",
+          "fullName": "frtuuioo",
+          "score": 1361,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 4,
+          "timeSpent": 131700,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 1407.75,
+        "medianScore": 1419,
+        "minScore": 1361,
+        "maxScore": 1450,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759734294833_g93zxizuo",
+      "timestamp": "2025-10-06T07:04:54.833Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "standard",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 72818,
+        "totalPlayers": 3,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "grulo",
+          "fullName": "grulo",
+          "score": 450,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 3,
+          "timeSpent": 72818,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "stretto",
+          "fullName": "stretto",
+          "score": 866,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 2,
+          "timeSpent": 72818,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "marto",
+          "fullName": "marto",
+          "score": 952,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 72818,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 756,
+        "medianScore": 866,
+        "minScore": 450,
+        "maxScore": 952,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759752363524_kdibf6q63",
+      "timestamp": "2025-10-06T12:06:03.524Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "appearing",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 75028,
+        "totalPlayers": 1,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "fretto",
+          "fullName": "fretto",
+          "score": 0,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 75029,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 0,
+        "medianScore": 0,
+        "minScore": 0,
+        "maxScore": 0,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759753201195_aeway42bb",
+      "timestamp": "2025-10-06T12:20:01.195Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "appearing",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 75038,
+        "totalPlayers": 2,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "gisallo",
+          "fullName": "gisallo",
+          "score": 0,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 75038,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "frullo",
+          "fullName": "frullo",
+          "score": 0,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 2,
+          "timeSpent": 75038,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 0,
+        "medianScore": 0,
+        "minScore": 0,
+        "maxScore": 0,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759755197812_iskzwyvt1",
+      "timestamp": "2025-10-06T12:53:17.812Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "appearing",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 75021,
+        "totalPlayers": 1,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "giollo",
+          "fullName": "giollo",
+          "score": 0,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 75021,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 0,
+        "medianScore": 0,
+        "minScore": 0,
+        "maxScore": 0,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759760720396_xrsmqs990",
+      "timestamp": "2025-10-06T14:25:20.396Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_4",
+        "quizTitle": "Tecnologia e Informatica",
+        "subject": "Informatica",
+        "difficulty": "media",
+        "totalQuestions": 5,
+        "gameMode": "appearing",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 103253,
+        "totalPlayers": 1,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "pollo",
+          "fullName": "pollo",
+          "score": 1886,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 103253,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 1886,
+        "medianScore": 1886,
+        "minScore": 1886,
+        "maxScore": 1886,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Chi ha fondato Microsoft?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Cosa significa 'WWW'?",
+            "correctAnswer": 0,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 2,
+            "question": "In quale anno è stato inventato Internet?",
+            "correctAnswer": 0,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 3,
+            "question": "Qual è il linguaggio di programmazione più usato nel 2024?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 4,
+            "question": "Cosa significa 'AI' in informatica?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759761343762_wpunbgdoq",
+      "timestamp": "2025-10-06T14:35:43.762Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1758916249334",
+        "quizTitle": "Quiz Microbiologia",
+        "subject": "Microbiologia",
+        "difficulty": "media",
+        "totalQuestions": 10,
+        "gameMode": "appearing",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 256358,
+        "totalPlayers": 1,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "porco",
+          "fullName": "porco",
+          "score": 1724,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 256358,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 1724,
+        "medianScore": 1724,
+        "minScore": 1724,
+        "maxScore": 1724,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Qual è la funzione principale del condensatore in un microscopio ottico?",
+            "correctAnswer": 0,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Qual è il rapporto di ingrandimento totale se si utilizza un obiettivo 40x e un oculare 10x?",
+            "correctAnswer": 0,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 2,
+            "question": "Quale delle seguenti affermazioni è vera riguardo all'uso del microscopio?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 3,
+            "question": "Qual è la dimensione ideale delle cellule di lievito per l'osservazione al microscopio?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 4,
+            "question": "Qual è il segno di vitalità delle cellule di lievito osservate al microscopio?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 5,
+            "question": "Cosa potrebbe indicare un'alta percentuale di cellule blu dopo la colorazione con blu di metilene?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 6,
+            "question": "Quale metodo è consigliato per la preparazione della sospensione di lievito?",
+            "correctAnswer": 2,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 7,
+            "question": "Qual è il tempo ottimale di contatto per la colorazione con blu di metilene?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 8,
+            "question": "Cosa fare se il campo visivo è troppo scuro durante l'osservazione?",
+            "correctAnswer": 0,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 9,
+            "question": "Quale preparazione è necessaria per un vetrino a fresco con lievito?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759765710339_kevc575g4",
+      "timestamp": "2025-10-06T15:48:30.339Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "appearing",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 42787,
+        "totalPlayers": 1,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "carlo",
+          "fullName": "carlo",
+          "score": 1071,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 42787,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 1071,
+        "medianScore": 1071,
+        "minScore": 1071,
+        "maxScore": 1071,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
+    },
+    {
+      "id": "game_1759767838658_8iukv6s4e",
+      "timestamp": "2025-10-06T16:23:58.658Z",
+      "gameDate": "2025-10-06",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "appearing",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 45779,
+        "totalPlayers": 2,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "frullo",
+          "fullName": "frullo",
+          "score": 1014,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 45779,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        },
+        {
+          "studentId": null,
+          "nickname": "derrt",
+          "fullName": "derrt",
+          "score": 983,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 2,
+          "timeSpent": 45779,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 998.5,
+        "medianScore": 1014,
+        "minScore": 983,
+        "maxScore": 1014,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
     }
   ],
   "relationships": {
@@ -1123,11 +2099,11 @@
   },
   "metadata": {
     "version": "2.0",
-    "lastUpdate": "2025-09-23",
+    "lastUpdate": "2025-10-06",
     "totalStudents": 10,
     "totalClasses": 8,
     "totalTeachers": 1,
-    "totalGameResults": 3,
+    "totalGameResults": 13,
     "totalRelationships": 5,
     "migrationDate": "2025-09-20T19:29:03.845Z",
     "structure": "enhanced_many_to_many"
