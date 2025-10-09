@@ -162,53 +162,6 @@ export default function Home() {
         {/* Contenuto principale */}
         <main className="flex-1 flex items-center justify-center px-6">
           <div className="w-full max-w-6xl mx-auto">
-            
-            {/* Modelli Atomici Centrali */}
-            <div className="atomic-center">
-              {/* Atomo Principale - Idrogeno */}
-              <div className="atom atom-hydrogen">
-                <div className="nucleus nucleus-hydrogen">H</div>
-                <div className="electron-orbit orbit-1">
-                  <div className="electron electron-1"></div>
-                </div>
-              </div>
-
-              {/* Doppia Elica DNA Animata - Sinistra */}
-              <div className="dna-helix dna-left">
-                <div className="dna-strand strand-1">
-                  <div className="base-pair bp-1"><span>A-T</span></div>
-                  <div className="base-pair bp-2"><span>G-C</span></div>
-                  <div className="base-pair bp-3"><span>C-G</span></div>
-                  <div className="base-pair bp-4"><span>T-A</span></div>
-                </div>
-                <div className="dna-strand strand-2">
-                  <div className="base-pair bp-5"><span>G-C</span></div>
-                  <div className="base-pair bp-6"><span>A-T</span></div>
-                  <div className="base-pair bp-7"><span>T-A</span></div>
-                  <div className="base-pair bp-8"><span>C-G</span></div>
-                </div>
-              </div>
-
-              {/* Cristallo Quantico Pulsante - Destra */}
-              <div className="quantum-crystal">
-                <div className="crystal-core">
-                  <div className="energy-level level-1"></div>
-                  <div className="energy-level level-2"></div>
-                  <div className="energy-level level-3"></div>
-                  <div className="quantum-particle particle-a"></div>
-                  <div className="quantum-particle particle-b"></div>
-                  <div className="quantum-particle particle-c"></div>
-                </div>
-                <div className="crystal-glow"></div>
-              </div>
-            </div>
-
-            {/* Effetto Pulviscolo Particelle Cadenti */}
-            <div className="particle-dust">
-              {Array.from({length: 10}, (_, i) => (
-                <div key={i} className={`dust-particle dust-${i + 1}`}></div>
-              ))}
-            </div>
 
             {/* Banner di selezione al centro */}
             <div className="mt-16 mb-8 selection-area">
