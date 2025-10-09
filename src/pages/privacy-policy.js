@@ -3,6 +3,11 @@ import { useRouter } from "next/router"
 import Button from "@/components/Button"
 
 export default function PrivacyPolicyPage() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const router = useRouter()
   const [showTOC, setShowTOC] = useState(false)
   const [isLargeScreen, setIsLargeScreen] = useState(false)

@@ -1,11 +1,14 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-
 import TronButton from '@/components/TronButton'
 import PWAInstallButton from '@/components/PWAInstallButton'
-import AnimatedLeaderboard from '@/components/AnimatedLeaderboard'
 
 export default function Home() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const router = useRouter()
   const [showQuickJoin, setShowQuickJoin] = useState(false)
   const [showStudentOptions, setShowStudentOptions] = useState(false)
@@ -160,6 +163,45 @@ export default function Home() {
         <main className="flex-1 flex items-center justify-center px-6">
           <div className="w-full max-w-6xl mx-auto">
             
+            {/* Modelli Atomici Centrali */}
+            <div className="atomic-center">
+              {/* Atomo Principale - Idrogeno */}
+              <div className="atom atom-hydrogen">
+                <div className="nucleus nucleus-hydrogen">H</div>
+                <div className="electron-orbit orbit-1">
+                  <div className="electron electron-1"></div>
+                </div>
+              </div>
+
+              {/* Doppia Elica DNA Animata - Sinistra */}
+              <div className="dna-helix dna-left">
+                <div className="dna-strand strand-1">
+                  <div className="base-pair bp-1"><span>A-T</span></div>
+                  <div className="base-pair bp-2"><span>G-C</span></div>
+                  <div className="base-pair bp-3"><span>C-G</span></div>
+                  <div className="base-pair bp-4"><span>T-A</span></div>
+                </div>
+                <div className="dna-strand strand-2">
+                  <div className="base-pair bp-5"><span>G-C</span></div>
+                  <div className="base-pair bp-6"><span>A-T</span></div>
+                  <div className="base-pair bp-7"><span>T-A</span></div>
+                  <div className="base-pair bp-8"><span>C-G</span></div>
+                </div>
+              </div>
+
+              {/* Cristallo Quantico Pulsante - Destra */}
+              <div className="quantum-crystal">
+                <div className="crystal-core">
+                  <div className="energy-level level-1"></div>
+                  <div className="energy-level level-2"></div>
+                  <div className="energy-level level-3"></div>
+                  <div className="quantum-particle particle-a"></div>
+                  <div className="quantum-particle particle-b"></div>
+                  <div className="quantum-particle particle-c"></div>
+                </div>
+                <div className="crystal-glow"></div>
+              </div>
+            </div>
 
             {/* Effetto Pulviscolo Particelle Cadenti */}
             <div className="particle-dust">
@@ -189,6 +231,7 @@ export default function Home() {
                   href="/teacher-dashboard"
                   variant="primary"
                 />
+                
                 <TronButton
                   title="STUDENTE"
                   subtitle="Partecipa o registrati"
@@ -196,15 +239,15 @@ export default function Home() {
                   onClick={() => setShowStudentOptions(!showStudentOptions)}
                   variant="secondary"
                 />
+                
                 <TronButton
                   title="QUIZ LIBERO"
-                  subtitle="Quiz pubblici gratuiti"
-                  icon="🎮"
-                  href="/quiz-libero"
+                  subtitle="Modalità di pratica"
+                  icon="🧪"
+                  href="/dashboard"
                   variant="accent"
                 />
               </div>
-
               
               {/* Accesso rapido studente */}
               {showQuickJoin && (
@@ -696,6 +739,358 @@ export default function Home() {
           5%, 85% { opacity: 0.3; }
         }
 
+        /* === MODELLI ATOMICI CENTRALI === */
+        .atomic-center {
+          position: relative;
+          width: 100%;
+          height: 350px;
+          margin: 2rem 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 120px;
+          pointer-events: none;
+        }
+
+        .atom {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .atom-hydrogen {
+          transform: scale(1.56);
+          animation: atomFloat 8s ease-in-out infinite;
+        }
+
+        .dna-left {
+          transform: scale(1.3);
+          animation: atomFloat 12s ease-in-out infinite 2s;
+        }
+
+        .quantum-crystal {
+          transform: scale(1.2);
+          animation: atomFloat 8s ease-in-out infinite 4s;
+        }
+
+        @keyframes atomFloat {
+          0%, 100% {
+            transform: translateY(0px) scale(var(--scale, 1));
+          }
+          50% {
+            transform: translateY(-15px) scale(var(--scale, 1));
+          }
+        }
+
+        .nucleus {
+          position: relative;
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Orbitron', monospace;
+          font-weight: bold;
+          font-size: 20px;
+          z-index: 10;
+        }
+
+        .nucleus-hydrogen {
+          background: radial-gradient(circle, #ff6b6b, #ee5a24);
+          color: white;
+          box-shadow:
+            0 0 20px #ff6b6b,
+            inset 0 0 10px rgba(255, 255, 255, 0.3);
+          animation: nucleusGlow 3s ease-in-out infinite;
+        }
+
+        /* === DNA HELIX ANIMATA === */
+        .dna-helix {
+          position: relative;
+          width: 120px;
+          height: 200px;
+          perspective: 1000px;
+          transform-style: preserve-3d;
+        }
+
+        .dna-strand {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          animation: dnaRotate 6s linear infinite;
+        }
+
+        .strand-2 {
+          animation-delay: -3s;
+        }
+
+        @keyframes dnaRotate {
+          0% { transform: rotateY(0deg); }
+          100% { transform: rotateY(360deg); }
+        }
+
+        .base-pair {
+          position: absolute;
+          width: 100px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          backdrop-filter: blur(10px);
+          animation: basePairPulse 3s ease-in-out infinite;
+        }
+
+        .base-pair span {
+          font-family: 'Orbitron', monospace;
+          font-size: 10px;
+          font-weight: bold;
+          color: white;
+          text-shadow: 0 0 5px currentColor;
+        }
+
+        .bp-1, .bp-5 {
+          top: 10%;
+          background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+          animation-delay: 0s;
+        }
+        .bp-2, .bp-6 {
+          top: 30%;
+          background: linear-gradient(90deg, #4ecdc4, #00d2d3);
+          animation-delay: 0.5s;
+        }
+        .bp-3, .bp-7 {
+          top: 50%;
+          background: linear-gradient(90deg, #45b7d1, #3867d6);
+          animation-delay: 1s;
+        }
+        .bp-4, .bp-8 {
+          top: 70%;
+          background: linear-gradient(90deg, #fd79a8, #e84393);
+          animation-delay: 1.5s;
+        }
+
+        @keyframes basePairPulse {
+          0%, 100% {
+            opacity: 0.8;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+          }
+          50% {
+            opacity: 1;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+          }
+        }
+
+        /* === CRISTALLO QUANTICO === */
+        .quantum-crystal {
+          position: relative;
+          width: 140px;
+          height: 140px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .crystal-core {
+          position: relative;
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+          border-radius: 50%;
+          animation: quantumSpin 4s linear infinite;
+          box-shadow:
+            0 0 30px rgba(0, 255, 255, 0.5),
+            inset 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes quantumSpin {
+          0% { transform: rotate(0deg) scale(1); }
+          25% { transform: rotate(90deg) scale(1.1); }
+          50% { transform: rotate(180deg) scale(1); }
+          75% { transform: rotate(270deg) scale(1.1); }
+          100% { transform: rotate(360deg) scale(1); }
+        }
+
+        .energy-level {
+          position: absolute;
+          border: 2px solid;
+          border-radius: 50%;
+          animation: energyPulse linear infinite;
+        }
+
+        .level-1 {
+          width: 100px;
+          height: 100px;
+          top: -10px;
+          left: -10px;
+          border-color: #00ffff;
+          animation-duration: 3s;
+        }
+
+        .level-2 {
+          width: 120px;
+          height: 120px;
+          top: -20px;
+          left: -20px;
+          border-color: #ff00ff;
+          animation-duration: 4s;
+          animation-delay: -1s;
+        }
+
+        .level-3 {
+          width: 140px;
+          height: 140px;
+          top: -30px;
+          left: -30px;
+          border-color: #ffff00;
+          animation-duration: 5s;
+          animation-delay: -2s;
+        }
+
+        @keyframes energyPulse {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.05);
+          }
+        }
+
+        .quantum-particle {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          animation: quantumOrbit linear infinite;
+        }
+
+        .particle-a {
+          background: #00ffff;
+          box-shadow: 0 0 10px #00ffff;
+          animation-duration: 2s;
+          animation-timing-function: ease-in-out;
+        }
+
+        .particle-b {
+          background: #ff00ff;
+          box-shadow: 0 0 10px #ff00ff;
+          animation-duration: 3s;
+          animation-delay: -0.7s;
+          animation-timing-function: ease-in-out;
+        }
+
+        .particle-c {
+          background: #ffff00;
+          box-shadow: 0 0 10px #ffff00;
+          animation-duration: 2.5s;
+          animation-delay: -1.2s;
+          animation-timing-function: ease-in-out;
+        }
+
+        @keyframes quantumOrbit {
+          0% {
+            transform: rotate(0deg) translateX(50px) rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg) translateX(50px) rotate(-360deg);
+          }
+        }
+
+        .crystal-glow {
+          position: absolute;
+          width: 160px;
+          height: 160px;
+          top: -10px;
+          left: -10px;
+          background: radial-gradient(circle, transparent 60%, rgba(0, 255, 255, 0.1) 70%, transparent 80%);
+          border-radius: 50%;
+          animation: crystalGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes crystalGlow {
+          0%, 100% {
+            opacity: 0.5;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+
+        @keyframes nucleusGlow {
+          0%, 100% {
+            box-shadow:
+              0 0 20px currentColor,
+              inset 0 0 10px rgba(255, 255, 255, 0.3);
+          }
+          50% {
+            box-shadow:
+              0 0 35px currentColor,
+              0 0 50px currentColor,
+              inset 0 0 15px rgba(255, 255, 255, 0.5);
+          }
+        }
+
+        .electron-orbit {
+          position: absolute;
+          border: 2px solid rgba(0, 255, 255, 0.4);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          animation: orbitRotate linear infinite;
+        }
+
+        /* Orbita idrogeno - circolare */
+        .atom-hydrogen .orbit-1 {
+          border-radius: 50%;
+          width: 104px;
+          height: 104px;
+          animation-duration: 4s;
+        }
+
+        @keyframes orbitRotate {
+          0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+          100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+          }
+        }
+
+        .electron {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background: #00ffff;
+          border-radius: 50%;
+          box-shadow: 0 0 16px #00ffff;
+          animation: electronPulse 2s ease-in-out infinite;
+        }
+
+        /* Elettrone idrogeno */
+        .atom-hydrogen .orbit-1 .electron {
+          top: -4px;
+          right: 52px;
+          background: #ff6b6b;
+          box-shadow: 0 0 16px #ff6b6b;
+        }
+
+
+        @keyframes electronPulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          50% {
+            transform: scale(1.3);
+            opacity: 0.7;
+          }
+        }
 
         /* === EFFETTO PULVISCOLO CADENTE === */
         .particle-dust {
@@ -1056,6 +1451,32 @@ export default function Home() {
             letter-spacing: 0.2em;
           }
 
+          .atomic-center {
+            height: 250px;
+            gap: 60px;
+            flex-direction: row;
+            justify-content: space-around;
+          }
+
+          .atom-hydrogen, .dna-left, .quantum-crystal {
+            transform: scale(1.04);
+          }
+
+          .nucleus {
+            width: 39px;
+            height: 39px;
+            font-size: 16px;
+          }
+
+          .atom-hydrogen .orbit-1 { width: 78px; height: 78px; }
+
+          .electron {
+            width: 5px;
+            height: 5px;
+          }
+
+          .atom-hydrogen .orbit-1 .electron { right: 39px; }
+
           .circuit-corner { width: 40px; height: 40px; }
 
           .selection-area {
@@ -1089,6 +1510,44 @@ export default function Home() {
           .mode-subtitle {
             font-size: 0.8rem;
           }
+
+          .atomic-center {
+            height: 200px;
+            gap: 40px;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .atom-hydrogen {
+            transform: scale(1.17);
+            order: 1;
+          }
+
+          .dna-left {
+            transform: scale(0.8);
+            order: 2;
+          }
+
+          .quantum-crystal {
+            transform: scale(0.9);
+            order: 3;
+            display: none; /* Nascondi il cristallo su mobile molto piccolo */
+          }
+
+          .nucleus {
+            width: 32px;
+            height: 32px;
+            font-size: 13px;
+          }
+
+          .atom-hydrogen .orbit-1 { width: 65px; height: 65px; }
+
+          .electron {
+            width: 4px;
+            height: 4px;
+          }
+
+          .atom-hydrogen .orbit-1 .electron { right: 32px; }
 
 
           .particle-dust {

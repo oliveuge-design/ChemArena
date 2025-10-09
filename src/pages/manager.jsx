@@ -9,6 +9,11 @@ import { useRouter } from "next/router"
 import { createElement, useEffect, useState } from "react"
 
 export default function Manager() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const { socket, emit, on, off } = useSocketContext()
   const router = useRouter()
 
@@ -183,7 +188,7 @@ export default function Manager() {
     // Listener per errori di creazione room
     const handleRoomError = (error) => {
       console.log('❌ Room creation error:', error)
-      if (error === "Already manager") {
+      if (error === "Already manager" && typeof window !== 'undefined') {
         const forceReset = confirm("⚠️ Stato server inconsistente!\n\nIl server pensa che ci sia già un manager attivo.\n\nVuoi forzare un reset completo?")
         if (forceReset) {
           console.log('🚨 Forcing server reset...')
@@ -261,6 +266,9 @@ export default function Manager() {
   }
 
   const handleEndGame = () => {
+    // Evita errori SSR
+    if (typeof window === 'undefined') return
+
     // Conferma prima di chiudere
     const confirmEnd = confirm("🏆 Quiz completato!\n\nVuoi tornare al Dashboard per scegliere un nuovo quiz?")
     
@@ -301,12 +309,15 @@ export default function Manager() {
   }
 
   const handleCreateNewRoom = () => {
+    // Evita errori SSR
+    if (typeof window === 'undefined') return
+
     // Messaggio di conferma dinamico basato sullo stato
     const isQuizActive = state.status.name !== "SHOW_ROOM" && state.status.name !== "FINISH"
-    const confirmMessage = isQuizActive 
+    const confirmMessage = isQuizActive
       ? "🚨 Quiz in corso!\n\nVuoi interrompere il quiz e scegliere un nuovo quiz?"
       : "🆕 Vuoi scegliere un nuovo quiz?\n\nVerrai portato al dashboard per la selezione."
-    
+
     const confirmReset = confirm(confirmMessage)
     
     if (confirmReset) {

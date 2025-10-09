@@ -7,6 +7,11 @@ import Statistics from "@/components/dashboard/Statistics"
 import toast from 'react-hot-toast'
 
 export default function TeacherDashboard() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const router = useRouter()
   const [activeTab, setActiveTab] = useState('launch')
   const [teacher, setTeacher] = useState(null)

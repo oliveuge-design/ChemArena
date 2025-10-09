@@ -4,6 +4,11 @@ import { useRouter } from "next/router"
 import BackgroundManager from "@/components/BackgroundManager"
 
 export default function QuizLibero() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const router = useRouter()
   const [quizzes, setQuizzes] = useState([])
   const [loading, setLoading] = useState(true)

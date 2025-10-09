@@ -7,6 +7,11 @@ import { createElement, useEffect, useState } from "react"
 import toast from "react-hot-toast"
 
 export default function Game() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const router = useRouter()
   const { pin, name, qr } = router.query
 

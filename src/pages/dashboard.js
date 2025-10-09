@@ -45,6 +45,11 @@ import TeachersList from "@/components/dashboard/TeachersList"
 
 // Component interno che usa il context
 function DashboardContent() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const router = useRouter()
   const {
     activeTab,

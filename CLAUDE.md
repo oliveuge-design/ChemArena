@@ -2,6 +2,53 @@
 
 ⚠️ **DOCUMENTO PRINCIPALE**: Leggi `PROMEMORIA_UNIFIED.md` per stato completo e aggiornato ⚠️
 
+## 🆘 BACKUP DI EMERGENZA - 2025-10-07
+
+### 📦 Sistema Triplo di Backup Implementato:
+
+#### 1️⃣ **Commit Git** ✅
+- **Hash**: `0126db6`
+- **Messaggio**: "💾 BACKUP: Snapshot completo progetto 2025-10-07"
+- **Ripristino**: `git checkout 0126db6`
+
+#### 2️⃣ **Tag Git Annotato** ✅
+- **Nome**: `backup-emergency-2025-10-07`
+- **Ripristino**: `git checkout backup-emergency-2025-10-07`
+- **Dettagli**: `git show backup-emergency-2025-10-07`
+- **Lista tag**: `git tag -l "backup*"`
+
+#### 3️⃣ **Archivio Tar.gz** ✅
+- **File**: `ChemArena-BACKUP-EMERGENCY-2025-10-07.tar.gz`
+- **Dimensione**: **6.4 MB** (compresso)
+- **Posizione**: `c:\Users\linea\Downloads\Rahoot-main (1)\Rahoot-main\`
+- **Contenuto**: Tutto tranne `node_modules`, `.next`, `.git`
+- **Ripristino**:
+  ```bash
+  tar -xzf ChemArena-BACKUP-EMERGENCY-2025-10-07.tar.gz
+  cd ChemArena-LOCAL-DEV
+  npm install  # reinstalla dipendenze
+  ```
+
+### 🛡️ Scenari di Ripristino:
+
+| Scenario | Soluzione |
+|----------|-----------|
+| Errore nelle ultime modifiche | `git reset --hard 0126db6` |
+| Corruzione git locale | `git checkout backup-emergency-2025-10-07` |
+| Corruzione completa git | Estrai tar.gz + `npm install` |
+| Disaster recovery totale | Copia tar.gz su altro PC + estrai |
+
+### 📊 Stato Sistema al Backup:
+- ✅ 40 quiz totali (330 domande specialistiche)
+- ✅ Fix podio finale con icone scientifiche (DNA/Atomo/Microscopio)
+- ✅ Fix WAIT studente dopo login
+- ✅ Database studenti/teachers aggiornati
+- ✅ Socket handlers ottimizzati (multiRoomManager + player + manager)
+- ✅ Modalità "Appearing Answers" funzionante
+- ✅ Auto-advance con podio finale corretto
+
+---
+
 ## 📋 AGGIORNAMENTI RECENTI
 
 ### ✅ **SESSIONE 2025-10-06 FINALE - 10 NUOVI QUIZ + FIX COMPLETI**

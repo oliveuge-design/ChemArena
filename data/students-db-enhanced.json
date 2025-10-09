@@ -2021,6 +2021,80 @@
           "slowestAnswer": null
         }
       }
+    },
+    {
+      "id": "game_1760023685815_4w0jc4kkf",
+      "timestamp": "2025-10-09T15:28:05.815Z",
+      "gameDate": "2025-10-09",
+      "quizInfo": {
+        "quizId": "quiz_1757435542637",
+        "quizTitle": "Analisi",
+        "subject": "Chimica",
+        "difficulty": "media",
+        "totalQuestions": 2,
+        "gameMode": "standard",
+        "timeLimit": null
+      },
+      "sessionInfo": {
+        "teacherId": "admin_001",
+        "classId": null,
+        "sessionDuration": 1769721,
+        "totalPlayers": 1,
+        "completedPlayers": 0
+      },
+      "players": [
+        {
+          "studentId": null,
+          "nickname": "jjjj",
+          "fullName": "jjjj",
+          "score": 1741,
+          "correctAnswers": 0,
+          "totalAnswers": 0,
+          "accuracy": 0,
+          "position": 1,
+          "timeSpent": 1769721,
+          "isRegistered": false,
+          "className": null,
+          "answers": []
+        }
+      ],
+      "statistics": {
+        "averageScore": 1741,
+        "medianScore": 1741,
+        "minScore": 1741,
+        "maxScore": 1741,
+        "totalCorrectAnswers": 0,
+        "totalAnswers": 0,
+        "accuracyPercentage": 0,
+        "questionsStats": [
+          {
+            "questionIndex": 0,
+            "question": "Quale principio è alla base della spettrofotometria UV-Vis?",
+            "correctAnswer": 3,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          },
+          {
+            "questionIndex": 1,
+            "question": "Quale tecnica strumentale è più adatta per determinare la concentrazione di metalli in tracce?",
+            "correctAnswer": 1,
+            "totalAnswers": 0,
+            "correctAnswers": 0,
+            "accuracy": 0,
+            "difficulty": "media",
+            "timeSpent": null
+          }
+        ],
+        "difficultyBreakdown": {},
+        "timeStatistics": {
+          "averageAnswerTime": 0,
+          "fastestAnswer": null,
+          "slowestAnswer": null
+        }
+      }
     }
   ],
   "relationships": {
@@ -2099,11 +2173,11 @@
   },
   "metadata": {
     "version": "2.0",
-    "lastUpdate": "2025-10-06",
+    "lastUpdate": "2025-10-09",
     "totalStudents": 10,
     "totalClasses": 8,
     "totalTeachers": 1,
-    "totalGameResults": 13,
+    "totalGameResults": 14,
     "totalRelationships": 5,
     "migrationDate": "2025-09-20T19:29:03.845Z",
     "structure": "enhanced_many_to_many"

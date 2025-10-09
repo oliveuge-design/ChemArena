@@ -5,6 +5,11 @@ import SimpleLabBackground from "@/components/SimpleLabBackground"
 import toast from 'react-hot-toast'
 
 export default function LoginPage() {
+  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
+  if (typeof window === 'undefined') {
+    return null
+  }
+
   const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
