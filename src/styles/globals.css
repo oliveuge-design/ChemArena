@@ -689,3 +689,339 @@ body {
     backdrop-filter: blur(5px);
   }
 }
+
+/* ============================================
+   ATOMIC & MOLECULAR ANIMATIONS - HOMEPAGE
+   ============================================ */
+
+/* Container centrale per atomi e molecole */
+.atomic-center {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+/* ===== ATOMO IDROGENO ===== */
+.atom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.atom-hydrogen {
+  width: 180px;
+  height: 180px;
+  animation: float 6s ease-in-out infinite, spin-slow 20s linear infinite;
+}
+
+/* Nucleo dell'atomo */
+.nucleus {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.nucleus-hydrogen {
+  background: radial-gradient(circle, #00ffff, #0088ff);
+  color: #000;
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff, inset 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Orbita elettronica */
+.electron-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(0, 255, 136, 0.3);
+  border-radius: 50%;
+}
+
+.orbit-1 {
+  width: 180px;
+  height: 180px;
+  animation: spin-orbit 4s linear infinite;
+}
+
+@keyframes spin-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Elettrone */
+.electron {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #00ff88, #00cc66);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ===== DOPPIA ELICA DNA ===== */
+.dna-helix {
+  position: absolute;
+  width: 120px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.dna-left {
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: float 8s ease-in-out infinite;
+}
+
+.dna-strand {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.strand-1 {
+  animation: rotate-dna 10s linear infinite;
+}
+
+.strand-2 {
+  animation: rotate-dna 10s linear infinite reverse;
+}
+
+@keyframes rotate-dna {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.base-pair {
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base-pair span {
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.bp-1 { top: 5%; }
+.bp-2 { top: 20%; }
+.bp-3 { top: 35%; }
+.bp-4 { top: 50%; }
+.bp-5 { top: 10%; }
+.bp-6 { top: 25%; }
+.bp-7 { top: 40%; }
+.bp-8 { top: 55%; }
+
+/* ===== CRISTALLO QUANTICO ===== */
+.quantum-crystal {
+  position: absolute;
+  right: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 120px;
+  animation: float 7s ease-in-out infinite;
+}
+
+.crystal-core {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate-crystal 15s linear infinite;
+}
+
+@keyframes rotate-crystal {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.energy-level {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid;
+  border-radius: 50%;
+  animation: pulse-energy 3s ease-in-out infinite;
+}
+
+.level-1 {
+  width: 40px;
+  height: 40px;
+  border-color: #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+.level-2 {
+  width: 70px;
+  height: 70px;
+  border-color: #00ffff;
+  box-shadow: 0 0 20px #00ffff;
+  animation-delay: 1s;
+}
+
+.level-3 {
+  width: 100px;
+  height: 100px;
+  border-color: #00ff88;
+  box-shadow: 0 0 20px #00ff88;
+  animation-delay: 2s;
+}
+
+@keyframes pulse-energy {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+.quantum-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffffff, #00ffff);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffff;
+  animation: orbit-quantum 5s linear infinite;
+}
+
+.particle-a {
+  left: 50%;
+  top: 0;
+  animation-delay: 0s;
+}
+
+.particle-b {
+  left: 50%;
+  top: 0;
+  animation-delay: 1.67s;
+}
+
+.particle-c {
+  left: 50%;
+  top: 0;
+  animation-delay: 3.33s;
+}
+
+@keyframes orbit-quantum {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+.crystal-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.3), transparent);
+  border-radius: 50%;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ===== PULVISCOLO PARTICELLE ===== */
+.particle-dust {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.dust-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(0, 255, 255, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+  animation: fall-dust 10s linear infinite;
+}
+
+@keyframes fall-dust {
+  0% {
+    transform: translateY(-100px) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(800px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+.dust-1 { left: 10%; animation-delay: 0s; }
+.dust-2 { left: 20%; animation-delay: 1s; animation-duration: 12s; }
+.dust-3 { left: 30%; animation-delay: 2s; animation-duration: 11s; }
+.dust-4 { left: 40%; animation-delay: 3s; }
+.dust-5 { left: 50%; animation-delay: 4s; animation-duration: 13s; }
+.dust-6 { left: 60%; animation-delay: 5s; }
+.dust-7 { left: 70%; animation-delay: 6s; animation-duration: 11s; }
+.dust-8 { left: 80%; animation-delay: 7s; animation-duration: 12s; }
+.dust-9 { left: 90%; animation-delay: 8s; }
+.dust-10 { left: 95%; animation-delay: 9s; animation-duration: 14s; }
+
+/* Responsive - nascondi elementi decorativi su mobile */
+@media (max-width: 768px) {
+  .dna-helix,
+  .quantum-crystal {
+    display: none;
+  }
+
+  .atomic-center {
+    height: 300px;
+  }
+
+  .atom-hydrogen {
+    width: 150px;
+    height: 150px;
+  }
+
+  .orbit-1 {
+    width: 150px;
+    height: 150px;
+  }
+}
