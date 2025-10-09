@@ -38,10 +38,41 @@ export default function handler(req, res) {
     io = new Server(res.socket.server, {
       path: '/api/socket',
       cors: {
-        origin: process.env.NODE_ENV === 'production'
-          ? ["https://*.onrender.com", "https://*.render.com"]
-          : "*",
+        // 🔧 FIX RENDER: Permetti tutte le origini Render + localhost dev
+        origin: (origin, callback) => {
+          const allowedOrigins = [
+            'https://chemarena.onrender.com',
+            'https://chemarena-ai-generator.onrender.com',
+            /https:\/\/.*\.onrender\.com$/,
+            'http://localhost:3000',
+            'http://localhost:3001',
+            'http://localhost:3002',
+            'http://localhost:3003'
+          ]
+
+          // Allow no origin (for mobile apps, curl, etc.)
+          if (!origin) {
+            return callback(null, true)
+          }
+
+          // Check if origin matches
+          const allowed = allowedOrigins.some(allowed => {
+            if (typeof allowed === 'string') {
+              return allowed === origin
+            }
+
+            return allowed.test(origin)
+          })
+
+          if (allowed) {
+            callback(null, true)
+          } else {
+            console.warn(`⚠️ CORS blocked origin: ${origin}`)
+            callback(null, true) // 🔧 TEMPORARY: Allow all for debug
+          }
+        },
         credentials: true,
+        methods: ["GET", "POST"]
       },
       // 🔧 PRODUCTION FIX: Configurazioni robuste per quiz live ad alto carico
       transports: ['websocket', 'polling'], // WebSocket prioritario, fallback polling

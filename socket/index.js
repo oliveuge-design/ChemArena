@@ -99,26 +99,49 @@ io.on("connection", (socket) => {
 
   socket.on("manager:createRoom", (data = {}) => {
     const teacherId = data.teacherId || `teacher_${socket.id}`;
+    console.log(`📍 [SOCKET] manager:createRoom received from ${socket.id}`);
+    console.log(`📍 [SOCKET] Data:`, JSON.stringify(data, null, 2));
 
-    const result = multiRoomManager.createRoom(socket.id, teacherId, data);
+    try {
+      const result = multiRoomManager.createRoom(socket.id, teacherId, data);
+      console.log(`📍 [SOCKET] createRoom result:`, result);
 
-    if (result.success) {
-      socket.join(result.roomId);
-      socket.emit("manager:inviteCode", result.roomId);
-      socket.emit("manager:roomCreated", {
-        roomId: result.roomId,
-        stats: result.stats
-      });
+      if (result.success) {
+        socket.join(result.roomId);
 
-      console.log(`✅ Room ${result.roomId} created for ${teacherId}`);
-    } else {
+        // 🔧 FIX: Emit multipli con logging per debug Render
+        console.log(`📤 [SOCKET] Emitting manager:inviteCode with PIN: ${result.roomId}`);
+        socket.emit("manager:inviteCode", result.roomId);
+
+        // Verifica emit con timeout
+        setTimeout(() => {
+          console.log(`📤 [SOCKET] Retry emit manager:inviteCode with PIN: ${result.roomId}`);
+          socket.emit("manager:inviteCode", result.roomId);
+        }, 100);
+
+        socket.emit("manager:roomCreated", {
+          roomId: result.roomId,
+          stats: result.stats
+        });
+
+        console.log(`✅ Room ${result.roomId} created for ${teacherId}`);
+      } else {
+        console.error(`❌ [SOCKET] Room creation FAILED:`, result.error);
+        socket.emit("manager:createRoomError", {
+          error: result.error,
+          suggestions: result.suggestions,
+          stats: result.stats
+        });
+
+        console.log(`❌ Room creation failed for ${teacherId}: ${result.error}`);
+      }
+    } catch (error) {
+      console.error(`❌ [SOCKET] EXCEPTION in manager:createRoom:`, error);
       socket.emit("manager:createRoomError", {
-        error: result.error,
-        suggestions: result.suggestions,
-        stats: result.stats
+        error: "Errore interno del server",
+        suggestions: ["Riprova tra qualche secondo", "Contatta il supporto se persiste"],
+        details: error.message
       });
-
-      console.log(`❌ Room creation failed for ${teacherId}: ${result.error}`);
     }
   });
   // Altri eventi manager (multi-room aware)

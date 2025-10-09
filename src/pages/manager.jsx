@@ -9,11 +9,6 @@ import { useRouter } from "next/router"
 import { createElement, useEffect, useState } from "react"
 
 export default function Manager() {
-  // Evita errori SSR - controlla che siamo sul client PRIMA di useRouter
-  if (typeof window === 'undefined') {
-    return null
-  }
-
   const { socket, emit, on, off } = useSocketContext()
   const router = useRouter()
 
@@ -88,6 +83,14 @@ export default function Manager() {
     })
 
     on("manager:inviteCode", (inviteCode) => {
+      console.log(`📩 [FRONTEND] Received manager:inviteCode: ${inviteCode}`)
+
+      if (!inviteCode) {
+        console.error('❌ [FRONTEND] Invalid inviteCode received (empty/null)')
+
+        return
+      }
+
       setState(prevState => ({
         ...prevState,
         created: true,
@@ -99,6 +102,17 @@ export default function Manager() {
           },
         },
       }))
+
+      console.log(`✅ [FRONTEND] PIN set successfully: ${inviteCode}`)
+    })
+
+    // 🔧 FIX: Handler per errori creazione room
+    on("manager:createRoomError", (error) => {
+      console.error('❌ [FRONTEND] Room creation error:', error)
+
+      if (typeof window !== 'undefined') {
+        alert(`❌ Errore creazione quiz:\n\n${error.error}\n\nSuggerimenti:\n${error.suggestions?.join('\n')}`)
+      }
     })
 
     // 🎯 Listener per modalità senza tempo
@@ -136,6 +150,7 @@ export default function Manager() {
       off("game:status")
       off("game:saveStats")
       off("manager:inviteCode")
+      off("manager:createRoomError")
       off("manager:untimedWaiting")
     }
   }, [on, off])
