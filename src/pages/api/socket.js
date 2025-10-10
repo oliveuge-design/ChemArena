@@ -38,51 +38,28 @@ export default function handler(req, res) {
     io = new Server(res.socket.server, {
       path: '/api/socket',
       cors: {
-        // 🔧 FIX RENDER: Permetti tutte le origini Render + localhost dev
-        origin: (origin, callback) => {
-          const allowedOrigins = [
-            'https://chemarena.onrender.com',
-            'https://chemarena-ai-generator.onrender.com',
-            /https:\/\/.*\.onrender\.com$/,
-            'http://localhost:3000',
-            'http://localhost:3001',
-            'http://localhost:3002',
-            'http://localhost:3003'
-          ]
-
-          // Allow no origin (for mobile apps, curl, etc.)
-          if (!origin) {
-            return callback(null, true)
-          }
-
-          // Check if origin matches
-          const allowed = allowedOrigins.some(allowed => {
-            if (typeof allowed === 'string') {
-              return allowed === origin
-            }
-
-            return allowed.test(origin)
-          })
-
-          if (allowed) {
-            callback(null, true)
-          } else {
-            console.warn(`⚠️ CORS blocked origin: ${origin}`)
-            callback(null, true) // 🔧 TEMPORARY: Allow all for debug
-          }
-        },
+        // 🔧 FIX RENDER: Permetti tutte le origini (Render usa reverse proxy)
+        origin: true,  // Allow all origins (Render proxy compliant)
         credentials: true,
-        methods: ["GET", "POST"]
+        methods: ["GET", "POST", "OPTIONS"]
       },
-      // 🔧 PRODUCTION FIX: Configurazioni robuste per quiz live ad alto carico
-      transports: ['websocket', 'polling'], // WebSocket prioritario, fallback polling
-      pingTimeout: 60000,        // 60s - tolleranza reti mobili lente
-      pingInterval: 25000,       // 25s - heartbeat frequente
-      maxHttpBufferSize: 1e6,    // 1MB - supporto messaggi grandi (leaderboard)
-      allowUpgrades: true,       // Permetti upgrade polling→websocket
-      perMessageDeflate: false,  // Disabilita compressione per latency
-      httpCompression: true,     // Abilita compressione HTTP
-      connectTimeout: 45000,     // 45s timeout connessione iniziale
+      // 🔧 RENDER FIX: Polling-first per compatibilità con Next.js API routes su Render
+      transports: ['polling', 'websocket'], // Polling prioritario (WebSocket fallisce su Render)
+      allowEIO3: true,           // Compatibilità Engine.IO v3
+      pingTimeout: 30000,        // 30s - ridotto per Render
+      pingInterval: 15000,       // 15s - heartbeat più frequente
+      maxHttpBufferSize: 1e6,    // 1MB - supporto messaggi grandi
+      allowUpgrades: false,      // 🔧 RENDER: Disabilita upgrade (resta su polling)
+      perMessageDeflate: false,  // Disabilita compressione
+      httpCompression: true,     // Compressione HTTP
+      connectTimeout: 20000,     // 20s timeout (ridotto per Render)
+      cookie: false,             // 🔧 RENDER: Disabilita cookie (problemi CORS)
+    })
+
+    console.log('🔌 Socket.IO server config:', {
+      transports: ['polling', 'websocket'],
+      allowUpgrades: false,
+      path: '/api/socket'
     })
 
     // Socket.IO event handlers
