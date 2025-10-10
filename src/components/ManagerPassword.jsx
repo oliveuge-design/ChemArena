@@ -81,6 +81,41 @@ export default function ManagerPassword({ onCreateRoom }) {
     setLoading(true)
 
     try {
+      // 🔧 FIX RENDER: Verifica connessione socket
+      if (!socket || !socket.connected) {
+        console.error('❌ Socket not connected, waiting...')
+        toast.error('Connessione al server in corso...')
+
+        // Attendi connessione
+        const waitForConnection = new Promise((resolve, reject) => {
+          let attempts = 0
+          const maxAttempts = 20
+
+          const checkConnection = setInterval(() => {
+            attempts++
+            console.log(`🔄 Checking socket... (${attempts}/${maxAttempts})`)
+
+            if (socket && socket.connected) {
+              clearInterval(checkConnection)
+              resolve(true)
+            } else if (attempts >= maxAttempts) {
+              clearInterval(checkConnection)
+              reject(new Error('Socket timeout'))
+            }
+          }, 200)
+        })
+
+        try {
+          await waitForConnection
+          toast.success('Connessione stabilita!')
+        } catch (error) {
+          toast.error('Errore di connessione. Ricarica la pagina.')
+          setLoading(false)
+          setIsCreatingRoom(false)
+          return
+        }
+      }
+
       // SOLUZIONE GENIALE: Carica il quiz selezionato direttamente
       const currentQuiz = localStorage.getItem('current-game-quiz')
       let quizData = {}
@@ -132,10 +167,22 @@ export default function ManagerPassword({ onCreateRoom }) {
       if (onCreateRoom) {
         onCreateRoom()
       } else {
-        // PASSA I DATI DEL QUIZ DIRETTAMENTE ALLA ROOM
-        emit("manager:createRoom", {
+        // 🔧 FIX RENDER: PASSA I DATI DEL QUIZ CON ACKNOWLEDGMENT
+        console.log(`🚀 Creazione room con acknowledgment...`)
+
+        socket.emit("manager:createRoom", {
           teacherId: authenticatedTeacher.id,
           ...quizData
+        }, (ack) => {
+          console.log('📨 ACK received:', ack)
+
+          if (ack && ack.success) {
+            console.log(`✅ Room ${ack.roomId} creata con successo via ACK`)
+            toast.success(`PIN generato: ${ack.roomId}`)
+          } else {
+            console.error('❌ Room creation failed:', ack?.error)
+            toast.error(`Errore: ${ack?.error || 'Sconosciuto'}`)
+          }
         })
 
         console.log(`✅ Room creata con quiz: ${quizData.quizTitle}`)

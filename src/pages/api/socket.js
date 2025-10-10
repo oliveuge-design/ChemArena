@@ -131,7 +131,7 @@ export default function handler(req, res) {
         }
       })
 
-      socket.on("manager:createRoom", (data = {}) => {
+      socket.on("manager:createRoom", (data = {}, ackCallback) => {
         console.log(`🔍 DEBUG manager:createRoom - data ricevuto:`, {
           quizTitle: data.quizTitle,
           quizId: data.quizId,
@@ -146,12 +146,33 @@ export default function handler(req, res) {
 
         if (result.success) {
           socket.join(result.roomId)
+
+          // 🔧 FIX RENDER: Emit multipli con acknowledgment
+          console.log(`📤 Emitting manager:inviteCode with PIN: ${result.roomId}`)
           socket.emit("manager:inviteCode", result.roomId)
+
           socket.emit("manager:roomCreated", {
             roomId: result.roomId,
             stats: result.stats
           })
+
           console.log(`✅ Room ${result.roomId} created successfully`)
+
+          // 🔧 FIX: Acknowledge immediato al client
+          if (typeof ackCallback === 'function') {
+            ackCallback({
+              success: true,
+              roomId: result.roomId,
+              message: 'Room created successfully'
+            })
+          }
+
+          // 🔧 FIX: Retry emit dopo breve delay per sicurezza Render
+          setTimeout(() => {
+            console.log(`🔁 Retry emit manager:inviteCode: ${result.roomId}`)
+            socket.emit("manager:inviteCode", result.roomId)
+          }, 200)
+
         } else {
           socket.emit("manager:createRoomError", {
             error: result.error,
@@ -159,6 +180,13 @@ export default function handler(req, res) {
             stats: result.stats
           })
           console.log(`❌ Room creation failed: ${result.error}`)
+
+          if (typeof ackCallback === 'function') {
+            ackCallback({
+              success: false,
+              error: result.error
+            })
+          }
         }
       })
       

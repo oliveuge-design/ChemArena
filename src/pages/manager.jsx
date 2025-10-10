@@ -155,8 +155,41 @@ export default function Manager() {
     }
   }, [on, off])
 
-  const handleCreate = () => {
+  const handleCreate = async () => {
     console.log('🔌 Attempting to create room...')
+
+    // 🔧 FIX RENDER: Verifica connessione socket prima di procedere
+    if (!socket || !socket.connected) {
+      console.error('❌ Socket not connected, waiting...')
+
+      // Attendi connessione con timeout
+      const waitForConnection = new Promise((resolve, reject) => {
+        let attempts = 0
+        const maxAttempts = 20
+
+        const checkConnection = setInterval(() => {
+          attempts++
+          console.log(`🔄 Checking socket connection... (${attempts}/${maxAttempts})`)
+
+          if (socket && socket.connected) {
+            clearInterval(checkConnection)
+            console.log('✅ Socket connected!')
+            resolve(true)
+          } else if (attempts >= maxAttempts) {
+            clearInterval(checkConnection)
+            reject(new Error('Socket connection timeout'))
+          }
+        }, 200)
+      })
+
+      try {
+        await waitForConnection
+      } catch (error) {
+        console.error('❌ Failed to connect socket:', error)
+        alert('❌ Errore di connessione al server.\n\nRicarica la pagina e riprova.')
+        return
+      }
+    }
 
     // 1. Carica quiz selezionato dal localStorage
     let quizData = {}
@@ -209,8 +242,11 @@ export default function Manager() {
           console.log('🚨 Forcing server reset...')
           emit("manager:forceReset")
           setTimeout(() => {
-            emit("manager:createRoom", quizData)
-          }, 500) // Retry dopo il reset CON quiz data
+            // 🔧 FIX: Usa emit con acknowledgment
+            socket.emit("manager:createRoom", quizData, (ack) => {
+              console.log('📨 Room creation ACK:', ack)
+            })
+          }, 500)
         }
       }
     }
@@ -223,9 +259,37 @@ export default function Manager() {
       off("game:errorMessage", handleRoomError)
     }, 5000)
 
-    // 2. Emetti creazione room CON i dati del quiz
+    // 2. Emetti creazione room CON acknowledgment per garantire ricezione
     console.log('🚀 Creazione room con quiz data:', quizData)
-    emit("manager:createRoom", quizData)
+
+    // 🔧 FIX RENDER: Usa emit con callback acknowledgment
+    socket.emit("manager:createRoom", quizData, (ack) => {
+      console.log('📨 Room creation acknowledgment received:', ack)
+
+      if (ack && ack.success) {
+        console.log(`✅ Room ${ack.roomId} creata con successo via ACK`)
+
+        // Forza update dello stato se il PIN non arriva via evento normale
+        setTimeout(() => {
+          if (!state.created || !state.status?.data?.inviteCode) {
+            console.log('⚠️ PIN non ricevuto via evento, usando ACK')
+            setState(prevState => ({
+              ...prevState,
+              created: true,
+              status: {
+                ...prevState.status,
+                data: {
+                  ...prevState.status.data,
+                  inviteCode: ack.roomId,
+                },
+              },
+            }))
+          }
+        }, 500)
+      } else {
+        console.error('❌ Room creation failed via ACK:', ack?.error)
+      }
+    })
   }
 
   const handleSkip = () => {

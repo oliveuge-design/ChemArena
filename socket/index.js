@@ -97,7 +97,7 @@ io.on("connection", (socket) => {
   // MULTI-ROOM MANAGER EVENTS
   // ============================================
 
-  socket.on("manager:createRoom", (data = {}) => {
+  socket.on("manager:createRoom", (data = {}, ackCallback) => {
     const teacherId = data.teacherId || `teacher_${socket.id}`;
     console.log(`📍 [SOCKET] manager:createRoom received from ${socket.id}`);
     console.log(`📍 [SOCKET] Data:`, JSON.stringify(data, null, 2));
@@ -109,15 +109,9 @@ io.on("connection", (socket) => {
       if (result.success) {
         socket.join(result.roomId);
 
-        // 🔧 FIX: Emit multipli con logging per debug Render
+        // 🔧 FIX RENDER: Emit multipli con logging
         console.log(`📤 [SOCKET] Emitting manager:inviteCode with PIN: ${result.roomId}`);
         socket.emit("manager:inviteCode", result.roomId);
-
-        // Verifica emit con timeout
-        setTimeout(() => {
-          console.log(`📤 [SOCKET] Retry emit manager:inviteCode with PIN: ${result.roomId}`);
-          socket.emit("manager:inviteCode", result.roomId);
-        }, 100);
 
         socket.emit("manager:roomCreated", {
           roomId: result.roomId,
@@ -125,6 +119,22 @@ io.on("connection", (socket) => {
         });
 
         console.log(`✅ Room ${result.roomId} created for ${teacherId}`);
+
+        // 🔧 FIX: Acknowledge immediato
+        if (typeof ackCallback === 'function') {
+          ackCallback({
+            success: true,
+            roomId: result.roomId,
+            message: 'Room created successfully'
+          });
+        }
+
+        // 🔧 FIX: Retry emit dopo delay
+        setTimeout(() => {
+          console.log(`🔁 Retry emit manager:inviteCode: ${result.roomId}`);
+          socket.emit("manager:inviteCode", result.roomId);
+        }, 200);
+
       } else {
         console.error(`❌ [SOCKET] Room creation FAILED:`, result.error);
         socket.emit("manager:createRoomError", {
@@ -134,6 +144,13 @@ io.on("connection", (socket) => {
         });
 
         console.log(`❌ Room creation failed for ${teacherId}: ${result.error}`);
+
+        if (typeof ackCallback === 'function') {
+          ackCallback({
+            success: false,
+            error: result.error
+          });
+        }
       }
     } catch (error) {
       console.error(`❌ [SOCKET] EXCEPTION in manager:createRoom:`, error);
@@ -142,6 +159,14 @@ io.on("connection", (socket) => {
         suggestions: ["Riprova tra qualche secondo", "Contatta il supporto se persiste"],
         details: error.message
       });
+
+      if (typeof ackCallback === 'function') {
+        ackCallback({
+          success: false,
+          error: "Errore interno del server",
+          details: error.message
+        });
+      }
     }
   });
   // Altri eventi manager (multi-room aware)
